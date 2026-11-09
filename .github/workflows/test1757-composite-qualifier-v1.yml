@@ -1,0 +1,112 @@
+name: Test1757 local composite CI readiness v1
+
+on:
+  push:
+    branches: [research/test1757-composite-qualifier-ci-v1]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  local-composite-readiness:
+    if: github.repository == '0mis/Stockfish'
+    runs-on: windows-2022
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Check out the exact driver
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 2
+          persist-credentials: false
+
+      - name: Bind the single parent and text evidence directory
+        id: paths
+        run: |
+          $parent = git rev-parse 'HEAD^'
+          if ($LASTEXITCODE -ne 0 -or $parent -cne '39fd08831c65a61df4da6a4102f071a4320e37bd') { throw 'Unexpected qualifier parent' }
+          $directory = New-Item -ItemType Directory -Path evidence -ErrorAction Stop
+          'prepared=true' | Add-Content -LiteralPath $env:GITHUB_OUTPUT -Encoding utf8NoBOM
+
+      - name: Select CPython 3.11 x64
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: '3.11.9'
+          architecture: x64
+          check-latest: false
+
+      - name: Install only the pinned chess parser dependencies
+        run: |
+          $digest = (Get-FileHash -LiteralPath research/layout/requirements.txt -Algorithm SHA256).Hash.ToLowerInvariant()
+          if ($digest -cne 'd27dcedcb0b7c9c9b53987f7e5bb9da05e7f1d0ca9dbb55e83d69bcc9dfeacda') { throw 'Pinned Python requirements changed' }
+          $pins = Get-Content -LiteralPath research/layout/requirements.txt
+          $backend = Join-Path $env:RUNNER_TEMP 'composite-build-requirements.txt'
+          $runtime = Join-Path $env:RUNNER_TEMP 'composite-runtime-requirements.txt'
+          $pins | Where-Object { $_ -cmatch '^(setuptools|wheel) @ ' } | Set-Content -LiteralPath $backend -Encoding utf8NoBOM
+          $pins | Where-Object { $_ -cmatch '^chess @ ' } | Set-Content -LiteralPath $runtime -Encoding utf8NoBOM
+          $flags = @('--disable-pip-version-check', '--no-index', '--no-deps', '--no-cache-dir', '--require-hashes', '--force-reinstall')
+          python -m pip --isolated install @flags -r $backend
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m pip --isolated install @flags --no-build-isolation -r $runtime
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -B -c "import chess,struct,sys; assert chess.__version__=='1.11.2' and sys.version_info[:3]==(3,11,9) and struct.calcsize('P')==8"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Test signatures and failure preservation without an engine
+        run: |
+          $env:PYTHONPATH = @((Join-Path $env:GITHUB_WORKSPACE 'research/composite_qualifier'), (Join-Path $env:GITHUB_WORKSPACE 'research/layout')) -join [System.IO.Path]::PathSeparator
+          python -B -m unittest discover -s research/composite_qualifier -p test_*.py -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Download the exact history source executable and retired probes
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          repository: 0mis/Stockfish
+          run-id: 42579129686
+          name: test1757-history-floor-windows-bmi2-0b36bc418a68c8e280dcc8db08fc3e2226d61ab2
+          github-token: ${{ github.token }}
+          path: history-input
+
+      - name: Download the exact frozen ridge network artifact
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          repository: 0mis/Stockfish
+          run-id: 42583426891
+          name: test1757-readout-ridge-v1-08abd7bd1c3fa9a504a0fa8556a6bef6633933cc
+          github-token: ${{ github.token }}
+          path: ridge-input
+
+      - name: Download the exact accepted prefetch comparator
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          repository: 0mis/Stockfish
+          run-id: 42543250921
+          name: test1757-prefetch-windows-bmi2-49672d7b3c2b0cb544f4bf7cc70515249fe047e3
+          github-token: ${{ github.token }}
+          path: accepted-reference
+
+      - name: Qualify the fixed local composite without rebuilding or games
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          $env:PYTHONPATH = @((Join-Path $env:GITHUB_WORKSPACE 'research/composite_qualifier'), (Join-Path $env:GITHUB_WORKSPACE 'research/layout')) -join [System.IO.Path]::PathSeparator
+          python -B research/composite_qualifier/qualify.py --workspace . --output evidence --execute
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Upload only raw and parsed text evidence
+        if: ${{ always() && steps.paths.outputs.prepared == 'true' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: test1757-local-composite-qualifier-v1-${{ github.sha }}
+          path: |
+            evidence/**/*.json
+            evidence/**/*.txt
+            evidence/**/*.uci
+          include-hidden-files: false
+          if-no-files-found: warn
+          retention-days: 1
+          compression-level: 6

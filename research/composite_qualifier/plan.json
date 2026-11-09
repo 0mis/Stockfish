@@ -1,0 +1,137 @@
+{
+  "artifact_content": "Only qualifier JSON/raw TXT/UCI evidence; no executable, NNUE, downloaded parent evidence or PGNs.",
+  "artifacts": [
+    {
+      "digest": "sha256:4bc2d828a1f94f8e9e96f2b985d5470fbb98048ba0af6db86ed5c992156e80cc",
+      "expired": false,
+      "id": 13656641851,
+      "name": "test1757-history-floor-windows-bmi2-0b36bc418a68c8e280dcc8db08fc3e2226d61ab2",
+      "run_id": 42579129686,
+      "size_in_bytes": 115832278,
+      "workflow_run": {
+        "head_branch": "research/test1757-history-floor-ci-v1",
+        "head_repository_id": 1450723788,
+        "head_sha": "0b36bc418a68c8e280dcc8db08fc3e2226d61ab2",
+        "id": 42579129686,
+        "repository_id": 1450723788
+      }
+    },
+    {
+      "digest": "sha256:1f927b8cfad4d6a87b88cd4dd150c6826f25db723d14779f55a750ac1d61f00b",
+      "expired": false,
+      "id": 13658147479,
+      "name": "test1757-readout-ridge-v1-08abd7bd1c3fa9a504a0fa8556a6bef6633933cc",
+      "run_id": 42583426891,
+      "size_in_bytes": 122370886,
+      "workflow_run": {
+        "head_branch": "research/test1757-readout-ridge-ci-v1",
+        "head_repository_id": 1450723788,
+        "head_sha": "08abd7bd1c3fa9a504a0fa8556a6bef6633933cc",
+        "id": 42583426891,
+        "repository_id": 1450723788
+      }
+    },
+    {
+      "digest": "sha256:7539c83ab50befc6f7e71bf55f35c248809d2c1cb6fa4109fa9c19d44e69d205",
+      "expired": false,
+      "id": 13642730885,
+      "name": "test1757-prefetch-windows-bmi2-49672d7b3c2b0cb544f4bf7cc70515249fe047e3",
+      "run_id": 42543250921,
+      "size_in_bytes": 115853859,
+      "workflow_run": {
+        "head_branch": "research/test1757-prefetch-ci",
+        "head_repository_id": 1450723788,
+        "head_sha": "49672d7b3c2b0cb544f4bf7cc70515249fe047e3",
+        "id": 42543250921,
+        "repository_id": 1450723788
+      }
+    }
+  ],
+  "branch": "research/test1757-composite-qualifier-ci-v1",
+  "context_only": {
+    "history_component_screen": "68/128 audited, retired development only",
+    "mixed_match_played": false,
+    "official_comparator_superiority_established": false,
+    "public_game_context": {
+      "commit": "6831500a4c6b22d64109a38bb0dc5bbf5b6f8fe0",
+      "edited_pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9",
+      "parent_pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d",
+      "pgns_read_by_this_job": false,
+      "repository": "0mis/stockfish-weight-space-lab"
+    },
+    "ridge_component_screen": "66/128 reported; independent final raw audit was pending when requested"
+  },
+  "expected_artifact": "test1757-local-composite-qualifier-v1-<github.sha>",
+  "inputs": {
+    "history_exe": {
+      "artifact_id": 13656641851,
+      "bytes": 142322184,
+      "member": "stockfish-windows-x86-64-bmi2.exe",
+      "path": "history-input/stockfish-windows-x86-64-bmi2.exe",
+      "sha256": "ae1d4772a71529085b26d7460e76fcf65dbe09782e55ea67ecef2e4f033c5ba5"
+    },
+    "history_source": {
+      "artifact_id": 13656641851,
+      "bytes": 467,
+      "member": "source-pin.json",
+      "path": "history-input/source-pin.json",
+      "sha256": "840fa742e16a9c080a5ae2e77313849db27f3816a6d78dd4133761542157824f"
+    },
+    "network": {
+      "artifact_id": 13658147479,
+      "bytes": 138360528,
+      "member": "verified-readout-ridge-candidate/candidate.nnue",
+      "path": "ridge-input/verified-readout-ridge-candidate/candidate.nnue",
+      "sha256": "d5c257728ba53cb9808543ce2800080c860f1c878896cd1b17f75ed4b20aafee"
+    },
+    "probes": {
+      "artifact_id": 13656641851,
+      "bytes": 4783,
+      "member": "probes-v1.json",
+      "path": "history-input/probes-v1.json",
+      "sha256": "60237d711345475e7aeb846888faee49efc1ec4c9f4a3f17a1781332389e8349"
+    },
+    "reference_exe": {
+      "artifact_id": 13642730885,
+      "bytes": 142322823,
+      "member": "stockfish-windows-x86-64-bmi2.exe",
+      "path": "accepted-reference/stockfish-windows-x86-64-bmi2.exe",
+      "sha256": "12a8e7bfdd9b1189b4350bd9ebef3501be1e89bd5fa41dcb56921f85ba23869a"
+    }
+  },
+  "limits": {
+    "concurrent_native_processes": 1,
+    "native_capture_timeout_seconds": 240,
+    "native_processes_maximum": 5,
+    "workflow_minutes": 20
+  },
+  "parent_driver_commit": "39fd08831c65a61df4da6a4102f071a4320e37bd",
+  "purpose": "Independent hosted CI readiness of the fixed history-source executable plus frozen ridge network for later local combined-vs-official evaluation. No public Fishtest mixed-source submission or gain claim.",
+  "qualification": {
+    "bench_command": "bench 16 1 13 default depth",
+    "bench_positions": 51,
+    "bench_repetitions": 2,
+    "bench_roster_compact_json_sha256": "a81b4a8e2f81b261b9cf75e35c1fcb35add748f5f4b6dce903930fa4f9f6e272",
+    "comparison": "History-source executable plus d5 NNUE versus accepted prefetch executable plus the same d5 NNUE, only on the established22 retired probes.",
+    "eval_roots": 22,
+    "expected_mixed_bench_nodes": null,
+    "hash_mb": 16,
+    "perft_command": "go perft 4",
+    "perft_nodes": 197281,
+    "require_all_92_bucket_and_raw_final_parity": true,
+    "require_identical_per_position_final_search_signature": true,
+    "threads": 1
+  },
+  "repository": "0mis/Stockfish",
+  "schema": "test1757-local-composite-qualifier-plan-v1",
+  "source_context": {
+    "baseline_source_commit": "7a17b53bcaf93f54a23ad65f309c413585500c82",
+    "compile_in_this_job": false,
+    "external_network_override": true,
+    "history_source_commit": "d19047cc44fae773a590be3b0b9f08fdd75acdc7",
+    "history_source_tree": "6c3cd141dcc3cac20b84469b729fbbd1141c0d60",
+    "later_rebuilt_binary_equivalence_claimed": false
+  },
+  "verified_elo_gain": false,
+  "workflow": ".github/workflows/test1757-composite-qualifier-v1.yml"
+}
