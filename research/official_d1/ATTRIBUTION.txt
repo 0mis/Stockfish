@@ -1,0 +1,8 @@
+Unchanged reused D1 source: stage2/features_v19.py, stage2/nnue_v19.py,
+stage4/d1_fc2_study/{forward.py,weights.py}; original source contract ff7cee.
+The distinct sparse study is supervised calibration of official7cdd + originalD1.
+Stockfish source/NNUE architecture: Stockfish developers and contributors.
+Public sibling labels: Lichess public analysis; original score/engine/bound caveats remain.
+No 92-head test1757 mapping, weights, current candidate or trial0003 is changed.
+The supplied original official7cdd source checkout and release remain unmodified.
+Reuse/source content remains subject to its original GPL-3.0-or-later notices.

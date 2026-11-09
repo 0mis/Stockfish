@@ -1,0 +1,86 @@
+name: Official D1 sibling readout train v1
+
+on:
+  push:
+    branches: [research/official-d1-sibling-readout-ci-v1]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  train:
+    if: github.repository == '0mis/Stockfish'
+    runs-on: windows-2022
+    timeout-minutes: 45
+    steps:
+      - name: Preserve exact LF source bytes
+        shell: pwsh
+        run: git config --global core.autocrlf false
+
+      - name: Check out reviewed study driver
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          ref: ${{ github.sha }}
+          path: driver
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Check out exact official parent source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: official-stockfish/Stockfish
+          ref: 7cdd5e89a39fe3071b67d91c7bb07d712044bf76
+          path: source
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Select pinned CPython
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: '3.11.9'
+          architecture: x64
+          check-latest: false
+
+      - name: Install exact NumPy and chess artifacts
+        shell: pwsh
+        run: |
+          $pins = Get-Content -LiteralPath driver/research/official_d1/requirements.txt
+          $backend = Join-Path $env:RUNNER_TEMP 'official-d1-backend.txt'
+          $runtime = Join-Path $env:RUNNER_TEMP 'official-d1-runtime.txt'
+          $pins | Where-Object { $_ -cmatch '^(setuptools|wheel) @ ' } | Set-Content -LiteralPath $backend -Encoding utf8NoBOM
+          $pins | Where-Object { $_ -cmatch '^(numpy|chess) @ ' } | Set-Content -LiteralPath $runtime -Encoding utf8NoBOM
+          $flags = @('--disable-pip-version-check','--no-index','--no-deps','--no-cache-dir','--require-hashes','--force-reinstall')
+          python -m pip --isolated install @flags -r $backend
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m pip --isolated install @flags --no-build-isolation -r $runtime
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $runnerPython = python -I -c "import sys; assert sys.version_info[:3] == (3, 11, 9); print(sys.executable)"
+          if ($LASTEXITCODE -ne 0 -or $runnerPython -isnot [string] -or -not (Test-Path -LiteralPath $runnerPython -PathType Leaf)) { throw 'Pinned Python did not return one executable' }
+          "RUNNER_PYTHON=$runnerPython" >> $env:GITHUB_ENV
+
+      - name: Source and synthetic gates before any native execution
+        shell: pwsh
+        run: |
+          & $env:RUNNER_PYTHON -B -m unittest discover -s driver/research/official_d1 -p 'test_*.py' -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Current-official parity, train-only sparse fit and edited parity
+        shell: pwsh
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: |
+          & $env:RUNNER_PYTHON -B driver/research/official_d1/hosted.py --driver-commit $env:GITHUB_SHA
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Retain exact finite evidence and any one frozen candidate
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: official-d1-sibling-train-v1-${{ github.sha }}
+          path: official-d1-evidence/
+          retention-days: 1
+          if-no-files-found: warn
+          compression-level: 6
