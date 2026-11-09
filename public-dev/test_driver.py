@@ -4,9 +4,17 @@ from pathlib import Path
 import chess,chess.pgn
 from common import pair_games,bootstrap,NAMES
 from transfer_public import apply_edits
-from run_match import command
+from run_match import command,spawn_referee
 
 class DriverTests(unittest.TestCase):
+ def test_windows_referee_resolution_is_absolute_without_a_native_launch(self):
+  from unittest.mock import patch
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d).resolve();directory=root/'evidence/pairs/pair-000000'
+   with patch('run_match.subprocess.Popen') as popen:
+    spawn_referee(['../../../inputs/fastchess.exe'],root,directory,None,{})
+   self.assertEqual(popen.call_args.kwargs['executable'],str(root/'inputs/fastchess.exe'))
+   self.assertTrue(Path(popen.call_args.kwargs['executable']).is_absolute())
  def opening(self):
   fen=chess.STARTING_FEN
   return {'pair_index':0,'fen':fen,'opening_id':__import__('hashlib').sha256(' '.join(fen.split()[:4]).encode()).hexdigest(),'candidate_first':True}

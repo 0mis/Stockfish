@@ -9,6 +9,12 @@ from common import require,sha,dump,bound,verify_plan,pair_games,bootstrap,NAMES
 def state(path,value):
  raw=(json.dumps(value,sort_keys=True,indent=2,allow_nan=False)+'\n').encode();temp=path.with_suffix('.tmp');temp.write_bytes(raw);os.replace(temp,path)
 def relative(path,cwd):return os.path.relpath(path,cwd)
+def spawn_referee(argv,root,directory,console,env):
+ # On Windows, cwd does not make a relative CreateProcess executable portable.
+ # Keep public logged argv relative, but pin lpApplicationName to the local
+ # already-SHA-verified runner input. No user/workspace path is in public source.
+ return subprocess.Popen(argv,executable=str((root/'inputs/fastchess.exe').resolve()),cwd=directory,
+                         stdin=subprocess.DEVNULL,stdout=console,stderr=subprocess.STDOUT,env=env)
 def command(root,directory,opening,plan):
  args=[relative(root/'inputs/fastchess.exe',directory)]
  arms=[('candidate','nn-f92ca6117ec5.nnue'),('parent','nn-68752b755c93.nnue')]
@@ -44,7 +50,7 @@ def main():
     # Native children receive only ordinary runtime variables, never Actions tokens.
     safe={'SYSTEMROOT','WINDIR','PATH','PATHEXT','TEMP','TMP','COMSPEC','NUMBER_OF_PROCESSORS','PROCESSOR_ARCHITECTURE','USERPROFILE'}
     child_env={k:v for k,v in os.environ.items() if k.upper() in safe};child_env['TZ']='UTC'
-    process=subprocess.Popen(argv,cwd=directory,stdin=subprocess.DEVNULL,stdout=console,stderr=subprocess.STDOUT,env=child_env)
+    process=spawn_referee(argv,root,directory,console,child_env)
     dump(directory/'PROCESS.json',{'pid':process.pid,'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'pair_index':opening['pair_index']})
     try:exit_code=process.wait(timeout=plan['per_pair_hard_timeout_seconds'])
     except subprocess.TimeoutExpired:
