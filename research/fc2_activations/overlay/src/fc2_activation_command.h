@@ -121,7 +121,7 @@ inline bool capture_line(const std::string& text, const Eval::NNUE::Network& net
         << ",\"stored_heads\":" << capture.stored_heads
         << ",\"in_check\":" << (position.checkers() ? "true" : "false")
         << ",\"ordinary_eval_trace_available\":" << (position.checkers() ? "false" : "true")
-        << ",\"side_to_move\":" << position.side_to_move()
+        << ",\"side_to_move\":" << static_cast<int>(position.side_to_move())
         << ",\"rule50\":" << position.rule50_count() << ",\"fc0\":";
     json_array(out, capture.fc0);
     out << ",\"fc1\":"; json_array(out, capture.fc1);
