@@ -30,7 +30,7 @@ class DriverTests(unittest.TestCase):
    for x in ['tc=10+0.1','option.Threads=1','option.Hash=64','timemargin=0','restart=on','option.Ponder=false']:self.assertIn(x,argv)
    for x in ['-recover','-sprt','-draw','-resign']:self.assertNotIn(x,argv)
    self.assertFalse(any(__import__('re').fullmatch(r'(?:nodes|st)=\d+(?:\.\d+)?',y) for y in argv))
-   self.assertIn('option.EvalFile=../../../inputs/nn-f92ca6117ec5.nnue'.replace('/',__import__('os').sep),argv)
+   self.assertIn('option.EvalFile=../../../inputs/nn-selected.nnue'.replace('/',__import__('os').sep),argv)
  def test_paired_colors_results_and_legal_prefix(self):
   result=pair_games(self.pgn(),self.opening(),'fixture-pair',True);self.assertEqual(result['candidate_points'],1);self.assertEqual(len(result['games']),2)
  def test_foreign_opening_or_colors_refused(self):
