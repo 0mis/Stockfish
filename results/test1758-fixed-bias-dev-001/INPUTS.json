@@ -1,0 +1,47 @@
+{
+  "actual_candidate_sha256": "f92ca6117ec5ae7b0ca8c9242165aee06bd2417183daa4393b11f2df409e005d",
+  "actual_engine_sha256": "ae1d4772a71529085b26d7460e76fcf65dbe09782e55ea67ecef2e4f033c5ba5",
+  "actual_parent_sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
+  "actual_referee_sha256": "a7aa6762058e1f699809e9f3d1a35b609e90dbb2c3dde32d99099d641780eb9b",
+  "all_public_asset_hashes_verified": true,
+  "custom_secrets_required": false,
+  "native_processes_started_here": 0,
+  "plan_sha256": "e67d024da0dc028cec1e772271ef5b074c43c67655efcbe171589eb6fac5ad95",
+  "public_inputs": {
+    "engine_member": "stockfish-history-floor-bmi2.exe",
+    "engine_sha256": "ae1d4772a71529085b26d7460e76fcf65dbe09782e55ea67ecef2e4f033c5ba5",
+    "engine_zip": {
+      "bytes": 232285191,
+      "file": "history-release.zip",
+      "sha256": "23b4df6759e361ea510e28f23abec04daeb14f08969a781653b08a916f0e4e8d",
+      "url": "https://github.com/0mis/Stockfish/releases/download/experimental-test1757-history-d5c257728ba5/stockfish-test1757-history-d5-windows-bmi2.zip"
+    },
+    "parent_network": {
+      "bytes": 138360528,
+      "file": "nn-68752b755c93.nnue",
+      "sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
+      "url": "https://tests.stockfishchess.org/api/nn/nn-68752b755c93.nnue"
+    },
+    "referee_member": "fastchess-windows-x86-64/fastchess.exe",
+    "referee_sha256": "a7aa6762058e1f699809e9f3d1a35b609e90dbb2c3dde32d99099d641780eb9b",
+    "referee_zip": {
+      "bytes": 7192293,
+      "file": "fastchess-public.zip",
+      "sha256": "e4c66cceec4122d0638022da55e6841487a1dd9a4819685893749dbd7c645033",
+      "url": "https://github.com/Disservin/fastchess/releases/download/v1.8.3-alpha/fastchess-windows-x86-64.zip"
+    }
+  },
+  "runner_environment": "standard GitHub-hosted windows-2022, public repository",
+  "transfer": {
+    "bytes": 138360528,
+    "candidate_sha256": "f92ca6117ec5ae7b0ca8c9242165aee06bd2417183daa4393b11f2df409e005d",
+    "changed_bytes": 11,
+    "changed_heads": 9,
+    "delta_credit": "0mis AI-assisted test1757 readout study; fixed transfer, no new fit",
+    "donor_credit": "Shawn Xu (xu-shawn), test1758, CC0-1.0",
+    "inverse_sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
+    "parent_sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
+    "route_sha256": "166ea64eb3e4da682ba3394b0a7f68de6ca6e01daae472f8c85fbc5ad7e27dd7",
+    "schema": "public-test1758-fixed-bias-transfer/1"
+  }
+}

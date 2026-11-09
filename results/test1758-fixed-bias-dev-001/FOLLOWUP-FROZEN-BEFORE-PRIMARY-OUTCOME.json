@@ -1,0 +1,12 @@
+{
+  "followup_branch": "research/test1758-selected-vs-official-dev-001",
+  "followup_commit": "4f0672262b2edd3d9b4c7ce17ac466893b398389",
+  "followup_plan_sha256": "6b5806262ded69052089c623d02fc5dd8b0eaf2ed09d387fa9469ec7a71d5f5a",
+  "primary_commit": "d437003ccda2004fe26be7896a689614edfd1a55",
+  "primary_outcome_known": false,
+  "primary_run": 42675059274,
+  "primary_status_at_notice": "in_progress",
+  "recorded_utc": "2026-11-09T19:31:24.390441+00:00",
+  "selection": "valid full >128points selectsf92; valid <=128 selectsparent68752; invalid meansno dispatch",
+  "source": "Sibling sol_ridge_match explicit freeze notice; actual terminal values will be supplied only after audit."
+}

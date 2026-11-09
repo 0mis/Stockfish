@@ -1,0 +1,56 @@
+{
+  "candidate_points": 127.5,
+  "confirmed_strength_gain": false,
+  "descriptive_paired_bootstrap": {
+    "coefficient_vector_sha256": "99de89d90823e501dfb2c4c9fae5c7c008e284c0b97e0d40616d923c19ee55f0",
+    "empirical_pentanomial": [
+      0,
+      30,
+      69,
+      29,
+      0
+    ],
+    "endpoints": [
+      {
+        "boundary": null,
+        "logistic_elo": -21.74306492903708,
+        "percentile_denominator": 40,
+        "percentile_numerator": 1,
+        "score_fraction": {
+          "denominator": 512,
+          "numerator": 240
+        },
+        "twice_pair_point_sum": 240
+      },
+      {
+        "boundary": null,
+        "logistic_elo": 19.019359271422424,
+        "percentile_denominator": 40,
+        "percentile_numerator": 39,
+        "score_fraction": {
+          "denominator": 512,
+          "numerator": 270
+        },
+        "twice_pair_point_sum": 270
+      }
+    ],
+    "iid_empirical_pair_draws": 128,
+    "method": "exact_integer_empirical_paired_bootstrap_percentile",
+    "nominal_central_percent": 95,
+    "quantile_rule": "smallest k with40*CDF(k)>=q*128^128, q=1,39; no interpolation",
+    "scope": "Descriptive for this fixed retired-opening development match on standard public Actions VM; no formal confirmation or global gain inference."
+  },
+  "parent_points": 128.5,
+  "pentanomial": [
+    0,
+    30,
+    69,
+    29,
+    0
+  ],
+  "plan_sha256": "e67d024da0dc028cec1e772271ef5b074c43c67655efcbe171589eb6fac5ad95",
+  "private_formal_evidence": false,
+  "result_sha256": "2463d658a7e155dc07e955592199918aafa237266ef4649a930d1736c5b444db",
+  "schema": "full-fixed-public-development-independent-audit/1",
+  "status": "all128pairs_256games_raw_receipts_reverified"
+}

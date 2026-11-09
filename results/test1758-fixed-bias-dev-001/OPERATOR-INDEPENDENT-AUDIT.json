@@ -1,0 +1,40 @@
+{
+  "actual_engine_sha256": "ae1d4772a71529085b26d7460e76fcf65dbe09782e55ea67ecef2e4f033c5ba5",
+  "actual_referee_clock_go_commands": 42404,
+  "actual_referee_sha256": "a7aa6762058e1f699809e9f3d1a35b609e90dbb2c3dde32d99099d641780eb9b",
+  "bootstrap_coefficient_sha256": "99de89d90823e501dfb2c4c9fae5c7c008e284c0b97e0d40616d923c19ee55f0",
+  "bootstrap_quantile_sums": [
+    240,
+    270
+  ],
+  "candidate_network_sha256": "f92ca6117ec5ae7b0ca8c9242165aee06bd2417183daa4393b11f2df409e005d",
+  "candidate_points": 127.5,
+  "confirmed_strength_gain": false,
+  "extra_games_or_outcome_retries": false,
+  "game_termination_labels": {
+    "normal": 256
+  },
+  "moves_with_raw_comments": 42404,
+  "parent_network_sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
+  "parent_points": 128.5,
+  "pentanomial": [
+    0,
+    30,
+    69,
+    29,
+    0
+  ],
+  "plan_sha256": "e67d024da0dc028cec1e772271ef5b074c43c67655efcbe171589eb6fac5ad95",
+  "private_formal_evidence": false,
+  "raw_PGN_sha256": "f2aa1d6a9b2ec02eaa783f8a2fb01d5a72ead7a28bd3e50947f956f8fbc70565",
+  "result_sha256": "2463d658a7e155dc07e955592199918aafa237266ef4649a930d1736c5b444db",
+  "schema": "operator-independent-public-test1758-result-audit/1",
+  "scope": "Fixed retired-opening public standard Actions VM development comparison. Integer paired-bootstrap uncertainty is descriptive, separate from trial4.",
+  "status": "all128pairs_256games_independently_verified",
+  "summed_native_referee_seconds": 9196.94600000001,
+  "wins_draws_losses": [
+    67,
+    121,
+    68
+  ]
+}

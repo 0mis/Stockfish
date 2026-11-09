@@ -1,0 +1,43 @@
+{
+  "all_128_native_configurations_verified": true,
+  "all_network_announcements_match_the_actual_arm": true,
+  "artifact": {
+    "bytes": 38676423,
+    "id": 13710238515,
+    "sha256": "3cd86dab43b4931fecd9425560cff9d1565d72fa43d9644f5281c20cf111666a"
+  },
+  "cause": "The referee automatically retained config.json in each pair directory. It was already bound by every original PAIR-AUDIT hash map but omitted from the operator strict file-list fixture.",
+  "corrected_operator_audit": {
+    "bytes": 1601,
+    "sha256": "3331bc790e05118e96debf3b6a6a1bc27acba872ea8a91530791cf0f69b9f92e"
+  },
+  "corrected_operator_source": {
+    "bytes": 12609,
+    "sha256": "6ea21ac798ad112770c7dca3ffcd7d9bd665ebbebd46a6c076b1c3fb1a120b8f"
+  },
+  "correction": "Include only that extra config.json and independently verify its exact engine/EvalFile/options, real clocks, pair identity, no recovery, no SPRT and disabled adjudication.",
+  "created_utc": "2026-11-09T21:13:02.632189+00:00",
+  "head_sha": "d437003ccda2004fe26be7896a689614edfd1a55",
+  "hosted_source_or_models_or_schedule_changed": false,
+  "native_games_rerun": 0,
+  "native_network_announcements": {
+    "test1758-parent-68752": 21201,
+    "test1758-transfer-f92": 21203
+  },
+  "preterminal_operator_source": {
+    "bytes": 10810,
+    "sha256": "45af08bb58b4dad1e5aa93a42ae302110d79e569d398530bc014296dffc8ab41"
+  },
+  "result_selection_or_outcome_policy_changed": false,
+  "retained_initial_refusal": {
+    "message": "Unexpected raw pair file set",
+    "raw_private_path_content_not_published": true,
+    "stderr_file": {
+      "bytes": 735,
+      "sha256": "326f0f4296a38f1eb350e323505510d865b5889c5df81d2681662088b1082605"
+    }
+  },
+  "run_id": 42675059274,
+  "schema": "public-test1758-operator-reader-correction/1",
+  "timed_searches_and_announcements": 42404
+}

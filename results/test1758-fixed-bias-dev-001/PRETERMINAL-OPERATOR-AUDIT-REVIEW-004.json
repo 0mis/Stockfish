@@ -1,0 +1,54 @@
+{
+  "checks": [
+    "frozen_plan_and_code",
+    "full_128_pair_256_game_sample",
+    "exact_commands_and_native_exit_receipts",
+    "exact_both_network_selections",
+    "actual_wtime_btime_100ms_increments",
+    "all_raw_member_hashes",
+    "legal_reversed_PGNs_and_retained_comments",
+    "independent_exact_integer_bootstrap",
+    "independent_score_fraction_logistic_endpoint_and_null_boundary_labels",
+    "eight_GiB_disk_floor_before_download_and_extraction",
+    "enforce_original_native_failure_and_no_adjudication_policy_via_Termination_labels_normal_or_time_forfeit"
+  ],
+  "created_utc": "2026-11-09T20:24:17.321203+00:00",
+  "head_sha": "d437003ccda2004fe26be7896a689614edfd1a55",
+  "native_processes_started": 0,
+  "operator_source": {
+    "make_acceptance.py": {
+      "bytes": 5752,
+      "sha256": "8e3abd840d5b867fd7ff701efdcd6610f1287e4d42699d36d84cf72dc526fcc2"
+    },
+    "publish_result.py": {
+      "bytes": 7471,
+      "sha256": "77e0c51ffa1aedb2c6f103ebeed964063add0812af12a38aab13c44f3d90a5c6"
+    },
+    "secure_artifact.py": {
+      "bytes": 4927,
+      "sha256": "ef2a338123acbf51aec1900b60654ba90b7b61fa88185141a5e374f59e5ebfab"
+    },
+    "verify_completed.py": {
+      "bytes": 10810,
+      "sha256": "45af08bb58b4dad1e5aa93a42ae302110d79e569d398530bc014296dffc8ab41"
+    }
+  },
+  "parent_review_sha256": "2a7174f0c9877553e0ce74263fa03055ff56639b36d3263a063fb43f9b4b3491",
+  "real_outcomes_opened": false,
+  "run_id": 42675059274,
+  "run_status_observed": "in_progress",
+  "schema": "preterminal-public-development-operator-review/1",
+  "synthetic_cases": [
+    "interior_pentanomial_quantiles_245_279",
+    "all_pair_draws_256_256",
+    "all_parent_wins_0_0",
+    "all_candidate_wins_512_512"
+  ],
+  "windows_priority_fixture": {
+    "affinity_mask": 16,
+    "earlier_untyped_fixture_failed_before_any_data_open": true,
+    "priority_class": 16384,
+    "typed_64bit_handle": true
+  },
+  "workspace_writes": 0
+}
