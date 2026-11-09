@@ -1,0 +1,56 @@
+name: Fresh compiled default d5 qualification
+
+on:
+  push:
+    branches:
+      - research/test1757-default-d5-ci-v1
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test1757-default-d5-ci-v1
+  cancel-in-progress: false
+
+jobs:
+  qualify:
+    if: github.repository == '0mis/Stockfish' && github.ref == 'refs/heads/research/test1757-default-d5-ci-v1' && github.event_name == 'push'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout this exact source-only driver
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          path: driver
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Checkout exact attributed candidate source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: 0mis/Stockfish
+          ref: cecfcfd5480afd16b31740b24387f5779d24c0db
+          path: engine
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Install pinned legal-replay dependency
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m venv "$RUNNER_TEMP/default-d5-tools"
+          "$RUNNER_TEMP/default-d5-tools/bin/python" -m pip install --disable-pip-version-check --no-input --no-cache-dir -r driver/research/default_d5_ci/requirements.txt
+      - name: Verify source and net, compile, and run fresh default processes
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$RUNNER_TEMP/default-d5-tools/bin/python" -B driver/research/default_d5_ci/qualify.py --source engine --output evidence
+      - name: Retain actual qualification evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fresh-default-d5-qualification
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 90
+          compression-level: 6
+          include-hidden-files: true
