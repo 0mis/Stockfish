@@ -1,0 +1,112 @@
+[
+  {
+    "fen": "k3r3/8/8/3pP3/8/8/8/4K3 w - d6 0 1",
+    "id": "p10",
+    "moves": []
+  },
+  {
+    "fen": "r3k2r/7p/8/8/8/8/P7/R3K2R w - - 0 1",
+    "id": "p11",
+    "moves": []
+  },
+  {
+    "fen": "4k3/ppp5/8/8/8/8/PPP5/4K3 w - - 0 1",
+    "id": "p12",
+    "moves": []
+  },
+  {
+    "fen": "r3k2r/p7/8/8/8/8/P7/R3K2R w - - 0 1",
+    "id": "p13",
+    "moves": []
+  },
+  {
+    "fen": "6k1/8/8/4n3/R2B3r/8/8/2K5 w - - 0 1",
+    "id": "p14",
+    "moves": []
+  },
+  {
+    "fen": "4k3/ppppp3/8/8/8/8/PPPPP3/4K3 w - - 0 1",
+    "id": "p30",
+    "moves": []
+  },
+  {
+    "fen": "r3k2r/p6p/8/8/8/8/P6P/R3K2R w - - 0 1",
+    "id": "p31",
+    "moves": []
+  },
+  {
+    "fen": "4k3/pppp4/8/8/8/8/PPPP4/4K3 w - - 0 1",
+    "id": "p32",
+    "moves": []
+  },
+  {
+    "fen": "r3k2r/pp6/8/8/8/8/PP6/R3K2R w - - 0 1",
+    "id": "p33",
+    "moves": []
+  },
+  {
+    "fen": "r3k2r/8/1n4n1/8/8/1N4N1/8/R3K2R w KQkq - 0 1",
+    "id": "p34",
+    "moves": []
+  },
+  {
+    "fen": "4k3/ppppppp1/8/8/8/8/PPPPPPP1/4K3 w - - 0 1",
+    "id": "p50",
+    "moves": []
+  },
+  {
+    "fen": "r3k2r/pp4pp/8/8/8/8/PP4PP/R3K2R w - - 0 1",
+    "id": "p51",
+    "moves": []
+  },
+  {
+    "fen": "4k3/pppp4/pp6/8/8/PP6/PPPP4/4K3 w - - 0 1",
+    "id": "p52",
+    "moves": []
+  },
+  {
+    "fen": "r3k2r/pppp4/8/8/8/8/PPPP4/R3K2R w - - 0 1",
+    "id": "p53",
+    "moves": []
+  },
+  {
+    "fen": "rb1qk3/pppppppp/8/8/8/8/PPPPPPPP/RB1QK3 w - - 0 1",
+    "id": "p82",
+    "moves": []
+  },
+  {
+    "fen": "r2qk3/pppp4/pppp4/8/8/PPPP4/PPPP4/R2QK3 w - - 0 1",
+    "id": "p83",
+    "moves": []
+  },
+  {
+    "fen": "rbnqkn2/pppppppp/8/8/8/8/PPPPPPPP/RBNQKN2 w - - 0 1",
+    "id": "p87",
+    "moves": []
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "id": "p91",
+    "moves": []
+  },
+  {
+    "fen": "k7/8/8/3pP3/8/8/8/4K3 w - d6 0 1",
+    "id": "p0",
+    "moves": []
+  },
+  {
+    "fen": "8/8/7k/8/8/8/QQ6/5K2 w - - 0 1",
+    "id": "p8",
+    "moves": []
+  },
+  {
+    "fen": "5b1r/1bk2B2/3p1P1N/1Pp5/p1P2pPP/P2P4/4n3/4K1N1 w - - 3 49",
+    "id": "p65",
+    "moves": []
+  },
+  {
+    "fen": "rbn1knbr/pppppppp/8/8/8/8/PPPPPPPP/RBNQKNBR w - - 0 1",
+    "id": "p90",
+    "moves": []
+  }
+]

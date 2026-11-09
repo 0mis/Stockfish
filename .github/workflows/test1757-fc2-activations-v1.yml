@@ -1,0 +1,100 @@
+name: Test1757 diagnostic FC2 activations v1
+
+on:
+  push:
+    branches: [research/test1757-fc2-activations-ci-v1]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  diagnostic:
+    if: github.repository == '0mis/Stockfish'
+    runs-on: windows-2022
+    timeout-minutes: 35
+    steps:
+      - name: Preserve exact LF source bytes
+        shell: pwsh
+        run: git config --global core.autocrlf false
+
+      - name: Check out the reviewed driver
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          ref: ${{ github.sha }}
+          path: driver
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Check out exact original18cd parent source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: 0mis/Stockfish
+          ref: 7a17b53bcaf93f54a23ad65f309c413585500c82
+          path: source
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Select pinned CPython
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: '3.11.9'
+          architecture: x64
+          check-latest: false
+
+      - name: Install the exact chess source artifact and build dependencies
+        shell: pwsh
+        run: |
+          $pins = Get-Content -LiteralPath driver/research/fc2_activations/requirements.txt
+          $backend = Join-Path $env:RUNNER_TEMP 'fc2-backend.txt'
+          $runtime = Join-Path $env:RUNNER_TEMP 'fc2-runtime.txt'
+          $pins | Where-Object { $_ -cmatch '^(setuptools|wheel) @ ' } | Set-Content -LiteralPath $backend -Encoding utf8NoBOM
+          $pins | Where-Object { $_ -cmatch '^chess @ ' } | Set-Content -LiteralPath $runtime -Encoding utf8NoBOM
+          $flags = @('--disable-pip-version-check','--no-index','--no-deps','--no-cache-dir','--require-hashes','--force-reinstall')
+          python -m pip --isolated install @flags -r $backend
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m pip --isolated install @flags --no-build-isolation -r $runtime
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $runnerPython = (Get-Command python -CommandType Application).Source
+          "RUNNER_PYTHON=$runnerPython" >> $env:GITHUB_ENV
+
+      - name: Run source and synthetic checks before any compiler
+        shell: pwsh
+        run: |
+          python -B -m unittest discover -s driver/research/fc2_activations -p 'test_*.py' -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Setup established MinGW64 compiler
+        uses: msys2/setup-msys2@e9898307ac31d1a803454791be09ab9973336e1c
+        with:
+          msystem: MINGW64
+          path-type: inherit
+          cache: false
+          install: mingw-w64-x86_64-gcc make git curl
+
+      - name: Download exact previously accepted original18cd BMI2 artifact
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          repository: 0mis/Stockfish
+          run-id: 42543250921
+          artifact-ids: '13642730885'
+          merge-multiple: true
+          github-token: ${{ github.token }}
+          path: accepted-reference
+
+      - name: Build isolated controls, prove native parity, and capture train only
+        shell: msys2 {0}
+        run: |
+          PYTHON_EXE="$(cygpath -u "$RUNNER_PYTHON")"
+          "$PYTHON_EXE" -B driver/research/fc2_activations/hosted.py --driver-commit "$GITHUB_SHA" --collect-train
+
+      - name: Retain finite evidence and corresponding source
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: test1757-fc2-activations-v1-${{ github.sha }}
+          path: artifact-fc2-activations/
+          retention-days: 1
+          if-no-files-found: warn
+          compression-level: 6

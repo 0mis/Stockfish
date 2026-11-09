@@ -1,0 +1,395 @@
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -26,6 +26,10 @@
+ #include "tune.h"
+ #include "uci.h"
+ 
++#if defined(SF_TEST1757_FC2_DIAGNOSTIC)
++#include "fc2_activation_command.h"
++#endif
++
+ using namespace Stockfish;
+ 
+ #ifdef UNIVERSAL_BINARY
+@@ -37,6 +41,14 @@
+ #endif
+ 
+ int main(int argc, char* argv[]) {
++#if defined(SF_TEST1757_FC2_DIAGNOSTIC)
++    if (argc > 1 && std::string_view(argv[1]) == "--fc2-activations-v1")
++    {
++        Attacks::init();
++        Position::init();
++        return FC2ActivationCommand::run(argc, argv);
++    }
++#endif
+     std::cout << engine_info() << std::endl;
+ 
+     Attacks::init();
+--- a/src/nnue/nnue_architecture.h
++++ b/src/nnue/nnue_architecture.h
+@@ -34,6 +34,10 @@
+ #include "nnue_common.h"
+ #include "nnz_helper.h"
+ 
++#if defined(SF_TEST1757_FC2_DIAGNOSTIC)
++#include "fc2_activation_capture.h"
++#endif
++
+ namespace Stockfish::Eval::NNUE {
+ 
+ // Input features used in evaluation function
+@@ -94,7 +98,11 @@
+     }
+ 
+     i32 propagate(const TransformedFeatureType* transformedFeatures,
+-                  const NNZInfo<L1>&            nnzInfo) const {
++                  const NNZInfo<L1>&            nnzInfo
++#if defined(SF_TEST1757_FC2_DIAGNOSTIC)
++                  , FC2ActivationCapture* capture = nullptr
++#endif
++                  ) const {
+         struct alignas(CacheLineSize) Buffer {
+             alignas(CacheLineSize) typename decltype(fc_0)::OutputBuffer fc_0_out;
+             alignas(CacheLineSize) typename decltype(ac_sqr_0)::OutputType
+@@ -138,6 +146,32 @@
+           static_cast<i64>(HiddenOneVal) * static_cast<i64>(1U << WeightScaleBits) * 2;
+ 
+         i32 outputValue = static_cast<i32>((static_cast<i64>(fwdOut) * multiplier) / denominator);
++#if defined(SF_TEST1757_FC2_DIAGNOSTIC)
++        static_assert(FC_0_OUTPUTS == 32 && FC_1_OUTPUTS == 32);
++        static_assert(decltype(fc_2)::InputDimensions == 128 && decltype(fc_2)::OutputDimensions == 1);
++        if (capture)
++        {
++            for (unsigned i = 0; i < 32; ++i)
++            {
++                capture->fc0[i] = buffer.fc_0_out[i];
++                capture->fc1[i] = buffer.fc_1_out[i];
++            }
++            for (unsigned i = 0; i < 128; ++i)
++            {
++                const auto physical = decltype(fc_2)::get_weight_index(i);
++                capture->input_native[i] = buffer.concat_buffer[i];
++                capture->input_serialized[i] = buffer.concat_buffer[physical];
++                capture->serialized_to_native[i] = physical;
++            }
++            capture->fc2_affine = buffer.fc_2_out[0];
++            capture->skip = skip_0;
++            capture->combined = fwdOut;
++            capture->scaled = outputValue;
++            std::ostringstream readout(std::ios::out | std::ios::binary);
++            if (fc_2.write_parameters(readout))
++                capture->read_serialized_output(readout.str());
++        }
++#endif
+         return outputValue;
+     }
+ 
+--- a/src/nnue/network.h
++++ b/src/nnue/network.h
+@@ -67,6 +67,13 @@
+                    AccumulatorCaches& cache) const;
+ 
+ 
++#if defined(SF_TEST1757_FC2_DIAGNOSTIC)
++    Value capture_fc2_activations(const Position& pos,
++                                 AccumulatorStack& accumulatorStack,
++                                 AccumulatorCaches& cache,
++                                 FC2ActivationCapture& capture) const;
++#endif
++
+     void verify(const std::function<void(std::string_view)>& f,
+                 const EvalFile&                              evalFile,
+                 std::filesystem::path                        evalfilePath) const;
+--- a/src/nnue/network.cpp
++++ b/src/nnue/network.cpp
+@@ -176,6 +176,32 @@
+     return static_cast<Value>(positional / OutputScale);
+ }
+ 
++#if defined(SF_TEST1757_FC2_DIAGNOSTIC)
++Value Network::capture_fc2_activations(const Position&    pos,
++                        AccumulatorStack&  accumulatorStack,
++                        AccumulatorCaches& cache,
++                        FC2ActivationCapture& capture) const {
++    capture = {};
++
++    constexpr u64 alignment = CacheLineSize;
++
++    alignas(alignment) TransformedFeatureType transformedFeatures[FeatureTransformer::BufferSize];
++
++    ASSERT_ALIGNED(transformedFeatures, alignment);
++
++    NNZInfo<L1> nnzInfo;
++
++    const int bucket = layer_stack(pos);
++
++    featureTransformer.transform(pos, accumulatorStack, cache, transformedFeatures, nnzInfo);
++    const auto positional = network[bucket].propagate(transformedFeatures, nnzInfo, &capture);
++    capture.physical_head = bucket;
++    capture.stored_heads = storedLayerStacks;
++    capture.raw_nnue = static_cast<Value>(positional / OutputScale);
++    return capture.raw_nnue;
++}
++#endif
++
+ 
+ void Network::verify(const std::function<void(std::string_view)>& f,
+                      const EvalFile&                              evalFile,
+--- /dev/null
++++ b/src/fc2_activation_command.h
+@@ -0,0 +1,177 @@
++// Isolated, no-search, batched test1757 FC2 sidecar. GPL-3.0-or-later.
++#ifndef SF_TEST1757_FC2_ACTIVATION_COMMAND_H
++#define SF_TEST1757_FC2_ACTIVATION_COMMAND_H
++#if !defined(SF_TEST1757_FC2_DIAGNOSTIC) || !defined(NNUE_EMBEDDING_OFF) || defined(UNIVERSAL_BINARY)
++    #error "Use only an isolated external-network FC2 diagnostic build"
++#endif
++
++#include <charconv>
++#include <deque>
++#include <filesystem>
++#include <iostream>
++#include <memory>
++#include <sstream>
++#include <string>
++#include <string_view>
++#include <vector>
++#include "evaluate.h"
++#include "movegen.h"
++#include "nnue/network.h"
++#include "nnue/nnue_accumulator.h"
++#include "position.h"
++#include "uci.h"
++
++// Exact source defines this non-static helper in Stockfish (not Eval), with
++// only a .cpp-local declaration. Declare the same function for this sidecar;
++// its implementation and the ordinary evaluator remain unchanged.
++namespace Stockfish { Value scale_evaluation(Value nnue, int optimism, const Position& pos); }
++
++namespace Stockfish::FC2ActivationCommand {
++
++inline void json_string(std::ostream& out, const std::string& text) {
++    out << '"';
++    for (unsigned char c : text)
++    {
++        if (c == '"' || c == '\\') out << '\\' << char(c);
++        else if (c >= 32 && c < 127) out << char(c);
++        else out << '?';  // Native FEN/path inputs here are ASCII; envelope owns other IDs.
++    }
++    out << '"';
++}
++
++template<typename T, std::size_t N>
++inline void json_array(std::ostream& out, const std::array<T, N>& values) {
++    out << '[';
++    for (std::size_t i = 0; i < N; ++i)
++    {
++        if (i) out << ',';
++        out << std::int64_t(values[i]);
++    }
++    out << ']';
++}
++
++inline bool capture_line(const std::string& text, const Eval::NNUE::Network& network) {
++    // Each line is self-contained. Earlier game history before supplied_fen is
++    // explicitly unknown; this is a board-activation API, not teacher provenance.
++    std::istringstream input(text);
++    std::string command, id, kind, field, fen;
++    if (!(input >> command >> id >> kind) || command != "capture" || kind != "fen")
++        return false;
++    unsigned row_id = 0;
++    const auto parsed = std::from_chars(id.data(), id.data() + id.size(), row_id);
++    if (parsed.ec != std::errc{} || parsed.ptr != id.data() + id.size() || std::to_string(row_id) != id)
++        return false;
++    for (unsigned i = 0; i < 6; ++i)
++    {
++        if (!(input >> field)) return false;
++        if (i) fen += ' ';
++        fen += field;
++    }
++    std::deque<StateInfo> states(1);
++    Position position;
++    if (position.set(fen, false, &states.front())) return false;
++    std::vector<std::string> moves;
++    if (input >> field)
++    {
++        if (field != "moves") return false;
++        while (input >> field)
++        {
++            if (moves.size() >= 4096 || MoveList<ALL>(position).size() == 0) return false;
++            const Move move = UCIEngine::to_move(position, field);
++            if (move == Move::none() || UCIEngine::move(move, false) != field) return false;
++            states.emplace_back();
++            position.do_move(move, states.back());
++            moves.push_back(field);
++        }
++    }
++    if (MoveList<ALL>(position).size() == 0) return false;
++    auto ordinary_stack = std::make_unique<Eval::NNUE::AccumulatorStack>();
++    auto ordinary_cache = std::make_unique<Eval::NNUE::AccumulatorCaches>(network);
++    ordinary_stack->reset();
++    const Value ordinary = network.evaluate(position, *ordinary_stack, *ordinary_cache);
++    ordinary_stack.reset();
++    ordinary_cache.reset();
++    auto stack = std::make_unique<Eval::NNUE::AccumulatorStack>();
++    auto cache = std::make_unique<Eval::NNUE::AccumulatorCaches>(network);
++    stack->reset();
++    Eval::NNUE::FC2ActivationCapture capture;
++    network.capture_fc2_activations(position, *stack, *cache, capture);
++    capture.ordinary_raw_nnue = ordinary;
++    if (!capture.integer_reconstruction_valid()) return false;
++    const Value ordinary_static_zero = Stockfish::scale_evaluation(ordinary, VALUE_ZERO, position);
++    const int ordinary_static_cp = UCIEngine::to_cp(ordinary_static_zero, position);
++    std::array<int, 49> offset_static_zero{}, offset_cp{};
++    for (int delta = -24; delta <= 24; ++delta)
++    {
++        const std::int64_t shifted = std::int64_t(ordinary) + delta;
++        if (shifted < std::numeric_limits<Value>::min() || shifted > std::numeric_limits<Value>::max()) return false;
++        const Value value = Stockfish::scale_evaluation(static_cast<Value>(shifted), VALUE_ZERO, position);
++        offset_static_zero[delta + 24] = value;
++        offset_cp[delta + 24] = UCIEngine::to_cp(value, position);
++    }
++    std::ostringstream out;
++    out << "{\"schema\":\"test1757-fc2-activation/1\",\"row_id\":" << row_id
++        << ",\"source_commit\":\"7a17b53bcaf93f54a23ad65f309c413585500c82\",\"supplied_fen\":";
++    json_string(out, fen);
++    out << ",\"moves\":[";
++    for (std::size_t i = 0; i < moves.size(); ++i) { if (i) out << ','; json_string(out, moves[i]); }
++    out << "],\"final_fen\":";
++    json_string(out, position.fen());
++    out << ",\"history_scope\":\"supplied_fen_and_legal_prefix_only\",\"physical_head\":" << capture.physical_head
++        << ",\"stored_heads\":" << capture.stored_heads
++        << ",\"in_check\":" << (position.checkers() ? "true" : "false")
++        << ",\"ordinary_eval_trace_available\":" << (position.checkers() ? "false" : "true")
++        << ",\"side_to_move\":" << position.side_to_move()
++        << ",\"rule50\":" << position.rule50_count() << ",\"fc0\":";
++    json_array(out, capture.fc0);
++    out << ",\"fc1\":"; json_array(out, capture.fc1);
++    out << ",\"input_native\":"; json_array(out, capture.input_native);
++    out << ",\"input_serialized\":"; json_array(out, capture.input_serialized);
++    out << ",\"serialized_to_native\":"; json_array(out, capture.serialized_to_native);
++    out << ",\"output_weights\":"; json_array(out, capture.output_weights);
++    out << ",\"output_bias\":" << capture.output_bias << ",\"fc2_affine\":" << capture.fc2_affine
++        << ",\"skip\":" << capture.skip << ",\"combined\":" << capture.combined
++        << ",\"scaled\":" << capture.scaled << ",\"raw_nnue\":" << capture.raw_nnue
++        << ",\"ordinary_raw_nnue\":" << capture.ordinary_raw_nnue
++        << ",\"helper_static_zero\":" << ordinary_static_zero << ",\"helper_static_cp\":" << ordinary_static_cp
++        << ",\"ordinary_static_zero\":";
++    if (position.checkers()) out << "null"; else out << ordinary_static_zero;
++    out << ",\"ordinary_static_cp\":";
++    if (position.checkers()) out << "null"; else out << ordinary_static_cp;
++    out << ",\"static_loss_available\":" << (position.checkers() ? "false" : "true")
++        << ",\"static_loss_unavailable_reason\":";
++    if (position.checkers()) out << "\"in_check\""; else out << "null";
++    out << ",\"raw_offset_min\":-24,\"raw_offset_max\":24,\"cp_perspective\":\"side_to_move\",\"raw_offset_static_zero\":";
++    json_array(out, offset_static_zero);
++    out << ",\"raw_offset_cp\":"; json_array(out, offset_cp);
++    out << ",\"integer_parity\":true}";
++    std::cout << out.str() << '\n';
++    std::cout.flush();
++    return bool(std::cout);
++}
++
++inline int run(int argc, char* argv[]) {
++    if (argc != 4 || std::string_view(argv[1]) != "--fc2-activations-v1" || std::string_view(argv[2]) != "--network")
++        return 2;
++    const auto path = path_from_utf8(argv[3]);
++    if (!path.is_absolute()) return 2;
++    auto network = std::make_unique<Eval::NNUE::Network>();
++    Eval::NNUE::EvalFile loaded;
++    network->load_external(std::filesystem::path{}, path, loaded);
++    if (loaded.current != path) return 3;
++    std::string line;
++    std::size_t count = 0;
++    while (std::getline(std::cin, line))
++    {
++        if (line == "quit") return std::cout ? 0 : 5;
++        if (line.empty() || line.size() > 32768 || ++count > 100000 || !capture_line(line, *network))
++        {
++            std::cerr << "FC2 diagnostic rejected request or integer parity at row " << count << '\n';
++            return 4;
++        }
++    }
++    std::cerr << "FC2 diagnostic requires explicit quit\n";
++    return 5;
++}
++}  // namespace Stockfish::FC2ActivationCommand
++#endif
+--- /dev/null
++++ b/src/nnue/fc2_activation_capture.h
+@@ -0,0 +1,74 @@
++// Diagnostic-only test1757 FC2 observer. GPL-3.0-or-later.
++// Adapted from the private prospective v20 tail observer; never a search hook.
++#ifndef SF_TEST1757_FC2_ACTIVATION_CAPTURE_H
++#define SF_TEST1757_FC2_ACTIVATION_CAPTURE_H
++
++#if !defined(SF_TEST1757_FC2_DIAGNOSTIC) || !defined(USE_AVX2) \
++ || !defined(USE_PAIR_ACTIVATIONS) || defined(USE_AVX512)
++    #error "FC2 capture requires the isolated AVX2 pair-activation diagnostic"
++#endif
++
++#include <array>
++#include <cstdint>
++#include <limits>
++#include <sstream>
++#include <string>
++
++namespace Stockfish::Eval::NNUE {
++
++struct FC2ActivationCapture {
++    int physical_head = -1, stored_heads = 0;
++    std::array<std::int32_t, 32> fc0{}, fc1{};
++    std::array<std::uint8_t, 128> input_native{}, input_serialized{};
++    std::array<unsigned, 128> serialized_to_native{};
++    std::array<int, 128> output_weights{};
++    std::int32_t output_bias = 0, fc2_affine = 0, skip = 0, combined = 0, scaled = 0;
++    std::int32_t raw_nnue = 0, ordinary_raw_nnue = 0;
++    bool parameters_ready = false;
++
++    bool read_serialized_output(const std::string& bytes) {
++        // Existing AffineTransform::write_parameters is the authority for
++        // serialized order; never expose in-memory scrambled weights as W2.
++        if (bytes.size() != 132)
++            return false;
++        std::uint32_t bits = 0;
++        for (unsigned i = 0; i < 4; ++i)
++            bits |= std::uint32_t(static_cast<unsigned char>(bytes[i])) << (8 * i);
++        const std::int64_t signed_bias = bits < (std::uint32_t(1) << 31)
++            ? std::int64_t(bits) : std::int64_t(bits) - (std::int64_t(1) << 32);
++        output_bias = static_cast<std::int32_t>(signed_bias);
++        for (unsigned i = 0; i < 128; ++i)
++        {
++            const int byte = static_cast<unsigned char>(bytes[i + 4]);
++            output_weights[i] = byte < 128 ? byte : byte - 256;
++        }
++        parameters_ready = true;
++        return true;
++    }
++
++    bool integer_reconstruction_valid() const {
++        if (!parameters_ready || stored_heads != 92 || physical_head < 0 || physical_head >= stored_heads)
++            return false;
++        std::int64_t affine = output_bias;
++        for (unsigned i = 0; i < 128; ++i)
++        {
++            if (input_native[i] > 127 || input_serialized[i] > 127
++                || serialized_to_native[i] >= 128
++                || input_serialized[i] != input_native[serialized_to_native[i]])
++                return false;
++            affine += std::int64_t(output_weights[i]) * input_serialized[i];
++        }
++        const std::int64_t actual_skip = std::int64_t(fc0[30]) - fc0[31];
++        const std::int64_t forwarded = affine + actual_skip;
++        const auto fits = [](std::int64_t x) {
++            return x >= std::numeric_limits<std::int32_t>::min()
++                && x <= std::numeric_limits<std::int32_t>::max();
++        };
++        return fits(affine) && fits(actual_skip) && fits(forwarded)
++            && affine == fc2_affine && actual_skip == skip && forwarded == combined
++            && (forwarded * 9600) / 16384 == scaled
++            && scaled / 16 == raw_nnue && raw_nnue == ordinary_raw_nnue;
++    }
++};
++}  // namespace Stockfish::Eval::NNUE
++#endif
