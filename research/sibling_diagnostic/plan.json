@@ -1,0 +1,19 @@
+{
+  "schema": "test1757-sibling-diagnostic-v1",
+  "question": "On the published optimization openings, how often does the original network strongly prefer the worse of two moves that two depths of search rank in the same order?",
+  "base_driver": "08abd7bd1c3fa9a504a0fa8556a6bef6633933cc",
+  "engine_sha256": "12a8e7bfdd9b1189b4350bd9ebef3501be1e89bd5fa41dcb56921f85ba23869a",
+  "network_sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+  "source_commit_for_public_games": "6831500a4c6b22d64109a38bb0dc5bbf5b6f8fe0",
+  "population": "Select up to four positions per each of the original 48 optimization opening families. Within each family use ascending SHA-256 of the ASCII string 'sibling-diagnostic-v1|' plus the position ID, restricted to nonterminal boards with at least two legal moves. Freeze the resulting IDs before searches. The 15 prior held-out families get no searches in this diagnostic.",
+  "search": "For the same original network run a fresh-state MultiPV=2 depth-9 and depth-13 search at each root. Retain both exact final principal lines, root-perspective scores and legal continuations, together with omissions, bounds, mates, changed ranks and other exclusions.",
+  "stable": "Both searches must report the same legal ordered top two moves and unbounded integer centipawn scores on the final depth. A clear pair must have a margin of at least 20 centipawns at both depths, margins within 20 of each other, and both depth-13 scores within [-250,250].",
+  "measure": "Measure the original static score of both actually constructed child positions. Convert each side-to-move child score into the root player's perspective before subtracting rank two from rank one. A gross inversion is a clear pair with static margin at most -12 centipawns. Account for unavailable child evaluations and report all measured dispositions, per family and per physical head.",
+  "outcome": "This one diagnostic describes static move-ranking errors on exploratory openings. It makes no model edit or playing-strength estimate.",
+  "resources": {
+    "max_wall_seconds": 2400,
+    "max_search_seconds": 60,
+    "threads": 1,
+    "hash_mb": 16
+  }
+}
