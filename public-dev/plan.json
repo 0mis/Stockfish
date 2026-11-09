@@ -1,31 +1,38 @@
 {
-  "branch": "research/test1758-fixed-bias-dev-001",
-  "candidate_network_sha256": "f92ca6117ec5ae7b0ca8c9242165aee06bd2417183daa4393b11f2df409e005d",
-  "clock_failure_policy": "All completed legal two-game referee outcomes are retained, including reported clock forfeits after played moves; reasons/clocks/raw logs retained. Zero-move/incomplete/native/referee/parse failures stop the experiment as incomplete and preserve artifacts; no pair or outcome retry.",
-  "code_sha256": {
-    "audit.py": "34852b8c1a264f3ecdb59b64cf2a1c1c7279592428d6a2a88b28d0c5c001492b",
-    "common.py": "e3660a41c39e00c2819e1801150eb07f997446a7b552eacde4c998102b23efb9",
-    "openings.json": "93f62b243a0ba0519c88f39ededcf30164462fee447fe8d47942377fed0e5df9",
-    "prepare_inputs.py": "149e266842b2565c20cc3a238fadcb69a7fa5b0e72b2fd8d49ede00271a34d5b",
-    "published-test1757-recipe.json": "4ce6d12f6f79eb7462569e771e86ce1e27ee715d2801605f295dc1dcc0a804d3",
-    "run_match.py": "1928d2d97685f162c095fbf12a309204b7a161fcf8376c9775c9974575eb4f2c",
-    "test_driver.py": "c12e04ec7ae47d37146bffb44293023860f9d9458eeb16a5efae0e8624f7c460",
-    "transfer-binding.json": "2122b6b11edfd32bbf3cd40503f055e144eaff6e5837ecab045f8055df09d7c0",
-    "transfer_public.py": "85450c660903b872cca301eceb57b61a53f49f7aabd391914bc62c23eecc4eaf"
-  },
+  "branch": "research/test1758-selected-vs-official-dev-001",
   "concurrency": 1,
-  "confirmed_strength_claim": false,
+  "confirmed_strength_gain": false,
   "credits": {
     "donor": "Shawn Xu (xu-shawn), test1758, CC0-1.0",
     "donor_source_commit": "73fe1eaca99ac4a09252c876aa6b1cceeaf7c4c7",
     "engine": "Stockfish developers; Shawn Xu test1757; SanityEclipse000/MxTriX77 prefetch; Stefan Geschwentner/locutus2 history floor",
     "fixed_delta_recipe": "0mis AI-assisted test1757 readout study; not new training on test1758",
+    "official": "Stockfish developers, official master7cdd5e89; official release binary and network.",
+    "openings": "Public retired development evidence from0mis/stockfish-weight-space-lab; original opening/book and engine authors retain their credits.",
     "referee": "Disservin/fastchess v1.8.3-alpha"
   },
-  "experiment_id": "test1758-fixed-bias-dev-001",
-  "formal_openings_used": false,
+  "experiment_id": "test1758-selected-vs-official-dev-001",
+  "formal_trial4_or_alpha_evidence": false,
+  "frozen_utc": "2026-11-09T19:29:52.690808+00:00",
   "games": 256,
   "hash_mb_per_engine": 64,
+  "implementation_ancestry": {
+    "adaptation_scope": "Only explicit selection/admission gate, pinned official opponent, prospective disjoint opening order and corresponding identity/result labels; preserve primary match resources/freshness and independent raw replay.",
+    "commit": "d437003ccda2004fe26be7896a689614edfd1a55",
+    "plan_sha256": "e67d024da0dc028cec1e772271ef5b074c43c67655efcbe171589eb6fac5ad95",
+    "public_harness_code_sha256": {
+      "audit.py": "34852b8c1a264f3ecdb59b64cf2a1c1c7279592428d6a2a88b28d0c5c001492b",
+      "common.py": "e3660a41c39e00c2819e1801150eb07f997446a7b552eacde4c998102b23efb9",
+      "openings.json": "93f62b243a0ba0519c88f39ededcf30164462fee447fe8d47942377fed0e5df9",
+      "prepare_inputs.py": "149e266842b2565c20cc3a238fadcb69a7fa5b0e72b2fd8d49ede00271a34d5b",
+      "published-test1757-recipe.json": "4ce6d12f6f79eb7462569e771e86ce1e27ee715d2801605f295dc1dcc0a804d3",
+      "run_match.py": "1928d2d97685f162c095fbf12a309204b7a161fcf8376c9775c9974575eb4f2c",
+      "test_driver.py": "c12e04ec7ae47d37146bffb44293023860f9d9458eeb16a5efae0e8624f7c460",
+      "transfer-binding.json": "2122b6b11edfd32bbf3cd40503f055e144eaff6e5837ecab045f8055df09d7c0",
+      "transfer_public.py": "85450c660903b872cca301eceb57b61a53f49f7aabd391914bc62c23eecc4eaf"
+    },
+    "repository": "0mis/Stockfish"
+  },
   "inputs": {
     "engine_member": "stockfish-history-floor-bmi2.exe",
     "engine_sha256": "ae1d4772a71529085b26d7460e76fcf65dbe09782e55ea67ecef2e4f033c5ba5",
@@ -34,6 +41,22 @@
       "file": "history-release.zip",
       "sha256": "23b4df6759e361ea510e28f23abec04daeb14f08969a781653b08a916f0e4e8d",
       "url": "https://github.com/0mis/Stockfish/releases/download/experimental-test1757-history-d5c257728ba5/stockfish-test1757-history-d5-windows-bmi2.zip"
+    },
+    "official_engine_sha256": "b67c37d0d45e3540e311392aeeb699e3a745f16e172bc3fc6f85e0782093842b",
+    "official_member": "stockfish/stockfish-windows-x86-64-universal.exe",
+    "official_network": {
+      "bytes": 136247652,
+      "file": "nn-d1ee674a62ca.nnue",
+      "sha256": "d1ee674a62ca754648fb8c2907ff4e92f0c3acff28f59afa0f5bd4e3949538f1",
+      "url": "https://tests.stockfishchess.org/api/nn/nn-d1ee674a62ca.nnue"
+    },
+    "official_source_commit": "7cdd5e89a39fe3071b67d91c7bb07d712044bf76",
+    "official_zip": {
+      "asset_id": 717703279,
+      "bytes": 119111575,
+      "file": "official-release.zip",
+      "sha256": "37c5fff649e820e3bcb5ac3450a1363cf0d75045da0dd15559873f76e53055d1",
+      "url": "https://github.com/official-stockfish/Stockfish/releases/download/stockfish-dev-20261106-7cdd5e89/stockfish-windows-x86-64-universal.zip"
     },
     "parent_network": {
       "bytes": 138360528,
@@ -50,27 +73,67 @@
       "url": "https://github.com/Disservin/fastchess/releases/download/v1.8.3-alpha/fastchess-windows-x86-64.zip"
     }
   },
-  "openings_sha256": "93f62b243a0ba0519c88f39ededcf30164462fee447fe8d47942377fed0e5df9",
-  "pair_order": "exact original public PGN adjacent pair order0..127; candidate starts first on even pairindices; each pair reverses colors",
+  "opening_policy": {
+    "canonical_id": "sha256(first4 fields of python-chess legal-EP FEN, ASCII; castling normalized by python-chess)",
+    "canonical_primary_root_overlap": 0,
+    "correlation": "No shared primary starting root. Both studies use previously retired development families and a candidate selected by primary outcome; no independence of all chess positions or unbiased global strength estimate is claimed.",
+    "deterministic_order": "Sort disjoint root IDs ascending by sha256(UTF8(experiment_id + |opening-order-v1| + canonical_id)); take first128 DISTINCT IDs.",
+    "eligible_disjoint_roots": 276,
+    "pair_color_order": "Candidate registered first on even pair_index, official first on odd; reverse colors within each pair.",
+    "primary_unique_roots": 110,
+    "selected_unique_roots": 128,
+    "source_commit": "c6a21a063f5a219a72f8f814bfb6287d0925171b",
+    "source_kind": "Only already-published, completed and retired development match PGN starting positions; no formal pool or private openings.",
+    "source_repository": "0mis/stockfish-weight-space-lab"
+  },
+  "opening_provenance_sha256": "acad53849d6c3d2da8d4fd858faad13fdac2e873de0340beb6f4fd0ced721e50",
+  "openings_sha256": "ffec0b02cd65f0bb1091ada037d6aa50b332cfb09858f5ab0193f2027e38a398",
   "pairs": 128,
-  "parent_network_sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
-  "per_pair_hard_timeout_seconds": 300,
-  "private_trial4_evidence": false,
+  "possible_selected_networks": {
+    "edited": "f92ca6117ec5ae7b0ca8c9242165aee06bd2417183daa4393b11f2df409e005d",
+    "unedited_parent": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21"
+  },
+  "private_workspace_inputs": false,
+  "prospective_freeze": "Primary runtime scores, logs, PGNs, result and artifacts have not been read by this follow-up planner. Its terminal verifier has withheld all outcomes pending this published freeze.",
   "runner": {
+    "artifact_retention_days": 1,
     "billing_changes": false,
     "custom_runner": false,
     "custom_secrets": false,
     "kind": "standard GitHub-hosted public repository",
     "label": "windows-2022"
   },
-  "same_engine_isolates_network_edit": true,
-  "schema": "public-test1758-nine-bias-development-plan/1",
-  "source_pgn_commit": "c6a21a063f5a219a72f8f814bfb6287d0925171b",
-  "source_pgn_sha256": "a90252baa4b3c573e770fc7f17e62f191b52607c38f259bc7b8eb050263aa519",
-  "source_pgn_url": "https://raw.githubusercontent.com/0mis/stockfish-weight-space-lab/c6a21a063f5a219a72f8f814bfb6287d0925171b/results/test1757-selected-vs-official/games-utc.pgn",
-  "statistics": "Fixed full sample only; paired points and exact128-draw empirical paired-bootstrap nominal95% percentile via integer convolution. Descriptive scope only; no SPRT, no private alpha, no selection gate.",
+  "runtime_policy": {
+    "both_arms": "Full strength, Ponder=false, UCI_LimitStrength=false, SyzygyProbeLimit=0, Move Overhead=10, timemargin=0, Threads=1, Hash=64.",
+    "failure": "Retain every artifact; zero-move/incomplete/illegal/referee/native failure stops as incomplete. Completed legal clock-forfeit results after played moves count as reported and remain separately tabulated.",
+    "freshness": "fastchess restart=on; a new referee and both new engines per reversed pair, as in primary.",
+    "native_execution": "Only the admitted single standard windows-2022 public GitHub-hosted job; no local native engine/benchmark, no paid/custom runner.",
+    "per_pair_hard_timeout_seconds": 300,
+    "stopping": "No SPRT, draw/resign adjudication, outcome stopping, pair recovery, outcome retry or seed change.",
+    "timing": "UTC environment; retain timeleft=true, latency=true, nodes=true PGNs, complete trace log and events, command/process/start/end/runtime hashes.",
+    "total_job_timeout_minutes": 350
+  },
+  "schema": "public-test1758-selected-vs-official-development-plan/1",
+  "selection": {
+    "invalid_or_incomplete_primary": "NO_FOLLOWUP_DISPATCH",
+    "less_than_or_equal_128_points": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
+    "primary_driver_commit": "d437003ccda2004fe26be7896a689614edfd1a55",
+    "primary_initial_commit": "6fe9e301b8710b7e389bb33ff582dba34af9f287",
+    "primary_plan_sha256": "e67d024da0dc028cec1e772271ef5b074c43c67655efcbe171589eb6fac5ad95",
+    "primary_repository": "0mis/Stockfish",
+    "primary_run_id": 42675059274,
+    "primary_semantic_definition_sha256": "f842861d942b309f5844313109ba90a51481d940790744484fccbc4ad5c687dd",
+    "receipt_gate": "No gameplay workflow is present at prospective freeze. A later activation may add the exact independently verified complete primary receipt, its explicit raw ZIP/member/result/audit hashes and a hash-pinned admission workflow only. No gameplay may run before revalidation of those actual bytes.",
+    "strict_greater_than_128_points": "f92ca6117ec5ae7b0ca8c9242165aee06bd2417183daa4393b11f2df409e005d",
+    "tie": "Use unedited Shawn Xu test1758 parent68752b; no discretionary selection.",
+    "validity": "Exactly128 reversed pairs/256 games, all raw artifacts/hash/PGN/clock accounting and independent audit verified by the primary terminal reviewer. Actual complete GitHub run and artifact ZIP/member hashes must be explicitly bound before dispatch."
+  },
+  "statistics": {
+    "followup_nomination": "No further model choice, outcome-dependent retry or formal alpha decision is authorized by this experiment.",
+    "interval": "Exact integer empirical paired-bootstrap polynomial exponent128; normalization128^128; nominal95% central percentiles smallest k with40*CDF(k)>=q*128^128,q=1,39; descriptive only.",
+    "sample": "All128 pairs/256 games only. Candidate and correct pinned official wins/draws/losses, colors, paired pentanomial, clock losses and timestamps.",
+    "separation": "Report primary same-executable edited-vs-parent and this selected composite-vs-official estimate separately. Do not pool estimates or claim formal/global verified gain."
+  },
   "threads_per_engine": 1,
-  "time_control": "10+0.1",
-  "total_job_timeout_minutes": 350,
-  "zero_game_startup_repair": "Only if no game PGN/native game result exists; same128pair plan, inputs, clocks, order and model hashes must remain fixed. Preserve failed startup evidence and new exact driver commit."
+  "time_control": "10+0.1"
 }

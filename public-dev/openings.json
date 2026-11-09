@@ -1,1282 +1,2636 @@
 [
   {
     "candidate_first": true,
-    "fen": "rnbqk2r/1p2ppbp/p2p1np1/2p5/4P3/2P2N1P/PP1P1PP1/RNBQRBK1 w kq - 0 1",
-    "opening_id": "d33a50004fff7e34f18b8c752e2ae3f98887f9ac6cb05313cdeddf939ffd02ec",
+    "fen": "r1bqk2r/ppp2pp1/3p1n1p/2b1p3/4P3/2NP1QPP/PPP2PB1/R1B1K2R w KQkq - 0 1",
+    "opening_id": "a96a8893e87be7a51644fd8876b5f0a0d43a11dbf70984e905acbdc280960eda",
     "pair_index": 0,
-    "source_game_indices": [
-      0,
-      1
+    "published_sources": [
+      {
+        "game_ordinal": 30,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 32,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqkb1r/pp1n1pp1/2n1p3/2ppP3/3P1P1p/2N1BN2/PPPQ2PP/R3KB1R w KQkq - 0 1",
-    "opening_id": "f36c78f396255534758946a25b2f73e959fa3db61c2cc258d9d14363736a07ca",
+    "fen": "r1bqk2r/pp1nbpp1/3p1n1p/4p3/2B1P3/2N1QN2/PPP2PPP/R1B2RK1 w kq - 0 1",
+    "opening_id": "90ba3b0890f8a69b194bf2b6babbdb9eee4adac2201be2280a897625f2f6b942",
     "pair_index": 1,
-    "source_game_indices": [
-      2,
-      3
+    "published_sources": [
+      {
+        "game_ordinal": 33,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 34,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 33,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 34,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r2qk2r/ppp2ppp/1n1bpn2/5b2/3P4/1BN1PN2/PP3PPP/R1BQ1RK1 w kq - 0 1",
-    "opening_id": "a8f589d53b798847e44241d7bd6f44e850798233972b8f37273db3cb31bdd6b0",
+    "fen": "r1b1k2r/pp2ppbp/2np1np1/2q5/2P5/5NP1/PP1NPPBP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "606c2f952abc6d7d0d65b091a1b0def0470d213177ea2541d5d1b4833099a394",
     "pair_index": 2,
-    "source_game_indices": [
-      4,
-      5
+    "published_sources": [
+      {
+        "game_ordinal": 75,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 76,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1b2k1r/pp1pbppp/1qnNpn2/8/4P3/5N2/PPP1BPPP/R1BQK2R w KQ - 0 1",
-    "opening_id": "a5d049756bf8a0d99de5d0a2a1fc65b4e6b1197f55f25613161fba9241fb99f2",
+    "fen": "rnbqk2r/pp1pppb1/6p1/2nBP2p/3p3P/2P2N2/PP3PP1/RNBQK2R w KQkq - 0 1",
+    "opening_id": "4e653f304ed097df12019b9e9f197add07b2668c7a092920b878c81a0b295db5",
     "pair_index": 3,
-    "source_game_indices": [
-      6,
-      7
+    "published_sources": [
+      {
+        "game_ordinal": 63,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 64,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 63,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 64,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqk2r/pp2bppp/3p1n2/2p5/2B1P3/4Q3/PPP2PPP/RNB2RK1 w kq - 0 1",
-    "opening_id": "6721404105f829b30ec448fd25f5e5356ef97b809aa0550e490a2d76f09f51ab",
+    "fen": "rnbq1rk1/pp1n1pbp/2p1p1p1/3pN3/2PP4/2N3P1/PP2PPBP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "f4ae3cf342b50f7c2dbf2a789a2630c34e12c36eda645ec9a9ee75bb91c4cc37",
     "pair_index": 4,
-    "source_game_indices": [
-      8,
-      9
+    "published_sources": [
+      {
+        "game_ordinal": 115,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 116,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r2qkb1r/pp1b1ppp/3p1n2/4p3/2BBP3/2N5/PPP2PPP/R2QK2R w KQkq - 0 1",
-    "opening_id": "5d6ef2536ff5a39b132fcb375048338e028fe073d8e1923393c3be739b705b69",
+    "fen": "r2qkb1r/p2p1ppp/2nPpn2/1bp5/P1p1P3/8/1P3PPP/R1BQKBNR w KQkq - 0 1",
+    "opening_id": "42d1a5b91b65534280b3f75420cf47bce8859edf739815cd65460801fb4a9ab0",
     "pair_index": 5,
-    "source_game_indices": [
-      10,
-      11
+    "published_sources": [
+      {
+        "game_ordinal": 121,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 122,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1b1k2r/ppp3pp/2nqpn2/3pNp2/3P1P2/2N5/PPP1BPPP/R2QK2R w KQkq - 0 1",
-    "opening_id": "de953e45e20d50dee6be7ccd490a6429da979f3640d9b2e603526e4fef019fd5",
+    "fen": "r3kbnr/pppq1pp1/2n1p3/5b1p/Q1pP4/5NPP/PP2PPB1/RNB2RK1 w kq - 0 1",
+    "opening_id": "7391c3d122f8c394d1db4282c665d1cce0f2b5d62816b02ce975661c548664d9",
     "pair_index": 6,
-    "source_game_indices": [
-      12,
-      13
+    "published_sources": [
+      {
+        "game_ordinal": 51,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 52,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 51,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 52,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rn1qk2r/pb1pppb1/1p3npp/3P4/2P4P/2N2N2/PP3PP1/R1BQKB1R w KQkq - 0 1",
-    "opening_id": "592580532ef937cfb9ec3c0db5571aa84e2c34d1a37c598542621947278f88e6",
+    "fen": "rn3rk1/pppbqppp/4pn2/3p4/2PP4/P1N1P3/1P2BPPP/R1BQK2R w KQ - 0 1",
+    "opening_id": "6183bfb808cbde55bdb9a81cdd758714bdc88f23d89ff8bf1a38115932a22ce0",
     "pair_index": 7,
-    "source_game_indices": [
-      14,
-      15
+    "published_sources": [
+      {
+        "game_ordinal": 1,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 2,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnb2rk1/1pqpppbp/p4np1/3P4/2P5/2N2N2/PP2BPPP/R1BQK2R w KQ - 0 1",
-    "opening_id": "bf749a24167bc9be321e6445b30206606ea4c7e48f44897eb456b3cfd1612650",
+    "fen": "rn1qk2r/1bp1bppp/1p2pn2/p7/4p1P1/1PN5/PBPPQPBP/2KR2NR w kq - 0 1",
+    "opening_id": "d3c568b36558535987c178abc422b0daa2838f7d257d4d590ddc5fdc77748262",
     "pair_index": 8,
-    "source_game_indices": [
-      16,
-      17
+    "published_sources": [
+      {
+        "game_ordinal": 123,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 124,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqkb1r/pp1ppp2/6p1/5n1p/2P4P/3Q2P1/PP2PP2/RNB1KB1R w KQkq - 0 1",
-    "opening_id": "61daab0e87d86fb56e1fc4a5830e1b75ae28dc0335e42a08ce6505c24d8aa199",
+    "fen": "r2qk2r/1bppnpbp/p1n3p1/1p2p3/3PP3/1BP2N2/PP3PPP/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "e47f8a9f5f48870f70440c2d52b2caeafd4071d10a7ee9a17bd09f8726dfacbd",
     "pair_index": 9,
-    "source_game_indices": [
-      18,
-      19
+    "published_sources": [
+      {
+        "game_ordinal": 103,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 104,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqk2r/p3nppp/1p1bpn2/2pp4/3P4/2PBPNB1/PP1N1PPP/R2QK2R w KQkq - 0 1",
-    "opening_id": "37db590ad1e42d0db26492cc49cab903dd96377bfd1957a49fe5bca4e9b538d4",
+    "fen": "rnb1k2r/pp3ppp/4pn2/3q4/3p4/5NP1/PP1QPPBP/RN2K2R w KQkq - 0 1",
+    "opening_id": "8117818ab2f4dd26da4db8da517c98c25135b5f95a2a19649a9c4cc0cf45fb93",
     "pair_index": 10,
-    "source_game_indices": [
-      20,
-      21
+    "published_sources": [
+      {
+        "game_ordinal": 41,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 42,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqk2r/pp2bppp/1n2pn2/2p5/3pPP2/3P1NP1/PPP1N1BP/R1BQK2R w KQkq - 0 1",
-    "opening_id": "22fb4f6f0c7e3cadbaf658eed9300bf30a92588e02f036928358964dac92c870",
+    "fen": "r3kbnr/ppq1pp1p/2n3p1/3p1b2/3P4/2PB1N1P/PP3PP1/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "c5ef7b7d206420296f27156f87bb6c3df80c7149dcd3aa475e15be0af79996da",
     "pair_index": 11,
-    "source_game_indices": [
-      22,
-      23
+    "published_sources": [
+      {
+        "game_ordinal": 119,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 120,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 119,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 120,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rn2kb1r/ppq2ppp/2pp1n2/4p3/N2PP1b1/1P1B4/P1PBNPPP/R2QK2R w KQkq - 0 1",
-    "opening_id": "70aadad96df7707d7891405d4dbb62fa86d1171abaab0181fb8fdcfd6dec08d9",
+    "fen": "r1b1kb1r/pp1p1p2/2n1pq2/2p4p/3P2p1/2P1P3/PP1NBPPP/RN1QK2R w KQkq - 0 1",
+    "opening_id": "a226496f3a15e2821a8354554ec18c925ce118b58b22b4afe4cf5a1950c8e001",
     "pair_index": 12,
-    "source_game_indices": [
-      24,
-      25
+    "published_sources": [
+      {
+        "game_ordinal": 19,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 20,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rnb1k1nr/1pbpqppp/2p5/p1P1p3/1P6/P1N2N2/1BQPPPPP/R3KB1R w KQkq - 0 1",
-    "opening_id": "00f2615df0c9470159436d38c985ecc25f06822d9e37fd1f24e0c89e873991a5",
+    "fen": "r1b1k1nr/1pqp1ppp/p3p3/1Bp1b3/4P3/2P4P/PP1P1PP1/RNBQR1K1 w kq - 0 1",
+    "opening_id": "3560af9cdfbad34cb62535b8ccb56879fc0239b651147c8453341e88956fcdb4",
     "pair_index": 13,
-    "source_game_indices": [
-      26,
-      27
+    "published_sources": [
+      {
+        "game_ordinal": 81,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 82,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 81,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 82,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnbqkb1r/4pp1p/p2p1npP/1ppP4/4PP2/8/PPP1B1P1/RNBQK1NR w KQkq - 0 1",
-    "opening_id": "0a0ae0534ae755587a58e88083db6f9f6f047aab72badb65732342947e552ba3",
+    "fen": "r1bqkb1r/pp3p1p/2npp1p1/2p5/2PnP3/2NP2P1/PP2NPBP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "d194ac1920a4a1b5df3db4a5df7215d5fe7f5fafc4c26c95d8609b19c8eeb95a",
     "pair_index": 14,
-    "source_game_indices": [
-      28,
-      29
+    "published_sources": [
+      {
+        "game_ordinal": 13,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 14,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqk2r/2p1nppp/p2p1n2/1pb1p1B1/4P3/1B1P1N2/PPP2PPP/RN1Q1RK1 w kq - 0 1",
-    "opening_id": "821455be24188757359a70b4a30044c48ef21dd2872c7c3adbac5fe0dd7be69f",
+    "fen": "rnb1k2r/1p2bppp/p2ppn2/2q5/2P2B2/5NP1/PP2PPBP/RN1Q1RK1 w kq - 0 1",
+    "opening_id": "da77a782964a3a2ea4793275786e25f7cd07373a490f8973461e3c5e73f0407b",
     "pair_index": 15,
-    "source_game_indices": [
-      30,
-      31
+    "published_sources": [
+      {
+        "game_ordinal": 67,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 68,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1b1kb1r/pppp1ppp/2n5/8/2q1n3/P4NP1/1P2PPBP/RNBQ1RK1 w kq - 0 1",
-    "opening_id": "7340fa05fe2017714c8567ae5e1539e16c96bcdaa25f8448b265365c59bc8fee",
+    "fen": "r1bqk2r/pp1nbpp1/3p1n1p/2pPp2P/2P1P3/2N2N2/PP3PP1/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "b4ca8d042f6b9e9c257349b17237c7f2cb23a4dc85c0ff3e29c714f7e3344d0f",
     "pair_index": 16,
-    "source_game_indices": [
-      32,
-      33
+    "published_sources": [
+      {
+        "game_ordinal": 89,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 90,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqk2r/p2nbppp/2p1pn2/1p6/3PN3/P4NP1/1PP1QP1P/R1B1KB1R w KQkq - 0 1",
-    "opening_id": "3920432ea6de2381b50f74efd9a743b3dbb80677b0b4c80d4516b1c98a85267e",
+    "fen": "rnbqk2r/pp2bppp/2p5/3pP3/3P4/2N2n2/PPP2QPP/R1B1KB1R w KQkq - 0 1",
+    "opening_id": "15d34e6c1b8ac7317c6336de78910dd19682aed593ea820ce8742fff63cb3545",
     "pair_index": 17,
-    "source_game_indices": [
-      34,
-      35
+    "published_sources": [
+      {
+        "game_ordinal": 13,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 14,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnbq1rk1/pp3pb1/3p1npp/2pPp3/2P1P3/2N2NP1/PP3PBP/R1BQK2R w KQ - 0 1",
-    "opening_id": "f0c969d5cfe23e345e447ea5c60ec72153f4ec87c4a1d5afc5156dd289d8390c",
+    "fen": "1rbq1rk1/ppp2ppp/2n1pn2/8/1bpP4/2N1PNP1/PP3PBP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "8b91f27da53508fe3987b706813acc9dddd58e61e0385ccbde191185312496d8",
     "pair_index": 18,
-    "source_game_indices": [
-      36,
-      37
+    "published_sources": [
+      {
+        "game_ordinal": 57,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 58,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1b2rk1/ppqnbppp/2pp1n2/4p3/2PPP3/1PNB4/P3NPPP/R1BQ1RK1 w - - 0 1",
-    "opening_id": "03a5a985454958f76d881a3401bc059fc3e752fa3cc8329e3fbc7a07d4232a15",
+    "fen": "r1bqk2r/1p3ppp/2n1pn2/p1bp4/2P5/P4NP1/1P2PPBP/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "d82e7f475154e8700baaf8d68e7d22404c294d057d2ec15e36f9ca690d597f8b",
     "pair_index": 19,
-    "source_game_indices": [
-      38,
-      39
+    "published_sources": [
+      {
+        "game_ordinal": 89,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 90,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rn1q1rk1/pbpp1pb1/1p3ppp/8/3PP3/2N2N2/PPPQ1PPP/2KR1B1R w - - 0 1",
-    "opening_id": "dc3f432a383926e8e11e33ad13bb4d7871987d362968777c146723e8655bd0db",
+    "fen": "rnbqk2r/pp3pbp/4p3/2p2p2/3P4/4B1P1/PPP2PBP/R2QK1NR w KQkq - 0 1",
+    "opening_id": "97fde42bcec75c7026098d58762c2aee077a9852a70d2f83e1680fe0115c9e12",
     "pair_index": 20,
-    "source_game_indices": [
-      40,
-      41
+    "published_sources": [
+      {
+        "game_ordinal": 43,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 44,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqk2r/ppp3bp/2np1np1/4p3/3PP3/2N1B3/PPPQN1PP/R3KB1R w KQkq - 0 1",
-    "opening_id": "13073bc7f46b292bbe77fdf1993bf55d9d5bbb071c1fc8a879f82d1eade4a281",
+    "fen": "r2qkb1r/pp3ppp/2n1pn2/1B1p4/8/2N2Q1P/PPPP1PP1/R1B2RK1 w kq - 0 1",
+    "opening_id": "8d75b2bec9cf6bd4f690a8892614d6b4b2e34c3771e9c04ca26674be84877cb5",
     "pair_index": 21,
-    "source_game_indices": [
-      42,
-      43
+    "published_sources": [
+      {
+        "game_ordinal": 69,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 71,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r2qk2r/ppp1bppp/2npb3/2n1p1P1/4P2P/2NP1N2/PPP2P2/R1BQKB1R w KQkq - 0 1",
-    "opening_id": "f10e2c22e0935bd85f31e28d9f8d38633e3836cd39be90ea2aa00462c72e93b4",
+    "fen": "r2qkb1r/pp1b1ppp/2n1p2n/1Bp5/5P2/2NP1N2/PPP3PP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "80e35174bb3ef41eaa6ebcb72e79d295a554743a537fe08010656f42bf06832e",
     "pair_index": 22,
-    "source_game_indices": [
-      44,
-      45
+    "published_sources": [
+      {
+        "game_ordinal": 47,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 49,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rnbq1rk1/pp2n1bp/3p1pp1/2pPp1B1/4P3/2NB1N2/PPP2PPP/R2Q1RK1 w - - 0 1",
-    "opening_id": "6f3540c269b652ff4e8661cf34afee3f054cc6a027faeb3e724cf19ba48e190c",
+    "fen": "r1bq1rk1/pp1n1pbp/2p1pnp1/3p4/2P5/1QN1PNP1/PP1P1PBP/R1B2RK1 w - - 0 1",
+    "opening_id": "33457952ce50a43f47c2e10bcc009d81e9b1be7a45e25c93b6332da5572145a2",
     "pair_index": 23,
-    "source_game_indices": [
-      46,
-      47
+    "published_sources": [
+      {
+        "game_ordinal": 51,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 52,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bq1rk1/ppp1ppb1/3p1np1/3P3p/1n2P2P/2N1BN2/PPPQ1PP1/R3KB1R w KQ - 0 1",
-    "opening_id": "5abf3cd5041287537238650ad62483b78e251cbaac8961fa2b91a719efc5298e",
+    "fen": "rnbqkbnr/p4ppp/8/2p5/PppNP3/8/1P3PPP/RNBQKB1R w KQkq - 0 1",
+    "opening_id": "91e3f2a6c092c2bce8429e0f12ad87d7c3ae0936f384b1e355bb0163244962e3",
     "pair_index": 24,
-    "source_game_indices": [
-      48,
-      49
+    "published_sources": [
+      {
+        "game_ordinal": 93,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 95,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r2qkb1r/pp1n1ppp/4pn2/2p4b/2pP4/3N2P1/PP2PPBP/RNBQ1RK1 w kq - 0 1",
-    "opening_id": "e8353c9bf081144bd09e444a4d3957335a9399cabb791bddeb494ec49e37b308",
+    "fen": "r1bqk2r/ppp1pnbp/3p1np1/3P1p2/2P5/1P4PN/P3PPBP/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "59fcda5bf5b073354c1f0be607dc95879af6d530d0ff90f6ba8f842b7ebc45c4",
     "pair_index": 25,
-    "source_game_indices": [
-      50,
-      51
+    "published_sources": [
+      {
+        "game_ordinal": 41,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 42,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 81,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 82,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnb1k2r/pp2qpb1/2p1pnpp/3p4/2PP1N1P/2N1P3/PPQ2PP1/R1B1KB1R w KQkq - 0 1",
-    "opening_id": "01fd3487e1a383842c6ab5e3dca2d0907e0a0f81fc3c335dd70226f81bb542aa",
+    "fen": "rnbq1rk1/ppp2ppp/3b4/3pN3/3PnP2/3B4/PPP3PP/RNBQ1RK1 w - - 0 1",
+    "opening_id": "755ac328c4aa36ad231ddc405071b1fae8a4acd31a212a819447dd2f9aa16f55",
     "pair_index": 26,
-    "source_game_indices": [
-      52,
-      53
+    "published_sources": [
+      {
+        "game_ordinal": 121,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 122,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 121,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 122,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rnb1qrk1/pppp2pp/4p3/5p2/2PPn3/P3P3/1PQ2PPP/R1B1KBNR w KQ - 0 1",
-    "opening_id": "44a7671dfb6e35076293f57d89bd73f3689d639b7fcdde6b75c008bc0090d86e",
+    "fen": "r1bqk2r/p1p2pbp/2pp1np1/8/4P3/3B4/PPPN1PPP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "1ed16114884bf1da4f75fd0e77647a601f408ddc3b37827628612348caa6fe5b",
     "pair_index": 27,
-    "source_game_indices": [
-      54,
-      55
+    "published_sources": [
+      {
+        "game_ordinal": 105,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 106,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqk2r/ppp1b1pp/3p1n2/3Pnp2/8/2NB4/PPP1NPPP/R1BQ1RK1 w kq - 0 1",
-    "opening_id": "f2812c687809d9525a442d46c9f5400676fd36c1a31921ddd16a0a0edef37e91",
+    "fen": "rn1qk2r/pbp2pp1/1p1ppn1p/8/2PP3B/P4N2/1P2PPPP/R2QKB1R w KQkq - 0 1",
+    "opening_id": "775936ee49cd6fda94fb8e73d3ba7a379b527fb0464ff41c8642a694eb20beb2",
     "pair_index": 28,
-    "source_game_indices": [
-      56,
-      57
+    "published_sources": [
+      {
+        "game_ordinal": 109,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 110,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqk2r/p2n1ppp/2pbpn2/1p6/2BP4/2N1PN2/PPQB1PPP/R3K2R w KQkq - 0 1",
-    "opening_id": "d9feeacefd703fe08bbbfc7b71a45e7f28514426d72a48498f754ad527766fc6",
+    "fen": "2kr1b1r/pppn1ppp/4bn2/3q4/4N3/3P1N2/PPPBQPPP/R3KB1R w KQ - 0 1",
+    "opening_id": "bd6272588c66d9b8e331b8b264161ca9ee4b4f47abcf8cea3c28f0cd553e9467",
     "pair_index": 29,
-    "source_game_indices": [
-      58,
-      59
+    "published_sources": [
+      {
+        "game_ordinal": 39,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 40,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r2qkbnr/2p1pp1p/p1pp2b1/6p1/3PP1P1/5N1P/PPPN1P2/R1BQK2R w KQkq - 0 1",
-    "opening_id": "ec05aac7f65bfbeff5493233b390410f98042648fd0e7e92c17cd5a317bf2544",
+    "fen": "r1bqkb1r/pp3ppp/2n2n2/1B1p4/8/2N2N2/PP3PPP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "eba362d80f23cf16e26c35524663d11fca740d162024ac993efb49d328094567",
     "pair_index": 30,
-    "source_game_indices": [
-      60,
-      61
+    "published_sources": [
+      {
+        "game_ordinal": 93,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 94,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 93,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 94,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 123,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 124,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r2qkb1r/pbp1pppp/1p1p4/8/3PnB2/3BPN1P/PPP2PP1/R2QK2R w KQkq - 0 1",
-    "opening_id": "5c2d724d2b80aa04177fa44f61a2102f0fcedc87c45794c2fa276426623b2673",
+    "fen": "rnbqk1nr/pp3pbp/6p1/8/2pN4/2N5/PP3PPP/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "5d199f3253e3a8b2df95241c81e18da94714e5167df65e54b9ca8659d8417e58",
     "pair_index": 31,
-    "source_game_indices": [
-      62,
-      63
+    "published_sources": [
+      {
+        "game_ordinal": 7,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 8,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 7,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 8,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqk2r/1pp1ppb1/p1n3p1/3pP2p/3P1Bn1/2N4N/PPPQ1PPP/R3KB1R w KQkq - 0 1",
-    "opening_id": "3a15e34e6a7b9e002f28a45965412d9daf1fbebdc634906247babe24c3c8b2ac",
+    "fen": "rnbqk2r/pp2ppbp/2p1n1p1/3pP3/3P1N2/5N1P/PPP2PP1/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "094f4a4606a7a639e3cf4276a4a2427cf26f2f9eb98a2e2638755c1e0d2c6a85",
     "pair_index": 32,
-    "source_game_indices": [
-      64,
-      65
+    "published_sources": [
+      {
+        "game_ordinal": 59,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 60,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 59,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 60,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rn1q1rk1/pb1pbppp/4pn2/1p6/3P4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 1",
-    "opening_id": "b290890d8d389b5fb20bd04c53872a52050b64c716cc7bc9e6292da987f78009",
+    "fen": "rnb2rk1/ppppq1bp/5np1/3Ppp2/2P5/2N3PN/PP2PPBP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "8a482c92ad7601ccfe4ac00cede544c7d5be626f59856f11341762cc7a26ece7",
     "pair_index": 33,
-    "source_game_indices": [
-      66,
-      67
+    "published_sources": [
+      {
+        "game_ordinal": 11,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 12,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rn1qk1nr/1p2bppp/p7/2pP4/P1p3b1/2N2N2/1P3PPP/R1BQKB1R w KQkq - 0 1",
-    "opening_id": "bc572b6fb80fcfc58d96dc561dcf13260f328352fda089940b6ccf1bb82a16b0",
+    "fen": "r1bqr1k1/pp1nbppp/2pp1n2/4p3/2PPP3/3B1N2/PP3PPP/RNBQR1K1 w - - 0 1",
+    "opening_id": "db6acd48247e9797075641223de4318233cf0fa79ab20b4dfdd1bc5d36129539",
     "pair_index": 34,
-    "source_game_indices": [
-      68,
-      69
+    "published_sources": [
+      {
+        "game_ordinal": 127,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 128,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rn2kb1r/pp3ppp/2p1pn2/3p4/2PP1B2/3QPN2/Pq3PPP/RN3RK1 w kq - 0 1",
-    "opening_id": "801828c4c93037b5331fe42bc4561a5f0e8f9de1ddfe52be9ccbd9ca49142693",
+    "fen": "1r1qkbnr/p1pb1ppp/1p6/8/2P5/4B3/PP2PPBP/RN1QK2R w KQk - 0 1",
+    "opening_id": "6fb9297812606fc218025e04d5daebea1425de229e7db01b4ae9a64ae38feb63",
     "pair_index": 35,
-    "source_game_indices": [
-      70,
-      71
+    "published_sources": [
+      {
+        "game_ordinal": 5,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 6,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqk2r/pp2n1bp/2np2p1/2p1pp2/3PP3/1PP2N2/PB2BPPP/RN1Q1RK1 w kq - 0 1",
-    "opening_id": "4ee766f9891fb63c47d63d4828ef3db0b819f958d19deee46b14842812399216",
+    "fen": "rnbq1rk1/pp2ppbp/3p2p1/2pPn3/2P1P3/2NB4/PP2NPPP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "7c06381ab55ecced7daaa619a03ffdd1a17a9e2caf0fc3e8058b412d382028aa",
     "pair_index": 36,
-    "source_game_indices": [
-      72,
-      73
+    "published_sources": [
+      {
+        "game_ordinal": 125,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 126,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rnb2rk1/ppp1bppp/4pq2/8/2BP4/2Q5/PPP1NPPP/R1B1K2R w KQ - 0 1",
-    "opening_id": "63ca590c039353a570a00245d7f336e7bb4a561afe6f12adf7aa44d65c837c62",
+    "fen": "r1bqk1nr/pp5p/2n1pbp1/2pp2B1/2P5/2NP1N2/PP2PPP1/R2QKB1R w KQkq - 0 1",
+    "opening_id": "303cf3d55ddd8550526c6697f898055a4700003e07068257d8447f54e12fe4c5",
     "pair_index": 37,
-    "source_game_indices": [
-      74,
-      75
+    "published_sources": [
+      {
+        "game_ordinal": 85,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 86,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 85,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 86,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqk2r/ppp1b1pp/3p1n2/3Pnp2/8/2NB4/PPP1NPPP/R1BQ1RK1 w kq - 0 1",
-    "opening_id": "f2812c687809d9525a442d46c9f5400676fd36c1a31921ddd16a0a0edef37e91",
+    "fen": "r2qk2r/ppp2ppp/2nbp3/3n1b2/3P4/P4N1P/1PP1BPP1/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "a1aae921d1cabfcac310b02b1d7da213b18df9b916cb3e1dcbcf962512730cd6",
     "pair_index": 38,
-    "source_game_indices": [
-      76,
-      77
+    "published_sources": [
+      {
+        "game_ordinal": 83,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 84,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 83,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 84,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rn1qkb1r/1p3pp1/p2pbn2/4p2p/2P1P3/2N2P2/PPN3PP/R1BQKB1R w KQkq - 0 1",
-    "opening_id": "952540dc6af126ea33205aff120b800d279a657ed94a6f369e769d75315b2104",
+    "fen": "r2qkb1r/pp2n1pp/2npb3/4pp2/4P3/2N3P1/PPP1NPBP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "64a87c45502a12e4d71ec704dbdad5f354a47489631f789ed3b7fd8454c0ec4f",
     "pair_index": 39,
-    "source_game_indices": [
-      78,
-      79
+    "published_sources": [
+      {
+        "game_ordinal": 37,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 38,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1b1k2r/pp1nqpbp/2pp2pn/4p3/2PPP3/2N2NP1/PP3PBP/R1BQ1RK1 w kq - 0 1",
-    "opening_id": "db0116da99004508459439635c84fafac6449056b6490a4aa985d83e6e2a535b",
+    "fen": "rnb1k2r/1pqp1ppp/p3pn2/8/3NP3/2PQ4/P1P1BPPP/R1B1K2R w KQkq - 0 1",
+    "opening_id": "1be4b2c415d619e91e6cef99a84b10a9cf55de36712756a880267940366c6dd0",
     "pair_index": 40,
-    "source_game_indices": [
-      80,
-      81
+    "published_sources": [
+      {
+        "game_ordinal": 115,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 116,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rn1qk1nr/1bp2pbp/1p4p1/pP2p3/2Pp4/3P1NP1/P3PPBP/RNBQ1RK1 w kq - 0 1",
-    "opening_id": "955568ae19557250ab88e21955adf7af0ef0746d5bb263a113a866fc6478c4d5",
+    "fen": "r1bq1rk1/pp1n1pbp/2pp1np1/4p3/2P1P3/2N2NPP/PP1P1PB1/R1BQ1RK1 w - - 0 1",
+    "opening_id": "a9c9e7491735dea75fad6ef9e1a00470c2b5e4af7c256cfc94a24331e600aa51",
     "pair_index": 41,
-    "source_game_indices": [
-      82,
-      83
+    "published_sources": [
+      {
+        "game_ordinal": 111,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 112,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1b1kbnr/pp3pp1/1qn1p3/3pP2p/3P4/2N3P1/PP2NP1P/R1BQKB1R w KQkq - 0 1",
-    "opening_id": "d5416128716029fe58571725a04dc97b463e366a8d6471f5b2088ebe6576148b",
+    "fen": "r1bqk2r/pp1nnpb1/3p2pp/2pPp3/2P1P3/2N1BN2/PP2BPPP/R2QK2R w KQkq - 0 1",
+    "opening_id": "2b5eb889bf62d90cf6d4e870d0ef7ef2110e13bca64eec09208fc0e993abd01e",
     "pair_index": 42,
-    "source_game_indices": [
-      84,
-      85
+    "published_sources": [
+      {
+        "game_ordinal": 99,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 100,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 99,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 100,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rnbq1rk1/pp2npbp/2p1p1p1/3p4/3PPP1P/2N2N2/PPP1B1P1/R1BQ1RK1 w - - 0 1",
-    "opening_id": "5f3f35647557681cf7a65743356f0c2f13b17167706aa2ace51759e92dacd477",
+    "fen": "r1bqkb1r/pppn1pp1/4p2p/8/2BPP3/2N2N2/PP3PPP/R2QK2R w KQkq - 0 1",
+    "opening_id": "0e21cdfd4ab81f95ea1079dde0ea84524477147decd47fd3d025e4daf2b1211d",
     "pair_index": 43,
-    "source_game_indices": [
-      86,
-      87
+    "published_sources": [
+      {
+        "game_ordinal": 7,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 8,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 43,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 44,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rn2kb1r/ppq1pppp/2p2n2/8/2PP2b1/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 1",
-    "opening_id": "9ccbcead690d5e5d84862906d2aa66c193d4d7a42ab25b5522276945bb34bdeb",
+    "fen": "rnbqk2r/pp2ppbp/2p3p1/3pPn2/3P1B2/2N3PP/PPP2PB1/R2QK1NR w KQkq - 0 1",
+    "opening_id": "c3a0da89a70b80d046eb9290915e915f09166334cd53d97b09fb4ec6565e0547",
     "pair_index": 44,
-    "source_game_indices": [
-      88,
-      89
+    "published_sources": [
+      {
+        "game_ordinal": 127,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 128,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r2qk1nr/pp1bbppp/3p4/1B2p3/P2nP3/5N2/1P3PPP/RNBQ1RK1 w kq - 0 1",
-    "opening_id": "cae332186f4f20bff2a28cccede2bf11255995b4a910ef4aa2d125d32c03bcef",
+    "fen": "r2qk2r/pbpnbppp/1p3n2/3p4/3P4/P1N3PN/1P2PPBP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "b4fc7f01eb7d0dee95c0eef20ef02b9c7bdbe0ddf9f20d1804e4700f884652c2",
     "pair_index": 45,
-    "source_game_indices": [
-      90,
-      91
+    "published_sources": [
+      {
+        "game_ordinal": 31,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 32,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnbq1rk1/1p1pnpbp/p3p1p1/8/3PPP2/2NB1N2/PP4PP/R1BQK2R w KQ - 0 1",
-    "opening_id": "1488f2d6076d4b4401e4dc95da27eb1d44ce946ac931c7bdcc6c8d3c23f1c1da",
+    "fen": "r1b1kb1r/pp2pppp/1np2n2/3q4/8/Np3NP1/P1QPPPBP/R1B2RK1 w kq - 0 1",
+    "opening_id": "e86ab9f499bcdee161d8e864495c606692e48968b4a166fdef80daa6361433e5",
     "pair_index": 46,
-    "source_game_indices": [
-      92,
-      93
+    "published_sources": [
+      {
+        "game_ordinal": 1,
+        "pgn_path": "results/control-control/games.pgn",
+        "pgn_sha256": "88c117cd32b50233c6117524f91bdeec7758e2e6db54d33750b1ae54e289a447"
+      },
+      {
+        "game_ordinal": 2,
+        "pgn_path": "results/control-control/games.pgn",
+        "pgn_sha256": "88c117cd32b50233c6117524f91bdeec7758e2e6db54d33750b1ae54e289a447"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqk2r/pppp1ppp/2n5/4P3/4nP2/P7/1PP3PP/RNBQKB1R w KQkq - 0 1",
-    "opening_id": "105c6720d1e3b5e1c88d2772d6a845c209204014bdcbf399cc4d646281e2648a",
+    "fen": "r1bq1rk1/pp2ppbp/2n2np1/1BPp4/3P1B2/2N5/PP3PPP/R2QK1NR w KQ - 0 1",
+    "opening_id": "61c0d0b1531f265cb48f915b9bc7ab9837ec794974576c76c2f37bbff555d9ad",
     "pair_index": 47,
-    "source_game_indices": [
-      94,
-      95
+    "published_sources": [
+      {
+        "game_ordinal": 1,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 2,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r2qkbnr/pp1bpppp/2n5/1B2p3/4Q3/2N2N2/PPP2PPP/R1B1K2R w KQkq - 0 1",
-    "opening_id": "5d3ecea11f0746e6aabc7800b77270c42714866d6512c4a413315e727c6feb80",
+    "fen": "rnbq1rk1/pp3ppp/4pn2/2b5/2p5/5NP1/PP1BPPBP/RN1Q1RK1 w - - 0 1",
+    "opening_id": "315b2a293cefa7b69308d184504930efe423a2431d7408fe2f38462f1d5e1bda",
     "pair_index": 48,
-    "source_game_indices": [
-      96,
-      97
+    "published_sources": [
+      {
+        "game_ordinal": 23,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 24,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rnb1qrk1/pp2p1bp/2pp1np1/5p2/3P1B2/2PBPN1P/PP1N1PP1/R2QK2R w KQ - 0 1",
-    "opening_id": "7f9feae61180db3140c86e9c27a9071b15e35666eb2c6d67a705295848be4274",
+    "fen": "r2qk2r/pb2bppp/1pn1p2n/2ppP3/3P4/2PB1N2/PP1N1PPP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "4bca5f03654653dac0a84f89cdc40ad1a9da822ebdb5eca799c7fa9837752c8f",
     "pair_index": 49,
-    "source_game_indices": [
-      98,
-      99
+    "published_sources": [
+      {
+        "game_ordinal": 91,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 92,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnb2rk1/ppp1bppp/4pq2/8/2BP4/2Q5/PPP1NPPP/R1B1K2R w KQ - 0 1",
-    "opening_id": "63ca590c039353a570a00245d7f336e7bb4a561afe6f12adf7aa44d65c837c62",
+    "fen": "rnbqnrk1/pp2ppbp/6p1/3p4/3P1B2/2NBP2P/PP3PP1/R2QK1NR w KQ - 0 1",
+    "opening_id": "5912012f1a6cbf0474802072b74c11b6a150a2c03990d343090ad5ee5f630261",
     "pair_index": 50,
-    "source_game_indices": [
-      100,
-      101
+    "published_sources": [
+      {
+        "game_ordinal": 117,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 118,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 117,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 118,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqkb1r/ppp2ppp/1n2p3/3pP3/3P4/2NQ1N2/PPP2PPP/R1B2RK1 w kq - 0 1",
-    "opening_id": "25aa0a00550efe4f6899e59e2d1fc410e8bd4b5f4c6576c474616c638f11ec05",
+    "fen": "rn2kb1r/1bq2ppp/p2ppn2/1pp5/4PP2/2NP2PN/PPP3BP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "7df5c081b7b284957c7dd035d6ff7aff8a80e2c1a87c45b2766474384f943726",
     "pair_index": 51,
-    "source_game_indices": [
-      102,
-      103
+    "published_sources": [
+      {
+        "game_ordinal": 25,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 27,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqk2r/pp1n1ppp/3p1n2/b1pPp3/2P1P3/2NB1N1P/PP3PP1/R1BQK2R w KQkq - 0 1",
-    "opening_id": "26313b145a474a3bf89abf0499a3d22597a48e3844ff94301c20226d1c399270",
+    "fen": "r1bqk2r/pp2bppp/4p3/2ppP1B1/4n3/2PBP3/PP3PPP/RN1QK2R w KQkq - 0 1",
+    "opening_id": "9497ed3164ff4772393118392afccd232423fa05f5c509d57d1a72e339ca5df6",
     "pair_index": 52,
-    "source_game_indices": [
-      104,
-      105
+    "published_sources": [
+      {
+        "game_ordinal": 75,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 76,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1b1k1nr/1pp2ppp/p1np2q1/8/1b2P3/2N3Q1/PPPB1PPP/2KR1BNR w kq - 0 1",
-    "opening_id": "644b657a61442044aebf26f350c943c34d6f7a3454604967b786de776b396878",
+    "fen": "r2qkb1r/pp3ppp/2n2n2/2P5/N2p2b1/4PN2/PP3PPP/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "6f871d656c495c0c695dbb6209ac78ae7aa21012c64fde815be0a5826a5cbfc4",
     "pair_index": 53,
-    "source_game_indices": [
-      106,
-      107
+    "published_sources": [
+      {
+        "game_ordinal": 97,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 98,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnbq1rk1/1p2npbp/p1ppp1p1/8/3PPP2/2PB1N2/PP4PP/RNB1QRK1 w - - 0 1",
-    "opening_id": "9c6945fe0a52bcc0534813ba7f1888a0c25cd58b2d75e26675414c897233333b",
+    "fen": "r1bqrbk1/1ppp1ppp/2n2n2/p3p3/2P5/PPN1PN2/1BQP1PPP/R3KB1R w KQ - 0 1",
+    "opening_id": "a5ddab847c14bebfa876c0bb34e67945c5e49a6625252f10dde692944025534e",
     "pair_index": 54,
-    "source_game_indices": [
-      108,
-      109
+    "published_sources": [
+      {
+        "game_ordinal": 87,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 88,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqk2r/1ppnnpb1/p2pp1pp/8/2PPP2P/2NBBN2/PP3PP1/R2QK2R w KQkq - 0 1",
-    "opening_id": "dc7cdd697753bc554e19f60c09b79fe79dc50066c3a5a9c44dbad7735d96a6f3",
+    "fen": "r1b1k1nr/pp2bppp/1q2p3/n2pP3/2pP4/P1P2NP1/1P1N1P1P/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "73c36e84db9702f915accf5437eb0b820fe2e11f7c386f16fd938ac16c6cffef",
     "pair_index": 55,
-    "source_game_indices": [
-      110,
-      111
+    "published_sources": [
+      {
+        "game_ordinal": 121,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 122,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rn2kbnr/1b2qppp/p3p3/1p1pP1N1/2pP4/P1N1B3/1PP2PPP/R2QKB1R w KQkq - 0 1",
-    "opening_id": "49fed3a5ac07cce0296d68a971aca1318082bbc1c80dfb43e27f491a7d982956",
+    "fen": "rn1q1rk1/pbp1bppp/1p2pn2/8/2pP4/1P1BPN2/PB3PPP/RN1Q1RK1 w - - 0 1",
+    "opening_id": "107fb65d815fd43704698ec4424a42a25ad4f6d4dc0f04530133475f6eb60b3f",
     "pair_index": 56,
-    "source_game_indices": [
-      112,
-      113
+    "published_sources": [
+      {
+        "game_ordinal": 35,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 36,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqk2r/p1n1ppbp/1p1p1np1/2pP4/P1P1P3/2N2N1P/1P3PP1/R1BQKB1R w KQkq - 0 1",
-    "opening_id": "3b28f696c585612399203477b3ec8dad490a12d82b120d1fc96718318d874623",
+    "fen": "rnbq1rk1/p1p1bppp/1p2pn2/2Pp4/3P1N2/P1N1P3/1P3PPP/R1BQKB1R w KQ - 0 1",
+    "opening_id": "cd33dac3a8dc531c7efa93efb40f94cfcd7285abf213d28eb35e697ce11bb38c",
     "pair_index": 57,
-    "source_game_indices": [
-      114,
-      115
+    "published_sources": [
+      {
+        "game_ordinal": 1,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 2,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1b1k1nr/1pp2ppp/p1np2q1/8/1b2P3/2N3Q1/PPPB1PPP/2KR1BNR w kq - 0 1",
-    "opening_id": "644b657a61442044aebf26f350c943c34d6f7a3454604967b786de776b396878",
+    "fen": "r3kb1r/pb1qnppp/1pnpp3/2p5/4P3/2PP1NP1/PP3PBP/RNBQR1K1 w kq - 0 1",
+    "opening_id": "cf868b21902bf4b3645d27756a1bd2036fb2dee27eb716fcccbeb7d0e0ce86b9",
     "pair_index": 58,
-    "source_game_indices": [
-      116,
-      117
+    "published_sources": [
+      {
+        "game_ordinal": 113,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 114,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rnbq1rk1/1pp1b1pp/3pp3/p4p2/2P1n3/P1N2NP1/1P1PPPBP/1RBQ1RK1 w - - 0 1",
-    "opening_id": "d6716fd106ce39da749471f645b60a11526ef447a2ecd0565c3577a7de8a69d1",
+    "fen": "r2qk1nr/2pb1pbp/p1np2p1/1p2p3/3PP3/1BP1BN2/PP3PPP/RN1QK2R w KQkq - 0 1",
+    "opening_id": "d51dd18e48ed4fc374212f28ad42b1662850105c3125f3cf3e038cba864895ef",
     "pair_index": 59,
-    "source_game_indices": [
-      118,
-      119
+    "published_sources": [
+      {
+        "game_ordinal": 93,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 94,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bq1rk1/ppp1p1bp/2np2p1/5p1n/2PP4/2N2NP1/PP1QPPBP/R1B2RK1 w - - 0 1",
-    "opening_id": "c9d15be55e98028ff91bb916f955b1447b53e01566eea4483adef1b4d8682926",
+    "fen": "1k1r2nr/ppp1qppp/2nb4/8/6b1/5NP1/PPPBPPBP/RN1Q1RK1 w - - 0 1",
+    "opening_id": "108528bc27c7bb32d923e7f09cdaa31de1c981c78344f886504dae32919bb006",
     "pair_index": 60,
-    "source_game_indices": [
-      120,
-      121
+    "published_sources": [
+      {
+        "game_ordinal": 29,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 30,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 29,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 30,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r2qkb1r/3bpppp/ppn2n2/2Pp4/3P4/2N2N2/PP2BPPP/R1BQK2R w KQkq - 0 1",
-    "opening_id": "b63b13a17966e3489405f6afadb6a6d05e53b0b2f31ad00f884758cf2c424ae9",
+    "fen": "rnbq1rk1/pp1nbppp/4p3/2ppP3/3P1P2/2N1B3/PPPQ2PP/R3KBNR w KQ - 0 1",
+    "opening_id": "72356eea8dc5769a314a20f5da635f077808dd63f6522ff9305659228a1b7a91",
     "pair_index": 61,
-    "source_game_indices": [
-      122,
-      123
+    "published_sources": [
+      {
+        "game_ordinal": 57,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 58,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnbq3r/pp3kbp/2p2ppn/3p4/3P4/2NB1N2/PPP2PPP/R1BQ1RK1 w - - 0 1",
-    "opening_id": "fed81942e56c825a8a18689738c583c70902c5789bb28d1a7e93d95bd34331d9",
+    "fen": "rn2kb1r/pp3ppp/2pqpnb1/8/2B5/2NP1N1P/PPP1QPP1/R1B1K2R w KQkq - 0 1",
+    "opening_id": "db7b8443a1b37d8735c39c876180d9b3075da49e7d16f856ddf79e81f77beecd",
     "pair_index": 62,
-    "source_game_indices": [
-      124,
-      125
+    "published_sources": [
+      {
+        "game_ordinal": 7,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 8,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bk1b1r/pp1npppp/3p1n2/2pN2B1/2BP4/q3PN2/P1P2PPP/1R1QK2R w K - 0 1",
-    "opening_id": "9b2acfed506d264b9b1eb9e1b4940f150fb523b2ebc9dd6d320d3da36d934828",
+    "fen": "r1bq1rk1/1ppnbppp/p3p3/2Pp3n/1P1P1B2/2N1PN2/P4PPP/R2QKB1R w KQ - 0 1",
+    "opening_id": "87bec4c56f78c7913aeda8ed177d4b1e0b6eb76d7dbfa352e744529c835c379c",
     "pair_index": 63,
-    "source_game_indices": [
-      126,
-      127
+    "published_sources": [
+      {
+        "game_ordinal": 67,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 68,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqk2r/pp1n1pb1/2pp2pn/4p2p/2PPP2P/2N1B3/PP1QBPP1/R3K1NR w KQkq - 0 1",
-    "opening_id": "df5c5e7f5f87b6fb124d2a59e3cbc2d8a7fc54d86c2157325c3bf10cf066defe",
+    "fen": "rnbqr1k1/pp1p1pp1/2p2n1p/4p3/2P1P3/2P3P1/P2PNPBP/R1BQK2R w KQ - 0 1",
+    "opening_id": "906375f62c9c5dc49e6d1a6298b8411c44822747b55fbd8758fa73b0c7d8816c",
     "pair_index": 64,
-    "source_game_indices": [
-      128,
-      129
+    "published_sources": [
+      {
+        "game_ordinal": 73,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 74,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rnbq1rk1/1p2npbp/p1ppp1p1/8/3PPP2/2PB1N2/PP4PP/RNB1QRK1 w - - 0 1",
-    "opening_id": "9c6945fe0a52bcc0534813ba7f1888a0c25cd58b2d75e26675414c897233333b",
+    "fen": "rnbqk2r/ppp1bppp/4Pn2/3p4/3N4/2N3P1/PPP2P1P/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "5dc3af2825e564b515f274361d31868ee9a9057a117ab023f6307b07ef6a7f6f",
     "pair_index": 65,
-    "source_game_indices": [
-      130,
-      131
+    "published_sources": [
+      {
+        "game_ordinal": 51,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 52,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnbqk2r/pp1pnp2/2p4p/4P1p1/2B1Pp2/2N5/PPP3PP/R1BQK2R w KQkq - 0 1",
-    "opening_id": "bd9551c6a2af6858773a5b760b06ddad93987c7693cc16b44a4121fa29c5a527",
+    "fen": "r1bq1rk1/p1p2ppp/1bpp1n2/4p3/4P3/2NP1N1P/PPP2PP1/R1BQ1RK1 w - - 0 1",
+    "opening_id": "681f559e3cbf70461eb415335b4bce13effc4c51f5091103a6850a010f3b5370",
     "pair_index": 66,
-    "source_game_indices": [
-      132,
-      133
+    "published_sources": [
+      {
+        "game_ordinal": 113,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 114,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r2qk1nr/1p2ppbp/p1p3p1/2p5/4P3/3P1b1P/PPPN1PP1/R1BQ1RK1 w kq - 0 1",
-    "opening_id": "a00e719ef97ffe553629eba567a090e478c35bd8ab446508c6de67031a672e6c",
+    "fen": "r2qkb1r/pp2ppp1/n1p1bn1p/8/P1pPP3/2N2N2/1P3PPP/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "1251acce65e1e4956b54c783406f533b3414e8c5763ad26af59a2b7f2a32f5e5",
     "pair_index": 67,
-    "source_game_indices": [
-      134,
-      135
+    "published_sources": [
+      {
+        "game_ordinal": 109,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 110,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqkb1r/pp3ppp/8/2pn4/2Pn4/3P2P1/PP3PBP/R1BQK1NR w KQkq - 0 1",
-    "opening_id": "47b173a51f55fc739da6727be74c2f9f138f0fbdc693b2bd4c21024c8d082526",
+    "fen": "r1bqk2r/ppp1p1bp/6pn/3Ppp2/2P5/6P1/PP2PPBP/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "1df008f54e402034a69f11522df972a9b5ee68fc9159516ecb8b86cc538126da",
     "pair_index": 68,
-    "source_game_indices": [
-      136,
-      137
+    "published_sources": [
+      {
+        "game_ordinal": 87,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 88,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 87,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 88,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r2qk1nr/pb1n1ppp/1p1bp3/3p4/2pP1P2/2P1PN2/PPBN2PP/R1BQK2R w KQkq - 0 1",
-    "opening_id": "b5e185977c448a31dc02cabf7aa3beb657f4eb17657c647b5ff1ab6e42d048ff",
+    "fen": "r1bqknnr/1pp2ppp/3p4/p1bPp2P/2P1P3/2N2N2/PP3PP1/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "ee07b70eeabf6325ddcab8d6b495bfe27c3040336402426baa083c9257363def",
     "pair_index": 69,
-    "source_game_indices": [
-      138,
-      139
+    "published_sources": [
+      {
+        "game_ordinal": 1,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 2,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rn2kb1r/ppq2ppp/2pp1n2/4p3/N2PP1b1/1P1B4/P1PBNPPP/R2QK2R w KQkq - 0 1",
-    "opening_id": "70aadad96df7707d7891405d4dbb62fa86d1171abaab0181fb8fdcfd6dec08d9",
+    "fen": "r1b1k2r/pppnqppp/3b1n2/3p4/5p2/1P2PNN1/PBPP2PP/R2QKB1R w KQkq - 0 1",
+    "opening_id": "80db4921693bd3814794d40d089ede9f36843d3b3e6dbd96ddfaf0229df04828",
     "pair_index": 70,
-    "source_game_indices": [
-      140,
-      141
+    "published_sources": [
+      {
+        "game_ordinal": 101,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 102,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 101,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 102,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1b1k1nr/1p3pp1/1qn1p2p/p1bpP3/8/2PB1N2/PP3PPP/RNBQ1RK1 w kq - 0 1",
-    "opening_id": "4534127a72dcf6be2168348011ffa906a83ab261fcb900a53b905ac5d8038f92",
+    "fen": "r1bq1rk1/1pp2pp1/p1np1n1p/2b1p3/2P5/1PNP1NP1/P3PPBP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "0be9776b52ab02da74e589a0ee9494660fdf13260ecdd7e4a34b0de5cc2bc6f2",
     "pair_index": 71,
-    "source_game_indices": [
-      142,
-      143
+    "published_sources": [
+      {
+        "game_ordinal": 117,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 118,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rn2kb1r/ppq1pppp/2p2n2/8/2PP2b1/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 1",
-    "opening_id": "9ccbcead690d5e5d84862906d2aa66c193d4d7a42ab25b5522276945bb34bdeb",
+    "fen": "rn1q1rk1/ppp1ppb1/5n1p/3p1bp1/3P4/2N1PNB1/PPP1BPPP/R2QK2R w KQ - 0 1",
+    "opening_id": "bb5cdc97841452dcc8cb059890f074a8fc231e261c2442bb3c08004392cd8a77",
     "pair_index": 72,
-    "source_game_indices": [
-      144,
-      145
+    "published_sources": [
+      {
+        "game_ordinal": 115,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 116,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 115,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 116,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqk2r/ppp2pp1/2n1pn1p/8/2QP4/P4N2/1P2PPPP/R1B1KB1R w KQkq - 0 1",
-    "opening_id": "aeb8ada939b5c7c7e373c6465ce754ded0202bcd814e93c6b93307c567c8d34a",
+    "fen": "r1bqr1k1/ppp2pbp/2np1np1/4p3/2P1P3/2NP1NP1/PP3PBP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "af9c65ee8fe7e33bd920c60f5113f259006af5a8d2c9ad5cb10112a427ab6dde",
     "pair_index": 73,
-    "source_game_indices": [
-      146,
-      147
+    "published_sources": [
+      {
+        "game_ordinal": 7,
+        "pgn_path": "results/control-control/games.pgn",
+        "pgn_sha256": "88c117cd32b50233c6117524f91bdeec7758e2e6db54d33750b1ae54e289a447"
+      },
+      {
+        "game_ordinal": 8,
+        "pgn_path": "results/control-control/games.pgn",
+        "pgn_sha256": "88c117cd32b50233c6117524f91bdeec7758e2e6db54d33750b1ae54e289a447"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqk1nr/pp3pb1/3pp1p1/2p4p/3nPP2/3P1NPP/PPP3B1/RNBQ1RK1 w kq - 0 1",
-    "opening_id": "5234e99bb32f4c3adde8b302355ad5dfc57db91bb736c78323e312de7ae46919",
+    "fen": "r2qkb1r/pp1n1ppp/4pn2/3p4/8/1QN2bP1/PP1PPPBP/R1B2RK1 w kq - 0 1",
+    "opening_id": "a85acac04edf2b0a0fb3bad3e42bbf4ac3679b1bf921f058a0d58bf915834768",
     "pair_index": 74,
-    "source_game_indices": [
-      148,
-      149
+    "published_sources": [
+      {
+        "game_ordinal": 3,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 5,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqk1nr/pp1n1pb1/3p2pp/2pPp3/2P1P2P/1PNB4/P4PP1/R1BQK1NR w KQkq - 0 1",
-    "opening_id": "407e41dceaf8f68dbd6a733f29b59b4e3ebb5e3fc9d26ef50fbf0d816576adbf",
+    "fen": "r1bqk2r/2pp1pp1/p1n3np/1pbNp3/2B1P2P/2P2N2/PP1P1PP1/R1BQK2R w KQkq - 0 1",
+    "opening_id": "561cbcc47673a378c0fb826f937195c3c83b6beab5496e23d9d48efc095076d1",
     "pair_index": 75,
-    "source_game_indices": [
-      150,
-      151
+    "published_sources": [
+      {
+        "game_ordinal": 11,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 12,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r2qkb1r/p4ppp/2p1pn2/7b/3P4/2N5/PP2PPPP/R1BQKB1R w KQkq - 0 1",
-    "opening_id": "b0287065ed5661afb67f3141e3cc37d5290707c99ef16381415c546e5794fd55",
+    "fen": "rn1q1rk1/pp1b1ppp/5n2/1Bbp4/8/2N2N2/PPP2PPP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "22845730d88f8254cc908c60c0566e5ab49b2c618de6b587bd297e582e027853",
     "pair_index": 76,
-    "source_game_indices": [
-      152,
-      153
+    "published_sources": [
+      {
+        "game_ordinal": 61,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 62,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 61,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 62,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1b2rk1/ppqnbppp/2pp1n2/4p3/3PPP2/2PB1N2/PP4PP/RNBQ1R1K w - - 0 1",
-    "opening_id": "65f16333d2ad7856423c71637a3f2019f5601845e482f8e69a08ccd9f92880a7",
+    "fen": "r2qkb1r/1p2nppp/p1n1p3/1BPpP3/1P4b1/5N2/P1P2PPP/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "973bca81e3f6ad71b549ae5e6b10c38350484d534b8573e35b9e19c86f246eb0",
     "pair_index": 77,
-    "source_game_indices": [
-      154,
-      155
+    "published_sources": [
+      {
+        "game_ordinal": 33,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 34,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1b1kb1r/2qn1ppp/2pp1n2/pp2p3/3PP3/2N1BP2/PPPQN1PP/2KR1B1R w kq - 0 1",
-    "opening_id": "22e6460d52c76787fa5641e9c6085d1cc4035c5bc6adcf802b210b5bc4b63d12",
+    "fen": "rn2kb1r/pp3ppp/2pqpn2/7b/2B5/2NP1P2/PPPBQ1PP/R3K1NR w KQkq - 0 1",
+    "opening_id": "60e97954e9e34174807889e728e0fbe669478f17b0855ae0c97d003b86ef091f",
     "pair_index": 78,
-    "source_game_indices": [
-      156,
-      157
+    "published_sources": [
+      {
+        "game_ordinal": 59,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 60,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1b1kb1r/pp1n1ppp/2p1p3/q2n4/2BP1B2/2N1PN2/PPQ2PPP/R3K2R w KQkq - 0 1",
-    "opening_id": "fa9f6d42d31374bc234c2bb72f24bdb4c00708de8df050e7e60006450a0e6d34",
+    "fen": "rnb1k2r/pp1p1ppp/4p3/2pP3n/2q5/2b2P2/PP1BPNPP/R2QKB1R w KQkq - 0 1",
+    "opening_id": "d909c2560ef18f4726614fce7c50b0f47d5ef6edf6c4d75a784236a977ac2a28",
     "pair_index": 79,
-    "source_game_indices": [
-      158,
-      159
+    "published_sources": [
+      {
+        "game_ordinal": 48,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 50,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnb1k2r/pp2nppp/4p3/2ppP3/q2P3P/P1P2N2/2P2PP1/R1BQKB1R w KQkq - 0 1",
-    "opening_id": "79f4abbbe3aeff2b5fe64b466abac8012db82ef2e55648f2691a25289574857c",
+    "fen": "r2qkb1r/1pp2ppp/1nbp1n2/p3p3/P5P1/1PN1PN2/1BPP1P1P/R2QKBR1 w Qkq - 0 1",
+    "opening_id": "e681a09f3626c50bd8f7f87a15b17926d46b083934b083194a07b570a4664cf8",
     "pair_index": 80,
-    "source_game_indices": [
-      160,
-      161
+    "published_sources": [
+      {
+        "game_ordinal": 39,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 40,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 73,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 74,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "1r1qk2r/pppbb1pp/2np1n2/4pp2/2PP4/2N1P1P1/PP2NPBP/R1BQ1RK1 w k - 0 1",
-    "opening_id": "21b7cf857a9adb99f00e78f26b106ca0fc7d7c617a98d60b0654e0dbb3057b81",
+    "fen": "2kr1bnr/pppqpppp/8/3Pn3/2p5/2N2BP1/PP2PP1P/R1BQK2R w KQ - 0 1",
+    "opening_id": "cc9c7e9595b855e57f65f8f82dffdf268503a25245cf3cf88897b21f73fd1f99",
     "pair_index": 81,
-    "source_game_indices": [
-      162,
-      163
+    "published_sources": [
+      {
+        "game_ordinal": 19,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 21,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqnrk1/pp1nbppp/3p4/2pPp3/4P3/2N2NP1/PPP2PBP/R1BQ1RK1 w - - 0 1",
-    "opening_id": "43e99315b7e8020566805257993bd65f44dc1539e112c86418ea9bb3192ecad6",
+    "fen": "r1b1kb1r/1p1n1ppp/p2p1n2/q3p1B1/3NPP2/2N5/PPP1Q1PP/R3KB1R w KQkq - 0 1",
+    "opening_id": "057fe09f17571515ae38d6f2008a6f16906dbd786d7a1fb469cc1ffd038e245c",
     "pair_index": 82,
-    "source_game_indices": [
-      164,
-      165
+    "published_sources": [
+      {
+        "game_ordinal": 21,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 22,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqk2r/ppp3bp/2np1np1/4p3/3PP3/2N1B3/PPPQN1PP/R3KB1R w KQkq - 0 1",
-    "opening_id": "13073bc7f46b292bbe77fdf1993bf55d9d5bbb071c1fc8a879f82d1eade4a281",
+    "fen": "r2qkb1r/1p2pppp/p1np1nb1/2p5/3P2P1/2PBPN1P/PP1N1P2/R1BQK2R w KQkq - 0 1",
+    "opening_id": "52a91c2c31d6b5c4aa2cad599a2c9d458b7e5d441d158d5cb190b6da0e03ec46",
     "pair_index": 83,
-    "source_game_indices": [
-      166,
-      167
+    "published_sources": [
+      {
+        "game_ordinal": 25,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 26,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "2rqkb1r/1p1n1ppp/p1p1p2n/3pPb2/3P1P2/2N2N2/PPP1B1PP/R1BQ1RK1 w k - 0 1",
-    "opening_id": "a33eca248c3db082d496c5de4dbe3db16b9b47ca90cb20f2e0d4382f15344b7b",
+    "fen": "rn1qkb1r/pb1ppppp/8/1Pp1P3/4n3/5N2/PP3PPP/RNBQKB1R w KQkq - 0 1",
+    "opening_id": "cf285e2bac71447ce0c18af94898694092efcdbae8db495ea12ecb2e35790cd6",
     "pair_index": 84,
-    "source_game_indices": [
-      168,
-      169
+    "published_sources": [
+      {
+        "game_ordinal": 85,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 86,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rn3rk1/ppq1ppbp/2ppbnp1/8/3PP3/N5PP/PPP1NPB1/R1BQ1RK1 w - - 0 1",
-    "opening_id": "2f20e077fca2df4399c606f250790a07da509da5983f08075466b043429106ed",
+    "fen": "r1bqnrk1/pp1nppbp/2pp2p1/8/2PPP3/2N2NP1/PP3PBP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "7d1dc571848002bd7195047fc7808a88d03fef2dc0dc7681087c23daaacd760e",
     "pair_index": 85,
-    "source_game_indices": [
-      170,
-      171
+    "published_sources": [
+      {
+        "game_ordinal": 87,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 88,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 111,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 112,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnb1k2r/4ppbp/p1pp1np1/qp6/3PP1P1/P1N1BP2/1PPQ3P/R3KBNR w KQkq - 0 1",
-    "opening_id": "0b8df2b8dc3299e49869dfd91c96a12a8d6216e03884d04b18354eef9f684893",
+    "fen": "r2qkb1r/pbpn1p2/1p1ppn1p/6p1/2PP3B/3BPN2/PP3PPP/RN1Q1RK1 w kq - 0 1",
+    "opening_id": "37e1e903033f79a66d34f796eb46d76757109ce91e59ce13c16b42259b89c0b1",
     "pair_index": 86,
-    "source_game_indices": [
-      172,
-      173
+    "published_sources": [
+      {
+        "game_ordinal": 77,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 78,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r2qkb1r/pp3ppp/2n1pn2/2Pp1b2/1P6/2P1PN2/P4PPP/RNBQKB1R w KQkq - 0 1",
-    "opening_id": "f272041bb698078c483c6d035e2a9c69ccd207e3e46b4f48db0097af599290ef",
+    "fen": "rnb1k2r/pp3ppp/2p1pn2/q7/2pP4/5NP1/PPQNPP1P/R3KB1R w KQkq - 0 1",
+    "opening_id": "90e8d4da640288a338e2ed083bfab8b9539db6efd6e4be65716c7e6301a751f5",
     "pair_index": 87,
-    "source_game_indices": [
-      174,
-      175
+    "published_sources": [
+      {
+        "game_ordinal": 81,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 82,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqk2r/p2nbppp/2p1pn2/1p6/3PN3/P4NP1/1PP1QP1P/R1B1KB1R w KQkq - 0 1",
-    "opening_id": "3920432ea6de2381b50f74efd9a743b3dbb80677b0b4c80d4516b1c98a85267e",
+    "fen": "r2qkb1r/pbpp3p/1pn2n2/5pp1/2P2p2/2NPP1P1/PP2N1BP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "dac0423338273b977b4008a9dc8e330526c4b78facbf462b3d81faeefbffeaa7",
     "pair_index": 88,
-    "source_game_indices": [
-      176,
-      177
+    "published_sources": [
+      {
+        "game_ordinal": 47,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 48,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rn1qk1nr/pbp1bppp/1p1pp3/4P3/2PP4/P1N1B3/1P2NPPP/R2QKB1R w KQkq - 0 1",
-    "opening_id": "79a6ab1e128585ed0897dfe0f2d69ab53e0e2b2d572ddf43330df857019450db",
+    "fen": "rn1qkb1r/p4p1p/bp2pnp1/3p4/2PP4/PP3N2/3N1PPP/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "e70a0b8ef63dcaec30767e33e91ec26ad7190f95047db49f692f49a4a6b8c74d",
     "pair_index": 89,
-    "source_game_indices": [
-      178,
-      179
+    "published_sources": [
+      {
+        "game_ordinal": 5,
+        "pgn_path": "results/control-control/games.pgn",
+        "pgn_sha256": "88c117cd32b50233c6117524f91bdeec7758e2e6db54d33750b1ae54e289a447"
+      },
+      {
+        "game_ordinal": 6,
+        "pgn_path": "results/control-control/games.pgn",
+        "pgn_sha256": "88c117cd32b50233c6117524f91bdeec7758e2e6db54d33750b1ae54e289a447"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bq1rk1/pp1nbpp1/2pp1n1p/4p3/3PP2P/2N1BP2/PPPQN1P1/R3KB1R w KQ - 0 1",
-    "opening_id": "32a1ae7e06e58fbc9d91f07442e10e5ec821466c077ae78964ba7fa1131d5853",
+    "fen": "rnb1kb1r/p4p1p/1qp1pp2/1p6/P1pPP3/2N2N2/1P3PPP/R2QKB1R w KQkq - 0 1",
+    "opening_id": "5f680e6909ddcc4409298cc363d0ae3cf5641f82c5d1f7d833705d9be0d62b48",
     "pair_index": 90,
-    "source_game_indices": [
-      180,
-      181
+    "published_sources": [
+      {
+        "game_ordinal": 19,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 20,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1b1k2r/1pppnppp/p1n2q2/4b3/3NP3/1BN1B3/PPP2PPP/R2QK2R w KQkq - 0 1",
-    "opening_id": "6d4541c3672b307392a1bf5cd78c91dca270bd301ec5239aaa240e784a8f3a5c",
+    "fen": "r1bqk2r/pp2bppp/2n1p3/2pp4/2PP4/P1PBPN2/5PPP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "7adcdfaade40d13765f1a3f4e4059cc539516767a90d8263572fd5fa7fcc294d",
     "pair_index": 91,
-    "source_game_indices": [
-      182,
-      183
+    "published_sources": [
+      {
+        "game_ordinal": 54,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 56,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rn1qk2r/pb1pbppp/3np3/2pP4/8/2N2N2/PPP1BPPP/R1BQ1RK1 w kq - 0 1",
-    "opening_id": "cd1eaa6a2622736a34815ce8636f9d362f81bdf9ae6bffd0af53aaf539c7f9e0",
+    "fen": "r2qkb1r/3b1ppp/p1n1pn2/1p6/8/1BN2N2/PPPP1PPP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "8b82abb3e9dd6cda4c0e86caa4f0d516ea24e5c2854cc13bce93d88483e0e124",
     "pair_index": 92,
-    "source_game_indices": [
-      184,
-      185
+    "published_sources": [
+      {
+        "game_ordinal": 83,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 84,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r3k2r/pp1q1ppp/2nb1n2/4p3/2P3b1/2NP1N2/PP2BPPP/R1BQK2R w KQkq - 0 1",
-    "opening_id": "e02b221002633194a05a3dee353f423a0cb71fd99f6b4c75a1bf17037f3f810d",
+    "fen": "r3k1nr/pppq1pb1/2npb1pp/4p3/2P4P/2NPP1P1/PP2NPB1/R1BQK2R w KQkq - 0 1",
+    "opening_id": "5da6d8d2e7f28a983ff8353e28acf6c109754ebe921c072ae57ea5d10a2d5b64",
     "pair_index": 93,
-    "source_game_indices": [
-      186,
-      187
+    "published_sources": [
+      {
+        "game_ordinal": 6,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 9,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1b1kb1r/pp3ppp/1qn1pn2/1Bp5/8/1PN1PN2/PB1P1PPP/R2QK2R w KQkq - 0 1",
-    "opening_id": "553590b26f18b0d37b4d46b14d089099d2d4b3780f51b2f4c22382247118e610",
+    "fen": "rnbqk2r/pp3p1p/2p2bp1/3p4/3P4/2N2N2/PPQ1PPPP/R3KB1R w KQkq - 0 1",
+    "opening_id": "47ac1fe2bb7ea860f65281c36f58994247bf16fbe6a223165accf50f34280f91",
     "pair_index": 94,
-    "source_game_indices": [
-      188,
-      189
+    "published_sources": [
+      {
+        "game_ordinal": 17,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 18,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1b1k2r/ppp3pp/2nqpn2/3pNp2/3P1P2/2N5/PPP1BPPP/R2QK2R w KQkq - 0 1",
-    "opening_id": "de953e45e20d50dee6be7ccd490a6429da979f3640d9b2e603526e4fef019fd5",
+    "fen": "rn1q1rk1/pp2ppb1/2pp1np1/6Np/3P1BbP/2N1P3/PPPQ1PP1/R3KB1R w KQ - 0 1",
+    "opening_id": "62a93b61fad67dd8d12241e19018d8e6779b57d0c486127ee7d6b0dffd24dfff",
     "pair_index": 95,
-    "source_game_indices": [
-      190,
-      191
+    "published_sources": [
+      {
+        "game_ordinal": 37,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 38,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 37,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 38,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rn1q1rk1/ppp2pp1/5n1p/2b3B1/4P1b1/3P1N2/PPP1B1PP/RN1QK2R w KQ - 0 1",
-    "opening_id": "7d79ad0b986e5b43936b082ed185b792f6463e44c759ca8cbf3821bab7bc7931",
+    "fen": "rnbqkb1r/2p2p2/p3pn1p/1p2P1p1/2pP3B/2N2N2/PP3PPP/R2QKB1R w KQkq - 0 1",
+    "opening_id": "d8417fbc5a0a083b1669aceada9c469319dc310b79fb4c2952cc6804c4e8e069",
     "pair_index": 96,
-    "source_game_indices": [
-      192,
-      193
+    "published_sources": [
+      {
+        "game_ordinal": 39,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 40,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rnbq1rk1/pp2n1bp/3p1pp1/2pPp1B1/4P3/2NB1N2/PPP2PPP/R2Q1RK1 w - - 0 1",
-    "opening_id": "6f3540c269b652ff4e8661cf34afee3f054cc6a027faeb3e724cf19ba48e190c",
+    "fen": "r1bqkbnr/pppn4/3p1p2/4p1p1/3P4/4BNp1/PPPQPPBP/RN3RK1 w kq - 0 1",
+    "opening_id": "0f3ef7affc8552b413336811ebf242656bcfce92efc1c086e805cb5a0c9f91e6",
     "pair_index": 97,
-    "source_game_indices": [
-      194,
-      195
+    "published_sources": [
+      {
+        "game_ordinal": 15,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 16,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 17,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 18,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bq1rk1/1pp1ppb1/p1np1npp/8/2BPP3/P1N1BN1P/1PP2PP1/R2QK2R w KQ - 0 1",
-    "opening_id": "61f5380c240f4fabe6ab322f5d29418f86b2743f35ab5b8064ac0697f987667e",
+    "fen": "r1bq1rk1/pp3ppp/2n2n2/2pp2B1/1b1P4/2N2N2/PPQ1PPPP/2KR1B1R w - - 0 1",
+    "opening_id": "02cea1080ca0dce2f675d6c0817983c8b94fc6e640828161f2a9a966669e23ce",
     "pair_index": 98,
-    "source_game_indices": [
-      196,
-      197
+    "published_sources": [
+      {
+        "game_ordinal": 35,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 36,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rn1qkb1r/pbpp1p1p/1p2p1pQ/3nP1B1/3P4/7N/PPPN1PPP/R3KB1R w KQkq - 0 1",
-    "opening_id": "a0dc8f896f382bfcad53bff554fe3d1a784ab16958686ed11fa95056f3699b6d",
+    "fen": "r1bqk2r/p2nbppp/3p1n2/1PpP4/8/5P2/PP2N1PP/RNBQKB1R w KQkq - 0 1",
+    "opening_id": "3882a96a37cd7c9df19120ea67fdd0c10041e40ce333523e4ba948664ba216a0",
     "pair_index": 99,
-    "source_game_indices": [
-      198,
-      199
+    "published_sources": [
+      {
+        "game_ordinal": 41,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 42,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnbqkb1r/4pp1p/p2p1npP/1ppP4/4PP2/8/PPP1B1P1/RNBQK1NR w KQkq - 0 1",
-    "opening_id": "0a0ae0534ae755587a58e88083db6f9f6f047aab72badb65732342947e552ba3",
+    "fen": "rn2kbnr/pp3pp1/2p1p1p1/q7/2BP4/2N5/PPP2PPP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "5ad9ae43c8449aae2c18f268930798fcf1053ad496b9def832c1d035cdededca",
     "pair_index": 100,
-    "source_game_indices": [
-      200,
-      201
+    "published_sources": [
+      {
+        "game_ordinal": 59,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 60,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r2qk2r/ppp2ppp/1bnp1n2/4p2b/2B1P3/2NPBN1P/PPP1QPP1/R3K2R w KQkq - 0 1",
-    "opening_id": "d994adfa416de5d219965ab157d67c432638f56deae8a69d6247b461a6308e13",
+    "fen": "r1bqk1nr/pp2ppb1/2pp2np/6p1/3P4/2P1PNB1/PP1N1PPP/R2QKB1R w KQkq - 0 1",
+    "opening_id": "25548cf7ab3b0c6803a200a58739c2d797afe76b78db817b8108f2b2923ffb61",
     "pair_index": 101,
-    "source_game_indices": [
-      202,
-      203
+    "published_sources": [
+      {
+        "game_ordinal": 101,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 102,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnbq1rk1/ppp1ppb1/6pB/8/3Pp3/5N2/PPPQPPPP/2KR1B1R w - - 0 1",
-    "opening_id": "adfee980c09ea3907510512553f6a158f0c9fbf0c4fe3d3e100d9d95ae50c085",
+    "fen": "rnb1k2r/ppp1bp2/4pp1p/7q/2BP4/5N2/PPPN1PPP/R2QK2R w KQkq - 0 1",
+    "opening_id": "1b6939f55875616fef5939b590cdfa857b1e9117ffb19f9ff033f4f8b5be7b2d",
     "pair_index": 102,
-    "source_game_indices": [
-      204,
-      205
+    "published_sources": [
+      {
+        "game_ordinal": 69,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 70,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rn1qkb1r/ppp2bpp/4p3/3p1p1P/3PnB2/3BPN2/PPP2PP1/RN1QK2R w KQkq - 0 1",
-    "opening_id": "ae82f754aec1ef16f82c31e5b7c421946cfafd120de13008157f99bebe2055ff",
+    "fen": "rn2kbnr/ppq2ppb/2p1p2p/3pP2P/3P1PP1/2N5/PPP5/R1BQKBNR w KQkq - 0 1",
+    "opening_id": "252c11a4743834821b1dacc1fa5a6ab770c3b6f683619af2205baf62aa099123",
     "pair_index": 103,
-    "source_game_indices": [
-      206,
-      207
+    "published_sources": [
+      {
+        "game_ordinal": 9,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 10,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1b1kb1r/pp3pp1/2npp3/q1p1P2p/2B3n1/2PP1N2/PP2QPPP/RNB2RK1 w kq - 0 1",
-    "opening_id": "9931ddcc7e46f2c1ea03b8aca4280ff1363c8156ac99d1e58c6e3497887477ef",
+    "fen": "r2qk2r/ppp3pp/3ppn2/4p3/1b1nP3/2N2N1P/PPPP1PP1/R1BQR1K1 w kq - 0 1",
+    "opening_id": "27014806be23a02bd0c85c19ac46c6fe5739401ed31c26303d76cfcbfc1a53f2",
     "pair_index": 104,
-    "source_game_indices": [
-      208,
-      209
+    "published_sources": [
+      {
+        "game_ordinal": 101,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 102,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rnbq1rk1/1p2ppbp/3p1np1/2p5/4P3/PBNP4/1PP1NPPP/R1BQK2R w KQ - 0 1",
-    "opening_id": "d62a2e6c9ac0477b2fd1528f3442dccece3b7dbb0112cd3cf36568da90be4d8b",
+    "fen": "r1bqkbnr/3n1ppp/p3p3/1pp5/3P4/2NBPN2/PP3PPP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "b4992a575b38d493134fa972f0396041f1c4d999a694210b6e91f8f793663198",
     "pair_index": 105,
-    "source_game_indices": [
-      210,
-      211
+    "published_sources": [
+      {
+        "game_ordinal": 45,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 46,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rn1qkb1r/p4ppp/bpn1p3/2ppP3/3P4/2PB1N2/PP3PPP/RNBQR1K1 w kq - 0 1",
-    "opening_id": "e51530e2a2f18de4d9bd77e8d3147ce164cfb33b6f1f292ff7a6f16c0aae8b16",
+    "fen": "r1bqk1nr/p1n1ppb1/1ppp2p1/7p/2PPP2P/2N1B3/PP1QBPP1/R3K1NR w KQkq - 0 1",
+    "opening_id": "422beb9a9fc6fb97340d9a6535ff04158ff9f215fb1d423c24ac191e21c6bf97",
     "pair_index": 106,
-    "source_game_indices": [
-      212,
-      213
+    "published_sources": [
+      {
+        "game_ordinal": 11,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 12,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 11,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 12,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1b1k2r/ppp3pp/2nqpn2/3pNp2/3P1P2/2N5/PPP1BPPP/R2QK2R w KQkq - 0 1",
-    "opening_id": "de953e45e20d50dee6be7ccd490a6429da979f3640d9b2e603526e4fef019fd5",
+    "fen": "r2qkb1r/pp3ppp/2n1pn2/2pp3b/4P3/2PP1N1P/PPBN1PP1/R1BQK2R w KQkq - 0 1",
+    "opening_id": "b9990e226404a5b91e7d14a35c8e708623e83c0689b1497e5de48dcf4fee630c",
     "pair_index": 107,
-    "source_game_indices": [
-      214,
-      215
+    "published_sources": [
+      {
+        "game_ordinal": 61,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 62,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "2rqkb1r/1p1n1ppp/p1p1p2n/3pPb2/3P1P2/2N2N2/PPP1B1PP/R1BQ1RK1 w k - 0 1",
-    "opening_id": "a33eca248c3db082d496c5de4dbe3db16b9b47ca90cb20f2e0d4382f15344b7b",
+    "fen": "r2q1rk1/1bppbppp/p1n2n2/1p2p3/P3P3/1B3N2/1PPPQPPP/RNB2RK1 w - - 0 1",
+    "opening_id": "c8dc2faa69b82c72f6ea03beac2f674c54f1a8af34bf792a77e8d6e694068586",
     "pair_index": 108,
-    "source_game_indices": [
-      216,
-      217
+    "published_sources": [
+      {
+        "game_ordinal": 35,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 36,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1b1k2r/pp2bppp/1qnppn2/8/3P4/2PB1N2/PP1N1PPP/R1BQ1RK1 w kq - 0 1",
-    "opening_id": "d14a9d049ec12078a8f97f73943cb1caa7648eb9905b291a4897109ffe46da7d",
+    "fen": "2rqkb1r/p4ppp/2p1pn2/2ppNb2/8/1P1PP3/PBP2PPP/RN1QK2R w KQk - 0 1",
+    "opening_id": "3082d5ef1dd6f1536ff4bbd33f931813fce818a4d4160536d66f73c3b45e9d6e",
     "pair_index": 109,
-    "source_game_indices": [
-      218,
-      219
+    "published_sources": [
+      {
+        "game_ordinal": 111,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 112,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 111,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 112,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnb2rk1/1pqpppbp/p4np1/3P4/2P5/2N2N2/PP2BPPP/R1BQK2R w KQ - 0 1",
-    "opening_id": "bf749a24167bc9be321e6445b30206606ea4c7e48f44897eb456b3cfd1612650",
+    "fen": "r2qk2r/1bp1bppp/p1np1n2/1p1Np3/4P3/1B3N2/PPPP1PPP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "6538487504d1f54a643f44c5fbc62e167ea1b3e58deeb0146a940235330d4463",
     "pair_index": 110,
-    "source_game_indices": [
-      220,
-      221
+    "published_sources": [
+      {
+        "game_ordinal": 107,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 108,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "2rqkb1r/1p1n1ppp/p1p1p2n/3pPb2/3P1P2/2N2N2/PPP1B1PP/R1BQ1RK1 w k - 0 1",
-    "opening_id": "a33eca248c3db082d496c5de4dbe3db16b9b47ca90cb20f2e0d4382f15344b7b",
+    "fen": "r1bqk2r/1ppnnpb1/3pp1pp/pP6/2BPP3/5N2/P1P2PPP/RNBQR1K1 w kq - 0 1",
+    "opening_id": "b40c7aebacae193d1c1ecf4a812a7d47d2fce2c8fbd6b4e45c5cc63b007c4428",
     "pair_index": 111,
-    "source_game_indices": [
-      222,
-      223
+    "published_sources": [
+      {
+        "game_ordinal": 69,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 70,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqk2r/ppnnppbp/2p3p1/8/3PP3/3B1N2/PP3PPP/RNBQ1RK1 w kq - 0 1",
-    "opening_id": "a97f0a3738fdd3c27e9b050445e7a136ec839b6cb7d6b8ab2ca90901d23f304b",
+    "fen": "r3kb1r/pppq1pp1/2np2n1/3Np2p/2P3bP/3P1NP1/PP2PPB1/R1BQK2R w KQkq - 0 1",
+    "opening_id": "08f6eb05a436e1466ba7afe96e6b65779a78c15bc614244c707b70e0da666ccc",
     "pair_index": 112,
-    "source_game_indices": [
-      224,
-      225
+    "published_sources": [
+      {
+        "game_ordinal": 3,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 4,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 3,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 4,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r3k1nr/pbqpbppp/1pn5/2p1p3/4P3/3P1NP1/PPPN1PBP/R1BQR1K1 w kq - 0 1",
-    "opening_id": "22665770afd94f7270e14abfba6e0dabd0e9c1902c04a34da97b70ff3e8ec110",
+    "fen": "r1b1k2r/ppp1qppp/2n1p3/3p4/2PPn3/1P2P3/PB3PPP/R2QKBNR w KQkq - 0 1",
+    "opening_id": "e98408186b18548877412ee26f6a369f2f40f68fcb442f0869cdeb8ee2af2cc9",
     "pair_index": 113,
-    "source_game_indices": [
-      226,
-      227
+    "published_sources": [
+      {
+        "game_ordinal": 55,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 56,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 57,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 58,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnbqkb1r/4pp1p/p2p1npP/1ppP4/4PP2/8/PPP1B1P1/RNBQK1NR w KQkq - 0 1",
-    "opening_id": "0a0ae0534ae755587a58e88083db6f9f6f047aab72badb65732342947e552ba3",
+    "fen": "r2qkb1r/ppp2ppp/4pn2/3p4/2PP1Bb1/3BPN2/PP1Q1PPP/R3K2R w KQkq - 0 1",
+    "opening_id": "d470f9cc1ee489d97b36165771efe26af7aa0f58e8de33a2e5c881220e72ce01",
     "pair_index": 114,
-    "source_game_indices": [
-      228,
-      229
+    "published_sources": [
+      {
+        "game_ordinal": 53,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 54,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 53,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 54,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bq1rk1/ppp1bppp/4pn2/3n4/3PN3/3B1N2/PPP2PPP/R1BQ1RK1 w - - 0 1",
-    "opening_id": "e89267ad73a95c28799fe06e3d1b2218ccf29ca8f5569c69c4ae4eae1ba200ea",
+    "fen": "r1bqk1nr/pp1nbpp1/2p1p3/3p4/4P3/3P1NP1/PPPN1PB1/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "590a6015319a21275419ffb947806939e8c800528cc13e002d71371d9c32c0e7",
     "pair_index": 115,
-    "source_game_indices": [
-      230,
-      231
+    "published_sources": [
+      {
+        "game_ordinal": 7,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 8,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bqk2r/pp1nbppp/1npp4/4p1P1/3PP3/2N2PN1/PPP4P/R1BQKB1R w KQkq - 0 1",
-    "opening_id": "4d1bf7d65db16cb0b69f7e3004aef8018ca9e8dcfc4be11123055e524549ed84",
+    "fen": "rn1q1rk1/pb2bppp/1p1ppn2/2p5/2P1P3/2NP1NP1/PP3PBP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "566a810c98aa0406a4b7a8373c2ca42b0fa5f1f22cfa5fd73ac5ac1e74ebbd89",
     "pair_index": 116,
-    "source_game_indices": [
-      232,
-      233
+    "published_sources": [
+      {
+        "game_ordinal": 45,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 46,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqk2r/pp1nbpp1/2pp3p/4p3/2BPn3/5NN1/PPP2PPP/R1BQ1RK1 w kq - 0 1",
-    "opening_id": "d24dcf0dade2e68c9c4ac25f8401c65ed7fe4892de14108cbf5ee27e9eb86045",
+    "fen": "r1b1k1nr/1pqn1ppp/p3p3/2bpP3/5B2/P2B1N2/1PP2PPP/RN1QK2R w KQkq - 0 1",
+    "opening_id": "56a183e0cb04819d2add1c15f9eb751a337600a00f5adfe5be2e729c747c5da6",
     "pair_index": 117,
-    "source_game_indices": [
-      234,
-      235
+    "published_sources": [
+      {
+        "game_ordinal": 19,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 20,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "r1bq1rk1/ppp1bppp/2np4/7n/4PB2/2N1QN2/PPP2PPP/2KR1B1R w - - 0 1",
-    "opening_id": "8c96edb2fa270b9457f99dc0998a2b57e9c4bbce165171a574b25c2b9d4931f8",
+    "fen": "r1bq1rk1/ppp1n1bp/2npp1p1/5p2/2PP1B2/2N1PN2/PP2BPPP/R2Q1RK1 w - - 0 1",
+    "opening_id": "e1f0b3eb413e75b3a23e6d1cce632c64cc948802c90c6ff56d2bbccc8c1c45e5",
     "pair_index": 118,
-    "source_game_indices": [
-      236,
-      237
+    "published_sources": [
+      {
+        "game_ordinal": 55,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 56,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bq1rk1/pp2ppbp/3p1np1/2pP2B1/1n6/2N1PN2/PPP1BPPP/R2Q1RK1 w - - 0 1",
-    "opening_id": "c069611992409a7a5fa3e87d6558d0cfeffd0fc5438b2d606cc8d544ee4fdc7a",
+    "fen": "rnbq1rk1/ppp2pp1/5b1p/3p4/3P4/2N1PN2/PP3PPP/R2QKB1R w KQ - 0 1",
+    "opening_id": "bc4823bf991b36d332ee994ef4bb707fbeb30877fc8e9b21d449e462e39be6a0",
     "pair_index": 119,
-    "source_game_indices": [
-      238,
-      239
+    "published_sources": [
+      {
+        "game_ordinal": 28,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      },
+      {
+        "game_ordinal": 31,
+        "pgn_path": "results/screen-initiative-plus/games.pgn",
+        "pgn_sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnbqk2r/ppp2ppp/1n1b4/8/2PP1B2/5N2/PP4PP/RN1QKB1R w KQkq - 0 1",
-    "opening_id": "2afbd586c963f298a3afcb3b9135f5aaf33e14b3017bb14f0f7ed1676ad69cb9",
+    "fen": "r1bqk1nr/ppp2pb1/3pn1p1/4p2p/2P1P2P/3P2P1/PP2NPB1/R1BQK1NR w KQkq - 0 1",
+    "opening_id": "ec484367287ab527d78714dde2bdd8b8a7789244009a3fe7b7c79851536f2e68",
     "pair_index": 120,
-    "source_game_indices": [
-      240,
-      241
+    "published_sources": [
+      {
+        "game_ordinal": 43,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 44,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1b1kb1r/pp3ppp/1qn1pn2/1Bp5/8/1PN1PN2/PB1P1PPP/R2QK2R w KQkq - 0 1",
-    "opening_id": "553590b26f18b0d37b4d46b14d089099d2d4b3780f51b2f4c22382247118e610",
+    "fen": "r2qkb1r/ppp2ppp/1n2b3/4p3/3n4/P1NP1NP1/1P2PPBP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "0d3fedb5ecbe3d1b5a446e9e34aca6df9fb7e59da56715bc3b20ff7c43752290",
     "pair_index": 121,
-    "source_game_indices": [
-      242,
-      243
+    "published_sources": [
+      {
+        "game_ordinal": 15,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      },
+      {
+        "game_ordinal": 16,
+        "pgn_path": "results/confirmation-initiative-plus/games.pgn",
+        "pgn_sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rnb1k2r/ppp2p1p/3qpp2/b7/3P4/P1N5/1PP1NPPP/R2QKB1R w KQkq - 0 1",
-    "opening_id": "49424d9352aeac2c453d4e9fd13127859b55d673f6a208f26429712052796a74",
+    "fen": "r1bqkb1r/1p3pp1/p1np1n1p/2p5/4PB2/2NQ1N2/PPP2PPP/R3KB1R w KQkq - 0 1",
+    "opening_id": "2215960467fe9b85b8f99c5f5d5ba6cf8e3b340fd5d3818afa9d96971e345109",
     "pair_index": 122,
-    "source_game_indices": [
-      244,
-      245
+    "published_sources": [
+      {
+        "game_ordinal": 79,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 80,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 79,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 80,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bq1rk1/pp2ppbp/3p1np1/2pP2B1/1n6/2N1PN2/PPP1BPPP/R2Q1RK1 w - - 0 1",
-    "opening_id": "c069611992409a7a5fa3e87d6558d0cfeffd0fc5438b2d606cc8d544ee4fdc7a",
+    "fen": "rnbq1rk1/p1pp1ppp/1pn5/8/1bP1PP2/4BN2/PP1N2PP/R2QKB1R w KQ - 0 1",
+    "opening_id": "9395e1edc8134faa08a2d069fcb6feb36867c0ef1ca44bd755c2f2d74c50eaa2",
     "pair_index": 123,
-    "source_game_indices": [
-      246,
-      247
+    "published_sources": [
+      {
+        "game_ordinal": 27,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 28,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 27,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 28,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rn1qkb1r/pb2pppp/8/1Pp1p3/Q3n3/5N2/PP1PNPPP/R1B1KB1R w KQkq - 0 1",
-    "opening_id": "95858d761bce073b154d7c22f2593ac92c4cfead80c2800fc1b1c33b7fea5e5c",
+    "fen": "r2qkbnr/p4ppp/1pn1p3/2p1P3/8/2P2N2/PP3PPP/RNBQK2R w KQkq - 0 1",
+    "opening_id": "56fcaaedc8eab7e1a72224f83f63337e27de2239cf59b42c3103950bbc810e9e",
     "pair_index": 124,
-    "source_game_indices": [
-      248,
-      249
+    "published_sources": [
+      {
+        "game_ordinal": 17,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "game_ordinal": 18,
+        "pgn_path": "results/test1757-history-floor-screen/games-utc.pgn",
+        "pgn_sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "rnbq1rk1/pp2ppbp/2p3p1/8/4P3/2P1BN2/PPQ2PPP/R3KB1R w KQ - 0 1",
-    "opening_id": "cd692d24cb43476064a062413158792d2d4a94e030840c0cb86cd269a3b6165c",
+    "fen": "r1bq1rk1/p3bppp/p2p1n2/2pPp3/P3P3/2N2N1P/1PP2PP1/R1BQK2R w KQ - 0 1",
+    "opening_id": "cb1670e96147597e8aa087999d23f5ecae1f737fff6e1435f27b668c4cd426f2",
     "pair_index": 125,
-    "source_game_indices": [
-      250,
-      251
+    "published_sources": [
+      {
+        "game_ordinal": 59,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 60,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": true,
-    "fen": "rn2kbnr/1bq2ppp/p2pp3/1p6/3NP3/3BB3/PPP1QPPP/RN3RK1 w kq - 0 1",
-    "opening_id": "e342d7024351357027e14bf00660471743831994a55b2186af8fa4ac7a5b7e57",
+    "fen": "r1bqkb1r/pp3pp1/2p1pn2/3p2Bp/2PP2nP/2N2NP1/PP2PPB1/R2QK2R w KQkq - 0 1",
+    "opening_id": "d10d67d4465248f3daec6262a38c23bc6602d5fdaf841944e52216a60caacadc",
     "pair_index": 126,
-    "source_game_indices": [
-      252,
-      253
+    "published_sources": [
+      {
+        "game_ordinal": 127,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "game_ordinal": 128,
+        "pgn_path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+        "pgn_sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      }
     ]
   },
   {
     "candidate_first": false,
-    "fen": "r1bqkb1r/p2n2pp/1pn1pp2/2ppP3/3P4/1NP2N2/PP2BPPP/R1BQK2R w KQkq - 0 1",
-    "opening_id": "f8ffb38eae454888d320aec56ca7dc6761d15ef4ac376bd45476c33e30711844",
+    "fen": "rn1qkb1r/pb1p1pp1/1p2p2p/3nP3/3P4/2NB1N2/PP3PPP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "85e8c5ec30d07a46cd10e5e23db1bc11a8f71825031b58067605322edb34f9bd",
     "pair_index": 127,
-    "source_game_indices": [
-      254,
-      255
+    "published_sources": [
+      {
+        "game_ordinal": 45,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 46,
+        "pgn_path": "results/test1757-parent-screen/games-utc.pgn",
+        "pgn_sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "game_ordinal": 45,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "game_ordinal": 46,
+        "pgn_path": "results/test1757-edited-screen/games-utc.pgn",
+        "pgn_sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      }
     ]
   }
 ]

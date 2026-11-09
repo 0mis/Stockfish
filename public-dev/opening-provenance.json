@@ -1,0 +1,111 @@
+{
+  "disjoint_available": 276,
+  "openings_sha256": "ffec0b02cd65f0bb1091ada037d6aa50b332cfb09858f5ab0193f2027e38a398",
+  "overlap_primary": 0,
+  "primary_unique": 110,
+  "retired_union_unique": 276,
+  "rule": "sha256(experiment_id|opening-order-v1|canonical_id), lowest128 distinct; exclude every primary root",
+  "selected_unique": 128,
+  "source_summary": [
+    {
+      "eligible_disjoint_roots": 4,
+      "games": 8,
+      "overlap_primary_roots": 0,
+      "path": "results/control-control/games.pgn",
+      "unique_roots": 4
+    },
+    {
+      "eligible_disjoint_roots": 32,
+      "games": 64,
+      "overlap_primary_roots": 0,
+      "path": "results/screen-initiative-plus/games.pgn",
+      "unique_roots": 32
+    },
+    {
+      "eligible_disjoint_roots": 64,
+      "games": 128,
+      "overlap_primary_roots": 0,
+      "path": "results/confirmation-initiative-plus/games.pgn",
+      "unique_roots": 64
+    },
+    {
+      "eligible_disjoint_roots": 63,
+      "games": 128,
+      "overlap_primary_roots": 0,
+      "path": "results/test1757-parent-screen/games-utc.pgn",
+      "unique_roots": 63
+    },
+    {
+      "eligible_disjoint_roots": 63,
+      "games": 128,
+      "overlap_primary_roots": 0,
+      "path": "results/test1757-edited-screen/games-utc.pgn",
+      "unique_roots": 63
+    },
+    {
+      "eligible_disjoint_roots": 62,
+      "games": 128,
+      "overlap_primary_roots": 0,
+      "path": "results/test1757-history-floor-screen/games-utc.pgn",
+      "unique_roots": 62
+    },
+    {
+      "eligible_disjoint_roots": 59,
+      "games": 128,
+      "overlap_primary_roots": 0,
+      "path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+      "unique_roots": 59
+    }
+  ],
+  "sources": [
+    {
+      "bytes": 47242,
+      "commit": "c6a21a063f5a219a72f8f814bfb6287d0925171b",
+      "path": "results/control-control/games.pgn",
+      "repository": "0mis/stockfish-weight-space-lab",
+      "sha256": "88c117cd32b50233c6117524f91bdeec7758e2e6db54d33750b1ae54e289a447"
+    },
+    {
+      "bytes": 328917,
+      "commit": "c6a21a063f5a219a72f8f814bfb6287d0925171b",
+      "path": "results/screen-initiative-plus/games.pgn",
+      "repository": "0mis/stockfish-weight-space-lab",
+      "sha256": "c6dd775e65de231681956a2237d07432a4b96433757306e9b65caa0d2402dd33"
+    },
+    {
+      "bytes": 606486,
+      "commit": "c6a21a063f5a219a72f8f814bfb6287d0925171b",
+      "path": "results/confirmation-initiative-plus/games.pgn",
+      "repository": "0mis/stockfish-weight-space-lab",
+      "sha256": "034586eda3e2069f83ffb6fe6a28f4c9fc332b4f6b0ac004c6025e664524db0b"
+    },
+    {
+      "bytes": 935475,
+      "commit": "c6a21a063f5a219a72f8f814bfb6287d0925171b",
+      "path": "results/test1757-parent-screen/games-utc.pgn",
+      "repository": "0mis/stockfish-weight-space-lab",
+      "sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+    },
+    {
+      "bytes": 918097,
+      "commit": "c6a21a063f5a219a72f8f814bfb6287d0925171b",
+      "path": "results/test1757-edited-screen/games-utc.pgn",
+      "repository": "0mis/stockfish-weight-space-lab",
+      "sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+    },
+    {
+      "bytes": 981421,
+      "commit": "c6a21a063f5a219a72f8f814bfb6287d0925171b",
+      "path": "results/test1757-history-floor-screen/games-utc.pgn",
+      "repository": "0mis/stockfish-weight-space-lab",
+      "sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+    },
+    {
+      "bytes": 953620,
+      "commit": "c6a21a063f5a219a72f8f814bfb6287d0925171b",
+      "path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+      "repository": "0mis/stockfish-weight-space-lab",
+      "sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+    }
+  ]
+}
