@@ -1,0 +1,23 @@
+{
+  "files": [
+    {
+      "bytes": 4758,
+      "git_blob": "b4208e2f7107bbbff6cf9f1e94c42eda5fcfb712",
+      "sha256": "4d1efe8b85fa01033bdd99e8981fa2b5634ab616d190178b01615b9e5461834f",
+      "source_url": "https://github.com/0mis/Stockfish/blob/ef49ff7929b718490deb08342a0ce8b9dbe7301f/ci/qualify_common.py"
+    },
+    {
+      "bytes": 997,
+      "git_blob": "af6f6f0911939a244115dad7a6a337b6a3e7e7c3",
+      "sha256": "369ebac8fd63560be65092be538640a35336570eb0470ba5cea00b00e8773f56",
+      "source_url": "https://github.com/0mis/Stockfish/blob/ef49ff7929b718490deb08342a0ce8b9dbe7301f/ci/pgo_capture.py"
+    },
+    {
+      "bytes": 3390,
+      "git_blob": "d898ea49afda0450ca4e574ad9d01dfd04e5d340",
+      "sha256": "b8d09cddc719decb9324eccc767dcd3efc324e45600e57b5a1051eff2a2028f5",
+      "source_url": "https://github.com/0mis/Stockfish/blob/ef49ff7929b718490deb08342a0ce8b9dbe7301f/ci/test_qualification.py"
+    }
+  ],
+  "schema": "public-harness-reuse-v1"
+}

@@ -1,0 +1,115 @@
+{
+  "attribution": {
+    "0mis_role": "Narrow attributed port, source-preservation proof and bounded target-host diagnostic; not original policy authorship",
+    "PR": "https://github.com/official-stockfish/Stockfish/pull/7294",
+    "chosen_original_policy": "MxTriX77 / SanityEclipse000",
+    "existing_specialization": "mstembera428d7c76b872bcaa757f786d2e5a15367693cf76",
+    "original_base": "7cdd5e89a39fe3071b67d91c7bb07d712044bf76",
+    "original_commit": "5b559f0b7e37822d04dffe9e559d8a716705ccf5",
+    "overlapping_sawmaker_1f75e865_not_applied": true
+  },
+  "build": {
+    "PGO": "unchanged default ./stockfish bench per side, full original pipes retained; same fixed CPU",
+    "architecture": "x86-64-bmi2",
+    "compiler": "same freshly resolved g++ binary+SHA/version for both; COMP=gcc COMPCXX=g++",
+    "extra_flags": "none; exact unchanged source Makefile",
+    "runner": "ubuntu-24.04 standard public GitHub hosted",
+    "sequential": true,
+    "target": "fresh make-j2 profile-build, no cache, no prior objects/profiles"
+  },
+  "code_sha256": {
+    "REUSED-SOURCES.json": "676636263106e0cd65b006f2a0e3be6e6185b5f5c9903a02f92432bbc373152d",
+    "audit.py": "7ce667989f8dd45c9a872982de6e9bb238239440e395b9605c56339bf25475c1",
+    "pgo_capture.py": "369ebac8fd63560be65092be538640a35336570eb0470ba5cea00b00e8773f56",
+    "policy.py": "abed054f38ab4b4a7fb8fc4d8f804c5f0c475703271a5383fe314dafbf260fec",
+    "qualify_common.py": "4d1efe8b85fa01033bdd99e8981fa2b5634ab616d190178b01615b9e5461834f",
+    "run.py": "07cc09cc724e9ec2bcce18f82807c62e251e37e879b6ad92b7dfd897fc3bc326",
+    "test_policy.py": "ad82ebb9de21a597bb65b3498f1b146f3fbf35fa2e402399597d767b71765598",
+    "test_qualification.py": "b8d09cddc719decb9324eccc767dcd3efc324e45600e57b5a1051eff2a2028f5"
+  },
+  "functional": {
+    "bench_command": "bench 16 1 13 default depth",
+    "bench_nodes": 3464885,
+    "embedded_net": "full ELF embedded raw bytes/SHA and UCI default independently checked",
+    "legality": "all reported PV rows plus final bestmove/ponder legally reconstructed from exact public benchmark.cpp roots; includes2Chess960 roots; no formal positions",
+    "perft4": 197281,
+    "positions": 51,
+    "signatures": "all51 final info/PV/bestmove/ponder/per-position nodes identical between sides and every qualification/warmup/timed bench, timing/nps fields omitted only"
+  },
+  "limits": {
+    "PGO_timeout_seconds": 180,
+    "build_timeout_seconds_each": 900,
+    "compile_jobs": 2,
+    "hosted_job_minutes": 40,
+    "local_builds_or_engines": 0,
+    "native_processes_max": 40,
+    "native_timeout_seconds_each": 90,
+    "wall_seconds": 2100
+  },
+  "network": {
+    "bytes": 138360528,
+    "filename": "nn-18cd32e11a9c.nnue",
+    "sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+    "url": "https://tests.stockfishchess.org/api/nn/nn-18cd32e11a9c.nnue"
+  },
+  "policy": {
+    "compile_gate": "USE_PAIRED_WIDENING_ADD and USE_PEXT and Dimensions/TileHeight>2",
+    "engine_source_paths_changed": [
+      "AUTHORS",
+      "src/nnue/nnue_accumulator.cpp"
+    ],
+    "hints": "READ/HIGH default prefetch on each CacheLineSize offset of the next tile; data already includes current j",
+    "preserve": "Current specialized fixed-address arrays, dispatch, UNROLLED_FOR and GCC unrolls, all remaining cpp bytes and all search/net sources; exact reverse-port byte proof",
+    "row_gate": "j+TileHeight<Dimensions"
+  },
+  "schema": "official43e01-pr7294-port-timing-plan-v1",
+  "scope": {
+    "elo_claim": false,
+    "games_dispatched": 0,
+    "if_fail": "retain actual timing and reject this port route, do not search alternatives",
+    "if_pass": "send actual timings/sources to Root first; no real-clock A/B without later explicit authorization",
+    "performance_claim": "target-host BMI2 diagnostic only",
+    "private_or_current_matches_touched": false
+  },
+  "source": {
+    "A": {
+      "commit": "43e01e07210948e1130dc687c065d7a3742b2793",
+      "repository": "official-stockfish/Stockfish",
+      "tree": "97c77114c970b5573e33db9c1e90fbef943a6d42"
+    },
+    "B": {
+      "commit": "709bddfb2d10b9da1ecb0b97fff9452cd5a8ffc5",
+      "repository": "0mis/Stockfish",
+      "tree": "36c914bbf7270815f4278da5925e30642c2a5528"
+    },
+    "baseline_accumulator_sha256": "7a9961bf597348bb3f05c5561a98055699a9533e61b905f14fb4479edc11bd82"
+  },
+  "study_id": "official43e01-nexttile-prefetch-001",
+  "timing": {
+    "block_estimate": "arithmetic mean of2A times / arithmetic mean of2B times -1, separately for both clocks",
+    "cpu_affinity": "lowest allowed host CPU, same for PGO and all qualification/warmup/timed native processes",
+    "exclusions": "no outlier removal, retries, additional blocks, adaptive reordering or alternative policy",
+    "gate": "median8 block speed>=0.01 on BOTH clocks AND at least7/8blocks speed>0 on BOTH clocks",
+    "labels": {
+      "A": "unedited official43e01+stock18cd",
+      "B": "narrow PR7294 port+same stock18cd"
+    },
+    "measurements": "engine-reported benchmark elapsed_ms and Python monotonic_ns around entire fresh process (taskset wrapper included equally)",
+    "native_processes_at_once": 1,
+    "orders": [
+      "ABBA",
+      "BAAB",
+      "ABBA",
+      "BAAB",
+      "ABBA",
+      "BAAB",
+      "ABBA",
+      "BAAB"
+    ],
+    "stop": "any functional/integrity failure withholds timing acceptance; retain all raw outputs",
+    "ties": "not favorable",
+    "timed_runs": 32,
+    "warmup_order": "AB after both fresh builds qualify",
+    "warmups_per_side": 1
+  }
+}

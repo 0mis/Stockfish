@@ -1,0 +1,71 @@
+name: Official43e01 attributed PR7294 port diagnostic
+on:
+  push:
+    branches: [research/official43e01-nexttile-prefetch-001]
+    paths:
+      - research/nexttile43e01_001/*.py
+      - research/nexttile43e01_001/plan.json
+      - research/nexttile43e01_001/REUSED-SOURCES.json
+      - .github/workflows/official43e01-nexttile-prefetch-001.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: official43e01-nexttile-prefetch-001
+  cancel-in-progress: false
+jobs:
+  bmi2-diagnostic:
+    if: github.repository == '0mis/Stockfish'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - name: Checkout predeclared driver
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          path: driver
+          persist-credentials: false
+      - name: Checkout exact official baseline
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: official-stockfish/Stockfish
+          ref: 43e01e07210948e1130dc687c065d7a3742b2793
+          path: baseline
+          persist-credentials: false
+      - name: Checkout exact attributed narrow port
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: 0mis/Stockfish
+          ref: 709bddfb2d10b9da1ecb0b97fff9452cd5a8ffc5
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+      - name: Install fixed passive legality parser
+        run: |
+          python -m pip install --disable-pip-version-check --no-cache-dir chess==1.11.2
+      - name: Pure source/parser/gate tests
+        run: |
+          python -B -m unittest discover -s driver/research/nexttile43e01_001 -p 'test_*.py' -v
+      - name: Fresh identical builds then bounded serial timing
+        run: |
+          python -B driver/research/nexttile43e01_001/run.py --root "$GITHUB_WORKSPACE" --expected-plan-sha 201bc0b8c03fdf4cb837a87b4a8c6ca0dfeefe979a220d0e093eed615ce657dc
+      - name: Passive independent raw-output and clock audit
+        run: |
+          python -B driver/research/nexttile43e01_001/audit.py --evidence "$GITHUB_WORKSPACE/evidence"
+      - name: Preserve source binaries logs and actual timing including failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: official43e01-nexttile-prefetch-${{ github.run_id }}
+          path: evidence/
+          retention-days: 14
+          if-no-files-found: warn
+          compression-level: 6
