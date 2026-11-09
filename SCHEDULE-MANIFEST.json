@@ -1,0 +1,75 @@
+{
+  "color_rule": "Candidate first iff integer SHA256(experiment+/color|+position_id) modulo2 is0; every pair reverses colors.",
+  "distinct_legal_ep_fen4_families": 286,
+  "experiment": "released-composite-vs-official-nov9-dev-001",
+  "games": 572,
+  "legal_one_ply_id_stream": {
+    "bytes": 697060,
+    "count": 10724,
+    "file": "public-one-ply-ids.txt",
+    "sha256": "12a022058499c7d97f24cbaa250928df4b88ce9a1a6b1171e452727e5e1f40a0"
+  },
+  "native_play_admitted": false,
+  "native_processes_started": 0,
+  "new_outcomes_accessed": false,
+  "old_outcomes_used_for_selection": false,
+  "order_rule": "Ascending SHA256(experiment+/order|+position_id); position_id=SHA256(ASCII legal-EP canonical FEN4, no newline).",
+  "pairs": 286,
+  "public_commit": "c6a21a063f5a219a72f8f814bfb6287d0925171b",
+  "public_repository": "0mis/stockfish-weight-space-lab",
+  "representative_rule": "First occurrence in the fixed listed source order; retain canonical legal-EP six-field FEN including original counters.",
+  "root_id_stream": {
+    "bytes": 18590,
+    "count": 286,
+    "file": "public-root-ids.txt",
+    "sha256": "a33f09108012dc4b497b3baf657de528e4f7770a1215059582eed760b4b72eb9"
+  },
+  "schedule_file": "openings.json",
+  "schedule_sha256": "e8a84dc8fc6cca10ec52c31a65aa074131a1887c766db36af7869b6660e07ef5",
+  "schema": "retired-public-nov9-composite-opening-freeze/1",
+  "scope": "Known retired public development population only; no fresh-confirmation or private-pool claim.",
+  "shard_rule": "global pair_index modulo2;143 disjoint pairs per host; maximum2 concurrent standard windows-2022 hosts.",
+  "source_games": 768,
+  "sources": [
+    {
+      "bytes": 918097,
+      "git_blob": "90475fc71ae415c4b0a141e8f43d425547a41913",
+      "path": "results/test1757-edited-screen/games-utc.pgn",
+      "sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9",
+      "source_games": 128,
+      "url": "https://raw.githubusercontent.com/0mis/stockfish-weight-space-lab/c6a21a063f5a219a72f8f814bfb6287d0925171b/results/test1757-edited-screen/games-utc.pgn"
+    },
+    {
+      "bytes": 981421,
+      "git_blob": "29b1763b34807648e1db46f100d5f335dddc6199",
+      "path": "results/test1757-history-floor-screen/games-utc.pgn",
+      "sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0",
+      "source_games": 128,
+      "url": "https://raw.githubusercontent.com/0mis/stockfish-weight-space-lab/c6a21a063f5a219a72f8f814bfb6287d0925171b/results/test1757-history-floor-screen/games-utc.pgn"
+    },
+    {
+      "bytes": 935475,
+      "git_blob": "b81d5b87b498536536329dce50ff5ea5000dd4e7",
+      "path": "results/test1757-parent-screen/games-utc.pgn",
+      "sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d",
+      "source_games": 128,
+      "url": "https://raw.githubusercontent.com/0mis/stockfish-weight-space-lab/c6a21a063f5a219a72f8f814bfb6287d0925171b/results/test1757-parent-screen/games-utc.pgn"
+    },
+    {
+      "bytes": 953620,
+      "git_blob": "fb9ae2f77e48cbdef39eede7f7dbdd0ed073161d",
+      "path": "results/test1757-readout-ridge-screen/games-utc.pgn",
+      "sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779",
+      "source_games": 128,
+      "url": "https://raw.githubusercontent.com/0mis/stockfish-weight-space-lab/c6a21a063f5a219a72f8f814bfb6287d0925171b/results/test1757-readout-ridge-screen/games-utc.pgn"
+    },
+    {
+      "bytes": 1879333,
+      "git_blob": "af0cbe990d156efad11705aacb929b4460394482",
+      "path": "results/test1757-selected-vs-official/games-utc.pgn",
+      "sha256": "a90252baa4b3c573e770fc7f17e62f191b52607c38f259bc7b8eb050263aa519",
+      "source_games": 256,
+      "url": "https://raw.githubusercontent.com/0mis/stockfish-weight-space-lab/c6a21a063f5a219a72f8f814bfb6287d0925171b/results/test1757-selected-vs-official/games-utc.pgn"
+    }
+  ]
+}

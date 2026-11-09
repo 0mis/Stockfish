@@ -1,0 +1,154 @@
+{
+  "adjudication": {
+    "evaluation_draw": false,
+    "evaluation_resign": false,
+    "maximum_moves": false,
+    "tablebase": false
+  },
+  "admission": {
+    "aggregate_zero_overlap_required_before_native_play": true,
+    "file": "ROOT-ADMISSION.json",
+    "private_ids_or_individual_membership_must_not_be_published": true,
+    "required": true,
+    "schedule_and_public_root_and_child_commitments_must_match": true
+  },
+  "branch": "research/released-composite-vs-official-nov9-dev-001",
+  "candidate": {
+    "engine_sha256": "ae1d4772a71529085b26d7460e76fcf65dbe09782e55ea67ecef2e4f033c5ba5",
+    "expected_configured_default_bench": {
+      "nodes": 4125162,
+      "search_signature_sha256": "40a3d997d2cd31391c58ba8745bd578f8a08550d869d78e44b01059785da38fc"
+    },
+    "explicit_evalfile_required": true,
+    "name": "released-composite-ae1d-d5",
+    "network_bytes": 138360528,
+    "network_filename": "nn-d5c257728ba5.nnue",
+    "network_sha256": "d5c257728ba53cb9808543ce2800080c860f1c878896cd1b17f75ed4b20aafee",
+    "source_commit": "d19047cc44fae773a590be3b0b9f08fdd75acdc7",
+    "source_tree": "6c3cd141dcc3cac20b84469b729fbbd1141c0d60",
+    "zip": {
+      "bytes": 232285191,
+      "sha256": "23b4df6759e361ea510e28f23abec04daeb14f08969a781653b08a916f0e4e8d",
+      "url": "https://github.com/0mis/Stockfish/releases/download/experimental-test1757-history-d5c257728ba5/stockfish-test1757-history-d5-windows-bmi2.zip"
+    }
+  },
+  "credits": "Stockfish developers; Shawn Xu test1757 NNUE; Stefan Geschwentner/locutus2 history floor; SanityEclipse000/MxTriX77 prefetch; 0mis AI-assisted fixed nine-bias readout derivative; Disservin fastchess.",
+  "evidence": [
+    "immutable schedule and Root admission hash",
+    "exact downloaded assets/net/executable hashes",
+    "two fresh configured benches and perft on every host",
+    "every pair command/config/process/clock log",
+    "raw PGNs and clock comments without sanitizing moves/results",
+    "full-sample independent legal replay and exact polynomial interval"
+  ],
+  "experiment": "released-composite-vs-official-nov9-dev-001",
+  "failure_policy": "Retain every completed legal normal result and played-move time forfeit. Abandoned/native/illegal/unterminated result, zero-move/incomplete PGN, nonzero referee exit, timeout or any input/qualification mismatch invalidates the full experiment; preserve all raw evidence and stop the failed shard. Other shard may finish its fixed list (fail-fast false). No pair replay or repair-run is authorized by this plan.",
+  "fishtest_submission": false,
+  "fixed_sample_policy": "Exactly all286 pairs once, across both disjoint143-pair shards. No seed or model selection, no statistical or outcome stopping, no extra games, no outcome-based retries or omitted completed results.",
+  "games": 572,
+  "games_per_shard": 286,
+  "legal_one_ply_id_stream": {
+    "bytes": 697060,
+    "count": 10724,
+    "file": "public-one-ply-ids.txt",
+    "sha256": "12a022058499c7d97f24cbaa250928df4b88ce9a1a6b1171e452727e5e1f40a0"
+  },
+  "maximum_parallel_standard_hosts": 2,
+  "native_qualification": "On each host before games: verify exact archive/executable/net SHA and sizes, two fresh configured-default51 UCI benches per arm matching the pinned per-side search signature, and startpos perft4=197281. No laptop engines/builds.",
+  "opening_order": {
+    "color_domain": "released-composite-vs-official-nov9-dev-001/color|",
+    "first_color": "Candidate first iff integer SHA256(color_domain+root_id) modulo2 equals0; second game reverses colors.",
+    "order_domain": "released-composite-vs-official-nov9-dev-001/order|",
+    "ordering": "Ascending SHA256(order_domain+root_id), once per unique family; shard=global pair_index modulo2."
+  },
+  "outcome_access": "No partial scores or partial game results will be inspected. Open scoring artifacts only after both shards reach terminal state.",
+  "pairs": 286,
+  "pairs_per_shard": 143,
+  "private_natural_play_screen_used": false,
+  "private_pool_access": false,
+  "referee": {
+    "exe_sha256": "a7aa6762058e1f699809e9f3d1a35b609e90dbb2c3dde32d99099d641780eb9b",
+    "name": "Disservin/fastchess v1.8.3-alpha",
+    "zip_bytes": 7192293,
+    "zip_sha256": "e4c66cceec4122d0638022da55e6841487a1dd9a4819685893749dbd7c645033",
+    "zip_url": "https://github.com/Disservin/fastchess/releases/download/v1.8.3-alpha/fastchess-windows-x86-64.zip"
+  },
+  "reference": {
+    "engine_sha256": "17a28950655273d295bacea5095ac49727c16b58a1cc3a5b27c01d7b71679a30",
+    "expected_configured_default_bench": {
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd"
+    },
+    "name": "official-nov9-43e01-18cd",
+    "network_bytes": 138360528,
+    "network_filename": "nn-18cd32e11a9c.nnue",
+    "network_sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+    "network_url": "https://tests.stockfishchess.org/api/nn/nn-18cd32e11a9c.nnue",
+    "release_tag": "stockfish-dev-20261109-43e01e07",
+    "source_commit": "43e01e07210948e1130dc687c065d7a3742b2793",
+    "source_tree": "97c77114c970b5573e33db9c1e90fbef943a6d42",
+    "zip": {
+      "bytes": 117558592,
+      "sha256": "7112d3bb99b77c20e6c1edd2538a848e8a317b1cc886151c15c1d14398999c2c",
+      "url": "https://github.com/official-stockfish/Stockfish/releases/download/stockfish-dev-20261109-43e01e07/stockfish-windows-x86-64-universal.zip"
+    }
+  },
+  "release_or_main_edit": false,
+  "repository": "0mis/Stockfish",
+  "root_id_stream": {
+    "bytes": 18590,
+    "count": 286,
+    "file": "public-root-ids.txt",
+    "sha256": "a33f09108012dc4b497b3baf657de528e4f7770a1215059582eed760b4b72eb9"
+  },
+  "runner": {
+    "billing_changes": false,
+    "custom_secrets": false,
+    "kind": "standard public GitHub-hosted",
+    "label": "windows-2022"
+  },
+  "runtime": {
+    "concurrency_per_host": 1,
+    "evalfile": "Explicit pinned EvalFile on both arms; candidate must use the released d5 external file rather than its compiled original18cd default.",
+    "fresh_engine_each_game": true,
+    "hash_mb_per_engine": 64,
+    "move_overhead_ms": 10,
+    "per_pair_hard_timeout_seconds": 300,
+    "ping_ms": 60000,
+    "ponder": false,
+    "referee_time_margin_ms": 0,
+    "startup_ms": 10000,
+    "syzygy_probe_limit": 0,
+    "threads_per_engine": 1,
+    "time_control": "10+0.1",
+    "uci_limit_strength": false,
+    "ucinewgame_ms": 60000
+  },
+  "schedule_manifest_sha256": "a81a6d3cfad507755ce6feb63926e644200faea4cdae0c1797884888447f5ff0",
+  "schedule_sha256": "e8a84dc8fc6cca10ec52c31a65aa074131a1887c766db36af7869b6660e07ef5",
+  "schema": "released-composite-nov9-fixed-development-plan/1",
+  "scientific_scope": "Whole released history/prefetch-plus-d5 bundle versus actual official Nov9 Windows universal engine. Any observed differential belongs to the complete bundles and must not be attributed solely to weights.",
+  "shards": 2,
+  "source_or_weight_selection": false,
+  "statistics": {
+    "boundary_policy": "If a percentile is0 or1, logistic Elo is null with explicit negative_infinity/positive_infinity boundary label.",
+    "host_by_shard_outputs": [
+      "actual runner identity and load/configuration receipts",
+      "fixed pair/game counts",
+      "W/D/L and points",
+      "pentanomial",
+      "normal/time-forfeit termination counts"
+    ],
+    "primary_outputs": [
+      "whole-sample W/D/L",
+      "candidate/reference points",
+      "pentanomial counts0..4",
+      "score fraction and descriptive logistic Elo"
+    ],
+    "scope": "Descriptive for this complete known retired public development population and these two hosted VMs; no fresh confirmation, private alpha, SPRT or gain claim.",
+    "score_denominator": 1144,
+    "uncertainty": "Exact integer empirical paired-bootstrap percentile,286 iid empirical pair draws, nominal central95%, smallest k with40*CDF(k)>=q*286^286 forq=1,39; no interpolation.",
+    "unit": "one reversed-opening pair",
+    "whole_sample_games": 572
+  }
+}
