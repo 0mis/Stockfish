@@ -1,0 +1,36 @@
+{
+  "schema": "official-d1-test1758-complete-train-inputs/1",
+  "run_id": 42696757852,
+  "driver_commit": "90f6a1032ba36934ad9ad7fb1961246a81adb2d2",
+  "plan_sha256": "4c12de51e9acc6bbb63a831d7bd2c6511cf155b2b9d6dca83e2644e5cceb1ca9",
+  "artifacts": [
+    {
+      "shard": 0,
+      "id": 13709524801,
+      "bytes": 19031930,
+      "sha256": "289764bbc5c233961938aebd76c1d91e0c38a55cfc1fd84225c46827e2ae657e",
+      "name": "official-d1-test1758-train-shard-0"
+    },
+    {
+      "shard": 1,
+      "id": 13709149151,
+      "bytes": 18687711,
+      "sha256": "faad378a0dbb43362b67d63214a3f24f09d2261c8478bfdb1ef653886bb53332",
+      "name": "official-d1-test1758-train-shard-1"
+    },
+    {
+      "shard": 2,
+      "id": 13710867024,
+      "bytes": 18687164,
+      "sha256": "ecbd6ccc3426e1a22c32e7ac1c237ff43fabdb5c984df56e5fdba8694fcc9116",
+      "name": "official-d1-test1758-train-shard-2"
+    },
+    {
+      "shard": 3,
+      "id": 13710917173,
+      "bytes": 20690743,
+      "sha256": "431736c994907a7a1e0c3003652e9582fd92ec5b3263a458f2b757ab58808363",
+      "name": "official-d1-test1758-train-shard-3"
+    }
+  ]
+}

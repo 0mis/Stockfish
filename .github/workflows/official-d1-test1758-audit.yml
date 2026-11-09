@@ -1,0 +1,65 @@
+name: Official D1 test1758 complete TRAIN audit
+
+on:
+  push:
+    branches:
+      - research/official-d1-test1758-diagnostic-ci-v1
+    paths:
+      - .github/workflows/official-d1-test1758-audit.yml
+      - research/official_d1_test1758/training_audit.py
+      - research/official_d1_test1758/test_training_audit.py
+      - research/official_d1_test1758/train-inputs.json
+      - research/official_d1_test1758/audit-requirements.txt
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: official-d1-test1758-complete-train-audit-v1
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    if: github.repository == '0mis/Stockfish' && github.ref == 'refs/heads/research/official-d1-test1758-diagnostic-ci-v1'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout exact source-only audit driver
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          path: driver
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Use CPython 3.11
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+      - name: Install exact hashed legal-replay tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          sed -n '/^setuptools @/p; /^wheel @/p' driver/research/official_d1_test1758/audit-requirements.txt > "$RUNNER_TEMP/audit-bootstrap.txt"
+          python -m pip install --disable-pip-version-check --no-cache-dir --no-deps --require-hashes -r "$RUNNER_TEMP/audit-bootstrap.txt"
+          python -m pip install --disable-pip-version-check --no-cache-dir --no-deps --no-build-isolation --require-hashes -r driver/research/official_d1_test1758/audit-requirements.txt
+      - name: Check exact contracts without any model or native engine
+        shell: bash
+        run: python -B -m unittest discover -s driver/research/official_d1_test1758 -p 'test_*.py' -v
+      - name: Independently replay the complete closed TRAIN evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -B driver/research/official_d1_test1758/training_audit.py --pins driver/research/official_d1_test1758/train-inputs.json --out complete-train-audit-evidence
+      - name: Preserve one-shot raw sources and the actual identity/support decision
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: official-d1-test1758-complete-train-audit
+          path: complete-train-audit-evidence/
+          if-no-files-found: error
+          retention-days: 90
+          compression-level: 6
+          include-hidden-files: true
