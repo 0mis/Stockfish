@@ -168,6 +168,14 @@ def run(driver_commit):
                         *(HERE / name for name in INPUT_HASHES), driver / ".github/workflows/test1757-prefetch-build-v1.yml"]
         require(all(path.is_file() for path in driver_files), "A reviewed driver file is missing")
         summary["driver_files"] = {path.resolve().relative_to(driver.resolve()).as_posix(): file_hash(path) for path in driver_files}
+        capture(["git", "archive", "--format=tar", "--prefix=stockfish-source/", "--output=../artifact/corresponding-source.tar", SOURCE_COMMIT],
+                source, output, "archive-source")
+        with tarfile.open(output / "corresponding-source.tar", "a") as archive:
+            for relative in summary["driver_files"]:
+                archive.add(driver / relative, arcname="ci-driver/" + relative, recursive=False)
+        for name in ("AUTHORS", "Copying.txt"):
+            shutil.copyfile(source / name, output / name)
+        summary["source_archive"] = {"path": "corresponding-source.tar", "sha256": file_hash(output / "corresponding-source.tar")}
         for name in INPUT_HASHES:
             shutil.copyfile(HERE / name, output / name)
         net = source / "src" / NETS["donor"]
@@ -188,7 +196,7 @@ def run(driver_commit):
         shutil.copyfile(source / "src/stockfish.exe", executable)
         engine_hash = file_hash(executable)
         summary["engine"] = {"path": executable.name, "sha256": engine_hash, "bytes": executable.stat().st_size}
-        argv = [os.path.relpath(executable, source / "src")]
+        argv = [str(executable.resolve(strict=True))]
         capture(argv, source / "src", output, "engine-compiler", "uci\ncompiler\nisready\nquit\n")
         for role in ("donor", "edited"):
             benches = []
@@ -220,14 +228,6 @@ def run(driver_commit):
         require(file_hash(executable) == engine_hash and file_hash(net) == DONOR and file_hash(edited) == EDITED,
                 "Executable or networks changed during capture")
         capture(["git", "diff", "--exit-code", "HEAD", "--"], source, output, "source-clean-after")
-        capture(["git", "archive", "--format=tar", "--prefix=stockfish-source/", "--output=../artifact/corresponding-source.tar", SOURCE_COMMIT],
-                source, output, "archive-source")
-        with tarfile.open(output / "corresponding-source.tar", "a") as archive:
-            for relative in summary["driver_files"]:
-                archive.add(driver / relative, arcname="ci-driver/" + relative, recursive=False)
-        for name in ("AUTHORS", "Copying.txt"):
-            shutil.copyfile(source / name, output / name)
-        summary["source_archive"] = {"path": "corresponding-source.tar", "sha256": file_hash(output / "corresponding-source.tar")}
         summary["status"] = "captured_pending_independent_passive_verification"
     except Exception as exc:
         summary["error"] = {"type": type(exc).__name__, "message": str(exc)}
