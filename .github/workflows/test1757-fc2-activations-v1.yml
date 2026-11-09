@@ -56,7 +56,8 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python -m pip --isolated install @flags --no-build-isolation -r $runtime
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          $runnerPython = (Get-Command python -CommandType Application).Source
+          $runnerPython = python -I -c "import sys; assert sys.version_info[:3] == (3, 11, 9); print(sys.executable)"
+          if ($LASTEXITCODE -ne 0 -or $runnerPython -isnot [string] -or -not (Test-Path -LiteralPath $runnerPython -PathType Leaf)) { throw 'Pinned CPython did not return one executable' }
           "RUNNER_PYTHON=$runnerPython" >> $env:GITHUB_ENV
 
       - name: Run source and synthetic checks before any compiler
