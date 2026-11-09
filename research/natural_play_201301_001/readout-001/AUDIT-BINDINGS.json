@@ -1,0 +1,43 @@
+{
+  "artifact": {
+    "actual_zip_download_verified": true,
+    "bytes": 1953,
+    "id": 13714511299,
+    "name": "natural-play-201301-fixed-audit-receipt",
+    "sha256": "6e6b77f820862bb5920f788871ccd3aa89c274e976f8bf469e2a4e8beaa59cd9"
+  },
+  "audit_json": {
+    "bytes": 1138,
+    "sha256": "b8733a382e25e977ac610f2f824bc1cb2e2eb2d0abac9d0cb9611dc08084b76e"
+  },
+  "audit_source_commit": "c56eca2339cb8b306ce710499be85b9ff31bf9da",
+  "audited_source_commit": "87e0d14e8c8e1c0510865acef2b1ebf04b00f816",
+  "audited_source_run": 42706302113,
+  "private_collision_pending": true,
+  "repo": "0mis/Stockfish",
+  "run_id": 42707284461,
+  "schema": "natural-play-audit-bindings-v1",
+  "source_files": [
+    {
+      "bytes": 11522,
+      "path": "research/natural_play_201301_001/verify_saved.py",
+      "sha256": "a9914fdea11c298ea1ebaf8e7254a0289a27e2110f3df3bd3caf1e3706170666"
+    },
+    {
+      "bytes": 1687,
+      "path": "research/natural_play_201301_001/test_verify_saved.py",
+      "sha256": "bb4006024b7a23651b341ef0f78029e4074cdb08db2128f80e83d5c1b3a491a3"
+    },
+    {
+      "bytes": 2047,
+      "path": ".github/workflows/natural-play-201301-audit-001.yml",
+      "sha256": "9188451a255e610a8b919a07a63f429198028f2099e53fbbb38cdb684d62e986"
+    }
+  ],
+  "synthetic_tests": {
+    "large_products_downloaded_locally": false,
+    "passed": 11,
+    "real_source_locally_read": false
+  },
+  "training_admitted": false
+}
