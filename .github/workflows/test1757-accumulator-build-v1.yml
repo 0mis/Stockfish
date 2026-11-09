@@ -1,0 +1,80 @@
+name: Test1757 accumulator alternative evidence v1
+on:
+  push:
+    branches: [research/test1757-accumulator-ci]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  windows-bmi2:
+    if: github.repository == '0mis/Stockfish'
+    runs-on: windows-2022
+    timeout-minutes: 45
+    steps:
+      - name: Checkout reviewed driver
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          ref: ${{ github.sha }}
+          path: driver
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Checkout exact alternative source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: 0mis/Stockfish
+          ref: 7a2c542da605b587558f55460901e215584fd5ec
+          path: source
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Download accepted reference artifact
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          repository: 0mis/Stockfish
+          run-id: 42543250921
+          name: test1757-prefetch-windows-bmi2-49672d7b3c2b0cb544f4bf7cc70515249fe047e3
+          github-token: ${{ github.token }}
+          path: reference
+      - name: Locate Python and install pinned analysis dependency
+        shell: pwsh
+        run: |
+          $runnerPython = (Get-Command python -CommandType Application).Source
+          "RUNNER_PYTHON=$runnerPython" >> $env:GITHUB_ENV
+          & $runnerPython -m pip install --index-url https://pypi.org/simple --disable-pip-version-check --no-cache-dir --no-deps --require-hashes -r driver/research/ci/requirements-history.txt
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Setup MinGW64 without cache
+        uses: msys2/setup-msys2@e9898307ac31d1a803454791be09ab9973336e1c
+        with:
+          msystem: MINGW64
+          path-type: inherit
+          cache: false
+          install: mingw-w64-x86_64-gcc make git curl
+      - name: Build and collect fixed regression evidence
+        shell: msys2 {0}
+        run: |
+          set -euo pipefail
+          PYTHON_EXE="$(cygpath -u "$RUNNER_PYTHON")"
+          "$PYTHON_EXE" -B -m unittest discover -s driver/research/ci -p 'test_*.py'
+          "$PYTHON_EXE" driver/research/ci/build_and_capture_v1.py --driver-commit "$GITHUB_SHA"
+      - name: Upload candidate evidence only
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: test1757-accumulator-windows-bmi2-${{ github.sha }}
+          path: |
+            artifact/stockfish-windows-x86-64-bmi2.exe
+            artifact/*.stdout.txt
+            artifact/*.stderr.txt
+            artifact/*.record.json
+            artifact/*.uci
+            artifact/SUMMARY.json
+            artifact/HISTORY-RESULT.json
+            artifact/patch-v1.json
+            artifact/probes-v1.json
+            artifact/histories-v1.json
+            artifact/requirements-history.txt
+            artifact/AUTHORS
+            artifact/Copying.txt
+            artifact/corresponding-source.tar
+          retention-days: 1
+          if-no-files-found: warn
+          compression-level: 6

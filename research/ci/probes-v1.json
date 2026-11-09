@@ -1,0 +1,200 @@
+{
+  "arms": {
+    "donor": {
+      "external_evalfile": {
+        "bytes": 138360528,
+        "path": "..\\src\\nn-18cd32e11a9c.nnue",
+        "sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf"
+      }
+    },
+    "edited": {
+      "external_evalfile": {
+        "bytes": 138360528,
+        "path": "..\\src\\nn-034f47e652a6.nnue",
+        "sha256": "034f47e652a6a0354f9099993535a0405f4933146fc6d0b913583696bfbdacbd"
+      }
+    }
+  },
+  "buckets_per_eval": 92,
+  "original_request_sha256": "4aa21bdcc8dddd3403c0363a0b4c5a44da6748ce3f754ff0918fc0eb40fea25b",
+  "rows": [
+    {
+      "donor": -1702,
+      "edited": -1715,
+      "fen": "k3r3/8/8/3pP3/8/8/8/4K3 w - d6 0 1",
+      "id": "p10",
+      "physical": 10,
+      "side_to_move": "white"
+    },
+    {
+      "donor": -2,
+      "edited": 8,
+      "fen": "r3k2r/7p/8/8/8/8/P7/R3K2R w - - 0 1",
+      "id": "p11",
+      "physical": 11,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 44,
+      "edited": 50,
+      "fen": "4k3/ppp5/8/8/8/8/PPP5/4K3 w - - 0 1",
+      "id": "p12",
+      "physical": 12,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 76,
+      "edited": 86,
+      "fen": "r3k2r/p7/8/8/8/8/P7/R3K2R w - - 0 1",
+      "id": "p13",
+      "physical": 13,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 3,
+      "edited": 10,
+      "fen": "6k1/8/8/4n3/R2B3r/8/8/2K5 w - - 0 1",
+      "id": "p14",
+      "physical": 14,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 17,
+      "edited": 21,
+      "fen": "4k3/ppppp3/8/8/8/8/PPPPP3/4K3 w - - 0 1",
+      "id": "p30",
+      "physical": 30,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 5,
+      "edited": 9,
+      "fen": "r3k2r/p6p/8/8/8/8/P6P/R3K2R w - - 0 1",
+      "id": "p31",
+      "physical": 31,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 27,
+      "edited": 36,
+      "fen": "4k3/pppp4/8/8/8/8/PPPP4/4K3 w - - 0 1",
+      "id": "p32",
+      "physical": 32,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 99,
+      "edited": 109,
+      "fen": "r3k2r/pp6/8/8/8/8/PP6/R3K2R w - - 0 1",
+      "id": "p33",
+      "physical": 33,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 53,
+      "edited": 55,
+      "fen": "r3k2r/8/1n4n1/8/8/1N4N1/8/R3K2R w KQkq - 0 1",
+      "id": "p34",
+      "physical": 34,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 16,
+      "edited": 22,
+      "fen": "4k3/ppppppp1/8/8/8/8/PPPPPPP1/4K3 w - - 0 1",
+      "id": "p50",
+      "physical": 50,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 3,
+      "edited": 14,
+      "fen": "r3k2r/pp4pp/8/8/8/8/PP4PP/R3K2R w - - 0 1",
+      "id": "p51",
+      "physical": 51,
+      "side_to_move": "white"
+    },
+    {
+      "donor": -93,
+      "edited": -97,
+      "fen": "4k3/pppp4/pp6/8/8/PP6/PPPP4/4K3 w - - 0 1",
+      "id": "p52",
+      "physical": 52,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 21,
+      "edited": 33,
+      "fen": "r3k2r/pppp4/8/8/8/8/PPPP4/R3K2R w - - 0 1",
+      "id": "p53",
+      "physical": 53,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 31,
+      "edited": 38,
+      "fen": "rb1qk3/pppppppp/8/8/8/8/PPPPPPPP/RB1QK3 w - - 0 1",
+      "id": "p82",
+      "physical": 82,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 32,
+      "edited": 35,
+      "fen": "r2qk3/pppp4/pppp4/8/8/PPPP4/PPPP4/R2QK3 w - - 0 1",
+      "id": "p83",
+      "physical": 83,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 22,
+      "edited": 28,
+      "fen": "rbnqkn2/pppppppp/8/8/8/8/PPPPPPPP/RBNQKN2 w - - 0 1",
+      "id": "p87",
+      "physical": 87,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 34,
+      "edited": 45,
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "id": "p91",
+      "physical": 91,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 2809,
+      "edited": 2809,
+      "fen": "k7/8/8/3pP3/8/8/8/4K3 w - d6 0 1",
+      "id": "p0",
+      "physical": 0,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 8204,
+      "edited": 8204,
+      "fen": "8/8/7k/8/8/8/QQ6/5K2 w - - 0 1",
+      "id": "p8",
+      "physical": 8,
+      "side_to_move": "white"
+    },
+    {
+      "donor": -846,
+      "edited": -846,
+      "fen": "5b1r/1bk2B2/3p1P1N/1Pp5/p1P2pPP/P2P4/4n3/4K1N1 w - - 3 49",
+      "id": "p65",
+      "physical": 65,
+      "side_to_move": "white"
+    },
+    {
+      "donor": 4718,
+      "edited": 4718,
+      "fen": "rbn1knbr/pppppppp/8/8/8/8/PPPPPPPP/RBNQKNBR w - - 0 1",
+      "id": "p90",
+      "physical": 90,
+      "side_to_move": "white"
+    }
+  ],
+  "schema": "test1757-synthetic-probes-v1",
+  "scope": "Synthetic requests and scalar expectations only. Future native transcripts require independent passive verification."
+}

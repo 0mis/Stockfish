@@ -1,0 +1,97 @@
+{
+  "cases": [
+    {
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "id": "castle-both",
+      "moves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5a4",
+        "g8f6",
+        "e1g1",
+        "f8e7",
+        "d2d3",
+        "e8g8"
+      ]
+    },
+    {
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "id": "capture-both",
+      "moves": [
+        "e2e4",
+        "d7d5",
+        "e4d5",
+        "d8d5",
+        "b1c3",
+        "d5d6",
+        "g1f3",
+        "g8f6"
+      ]
+    },
+    {
+      "fen": "r3k3/8/8/3pP3/8/8/8/R3K3 w - d6 0 1",
+      "id": "ep-white",
+      "moves": [
+        "e5d6",
+        "e8d7",
+        "e1d2",
+        "d7d6"
+      ]
+    },
+    {
+      "fen": "r3k3/8/8/8/3Pp3/8/8/R3K3 b - d3 0 1",
+      "id": "ep-black",
+      "moves": [
+        "e4d3",
+        "e1d2",
+        "e8d7",
+        "d2d3"
+      ]
+    },
+    {
+      "fen": "8/P6k/8/8/8/8/p6K/8 w - - 0 1",
+      "id": "promote-both",
+      "moves": [
+        "a7a8q",
+        "a2a1q",
+        "h2h3",
+        "h7h6"
+      ]
+    },
+    {
+      "fen": "8/P6k/8/8/8/8/p6K/8 w - - 0 1",
+      "id": "underpromote-both",
+      "moves": [
+        "a7a8n",
+        "a2a1r",
+        "h2h3",
+        "h7h6"
+      ]
+    },
+    {
+      "fen": "1r6/P6k/8/8/8/8/7K/8 w - - 0 1",
+      "id": "promotion-capture-white",
+      "moves": [
+        "a7b8q",
+        "h7h6",
+        "h2h3"
+      ]
+    },
+    {
+      "fen": "8/7k/8/8/8/8/p6K/1R6 b - - 0 1",
+      "id": "promotion-capture-black",
+      "moves": [
+        "a2b1q",
+        "h2h3",
+        "h7h6"
+      ]
+    }
+  ],
+  "depth": 6,
+  "schema": "accumulator-history-cases-v1",
+  "scope": "Fixed synthetic/legal histories; every forward prefix is searched, then full repeat, undo one ply, and full reuse. No playing-strength claim."
+}
