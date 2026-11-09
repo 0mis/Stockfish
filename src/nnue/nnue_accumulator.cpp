@@ -343,6 +343,21 @@ sf_always_inline Tile apply([[maybe_unused]] IndexType j, Tile acc, const i16* d
     return acc;
 }
 
+    #if defined(USE_PAIRED_WIDENING_ADD)
+// PR7294 by MxTriX77/SanityEclipse000: prefetch the next tile of each changed
+// row while its current tile is being added. Keep the original fast-PEXT and
+// more-than-two-tiles gate; current specialized row arrays and unrolls stay intact.
+sf_always_inline void prefetch_next_tile([[maybe_unused]] IndexType j,
+                                         [[maybe_unused]] const i8* data) {
+        #if defined(USE_PEXT)
+    if constexpr (Dimensions / Tiling::TileHeight > 2)
+        if (j + Tiling::TileHeight < Dimensions)
+            for (IndexType k = 0; k < Tiling::TileHeight; k += CacheLineSize)
+                prefetch(data + Tiling::TileHeight + k);
+        #endif
+}
+    #endif
+
 template<int sign>
 sf_always_inline Tile apply_feature_single([[maybe_unused]] IndexType j, Tile acc, const i8* data) {
     static_assert(sign == +1 || sign == -1);
@@ -379,6 +394,7 @@ sf_always_inline Tile apply_feature_single([[maybe_unused]] IndexType j, Tile ac
     }
     #elif defined(USE_PAIRED_WIDENING_ADD)
     static_assert(Tiling::NumRegs % 2 == 0);
+    prefetch_next_tile(j, data);
     const vec_t zero = vec_zero();
     UNROLLED_FOR (IndexType k = 0; k < Tiling::NumRegs; k += 2)
     {
@@ -409,9 +425,11 @@ sf_always_inline Tile apply_feature_single([[maybe_unused]] IndexType j, Tile ac
     #if defined(USE_PAIRED_WIDENING_ADD)
 
 template<int sign>
-sf_always_inline Tile apply_feature_pair(Tile acc, const i8* data0, const i8* data1) {
+sf_always_inline Tile apply_feature_pair(IndexType j, Tile acc, const i8* data0, const i8* data1) {
     static_assert(sign == +1 || sign == -1);
     static_assert(Tiling::NumRegs % 2 == 0);
+    prefetch_next_tile(j, data0);
+    prefetch_next_tile(j, data1);
     const vec_t ones = vec_set_8(1);
     UNROLLED_FOR (IndexType k = 0; k < Tiling::NumRegs; k += 2)
     {
@@ -435,8 +453,10 @@ sf_always_inline Tile apply_feature_pair(Tile acc, const i8* data0, const i8* da
 
 // acc += add - sub in one maddubs per half. Bias both rows to u8 so maddubs' unsigned
 // operand is valid; the bias cancels and |add - sub| <= 255 can't saturate.
-sf_always_inline Tile apply_feature_diff(Tile acc, const i8* add, const i8* sub) {
+sf_always_inline Tile apply_feature_diff(IndexType j, Tile acc, const i8* add, const i8* sub) {
     static_assert(Tiling::NumRegs % 2 == 0);
+    prefetch_next_tile(j, add);
+    prefetch_next_tile(j, sub);
     const vec_t bias  = vec_set_8(-128);
     const vec_t signs = vec_set_16(-255);  // i8 pairs (+1, -1)
         #if defined(__clang__)
@@ -466,7 +486,7 @@ apply_features(IndexType j, Tile acc, const u16* indices, int count, const i8* w
     int i = 0;
 #if defined(USE_PAIRED_WIDENING_ADD)
     for (; i + 1 < count; i += 2)
-        acc = apply_feature_pair<sign>(acc, &weights[usize(indices[i]) * Dimensions],
+        acc = apply_feature_pair<sign>(j, acc, &weights[usize(indices[i]) * Dimensions],
                                        &weights[usize(indices[i + 1]) * Dimensions]);
 #endif
     for (; i < count; ++i)
@@ -497,7 +517,7 @@ sf_always_inline Tile apply_features_but_odd(IndexType                 j,
     int i = 0;
 #if defined(USE_PAIRED_WIDENING_ADD)
     for (; i + 1 < psqCount; i += 2)
-        acc = apply_feature_pair<sign>(acc, psqRow(i), psqRow(i + 1));
+        acc = apply_feature_pair<sign>(j, acc, psqRow(i), psqRow(i + 1));
 
     // Pair the odd psq row with the first threat/pp row of the same sign, if any.
     if (i < psqCount)
@@ -507,7 +527,7 @@ sf_always_inline Tile apply_features_but_odd(IndexType                 j,
             odd = psqRow(i);
             return acc;
         }
-        acc = apply_feature_pair<sign>(acc, psqRow(i), &thrWeights[usize(thr[0]) * Dimensions]);
+        acc = apply_feature_pair<sign>(j, acc, psqRow(i), &thrWeights[usize(thr[0]) * Dimensions]);
         ++thr;
         --thrCount;
     }
@@ -527,7 +547,7 @@ sf_always_inline Tile apply_odd_features(IndexType j,
                                          const i8* added) {
 #if defined(USE_PAIRED_WIDENING_ADD)
     if (removed && added)
-        return apply_feature_diff(acc, added, removed);
+        return apply_feature_diff(j, acc, added, removed);
 #endif
     if (removed)
         acc = apply_feature_single<-1>(j, acc, removed);
