@@ -1,0 +1,10 @@
+{
+  "schema": "test1757-history-floor-source-v1",
+  "repository": "0mis/Stockfish",
+  "source_commit": "d19047cc44fae773a590be3b0b9f08fdd75acdc7",
+  "source_tree": "6c3cd141dcc3cac20b84469b729fbbd1141c0d60",
+  "baseline_commit": "7a17b53bcaf93f54a23ad65f309c413585500c82",
+  "baseline_tree": "8e3164caf60d281cb4b1d00a699364e04b354451",
+  "old_search_blob": "6f85432cb918df5239a74d3d3d282a163b71ead5",
+  "new_search_blob": "310063f887ef7a1c964391ba539c12524995007c"
+}
