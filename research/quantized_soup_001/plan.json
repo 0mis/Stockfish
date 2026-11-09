@@ -1,0 +1,169 @@
+{
+  "claims": {
+    "fishtest_submission_upload_or_outreach": false,
+    "official_superiority": false,
+    "published_effects_added": false
+  },
+  "conditional_screen": {
+    "baseline": "UNEDITED test1758 B",
+    "engine": "Same unmodified test1758 source commit73fe1eaca99ac4a09252c876aa6b1cceeaf7c4c7 for both arms",
+    "status": "Not launched by alignment phase. Freeze deterministic independent public retired roots and identical time control/color-pair protocol before any games; compare hash-only memberships to separately frozen1758 bias/follow-up starts without viewing their scores. Stop before games if no viable independent set."
+  },
+  "correlation": {
+    "definition": "Pearson correlation centered separately for each compared channel/vector, restricted to entries where BOTH values are nonzero. Joint zeros, one-sided zeros, logical padding and constant vectors never supply positive evidence.",
+    "fc0_row_minimum_common_nonzero": 64,
+    "fc1_row_minimum_common_nonzero": 12,
+    "fc2_minimum_common_nonzero": 16,
+    "ft_minimum_common_nonzero": 64,
+    "ft_minimum_informative_alternatives": 32,
+    "minimum_quantized_std": 0.5
+  },
+  "decision": {
+    "fail": "STOP_DIRECT_INTERPOLATION_LINE; retain actual metrics/reasons, no candidate, forced permutation, fitting or games.",
+    "on_pass": "One candidate only: ties-to-even (A+3*B)/4 on signed logical typed weights/biases using overflow-safe arithmetic; retain B metadata/routing/tags/padding exactly. Independent reconstruction/checksums and real standard-CI default bench/perft required before games.",
+    "pass": "All geometry/routing/every-stack and all FT+head gates pass."
+  },
+  "ft_gate": {
+    "maximum_assignment_mean_gain": 0.005,
+    "minimum_assignment_identity_fraction": 0.9,
+    "minimum_fraction_strict_identity_winner": 0.9,
+    "minimum_identity_margin": 0.01,
+    "minimum_median_identity_correlation": 0.95,
+    "minimum_supported_pair_fraction": 0.9,
+    "scope": "Every feature plane separately AND the equal-plane-weight aggregate; aggregate support is the intersection.",
+    "symmetries": "All512 paired-lane permutations, both factor orientations. p moves raw lanes j and j+512 together; within-pair swaps are additionally tested because clipped multiplication is commutative. Report exact best assignment but never apply it."
+  },
+  "geometry": {
+    "fallback_sha256": "166ea64eb3e4da682ba3394b0a7f68de6ca6e01daae472f8c85fbc5ad7e27dd7",
+    "fc0": 32,
+    "fc1": 32,
+    "fc2_logical_inputs": 128,
+    "ft_lanes": 1024,
+    "paired_units": 512,
+    "physical_heads": 92,
+    "planes": [
+      {
+        "name": "FullThreats",
+        "offset": 0,
+        "rows": 59808,
+        "table": 0
+      },
+      {
+        "name": "PP_3Wide",
+        "offset": 0,
+        "rows": 4560,
+        "table": 1
+      },
+      {
+        "name": "K32H3_block0",
+        "offset": 0,
+        "rows": 22528,
+        "table": 2
+      },
+      {
+        "name": "K32H3_block1",
+        "offset": 22528,
+        "rows": 22528,
+        "table": 2
+      },
+      {
+        "name": "K32H3_block2",
+        "offset": 45056,
+        "rows": 22528,
+        "table": 2
+      }
+    ],
+    "raw_routes": 192
+  },
+  "head_gate": {
+    "bias_policy": "Report signed bias deltas and informative centered bias-vector correlations separately; scalar FC2 bias has no correlation and is never called an aligned vector.",
+    "fc0_flat_min_common": 1024,
+    "fc1_flat_min_common": 64,
+    "fc2_flat_min_common": 16,
+    "heads_required": 92,
+    "minimum_flattened_layer_correlation": 0.9,
+    "minimum_informative_row_fraction": 0.9,
+    "minimum_row_fraction_at_least_075": 0.9,
+    "minimum_row_median_identity_correlation": 0.9,
+    "scope": "FC0/FC1 logical row comparisons plus flattened FC0/FC1 and FC2 per head; every head must pass. FC0 fixed skip rows30/31 are reported individually. Padding excluded. Uninformative rows do not count as matches; insufficient support refuses gate."
+  },
+  "motivation": [
+    {
+      "authors": "Wortsman et al.",
+      "role": "Motivation only; shared low-error fine-tuning basins are not established for these quantized nets.",
+      "title": "Model soups",
+      "url": "https://arxiv.org/abs/2203.05482"
+    },
+    {
+      "authors": "Ainsworth et al.",
+      "role": "Motivation only; architecture symmetry does not prove trained-coordinate identity.",
+      "title": "Git Re-Basin",
+      "url": "https://arxiv.org/abs/2209.04836"
+    }
+  ],
+  "networks": {
+    "A": {
+      "bytes": 138360528,
+      "file": "nn-18cd32e11a9c.nnue",
+      "label": "Shawn Xu test1757 original",
+      "sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+      "url": "https://tests.stockfishchess.org/api/nn/nn-18cd32e11a9c.nnue"
+    },
+    "B": {
+      "bytes": 138360528,
+      "file": "nn-68752b755c93.nnue",
+      "label": "Shawn Xu test1758 original",
+      "sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
+      "url": "https://tests.stockfishchess.org/api/nn/nn-68752b755c93.nnue"
+    }
+  },
+  "pilot_id": "test1757-test1758-direct-3to1-001",
+  "resources": {
+    "blas_threads": 2,
+    "no_local_native_build_or_engine": true,
+    "no_local_real_weight_computation": true,
+    "no_paid_compute": true,
+    "provider": "standard free public0mis/Stockfish GitHub Actions ubuntu-24.04",
+    "workflow_timeout_minutes": 20
+  },
+  "sampling": {
+    "global_row_filter": "retain only rows with at least32 nonzero lanes and variance>=0.25 across raw lanes in each checkpoint",
+    "minimum_retained_rows": 512,
+    "rank": "ascending SHA256 ASCII(qinterp-alignment-v1|plane_name|decimal_local_row), within the structurally eligible geometry-only rows; first min(1024,eligible), no checkpoint-dependent resampling",
+    "samples_per_plane": 1024,
+    "structural_eligibility": "PP_3Wide: distinct physical pawn squares on ranks2..7, same/adjacent files, both colors. K32H3: no back-rank pawns or nonking on the normalized own-king square; king-plane excludes adjacent other-king squares; block0 excludes rook/queen planes; block1 excludes opponent queen. FullThreats uses its already compressed native LUT row space."
+  },
+  "schema": "quantized-soup-alignment-plan-v1",
+  "scope": "One weight-only identity-alignment screen; no positions, labels, games or native engine calls during this phase.",
+  "source": {
+    "audited_parser": {
+      "bytes": 12484,
+      "commit": "7bef16fe1d9eb0ec8091f9c81b51afb410e62428",
+      "git_blob": "f139b953424f4efdeba909dd24bf48480989f146",
+      "path": "research/layout/permute_nnue.py",
+      "repository": "0mis/Stockfish",
+      "sha256": "8cedd68e2d36437939e4987413a217ff7c3e21c560441feb94464828ada68d70"
+    },
+    "feature_geometry_primary": [
+      {
+        "commit": "73fe1eaca99ac4a09252c876aa6b1cceeaf7c4c7",
+        "git_blob": "9b190c2f4e2502148db383abc5b457285213c948",
+        "path": "src/nnue/features/pp_3wide.h"
+      },
+      {
+        "commit": "73fe1eaca99ac4a09252c876aa6b1cceeaf7c4c7",
+        "git_blob": "eed2596f2ad55bd6ba1f515f30bf6b086b106087",
+        "path": "src/nnue/features/k32h3.h"
+      },
+      {
+        "commit": "73fe1eaca99ac4a09252c876aa6b1cceeaf7c4c7",
+        "git_blob": "14dce98e8310391f133ea29eeaf679b57bb5d691",
+        "path": "src/nnue/nnue_feature_transformer.h"
+      }
+    ],
+    "repository": "xu-shawn/Stockfish",
+    "source_comparison": "Only src/evaluate.h differs between these exact commits.",
+    "test1757_commit": "d5a2bda7f028430f79e1789d47ae3228defb843b",
+    "test1758_commit": "73fe1eaca99ac4a09252c876aa6b1cceeaf7c4c7"
+  }
+}
