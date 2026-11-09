@@ -1,8 +1,9 @@
-"""Measure static scores and fixed-node search scores on the supplied roots.
+"""Measure static scores and depth-9/depth-13 search scores on supplied roots.
 
-The first move of the final primary PV must match the engine's bestmove. Only
-that final record can supply a teacher score. Failed eligibility keeps both
-search records and the reason. A failed UCI session raises and keeps its logs.
+The final primary PV must be at the requested depth and begin with the engine's
+bestmove. Only that final record can supply a teacher score. Failed eligibility
+keeps both search records and the reason. A failed UCI session raises and keeps
+its logs.
 
 The interactive barriers follow the Test1757 history_compare_v1.py driver.
 SPDX-License-Identifier: GPL-3.0-or-later
@@ -23,8 +24,8 @@ import native_check as native
 from fetch_inputs import NETWORK, REFERENCE
 
 
-SHALLOW_NODES = 16384
-DEEP_NODES = 65536
+SHALLOW_DEPTH = 9
+DEEP_DEPTH = 13
 INFO = re.compile(
     r"info depth (\d+) seldepth (\d+) multipv (\d+) score (cp|mate) ([+-]?\d+)"
     r"(?: (upperbound|lowerbound))? nodes (\d+) nps \d+ hashfull \d+ tbhits (\d+) time \d+ pv(?: (.*))?"
@@ -60,7 +61,7 @@ def _parse_static(prefix, block, net, row):
             "raw_score": trace["raw_score"], "used_bucket": trace["used_bucket"], "buckets": trace["buckets"]}
 
 
-def _parse_search(lines, board, net, budget):
+def _parse_search(lines, board, net, requested_depth):
     body, = native._ack_blocks(lines, net, 1)
     best = [native.BESTMOVE.fullmatch(line) for line in body if line.startswith("bestmove")]
     native._require(len(best) == 1 and best[0] and body[-1] == best[0][0], "Missing or malformed bestmove")
@@ -69,7 +70,8 @@ def _parse_search(lines, board, net, budget):
     replay.push_uci(bestmove)
     if ponder is not None:
         replay.push_uci(ponder)
-    result = {"requested_nodes": budget, "bestmove": bestmove, "ponder": ponder, "depth": None,
+    result = {"requested_depth": requested_depth, "final_at_requested_depth": False,
+              "bestmove": bestmove, "ponder": ponder, "depth": None,
               "seldepth": None, "score_kind": None, "score_value": None, "bound": None,
               "reported_nodes": None, "pv": [], "cp": None, "reason": None}
     marked = [line for line in body if line.startswith("info depth ") and " score " in line]
@@ -84,10 +86,13 @@ def _parse_search(lines, board, net, budget):
     for move in pv:
         native._require(re.fullmatch(native.MOVE, move), "Invalid UCI move in teacher PV")
         replay.push_uci(move)
-    result.update(depth=int(depth), seldepth=int(seldepth), score_kind=kind, score_value=int(value),
+    result.update(depth=int(depth), final_at_requested_depth=int(depth) == requested_depth,
+                  seldepth=int(seldepth), score_kind=kind, score_value=int(value),
                   bound=bound, reported_nodes=int(nodes), pv=pv)
-    if int(multipv) != 1 or not pv or pv[0] != bestmove or int(nodes) <= 0 or int(depth) <= 0:
+    if int(multipv) != 1 or not pv or pv[0] != bestmove or int(nodes) <= 0:
         result["reason"] = "no_matching_primary_pv"
+    elif not result["final_at_requested_depth"]:
+        result["reason"] = "requested_depth_not_completed"
     elif bound is not None:
         result["reason"] = "bounded_score"
     elif kind != "cp":
@@ -106,7 +111,7 @@ def _stability(shallow, deep):
     if max(abs(shallow["cp"]), abs(deep["cp"])) > 250:
         return False, "score_out_of_range"
     if abs(deep["cp"] - shallow["cp"]) > 20:
-        return False, "budget_score_difference"
+        return False, "depth_score_difference"
     return True, "stable"
 
 
@@ -191,14 +196,14 @@ class _Session:
         self.send("eval")
         return _parse_static(self.prefix, self.ready(), net, row)
 
-    def search(self, net, row, budget):
+    def search(self, net, row, requested_depth):
         self.send("ucinewgame")
         self.quiet_ready()
         self.send("position fen " + row["fen"])
-        self.send(f"go nodes {budget}")
+        self.send(f"go depth {requested_depth}")
         lines = self.receive(lambda line: line.startswith("bestmove"))
         self.quiet_ready()
-        return _parse_search(lines, chess.Board(row["fen"]), net, budget)
+        return _parse_search(lines, chess.Board(row["fen"]), net, requested_depth)
 
     def close(self, normal):
         if self.process is None:
@@ -224,7 +229,8 @@ class _Session:
 def _collect(exe, net, rows, output, work, stem, teacher):
     native._require(re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9._-]*", stem), "Invalid capture filename stem")
     output = Path(output).resolve(strict=True)
-    record = {"schema": "test1757-static-teacher-v1", "status": "incomplete", "teacher": teacher,
+    record = {"schema": "test1757-static-teacher-depth-v1", "status": "incomplete", "teacher": teacher,
+              "requested_depths": [SHALLOW_DEPTH, DEEP_DEPTH] if teacher else [],
               "returncode": None, "forced_cleanup": False, "requested_rows": len(rows)}
     results = []
     paths = {kind: output / f"{stem}.{suffix}" for kind, suffix in
@@ -259,8 +265,8 @@ def _collect(exe, net, rows, output, work, stem, teacher):
                 for row in rows:
                     observed = session.evaluate(relative, row)
                     if teacher:
-                        shallow = session.search(relative, row, SHALLOW_NODES)
-                        deep = session.search(relative, row, DEEP_NODES)
+                        shallow = session.search(relative, row, SHALLOW_DEPTH)
+                        deep = session.search(relative, row, DEEP_DEPTH)
                         stable, reason = _stability(shallow, deep)
                         observed.update(parent_static_cp=observed["static_cp"], shallow_cp=shallow["cp"], deep_cp=deep["cp"],
                                         shallow_search=shallow, deep_search=deep, stable=stable, reason=reason)
@@ -300,7 +306,7 @@ def _collect(exe, net, rows, output, work, stem, teacher):
 
 
 def collect_labels(exe: Path, net: Path, rows: list[dict], output: Path, work: Path, stem: str) -> list[dict]:
-    """Get original static and fixed-node search scores for each supplied root, in order."""
+    """Get original static and fixed-depth search scores for each supplied root, in order."""
     return _collect(exe, net, rows, output, work, stem, teacher=True)
 
 

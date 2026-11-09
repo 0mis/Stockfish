@@ -10,12 +10,12 @@ ACK = teacher.native.ACK_PREFIX + NET + teacher.native.ACK_SUFFIX
 ROW = {"position_id": "p", "family": "f", "role": "fit", "physical_head": 10, "fen": chess.STARTING_FEN}
 
 
-def score_line(score="cp 15", pv="e2e4 e7e5", nodes=16389):
-    return f"info depth 12 seldepth 15 multipv 1 score {score} nodes {nodes} nps 995 hashfull 2 tbhits 0 time 5 pv {pv}"
+def score_line(score="cp 15", pv="e2e4 e7e5", depth=9, nodes=16389):
+    return f"info depth {depth} seldepth 15 multipv 1 score {score} nodes {nodes} nps 995 hashfull 2 tbhits 0 time 5 pv {pv}"
 
 
-def search(lines, best="e2e4", budget=16384):
-    return teacher._parse_search([ACK, *lines, "bestmove " + best], chess.Board(), NET, budget)
+def search(lines, best="e2e4", requested_depth=9):
+    return teacher._parse_search([ACK, *lines, "bestmove " + best], chess.Board(), NET, requested_depth)
 
 
 class TeacherTests(unittest.TestCase):
@@ -49,15 +49,26 @@ class TeacherTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             search([good], best="e2e5")
         with self.assertRaises(ValueError):
-            teacher._parse_search([ACK, good, "bestmove e2e4"], chess.Board(), "fallback.nnue", 16384)
+            teacher._parse_search([ACK, good, "bestmove e2e4"], chess.Board(), "fallback.nnue", 9)
 
-    def test_thresholds_and_budget_move_consistency(self):
+    def test_final_score_must_complete_the_requested_depth(self):
+        for requested_depth in (9, 13):
+            exact = score_line(depth=requested_depth)
+            observed = search([score_line(depth=requested_depth - 1), exact], requested_depth=requested_depth)
+            self.assertEqual((observed["requested_depth"], observed["depth"], observed["cp"], observed["reason"]),
+                             (requested_depth, requested_depth, 15, None))
+            for other in (requested_depth - 1, requested_depth + 1):
+                observed = search([exact, score_line(depth=other)], requested_depth=requested_depth)
+                self.assertEqual((observed["depth"], observed["cp"], observed["reason"]), (other, None, "requested_depth_not_completed"))
+                self.assertGreaterEqual(observed["seldepth"], requested_depth)
+
+    def test_thresholds_and_depth_move_consistency(self):
         for shallow_cp, deep_cp, expected in ((230, 250, (True, "stable")), (-250, -230, (True, "stable")),
-                                              (231, 251, (False, "score_out_of_range")), (0, -21, (False, "budget_score_difference"))):
+                                              (231, 251, (False, "score_out_of_range")), (0, -21, (False, "depth_score_difference"))):
             shallow = search([score_line(f"cp {shallow_cp}")])
-            deep = search([score_line(f"cp {deep_cp}")], budget=65536)
+            deep = search([score_line(f"cp {deep_cp}", depth=13)], requested_depth=13)
             self.assertEqual(teacher._stability(shallow, deep), expected)
-        changed = search([score_line(pv="d2d4")], best="d2d4", budget=65536)
+        changed = search([score_line(pv="d2d4", depth=13)], best="d2d4", requested_depth=13)
         self.assertEqual(teacher._stability(shallow, changed), (False, "bestmove_disagreement"))
         self.assertEqual(teacher._stability(shallow, search([])), (False, "deep_no_final_score_marker"))
 
@@ -70,7 +81,9 @@ class TeacherTests(unittest.TestCase):
                 self.sent.append(command)
 
             def receive(self, predicate):
-                reply = {"uci": ["uciok"], "isready": ["readyok"]}.get(self.sent[-1], [ACK, score_line(), "bestmove e2e4"])
+                replies = {"uci": ["uciok"], "isready": ["readyok"], "go depth 9": [ACK, score_line(depth=9), "bestmove e2e4"],
+                           "go depth 13": [ACK, score_line(depth=13), "bestmove e2e4"]}
+                reply = replies[self.sent[-1]]
                 if not predicate(reply[-1]):
                     raise AssertionError("Wrong UCI completion marker")
                 return reply
@@ -80,11 +93,12 @@ class TeacherTests(unittest.TestCase):
         setup_len = len(transcript.sent)
         self.assertIn("setoption name Hash value 16", transcript.sent)
         self.assertIn("setoption name Threads value 1", transcript.sent)
-        for budget in (teacher.SHALLOW_NODES, teacher.DEEP_NODES):
-            transcript.search(NET, ROW, budget)
+        for requested in (teacher.SHALLOW_DEPTH, teacher.DEEP_DEPTH):
+            result = transcript.search(NET, ROW, requested)
+            self.assertEqual((result["requested_depth"], result["depth"], result["reason"]), (requested, requested, None))
         expected = []
-        for budget in (16384, 65536):
-            expected.extend(["ucinewgame", "isready", "position fen " + ROW["fen"], f"go nodes {budget}", "isready"])
+        for requested in (9, 13):
+            expected.extend(["ucinewgame", "isready", "position fen " + ROW["fen"], f"go depth {requested}", "isready"])
         self.assertEqual(transcript.sent[setup_len:], expected)
 
     def test_reader_retains_log_after_error(self):

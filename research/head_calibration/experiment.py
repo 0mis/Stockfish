@@ -20,7 +20,7 @@ import permute_nnue
 import teacher
 
 
-PLAN_SHA = "83f554d89173705d991bf90905308d8f1eb2999c00ff4948e9ba5948f7dd077b"
+PLAN_SHA = "9a72beed16b54724c17ffb7dd062541782e9f94f166607760c3c8bf1ad565ac0"
 
 
 def require(condition, message):
@@ -131,6 +131,7 @@ def run(inputs, output):
     selection = calibration.select_heads(training)
     save(output / "HEAD-SELECTION.json", selection)
     target, control = selection["target_head"], selection["control_head"]
+    require((target, control) == (82, 87), "Original ranked target and control changed")
     result.update(target_head=target, control_head=control)
     with tempfile.TemporaryDirectory(prefix="bias-work-", dir=output.parent) as temp:
         work = Path(temp)

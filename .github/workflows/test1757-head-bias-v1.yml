@@ -1,8 +1,8 @@
-name: Test1757 head-bias calibration on retired games v1
+name: Test1757 head-bias diagnosis at completed depths
 
 on:
   push:
-    branches: [research/test1757-head-bias-ci-v1]
+    branches: [research/test1757-head-bias-depth-ci-v1]
 
 permissions:
   contents: read
@@ -140,7 +140,7 @@ jobs:
         if: ${{ always() && !cancelled() && steps.paths.outcome == 'success' }}
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
-          name: test1757-head-bias-v1-${{ github.sha }}
+          name: test1757-head-bias-depth-v1-${{ github.sha }}
           path: |
             layout-inputs-receipt.json
             evidence/**/*.json

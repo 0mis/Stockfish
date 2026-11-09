@@ -1,5 +1,5 @@
 {
-  "experiment": "test1757-common-head-bias-v1",
+  "experiment": "test1757-common-head-bias-depth-v1",
   "question": "Does the most frequent physical head have a reproducible signed static-evaluation error relative to deeper search, beyond the error of the next most frequent head?",
   "source_commit": "7a17b53bcaf93f54a23ad65f309c413585500c82",
   "layout_pipeline_parent": "7bef16fe1d9eb0ec8091f9c81b51afb410e62428",
@@ -7,16 +7,19 @@
   "original_net_sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
   "accepted_executable_sha256": "12a8e7bfdd9b1189b4350bd9ebef3501be1e89bd5fa41dcb56921f85ba23869a",
   "positions": "Reuse the published-game corpus and the original 48 optimization / 15 holdout opening-family split of layout-public-games-v1. That earlier study measured channel sparsity. This study uses new search labels. Only optimization-family route frequencies have been used for feasibility.",
-  "selection": "Map each optimization FEN to its raw route and physical stack in the authenticated parent. Rank physical stacks by optimization-row frequency, breaking ties by ascending physical index. Test the most frequent as target and use the second as control. Freeze both before any search labels.",
+  "selection": "Reuse the original optimization population and ranking rule. Require the same target physical head 82 and control head 87 before collecting any new labels.",
   "teacher": {
     "engine": "Use the same accepted prefetch build and the original18cd network. The deeper search is a diagnostic teacher.",
-    "budgets_nodes": [16384, 65536],
     "settings": "T1, Hash=16, MultiPV=1, no pondering, tablebases or strength limit. Start each search with ucinewgame, wait for readies and bestmove. Preserve all UCI commands, both output streams and per-position decisions.",
     "score": "Root UCI CP from the perspective of the side to move. Convert the printed Final evaluation from white-side pawns to integer CP and then to the side-to-move perspective.",
-    "stable_row": "Both searches must supply an exact non-mate CP score on a PV beginning with the returned legal best move. The best move must agree across budgets, both absolute scores must be at most 250 CP and their difference at most 20 CP. Retain every ineligible occurrence and reason. Operational failures stop the run."
+    "stable_row": "Both returned final primary scores must complete the requested depth, be exact CP, and have legal PV/bestmove agreement. The best move must agree between depths. Both absolute scores must be at most 250 CP and differ by at most 20 CP. Keep all rows and reasons. Operational failures stop the run.",
+    "depths": [
+      9,
+      13
+    ]
   },
   "fit": {
-    "residual": "65536-node CP minus the parent's static final CP.",
+    "residual": "Depth-13 CP minus the parent static final CP.",
     "comparison": "Within each optimization family with stable target and control observations, compute the median residual per head and their target-minus-control difference. Use each such family once.",
     "support": "Require at least 15 paired families and at least 50 stable rows from each head within those families.",
     "effect": "Require both the median of family contrasts and the median target-family residual to have magnitude at least 6 CP and the same sign. At least two thirds of paired families must have a contrast strictly in that direction.",
@@ -24,5 +27,15 @@
   },
   "holdout": "Freeze the one chosen delta and network digest before computing holdout search labels. Evaluate all holdout target-head positions with the original teacher and both static networks. Require at least 20 stable rows across at least six families. Compare absolute CP prediction errors to the deeper original search. Give every family equal weight. Require a MAE reduction of at least 1 CP and strictly lower error in at least 60 percent of included families. An incomplete candidate pairing abstains without dropping rows.",
   "native": "Check physical routing, 92 printed heads, selected raw integer changes, green control-head positions, two identical complete candidate benchmark signatures and start-position perft4 of197281. The one-bias edit is a functional change, so its benchmark node count may change.",
-  "scope": "A positive diagnostic qualifies a candidate for fresh playing-strength evaluation. Chess gains remain subject to actual games and the frozen confirmation protocol. The previous formal trial and the open D1 Fishtest run continue independently."
+  "scope": "A positive diagnostic qualifies a candidate for fresh playing-strength evaluation. Chess gains remain subject to actual games and the frozen confirmation protocol. The previous formal trial and the open D1 Fishtest run continue independently.",
+  "previous_experiment": {
+    "source_commit": "bd3524c5f03d0bfdcf3e3d0c2fd6569836a1bd0e",
+    "run_id": 42571622867,
+    "training_positions": 453,
+    "stable_positions": 13,
+    "paired_families": 3,
+    "first_failure_bounded_score_rows": 426,
+    "heldout_labels_opened": false,
+    "reason": "A node limit frequently interrupted the engine inside an aspiration window. Complete two uniform depths to obtain interpretable root scores."
+  }
 }
