@@ -1,0 +1,21 @@
+{
+  "candidate_bytes": 138360528,
+  "candidate_sha256": "622b9b7292b49ed0b0ab4cf944e8ba3031a12f5348dc997e72f3dd6c2b0484d5",
+  "complete_inverse_sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+  "completed_fit_result_schema": "lichess-fc2-real-training-fit-receipt/1",
+  "completed_fit_result_sha256": "be685a87b2a35031f29bc699f0c7f073cacdcdaf23f2d1b94b7a431efd7d913c",
+  "completed_fit_result_status": "candidate_frozen_awaiting_separate_hosted_validation",
+  "freeze_sha256": "0f5da7c5bfbfe538b8ba8af9cee6464bcbddda1da634898bdb21ff5a6e13abcc",
+  "frozen_file_sha256": "af8aebe059ca77c92440ec60d4696d1724b14adb3f771c012dcd443843771e77",
+  "identity": false,
+  "independent_disk_readback": true,
+  "mapping_sha256": "786502efa2fe9b3e16acdb58ac3f329923bcc7d102e48913b71aa51799ccfd93",
+  "patch_sha256": "785448ec2023f74ab679c9f80f5fa151a88842530133c46106532d91ddafcd33",
+  "root_byte_audit_sha256": "544e75e540d17fbfead74baf678b94bee63814c72388416e5949719ed632345a",
+  "root_verified": true,
+  "schema": "root-verified-lichess-fc2-freeze/1",
+  "status": "VERIFIED_FROZEN_RECIPE",
+  "utc": "2026-11-09T10:57:26.259160+00:00",
+  "verified_gain": false,
+  "wrapper_sha256": "0c358dee0e11b4288238d93dabdc45f0f6e0139e370f3824e288d9788ce70a96"
+}

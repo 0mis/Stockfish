@@ -1,2 +1,6 @@
 # normalize line endings for all text files
 * text=auto eol=lf
+research/lichess_fc2/** -text whitespace=cr-at-eol
+research/fc2_activations/protocol.py -text whitespace=cr-at-eol
+research/lichess_fc2_validation/** -text whitespace=cr-at-eol
+.github/workflows/lichess-fc2-validation-v1.yml -text

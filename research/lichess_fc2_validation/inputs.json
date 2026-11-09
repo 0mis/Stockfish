@@ -1,0 +1,112 @@
+{
+  "artifacts": {
+    "diagnostic": {
+      "artifact_id": 13665222909,
+      "artifact_name": "test1757-fc2-activations-v1-f5ef3e3d326fb64125a820b7b9f67239bcb24650",
+      "bytes": 4186081,
+      "head_sha": "f5ef3e3d326fb64125a820b7b9f67239bcb24650",
+      "member": "diagnostic-stockfish.exe",
+      "repository": "0mis/Stockfish",
+      "run_id": 42600082532,
+      "sha256": "f6d79b2df6be65183500ad406869247d9d7c31c11e9e0de202cd2c50f43b8f15",
+      "zip_bytes": 3827192,
+      "zip_sha256": "131753c03ec4d989ba2954342021997a589071c5dd8e09147daf6a453f3f3be6"
+    },
+    "reference": {
+      "artifact_id": 13642730885,
+      "artifact_name": "test1757-prefetch-windows-bmi2-49672d7b3c2b0cb544f4bf7cc70515249fe047e3",
+      "bytes": 142322823,
+      "head_sha": "49672d7b3c2b0cb544f4bf7cc70515249fe047e3",
+      "member": "stockfish-windows-x86-64-bmi2.exe",
+      "repository": "0mis/Stockfish",
+      "run_id": 42543250921,
+      "sha256": "12a8e7bfdd9b1189b4350bd9ebef3501be1e89bd5fa41dcb56921f85ba23869a",
+      "zip_bytes": 115853859,
+      "zip_sha256": "7539c83ab50befc6f7e71bf55f35c248809d2c1cb6fa4109fa9c19d44e69d205"
+    }
+  },
+  "completed_fit_result_sha256": "be685a87b2a35031f29bc699f0c7f073cacdcdaf23f2d1b94b7a431efd7d913c",
+  "dispatch_performed": false,
+  "expected_candidate_sha256": "622b9b7292b49ed0b0ab4cf944e8ba3031a12f5348dc997e72f3dd6c2b0484d5",
+  "freeze": "0f5da7c5bfbfe538b8ba8af9cee6464bcbddda1da634898bdb21ff5a6e13abcc",
+  "frozen": {
+    "bytes": 654635,
+    "file": "research/lichess_fc2_validation/frozen/FROZEN.json",
+    "sha256": "af8aebe059ca77c92440ec60d4696d1724b14adb3f771c012dcd443843771e77"
+  },
+  "mapping": {
+    "bytes": 528513,
+    "file": "research/lichess_fc2_validation/frozen/FC2-BYTE-MAP.json",
+    "sha256": "1182e738a34ab7143808e987174c30dda94f5f081dfa29feba815af43d73527b"
+  },
+  "program_files": {
+    "research/fc2_activations/protocol.py": {
+      "bytes": 9701,
+      "sha256": "bd88235f0745a20559571ca9e9782aff3846fda87ca46c10af71e654cdab0297"
+    },
+    "research/lichess_fc2/__init__.py": {
+      "bytes": 59,
+      "sha256": "9dec7d7546b411f7b16841472db2057e894e69493ddb07ff2cc27982bd3572c1"
+    },
+    "research/lichess_fc2/core.py": {
+      "bytes": 26036,
+      "sha256": "2f50995dfffaab0f2d1a72a0781bc5e2b8a0e33de6ee67462efcf07978073b87"
+    },
+    "research/lichess_fc2/patch.py": {
+      "bytes": 8121,
+      "sha256": "6adda45ca46e8096d1bbd20e01873f0f44238bcd76831402a8352d5c234c8747"
+    },
+    "research/lichess_fc2/synthetic_fixtures.py": {
+      "bytes": 4005,
+      "sha256": "416cc2db22f05fe7d57131d876ac42d1f4a4c36d8a5f28925f5e8116228e5a3a"
+    },
+    "research/lichess_fc2_validation/__init__.py": {
+      "bytes": 69,
+      "sha256": "d1a9cffdbfe2f9f94072be7cd35650630dc919e4f3bd6ea381aa60394a28e967"
+    },
+    "research/lichess_fc2_validation/benchmark.cpp": {
+      "bytes": 27162,
+      "sha256": "0a8d3f29278ad53abbceee284721a3ac4ddd7c768052de928672a2869bc2da80"
+    },
+    "research/lichess_fc2_validation/hosted.py": {
+      "bytes": 18695,
+      "sha256": "3e44768cd7af892f42df31f998ba514ce4df914558edaf74d4107b41b988c51d"
+    },
+    "research/lichess_fc2_validation/native.py": {
+      "bytes": 10391,
+      "sha256": "c3c753f3460e1432eb4281ed9da6c34ef3c4e999945d103673583c9831f46213"
+    },
+    "research/lichess_fc2_validation/requirements.txt": {
+      "bytes": 755,
+      "sha256": "61ca55f8a3ef48d26be3b7bd87ebd4d174477301d342df6f0c31676424435118"
+    },
+    "research/lichess_fc2_validation/test_validation.py": {
+      "bytes": 9251,
+      "sha256": "5d47297283542d1146f4af4c8f63b630f833e95e1b078314f69195c7d38055d6"
+    },
+    "research/lichess_fc2_validation/validation.py": {
+      "bytes": 14977,
+      "sha256": "591f0a68f4cce7cb084f804e0f700042aabd26d9cf30e464e57e6b776df7cb5e"
+    }
+  },
+  "root_acceptance": {
+    "bytes": 1267,
+    "file": "research/lichess_fc2_validation/frozen/ROOT-ACCEPTANCE.json",
+    "sha256": "2c98a5f1dda901a4a481c92aeb41062549381500228a97a8d09474f57ec31a69"
+  },
+  "root_completion_required": [],
+  "schema": "lichess-fc2-heldout-inputs/1",
+  "status": "ROOT_APPROVED_FROZEN_INPUTS_READY",
+  "training_acceptance": {
+    "bytes": 3653,
+    "file": "research/lichess_fc2_validation/frozen/TRAIN-CI-ACCEPTANCE.json",
+    "sha256": "55e997c3c5835dc8e76574333330111157af41b9d4b214535a49d33eb2079eba"
+  },
+  "validation": {
+    "bytes": 162650,
+    "rows": 68,
+    "sha256": "f542d111aa1c850c00da08beb6d45a8fa5b0447a6aa9df93d06350ee4ba5cd24",
+    "transport": "pinned_raw_github",
+    "url": "https://raw.githubusercontent.com/0mis/stockfish-weight-space-lab/f53bf6aebb79ba4d604297cc6da087cea8ac3fd3/research/lichess-multipv/validation.json"
+  }
+}

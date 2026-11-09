@@ -1,0 +1,80 @@
+name: Verify one frozen sparse FC2 candidate on heldout rows
+
+on:
+  push:
+    branches: [research/lichess-fc2-validation-ci-v1]
+  workflow_dispatch:
+    inputs:
+      input_manifest_sha256:
+        description: Exact SHA256 of Root-approved inputs.json at this ref
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  heldout:
+    if: github.repository == '0mis/Stockfish'
+    runs-on: windows-2022
+    timeout-minutes: 35
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Preserve exact source bytes
+        run: git config --global core.autocrlf false
+      - name: Check out driver and frozen receipt only
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          ref: ${{ github.sha }}
+          path: driver
+          fetch-depth: 1
+          persist-credentials: false
+          sparse-checkout: |
+            /research/lichess_fc2/
+            /research/fc2_activations/protocol.py
+            /research/lichess_fc2_validation/
+          sparse-checkout-cone-mode: false
+      - name: Select pinned CPython
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: '3.11.9'
+          architecture: x64
+          check-latest: false
+      - name: Install hash-pinned chess and build dependencies
+        run: |
+          $pins = Get-Content -LiteralPath driver/research/lichess_fc2_validation/requirements.txt
+          $backend = Join-Path $env:RUNNER_TEMP 'heldout-backend.txt'
+          $runtime = Join-Path $env:RUNNER_TEMP 'heldout-chess.txt'
+          $pins | Where-Object { $_ -cmatch '^(setuptools|wheel) @ ' } | Set-Content -LiteralPath $backend -Encoding utf8NoBOM
+          $pins | Where-Object { $_ -cmatch '^chess @ ' } | Set-Content -LiteralPath $runtime -Encoding utf8NoBOM
+          $flags = @('--disable-pip-version-check','--no-index','--no-deps','--no-cache-dir','--require-hashes','--force-reinstall')
+          python -m pip --isolated install @flags -r $backend
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m pip --isolated install @flags --no-build-isolation -r $runtime
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Run synthetic gate and scoring checks
+        run: |
+          $env:PYTHONPATH = Join-Path $env:GITHUB_WORKSPACE 'driver/research'
+          python -B -m unittest discover -s driver/research/lichess_fc2_validation -p 'test_*.py' -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Verify exact freeze before any heldout download or native capture
+        env:
+          GH_TOKEN: ${{ github.token }}
+          INPUT_MANIFEST_SHA256: ${{ inputs.input_manifest_sha256 || 'c633f0291cd7924bec54eb1e89b794b5b32e3b0dc6b58c8c54fd2152cecfce74' }}
+        run: |
+          if ($env:INPUT_MANIFEST_SHA256 -cnotmatch '^[0-9a-f]{64}$') { throw 'Input manifest SHA is required' }
+          $env:PYTHONPATH = Join-Path $env:GITHUB_WORKSPACE 'driver/research'
+          python -B -m lichess_fc2_validation.hosted --manifest driver/research/lichess_fc2_validation/inputs.json --manifest-sha256 $env:INPUT_MANIFEST_SHA256 --work heldout-work --output heldout-evidence
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Retain checks and qualified network
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: lichess-fc2-heldout-v1-${{ github.sha }}
+          path: heldout-evidence/
+          retention-days: 7
+          if-no-files-found: warn
+          compression-level: 6
