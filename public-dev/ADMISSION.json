@@ -1,6 +1,14 @@
 {
   "followup_plan_sha256": "6b5806262ded69052089c623d02fc5dd8b0eaf2ed09d387fa9469ec7a71d5f5a",
   "no_followup_native_dispatch_yet": true,
+  "preserved_pre_native_failures": [
+    {
+      "head_sha": "0284c28ac3e507c550627a5e0a7d05fd291a0f9e",
+      "job_id": 129444643206,
+      "run_attempt": 1,
+      "run_id": 42700795402
+    }
+  ],
   "primary": {
     "artifact": {
       "bytes": 38676423,
@@ -5180,5 +5188,10 @@
   },
   "schema": "test1758-primary-verified-followup-admission/1",
   "selected_network_sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
-  "status": "VERIFIED_COMPLETE_PRIMARY_ADMITTED"
+  "status": "VERIFIED_COMPLETE_PRIMARY_ADMITTED",
+  "transport_refusal_receipt": {
+    "bytes": 1970,
+    "file": "ZERO-NATIVE-TRANSPORT-REPAIR.json",
+    "sha256": "872457210e14c3a8bd8f6731e5d376d196d86646877348136e671333b1b7eb9e"
+  }
 }

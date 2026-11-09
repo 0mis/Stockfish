@@ -32,6 +32,25 @@ def read_url(url,token=None,limit=16*1024*1024):
  require(len(body)<=limit,'Remote response exceeds declared bound')
  return body
 
+def execution_history(own_run,history,admission,get_json):
+ """Permit one actual gameplay execution; preserve proven pre-native refusals."""
+ prior=admission.get('preserved_pre_native_failures',[])
+ require(len(prior)<=8 and len({r['run_id'] for r in prior})==len(prior),'Ambiguous prior zero-native scope')
+ expected={r['run_id'] for r in prior}|{own_run['id']}
+ require(history['total_count']==len(expected) and len(history['workflow_runs'])==len(expected) and {r['id'] for r in history['workflow_runs']}==expected,'An unadmitted follow-up execution exists')
+ proofs=[]
+ for ref in prior:
+  old=get_json('/actions/runs/'+str(ref['run_id']))
+  require(old['status']=='completed' and old['conclusion']=='failure' and old['head_sha']==ref['head_sha'] and old['run_attempt']==ref['run_attempt']==1 and old['workflow_id']==own_run['workflow_id'] and old['head_branch']==own_run['head_branch'],'Prior pre-native run identity differs')
+  jobs=get_json('/actions/runs/'+str(ref['run_id'])+'/jobs')
+  require(jobs['total_count']==1 and len(jobs['jobs'])==1 and jobs['jobs'][0]['id']==ref['job_id'],'Prior job identity/coverage differs')
+  job=jobs['jobs'][0];steps={s['name']:s for s in job['steps']}
+  require(job['status']=='completed' and job['conclusion']=='failure' and steps['Verify complete primary artifact before native input preparation']['conclusion']=='failure','Prior failure was not at admission')
+  skipped=['No-native fixed protocol and admission fixtures','Fetch exact public binaries and selected network','Run fixed128 reversed pairs at10plus0point1','Independently replay all256 PGNs clocks hashes and interval']
+  require(all(steps[name]['status']=='completed' and steps[name]['conclusion']=='skipped' for name in skipped),'A prior native preparation or game step was entered: no retry')
+  proofs.append({'run_id':old['id'],'head_sha':old['head_sha'],'run_attempt':old['run_attempt'],'job_id':job['id'],'native_input_and_game_steps_skipped':True,'actual_job_metadata_sha256':sha(canonical(job))})
+ return proofs
+
 def validate_selection(plan,admission,result,audit,inputs):
  selection=plan['selection'];primary=admission['primary']
  require(admission['schema']=='test1758-primary-verified-followup-admission/1' and admission['status']=='VERIFIED_COMPLETE_PRIMARY_ADMITTED','Not a verified full primary admission')
@@ -129,7 +148,7 @@ def main():
  own_run=json.loads(read_url(api+'/actions/runs/'+os.environ['GITHUB_RUN_ID'],token))
  require(own_run['repository']['private'] is False and own_run['head_branch']==plan['branch'],'Wrong follow-up repository/branch')
  prior=json.loads(read_url(api+'/actions/workflows/'+str(own_run['workflow_id'])+'/runs?branch='+plan['branch']+'&per_page=100',token))
- require(prior['total_count']==1 and len(prior['workflow_runs'])==1 and str(prior['workflow_runs'][0]['id'])==os.environ['GITHUB_RUN_ID'],'Previous follow-up execution exists: no outcome retries')
+ zero_native_history=execution_history(own_run,prior,admission,lambda suffix:json.loads(read_url(api+suffix,token)))
  artifact=admission['primary']['artifact'];metadata=json.loads(read_url(api+'/actions/artifacts/'+str(artifact['id']),token))
  require(metadata['expired'] is False and metadata['name']==artifact['name'] and metadata['workflow_run']['id']==plan['selection']['primary_run_id'] and metadata['workflow_run']['head_sha']==plan['selection']['primary_driver_commit'],'Actual primary artifact ownership differs')
  require(0<artifact['bytes']<=512*1024*1024,'Unbounded primary artifact')
@@ -147,6 +166,7 @@ def main():
  require(partition['primary_unique_roots']==plan['opening_policy']['primary_unique_roots'] and partition['followup_unique_roots']==128 and len(followup_openings)==128,'Frozen root coverage differs')
  with zipfile.ZipFile(io.BytesIO(payload)) as archive:proof=replay_primary(plan,admission,archive,module,primary_openings)
  proof['opening_partition']=partition
+ proof['preserved_pre_native_failures']=zero_native_history
  proof.update(schema='test1758-actual-primary-runtime-admission/1',admission_sha256=sha(admission_raw),actual_primary_archive_sha256=sha(payload),verified_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
               primary_run_id=run['id'],primary_head_sha=run['head_sha'],primary_run_attempt=run['run_attempt'],review_receipt_sha256=sha(review_raw),native_processes_started_here=0)
  evidence=root/'evidence';evidence.mkdir(exist_ok=False);dump(evidence/'PRIMARY-ADMISSION.json',proof)

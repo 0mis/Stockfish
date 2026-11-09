@@ -4,7 +4,7 @@ from pathlib import Path
 import chess,chess.pgn
 import common
 from common import sha,canonical,bootstrap,NAMES
-from admit_primary import validate_selection,validate_members,replay_primary,accepted_local,opening_partition
+from admit_primary import validate_selection,validate_members,replay_primary,accepted_local,opening_partition,execution_history
 from run_match import command,game_accounting
 
 def fixtures(points=128):
@@ -21,6 +21,23 @@ def fixtures(points=128):
  return plan,admission,result,audit,inputs
 
 class AdmissionTests(unittest.TestCase):
+ def history_fixture(self):
+  own={'id':20,'workflow_id':77,'head_branch':'fixture'};ref={'run_id':10,'head_sha':'pinned-old','run_attempt':1,'job_id':11}
+  old={'id':10,'status':'completed','conclusion':'failure','head_sha':'pinned-old','run_attempt':1,'workflow_id':77,'head_branch':'fixture'}
+  names=['No-native fixed protocol and admission fixtures','Fetch exact public binaries and selected network','Run fixed128 reversed pairs at10plus0point1','Independently replay all256 PGNs clocks hashes and interval']
+  steps=[{'name':name,'status':'completed','conclusion':'skipped'} for name in names]+[{'name':'Verify complete primary artifact before native input preparation','status':'completed','conclusion':'failure'}]
+  job={'id':11,'status':'completed','conclusion':'failure','steps':steps};docs={'/actions/runs/10':old,'/actions/runs/10/jobs':{'total_count':1,'jobs':[job]}}
+  return own,{'total_count':2,'workflow_runs':[own,old]},{'preserved_pre_native_failures':[ref]},docs
+ def test_proven_pre_native_refusal_allows_one_actual_gameplay_attempt(self):
+  own,history,admission,docs=self.history_fixture();proof=execution_history(own,history,admission,docs.__getitem__)
+  self.assertEqual(len(proof),1);self.assertTrue(proof[0]['native_input_and_game_steps_skipped'])
+ def test_no_prior_entered_native_or_unknown_execution_is_eligible(self):
+  for change in ('native_entered','wrong_head','unknown_run'):
+   own,history,admission,docs=self.history_fixture()
+   if change=='native_entered':docs['/actions/runs/10/jobs']['jobs'][0]['steps'][2]['conclusion']='failure'
+   if change=='wrong_head':docs['/actions/runs/10']['head_sha']='unrecognized'
+   if change=='unknown_run':history['total_count']=3;history['workflow_runs'].append({'id':30})
+   with self.assertRaises(ValueError):execution_history(own,history,admission,docs.__getitem__)
  def test_actual_canonical_partition_rejects_overlap_aliases_and_repeats(self):
   def row(board):
    fen=board.fen(en_passant='legal');return {'fen':fen,'opening_id':sha(' '.join(fen.split()[:4]).encode())}

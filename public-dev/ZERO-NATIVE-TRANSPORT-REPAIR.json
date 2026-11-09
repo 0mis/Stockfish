@@ -1,0 +1,42 @@
+{
+  "cause": "Publisher Path.read_text normalized261 CRLF sequences in transfer-binding.json; pinned raw bytes correctly refused before input preparation.",
+  "frozen_plan_sha256": "6b5806262ded69052089c623d02fc5dd8b0eaf2ed09d387fa9469ec7a71d5f5a",
+  "games_played": 0,
+  "head_sha": "0284c28ac3e507c550627a5e0a7d05fd291a0f9e",
+  "intended_transfer_binding_sha256": "2122b6b11edfd32bbf3cd40503f055e144eaff6e5837ecab045f8055df09d7c0",
+  "job_id": 129444643206,
+  "misserialized_transfer_binding_sha256": "1d653ad09299188e301a833600681111830f9415ae6afd7980e8b892fc3dd2cf",
+  "native_engines_started": 0,
+  "native_steps_skipped": [
+    "No-native fixed protocol and admission fixtures",
+    "Fetch exact public binaries and selected network",
+    "Run fixed128 reversed pairs at10plus0point1",
+    "Independently replay all256 PGNs clocks hashes and interval"
+  ],
+  "outcome_retries": 0,
+  "raw_api_and_joblog_refs": {
+    "ARTIFACTS.json": {
+      "bytes": 32,
+      "sha256": "244563f989470892c537c9a4622920af0d228ee4528f7d00c64a06d6cd95856c"
+    },
+    "JOB.log": {
+      "bytes": 24999,
+      "sha256": "7cf674e2a914fe3e6c0ac2875b795326fd86b7878eea11fd254d657b95bbf489"
+    },
+    "JOBS.json": {
+      "bytes": 3307,
+      "sha256": "afec37cb7d3f94f247f87694203ed4c312cb444ad921285a2ff4936c00efab7e"
+    },
+    "RUN.json": {
+      "bytes": 11716,
+      "sha256": "5c326b5163a1018e8426908bbc4219cca2627160361dcb9d9df920c52b8e8fef"
+    }
+  },
+  "recorded_utc": "2026-11-09T21:20:22.538427+00:00",
+  "repair": "Preserve raw UTF8 bytes in Git-tree transport; actual prepared Git blobs re-fetched and compared before branch CAS. Only an exact API-proven prior admission-stage refusal can be excluded from the one-gameplay-attempt count.",
+  "run_attempt": 1,
+  "run_id": 42700795402,
+  "run_url": "https://github.com/0mis/Stockfish/actions/runs/42700795402",
+  "schema": "test1758-pre-native-transport-refusal/1",
+  "status": "ZERO_NATIVE_INPUT_PREPARATION_OR_GAMEPLAY"
+}
