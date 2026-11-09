@@ -1,0 +1,72 @@
+name: Test1757 prefetch Windows evidence v1
+
+on:
+  push:
+    branches: [research/test1757-prefetch-ci]
+
+permissions:
+  contents: read
+
+jobs:
+  windows-bmi2:
+    if: github.repository == '0mis/Stockfish'
+    runs-on: windows-2022
+    timeout-minutes: 45
+    steps:
+      - name: Checkout reviewed driver commit
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ github.sha }}
+          path: driver
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Checkout exact source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          repository: 0mis/Stockfish
+          ref: 7a17b53bcaf93f54a23ad65f309c413585500c82
+          path: source
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Locate runner Python
+        shell: pwsh
+        run: |
+          $runnerPython = (Get-Command python -CommandType Application).Source
+          "RUNNER_PYTHON=$runnerPython" >> $env:GITHUB_ENV
+
+      - name: Setup MinGW64 without cache
+        uses: msys2/setup-msys2@e9898307ac31d1a803454791be09ab9973336e1c # v2.31.1
+        with:
+          msystem: MINGW64
+          path-type: inherit
+          cache: false
+          install: mingw-w64-x86_64-gcc make git curl
+
+      - name: Build and collect two-arm evidence
+        shell: msys2 {0}
+        run: |
+          PYTHON_EXE="$(cygpath -u "$RUNNER_PYTHON")"
+          "$PYTHON_EXE" driver/research/ci/build_and_capture_v1.py --driver-commit "$GITHUB_SHA"
+
+      - name: Upload bounded evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: test1757-prefetch-windows-bmi2-${{ github.sha }}
+          path: |
+            artifact/stockfish-windows-x86-64-bmi2.exe
+            artifact/*.stdout.txt
+            artifact/*.stderr.txt
+            artifact/*.record.json
+            artifact/*.uci
+            artifact/SUMMARY.json
+            artifact/patch-v1.json
+            artifact/probes-v1.json
+            artifact/AUTHORS
+            artifact/Copying.txt
+            artifact/corresponding-source.tar
+          retention-days: 1
+          if-no-files-found: warn
+          compression-level: 6
