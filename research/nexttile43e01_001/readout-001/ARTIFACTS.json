@@ -1,0 +1,38 @@
+{
+  "baseline_commit": "43e01e07210948e1130dc687c065d7a3742b2793",
+  "decision": "TIMING_GATE_FAILED_REJECT_PORT_ROUTE",
+  "driver_commit": "1f77125baf18626f7a6a6f206c6aec3c491a68f5",
+  "durable_public_raw_text_bundle": {
+    "bytes": 1298687,
+    "file": "RAW-TEXT.tar.gz",
+    "sha256": "447bac90f09e30370c9dbb4430449cc861c1d4045fe4810f5956ae28e7836964"
+  },
+  "elo_claim": false,
+  "initial_premeasurement_failure": {
+    "actual_zip_bytes_verified": true,
+    "artifact_id": 13718136166,
+    "bytes": 229919478,
+    "raw_text_bundle": {
+      "bytes": 694185,
+      "file": "RAW-TEXT.tar.gz",
+      "sha256": "b88461b07d18da45bd91782b64b089b7f2ce02485b5491279c8a0b292788c47d"
+    },
+    "run_id": 42715339745,
+    "sha256": "63499bf9bb63dd992fe996dd0d9e7815d9c622a22ed079f92268254f930be896",
+    "timed_blocks": 0,
+    "warmups": 0
+  },
+  "local_engines_or_builds": 0,
+  "no_additional_timing_or_games_authorized_or_launched": true,
+  "original_plan_sha256": "201bc0b8c03fdf4cb837a87b4a8c6ca0dfeefe979a220d0e093eed615ce657dc",
+  "schema": "official43e01-prefetch-terminal-bindings-v1",
+  "source_commit": "709bddfb2d10b9da1ecb0b97fff9452cd5a8ffc5",
+  "successful_CI": {
+    "actual_zip_bytes_verified": true,
+    "artifact_id": 13719575243,
+    "artifact_name": "official43e01-nexttile-prefetch-42716460040",
+    "bytes": 230561190,
+    "run_id": 42716460040,
+    "sha256": "59c04d5e0ee960bc621081667c05ee2cedfe1cadecbf0646884466ca0d6eb296"
+  }
+}

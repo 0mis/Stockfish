@@ -1,0 +1,9 @@
+{
+  "actual_bytes": 138360528,
+  "actual_sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+  "bytes": 138360528,
+  "filename": "nn-18cd32e11a9c.nnue",
+  "resolved_url": "https://data.stockfishchess.org/nn/nn-18cd32e11a9c.nnue",
+  "sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+  "url": "https://tests.stockfishchess.org/api/nn/nn-18cd32e11a9c.nnue"
+}

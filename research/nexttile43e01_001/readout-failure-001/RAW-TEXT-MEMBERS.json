@@ -1,0 +1,132 @@
+{
+  "bytes": 694185,
+  "excluded_binary_members": [
+    "bin/A-stockfish",
+    "bin/B-stockfish"
+  ],
+  "file": "RAW-TEXT.tar.gz",
+  "members": {
+    "A/BUILD-COMMAND.json": {
+      "bytes": 762,
+      "sha256": "466bc23357697edd1925a16ca51297f93460a246511528531b8e3eb0f5732b3d"
+    },
+    "A/build.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "A/build.stdout": {
+      "bytes": 30323,
+      "sha256": "303f079c604dd2e9d43626dbd250c14fc5459175c8c6b57020ee81de673bee64"
+    },
+    "A/corresponding-source.tar.gz": {
+      "bytes": 290868,
+      "sha256": "ef3390bc7b9fc2565eabfb2add9d2bdfa01514ce957d62fc52db63c950925c52"
+    },
+    "A/pgo.process.json": {
+      "bytes": 275,
+      "sha256": "154155750b34a24d0cf5edb11e580280ed54d3a4c8b92206553e58ed9e7df951"
+    },
+    "A/pgo.stderr": {
+      "bytes": 3723,
+      "sha256": "ed01cb0c210a22cf388708b641e4ddf5945a23e5ebf7146bbb66b8c3c8c7efdc"
+    },
+    "A/pgo.stdout": {
+      "bytes": 89301,
+      "sha256": "418b642d7930c86f8261ff52326f67cdc070394f51a30b94a1699ae916f2a620"
+    },
+    "A/qualify-bench.process.json": {
+      "bytes": 434,
+      "sha256": "609f0c8f0460f99d5e6be94ca1d9da3b9ae9c297c25ff1a5100371d6d1d232fc"
+    },
+    "A/qualify-bench.stderr": {
+      "bytes": 3724,
+      "sha256": "786df4b3b95594aad6de5f83dfc2d35b9b35c1c947eb67675291acfa56cf1434"
+    },
+    "A/qualify-bench.stdin": {
+      "bytes": 247,
+      "sha256": "9a6652cf96ed7cccd24b5f1e841ba0b7851d9b44f07a43f125570cb1f85d7362"
+    },
+    "A/qualify-bench.stdout": {
+      "bytes": 90688,
+      "sha256": "8ef8aa2f7aa647df474d41c125f07e741119b572bc042a75337ba0093647d89c"
+    },
+    "A/qualify-perft.process.json": {
+      "bytes": 433,
+      "sha256": "4ad04634f4ae7cf2fd3265b3fda89a1537d375507a33103819c15e2171b86892"
+    },
+    "A/qualify-perft.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "A/qualify-perft.stdin": {
+      "bytes": 257,
+      "sha256": "2d6e4e2328b564a19b3a885722f8f89be024d93f4b58839836304b5fa641bd1a"
+    },
+    "A/qualify-perft.stdout": {
+      "bytes": 1966,
+      "sha256": "044dff28b2da807060e16438f30c4fda3f858d433c91f42757124e3683025d40"
+    },
+    "A/symbols.nm": {
+      "bytes": 131528,
+      "sha256": "2c79390cd24fcedce339623a7eb8f4071d132e3dbb1664305d6afe385e9baa78"
+    },
+    "B/BUILD-COMMAND.json": {
+      "bytes": 749,
+      "sha256": "0db6d2501f2d2159e66ffb38f72c873b94bfa704ac53d2c051cdcab3c8ccacb8"
+    },
+    "B/build.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "B/build.stdout": {
+      "bytes": 30336,
+      "sha256": "4111cad64a2a17c3d922eac47dce78326e715213f53de2f5c9ac845874b21dbb"
+    },
+    "B/corresponding-source.tar.gz": {
+      "bytes": 291169,
+      "sha256": "bc7ee89bc1a615d498add7fb8e30379952be3959fe11d361e4a0330877da0be8"
+    },
+    "B/pgo.process.json": {
+      "bytes": 275,
+      "sha256": "e0a92ac05dc8f3650c3a9915d2a0874a37cfe449d0fb0f073eba066db986e029"
+    },
+    "B/pgo.stderr": {
+      "bytes": 3723,
+      "sha256": "229418380ef1f3e67ec9f9d58dd62a357e76e73db818647635e98b39de6847f6"
+    },
+    "B/pgo.stdout": {
+      "bytes": 89350,
+      "sha256": "40472eaaebac789e65e047bf05b8e28407dbc9307a1147bc9320eaa796e7af1b"
+    },
+    "B/symbols.nm": {
+      "bytes": 131528,
+      "sha256": "05897756cb7031ffa447ff07896ea1d91fc9c902883583e65a64fc680a0eaafb"
+    },
+    "FAILURE.json": {
+      "bytes": 226,
+      "sha256": "adaf30afe5180543b4c866b958cd624fcb739b788381c6ddf045e2fbc75363a8"
+    },
+    "HOST.json": {
+      "bytes": 1494,
+      "sha256": "9d5fc29d7a5358209684fcc9d695187050e8362412debe4fd8a9d80bb56a1cd3"
+    },
+    "NETWORK.json": {
+      "bytes": 409,
+      "sha256": "276b12194ccd955821c6831501689d5f00ee88ed151e3671dda14d6191028eea"
+    },
+    "SOURCE-MANIFESTS.json": {
+      "bytes": 54363,
+      "sha256": "f0f2f3766b0be2cb5d5f7cbeda52baf6dc7d9fa0549474f2c7b38c4d87adeea0"
+    },
+    "cpuinfo.txt": {
+      "bytes": 5952,
+      "sha256": "25eec00264d5fa9f6860d639caa5a90d48d9472035d59d6724d8c36b3e73f460"
+    },
+    "lscpu.json": {
+      "bytes": 4656,
+      "sha256": "0bc4f90dc0b0c3620783a1a4a620c44c8d6af5e2328ed494c152c1c473769dcf"
+    }
+  },
+  "sha256": "b88461b07d18da45bd91782b64b089b7f2ce02485b5491279c8a0b292788c47d",
+  "source": "exact authenticated hosted ZIP; native binaries remain in that pinned original artifact and are not executed locally"
+}

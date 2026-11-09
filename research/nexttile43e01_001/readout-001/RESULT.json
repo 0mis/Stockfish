@@ -1,0 +1,697 @@
+{
+  "attribution": {
+    "0mis_role": "Narrow attributed port, source-preservation proof and bounded target-host diagnostic; not original policy authorship",
+    "PR": "https://github.com/official-stockfish/Stockfish/pull/7294",
+    "chosen_original_policy": "MxTriX77 / SanityEclipse000",
+    "existing_specialization": "mstembera428d7c76b872bcaa757f786d2e5a15367693cf76",
+    "original_base": "7cdd5e89a39fe3071b67d91c7bb07d712044bf76",
+    "original_commit": "5b559f0b7e37822d04dffe9e559d8a716705ccf5",
+    "overlapping_sawmaker_1f75e865_not_applied": true
+  },
+  "automatic_retries": 0,
+  "bench_nodes": 3464885,
+  "decision": "TIMING_GATE_FAILED_REJECT_PORT_ROUTE",
+  "driver_commit": "1f77125baf18626f7a6a6f206c6aec3c491a68f5",
+  "elo_or_strength_claim": false,
+  "formal_or_private_inputs_used": false,
+  "functional_signature": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+  "games_dispatched": 0,
+  "host": {
+    "allowed_cpus": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "compiler_binary": {
+      "bytes": 1027128,
+      "sha256": "1353e9bdd29a7295c7226bf6c63abccce056d8cac31f112e5cdbecc3f28c2769"
+    },
+    "kernel": "7.0.0-1017-azure",
+    "linker": "GNU ld (GNU Binutils for Ubuntu) 2.42\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) a later version.\nThis program has absolutely no warranty.\n",
+    "loadavg_before": [
+      0.40234375,
+      0.13037109375,
+      0.04443359375
+    ],
+    "logical_cpus": 4,
+    "make": "GNU Make 4.3\nBuilt for x86_64-pc-linux-gnu\nCopyright (C) 1988-2020 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n",
+    "native_cpu": 0,
+    "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+    "python": "3.11.18 (main, Oct 26 2026, 02:48:34) [GCC 13.3.0]",
+    "runner_image": {
+      "ImageOS": "ubuntu24",
+      "ImageVersion": "20261101.360.1",
+      "RUNNER_ARCH": "X64",
+      "RUNNER_OS": "Linux"
+    }
+  },
+  "loadavg_after": [
+    1.23486328125,
+    1.029296875,
+    0.515625
+  ],
+  "native_execution_serial": true,
+  "network": {
+    "bytes": 138360528,
+    "filename": "nn-18cd32e11a9c.nnue",
+    "sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+    "url": "https://tests.stockfishchess.org/api/nn/nn-18cd32e11a9c.nnue"
+  },
+  "outliers_removed": 0,
+  "perft4": 197281,
+  "plan_sha256": "201bc0b8c03fdf4cb837a87b4a8c6ca0dfeefe979a220d0e093eed615ce657dc",
+  "schema": "official43e01-pr7294-port-diagnostic-v1",
+  "source": {
+    "A": {
+      "commit": "43e01e07210948e1130dc687c065d7a3742b2793",
+      "repository": "official-stockfish/Stockfish",
+      "tree": "97c77114c970b5573e33db9c1e90fbef943a6d42"
+    },
+    "B": {
+      "commit": "709bddfb2d10b9da1ecb0b97fff9452cd5a8ffc5",
+      "repository": "0mis/Stockfish",
+      "tree": "36c914bbf7270815f4278da5925e30642c2a5528"
+    },
+    "baseline_accumulator_sha256": "7a9961bf597348bb3f05c5561a98055699a9533e61b905f14fb4479edc11bd82"
+  },
+  "source_nonprefetch_bytes_preserved": true,
+  "status": "COMPLETE",
+  "target_architecture_scope": "This hosted x86-64-bmi2 host only; no laptop speed or Elo inference.",
+  "timed_runs": [
+    {
+      "block": 1,
+      "engine_elapsed_ms": 4427,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5129697729,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 1,
+      "stem": "block-01-slot-1-A"
+    },
+    {
+      "block": 1,
+      "engine_elapsed_ms": 4428,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5128760065,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 2,
+      "stem": "block-01-slot-2-B"
+    },
+    {
+      "block": 1,
+      "engine_elapsed_ms": 4484,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5177935533,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 3,
+      "stem": "block-01-slot-3-B"
+    },
+    {
+      "block": 1,
+      "engine_elapsed_ms": 4529,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5330371834,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 4,
+      "stem": "block-01-slot-4-A"
+    },
+    {
+      "block": 2,
+      "engine_elapsed_ms": 4409,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5129877507,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 1,
+      "stem": "block-02-slot-1-B"
+    },
+    {
+      "block": 2,
+      "engine_elapsed_ms": 4393,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5079600574,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 2,
+      "stem": "block-02-slot-2-A"
+    },
+    {
+      "block": 2,
+      "engine_elapsed_ms": 4454,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5178153693,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 3,
+      "stem": "block-02-slot-3-A"
+    },
+    {
+      "block": 2,
+      "engine_elapsed_ms": 4432,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5180151923,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 4,
+      "stem": "block-02-slot-4-B"
+    },
+    {
+      "block": 3,
+      "engine_elapsed_ms": 4448,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5180282815,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 1,
+      "stem": "block-03-slot-1-A"
+    },
+    {
+      "block": 3,
+      "engine_elapsed_ms": 4420,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5128245031,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 2,
+      "stem": "block-03-slot-2-B"
+    },
+    {
+      "block": 3,
+      "engine_elapsed_ms": 4429,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5130095534,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 3,
+      "stem": "block-03-slot-3-B"
+    },
+    {
+      "block": 3,
+      "engine_elapsed_ms": 4459,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5180443827,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 4,
+      "stem": "block-03-slot-4-A"
+    },
+    {
+      "block": 4,
+      "engine_elapsed_ms": 4436,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5180112906,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 1,
+      "stem": "block-04-slot-1-B"
+    },
+    {
+      "block": 4,
+      "engine_elapsed_ms": 4448,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5180498665,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 2,
+      "stem": "block-04-slot-2-A"
+    },
+    {
+      "block": 4,
+      "engine_elapsed_ms": 4500,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5230757189,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 3,
+      "stem": "block-04-slot-3-A"
+    },
+    {
+      "block": 4,
+      "engine_elapsed_ms": 4392,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5129692167,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 4,
+      "stem": "block-04-slot-4-B"
+    },
+    {
+      "block": 5,
+      "engine_elapsed_ms": 4513,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5230099803,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 1,
+      "stem": "block-05-slot-1-A"
+    },
+    {
+      "block": 5,
+      "engine_elapsed_ms": 4415,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5130286901,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 2,
+      "stem": "block-05-slot-2-B"
+    },
+    {
+      "block": 5,
+      "engine_elapsed_ms": 4411,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5129868920,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 3,
+      "stem": "block-05-slot-3-B"
+    },
+    {
+      "block": 5,
+      "engine_elapsed_ms": 4462,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5182519137,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 4,
+      "stem": "block-05-slot-4-A"
+    },
+    {
+      "block": 6,
+      "engine_elapsed_ms": 4431,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5180376875,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 1,
+      "stem": "block-06-slot-1-B"
+    },
+    {
+      "block": 6,
+      "engine_elapsed_ms": 4513,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5229958303,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 2,
+      "stem": "block-06-slot-2-A"
+    },
+    {
+      "block": 6,
+      "engine_elapsed_ms": 4514,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5230998268,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 3,
+      "stem": "block-06-slot-3-A"
+    },
+    {
+      "block": 6,
+      "engine_elapsed_ms": 4453,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5180358755,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 4,
+      "stem": "block-06-slot-4-B"
+    },
+    {
+      "block": 7,
+      "engine_elapsed_ms": 4489,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5229270033,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 1,
+      "stem": "block-07-slot-1-A"
+    },
+    {
+      "block": 7,
+      "engine_elapsed_ms": 4445,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5179057884,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 2,
+      "stem": "block-07-slot-2-B"
+    },
+    {
+      "block": 7,
+      "engine_elapsed_ms": 4460,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5180446187,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 3,
+      "stem": "block-07-slot-3-B"
+    },
+    {
+      "block": 7,
+      "engine_elapsed_ms": 4450,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5180345911,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 4,
+      "stem": "block-07-slot-4-A"
+    },
+    {
+      "block": 8,
+      "engine_elapsed_ms": 4361,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5079022547,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 1,
+      "stem": "block-08-slot-1-B"
+    },
+    {
+      "block": 8,
+      "engine_elapsed_ms": 4462,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5179597563,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 2,
+      "stem": "block-08-slot-2-A"
+    },
+    {
+      "block": 8,
+      "engine_elapsed_ms": 4539,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5281129025,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "A",
+      "slot": 3,
+      "stem": "block-08-slot-3-A"
+    },
+    {
+      "block": 8,
+      "engine_elapsed_ms": 4406,
+      "legal": {
+        "all_reported_PV_rows_checked": 637,
+        "chess960_roots": 2,
+        "final_positions_checked": 51
+      },
+      "monotonic_wall_ns": 5129556663,
+      "nodes": 3464885,
+      "search_signature_sha256": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+      "side": "B",
+      "slot": 4,
+      "stem": "block-08-slot-4-B"
+    }
+  ],
+  "timing": {
+    "automatic_retries": 0,
+    "blocks": [
+      {
+        "block": 1,
+        "engine_mean_ms": {
+          "A": 4478,
+          "B": 4456
+        },
+        "engine_speed_fraction": 0.004937163375224429,
+        "favorable_both": true,
+        "order": "ABBA",
+        "wall_mean_ns": {
+          "A": 5230034781.5,
+          "B": 5153347799
+        },
+        "wall_speed_fraction": 0.014881002697873624
+      },
+      {
+        "block": 2,
+        "engine_mean_ms": {
+          "A": 4423.5,
+          "B": 4420.5
+        },
+        "engine_speed_fraction": 0.000678656260604038,
+        "favorable_both": false,
+        "order": "BAAB",
+        "wall_mean_ns": {
+          "A": 5128877133.5,
+          "B": 5155014715
+        },
+        "wall_speed_fraction": -0.005070321414203716
+      },
+      {
+        "block": 3,
+        "engine_mean_ms": {
+          "A": 4453.5,
+          "B": 4424.5
+        },
+        "engine_speed_fraction": 0.006554412928014397,
+        "favorable_both": true,
+        "order": "ABBA",
+        "wall_mean_ns": {
+          "A": 5180363321,
+          "B": 5129170282.5
+        },
+        "wall_speed_fraction": 0.00998076407692361
+      },
+      {
+        "block": 4,
+        "engine_mean_ms": {
+          "A": 4474,
+          "B": 4414
+        },
+        "engine_speed_fraction": 0.013593112822836373,
+        "favorable_both": true,
+        "order": "BAAB",
+        "wall_mean_ns": {
+          "A": 5205627927,
+          "B": 5154902536.5
+        },
+        "wall_speed_fraction": 0.009840222999529358
+      },
+      {
+        "block": 5,
+        "engine_mean_ms": {
+          "A": 4487.5,
+          "B": 4413
+        },
+        "engine_speed_fraction": 0.016881939723544015,
+        "favorable_both": true,
+        "order": "ABBA",
+        "wall_mean_ns": {
+          "A": 5206309470,
+          "B": 5130077910.5
+        },
+        "wall_speed_fraction": 0.014859727440780679
+      },
+      {
+        "block": 6,
+        "engine_mean_ms": {
+          "A": 4513.5,
+          "B": 4442
+        },
+        "engine_speed_fraction": 0.01609635299414669,
+        "favorable_both": true,
+        "order": "BAAB",
+        "wall_mean_ns": {
+          "A": 5230478285.5,
+          "B": 5180367815
+        },
+        "wall_speed_fraction": 0.009673149144912685
+      },
+      {
+        "block": 7,
+        "engine_mean_ms": {
+          "A": 4469.5,
+          "B": 4452.5
+        },
+        "engine_speed_fraction": 0.0038180797304885328,
+        "favorable_both": true,
+        "order": "ABBA",
+        "wall_mean_ns": {
+          "A": 5204807972,
+          "B": 5179752035.5
+        },
+        "wall_speed_fraction": 0.0048372849372473326
+      },
+      {
+        "block": 8,
+        "engine_mean_ms": {
+          "A": 4500.5,
+          "B": 4383.5
+        },
+        "engine_speed_fraction": 0.026691000342192295,
+        "favorable_both": true,
+        "order": "BAAB",
+        "wall_mean_ns": {
+          "A": 5230363294,
+          "B": 5104289605
+        },
+        "wall_speed_fraction": 0.02469955640379462
+      }
+    ],
+    "favorable_both_blocks": 7,
+    "gate": "median engine and wall speed>=1%; at least7of8 blocks faster on both clocks",
+    "median_engine_speed_fraction": 0.010073762875425385,
+    "median_wall_speed_fraction": 0.009910493538226484,
+    "outliers_removed": 0,
+    "pass": false
+  },
+  "total_wall_seconds": 405.27424668,
+  "warmups_per_side": 1
+}

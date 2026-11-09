@@ -1,0 +1,25 @@
+{
+  "all_reported_PV_rows_legally_verified": 24206,
+  "canonical_nodes": 3464885,
+  "elo_claim": false,
+  "embedded_network_sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+  "favorable_both_blocks": 7,
+  "final_positions_verified": 1938,
+  "games_dispatched": 0,
+  "median_engine_speed_fraction": 0.010073762875425385,
+  "median_wall_speed_fraction": 0.009910493538226484,
+  "members": {
+    "bytes": 24087,
+    "sha256": "435874eeb1ee9dca3c57f17d48aef424e3d14c457954b271c703ecb06b3018fb"
+  },
+  "perft4": 197281,
+  "raw_benches_verified": 38,
+  "result": {
+    "bytes": 21076,
+    "sha256": "874cf3e35a8708a0cf887f1880697a7917aec954caaf20d91819e9b80582dd2c"
+  },
+  "schema": "official43e01-prefetch-passive-audit-v1",
+  "source_nonprefetch_bytes_preserved": true,
+  "status": "PASS",
+  "timing_gate_passed": false
+}

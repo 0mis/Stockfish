@@ -1,0 +1,29 @@
+{
+  "all_timing_arithmetic_recomputed_from_raw_clocks": true,
+  "cpu_model": "AMD EPYC 7763 64-Core Processor",
+  "decision": "TIMING_GATE_FAILED_REJECT_PORT_ROUTE",
+  "exact_median_engine_fraction": {
+    "denominator": 19529743,
+    "numerator": 196738
+  },
+  "exact_median_wall_fraction": {
+    "denominator": 11751276844177631805,
+    "numerator": 116460953230133327
+  },
+  "favorable_both_blocks": 7,
+  "functional_signature": "39b67104cddc03fb7030b71f6a0ee9b041b90f39d920d7091b830a2492272fbd",
+  "gate_passed": false,
+  "local_builds": 0,
+  "local_native_processes": 0,
+  "median_engine_speed_fraction": 0.010073762875425447,
+  "median_wall_speed_fraction": 0.009910493538226518,
+  "no_local_PV_search_or_teacher_work": true,
+  "raw_benches_parsed": 38,
+  "result": {
+    "bytes": 21076,
+    "sha256": "874cf3e35a8708a0cf887f1880697a7917aec954caaf20d91819e9b80582dd2c"
+  },
+  "schema": "prefetch-local-passive-raw-readback-v1",
+  "status": "PASS",
+  "timed_rows": 32
+}
