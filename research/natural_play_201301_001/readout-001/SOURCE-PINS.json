@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "bytes": 7341,
+      "path": "research/natural_play_201301_001/plan.json",
+      "sha256": "238cbe1c36df282b61bcaddcd26afc0529b5ca60f2280b1babd8d94d01e7565b"
+    },
+    {
+      "bytes": 19718,
+      "path": "research/natural_play_201301_001/discover.py",
+      "sha256": "0cbeb34ab2636e5820cf21d1fecaadc0913f92dd93c2560475e6ff1ccec44090"
+    },
+    {
+      "bytes": 5784,
+      "path": "research/natural_play_201301_001/test_discover.py",
+      "sha256": "bf5e833af04c8b05d579f6b93cd6de0e432a01eeab69515b3982c41fccb922c8"
+    },
+    {
+      "bytes": 3847,
+      "path": ".github/workflows/natural-play-201301-001.yml",
+      "sha256": "7704e2e6eb71615ce392a4382588888dbe4f6a1fddca52d7d606b85bbb708387"
+    }
+  ],
+  "native_processes": 0,
+  "python": "3.11.18",
+  "schema": "natural-play-source-pins-v1",
+  "source_commit": "87e0d14e8c8e1c0510865acef2b1ebf04b00f816"
+}

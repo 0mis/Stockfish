@@ -1,0 +1,51 @@
+name: natural-play-201301-fixed-artifact-audit
+on:
+  push:
+    branches: [research/lichess-201301-natural-discovery-001]
+    paths:
+      - .github/workflows/natural-play-201301-audit-001.yml
+      - research/natural_play_201301_001/verify_saved.py
+      - research/natural_play_201301_001/test_verify_saved.py
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+      - name: Fixed public data parsers
+        run: |
+          python -m pip install --disable-pip-version-check --no-cache-dir chess==1.11.2 zstandard==0.23.0
+      - name: Synthetic integrity tests
+        working-directory: research/natural_play_201301_001
+        run: |
+          set -o pipefail
+          python -B -m unittest -v test_discover.py test_verify_saved.py 2>&1 | tee "$RUNNER_TEMP/natural-play-audit-tests.log"
+      - name: Independently reconstruct fixed saved partitions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -o pipefail
+          nice -n 10 python -B research/natural_play_201301_001/verify_saved.py --work "$RUNNER_TEMP/natural-play-fixed-audit-001" 2>&1 | tee "$RUNNER_TEMP/natural-play-audit.log"
+      - name: Preserve only small audit receipt and test log
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: natural-play-201301-fixed-audit-receipt
+          path: |
+            ${{ runner.temp }}/natural-play-fixed-audit-001/audit-receipt/
+            ${{ runner.temp }}/natural-play-audit.log
+            ${{ runner.temp }}/natural-play-audit-tests.log
+          retention-days: 30
+          if-no-files-found: warn

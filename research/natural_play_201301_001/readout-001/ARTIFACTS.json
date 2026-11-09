@@ -1,0 +1,34 @@
+{
+  "artifacts": [
+    {
+      "bytes": 5393,
+      "id": 13713458861,
+      "name": "natural-play-201301-receipt",
+      "role": "receipt",
+      "sha256": "66bee933e4c320ab4d66f6a0cb904d4a013fc578601d13cbca3423358ad52d74"
+    },
+    {
+      "bytes": 161493708,
+      "id": 13713503713,
+      "name": "natural-play-201301-collision-index",
+      "role": "collision",
+      "sha256": "477fcea7d6cb278c0c6417eab40afe8626aba2a2e509db8eea5267f487f52c9b"
+    },
+    {
+      "bytes": 6925493,
+      "id": 13713164274,
+      "name": "natural-play-201301-sanitized-products",
+      "role": "positions",
+      "sha256": "05e4ea606660f97cc3b2a9b6cb07989686863d9a699717da8b50738d94e040f3"
+    }
+  ],
+  "audit": "fixed-artifact hosted integrity/partition readback only; no resampling, labels or engines",
+  "canonical_domain": "ordinary Standard legal-EP FEN4 SHA256; exact65byte sorted streams",
+  "no_fitting_or_native_admission": true,
+  "plan_sha256": "238cbe1c36df282b61bcaddcd26afc0529b5ca60f2280b1babd8d94d01e7565b",
+  "private_collision_check_pending": true,
+  "repo": "0mis/Stockfish",
+  "run_id": 42706302113,
+  "schema": "natural-play-hosted-artifact-bindings-v1",
+  "source_commit": "87e0d14e8c8e1c0510865acef2b1ebf04b00f816"
+}
