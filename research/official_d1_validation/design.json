@@ -1,0 +1,41 @@
+{
+  "schema": "official-d1-prospective-heldout-design/1",
+  "status": "PREPARATION_ONLY_NO_REAL_HELDOUT_OR_MODEL_OPENED",
+  "training_plan_sha256": "ff34dd8db34c08f51f96201ae74131ab2e10c58a35d06542dc06e9da96f61e92",
+  "source_heldout_design_sha256": "09e9446fc53eb418ad997edd450f7a401f0cf37f79489b286c9c6820881c6af4",
+  "source_commit": "7cdd5e89a39fe3071b67d91c7bb07d712044bf76",
+  "source_tree": "7086bc94bdb39564b678ec4812ecde485de58fb5",
+  "engine_sha256": "b67c37d0d45e3540e311392aeeb699e3a745f16e172bc3fc6f85e0782093842b",
+  "original_network_sha256": "d1ee674a62ca754648fb8c2907ff4e92f0c3acff28f59afa0f5bd4e3949538f1",
+  "original_network_bytes": 136247652,
+  "architecture": "OFFICIAL32-head D1,128 serialized FC2 lanes; unchanged D1 CacheBuilder and true int64 multiply in the source quantizer. No test1757 or92-head map reuse.",
+  "training_run_id": 42608176797,
+  "training_artifact_id": 13668397917,
+  "validation_input": {
+    "bytes": 162650,
+    "sha256": "f542d111aa1c850c00da08beb6d45a8fa5b0447a6aa9df93d06350ee4ba5cd24",
+    "roots": 68
+  },
+  "ordered_gates": [
+    "Explicit Root acceptance file with caller-pinned full SHA, exact official identities, accepted training receipt and complete artifact/file pins",
+    "Verify the accepted training archive and frozen cache/model/recipe/parity receipt bytes",
+    "Identity exits before any actual heldout input or prediction",
+    "Verify actual complete original and candidate136247652-byte files, source32-head mapping, only frozen sparse coefficient changes, unchanged biases, forward candidateSHA and full inverse originalSHA",
+    "Apply source heldout_design.gate: exact nonidentity joint freeze and all586 edited-training raw/CP native parity",
+    "Only now fetch/open the exact fixed68-root heldout input, verify every original component hash/mod5 assignment and train disjointness",
+    "Build ordinary-eligible child records with unchanged OFFICIAL D1 CacheBuilder; retain all68parents and every unavailable child reason",
+    "Compare native original and candidate raw+ordinary CP against every measurable child prediction using exact b67 executable",
+    "Only after both direct native parities pass, aggregate matched-component baseline/candidate losses; no training, tuning, fallback, winner or improvement gate",
+    "Require two complete repeated51-position benchmark signatures and start-position perft4=197281 for each model as structural playing qualification only"
+  ],
+  "coverage": "The source-plan paired-loss population is unchanged. Also measure each otherwise ordinary-eligible child even if its counterpart makes the parent unavailable. Keep every parent/child disposition, changed and unchanged heads, cross-head pairs and overlapping reason counts.",
+  "loss": "Reuse exact source-plan Huber20(max(0,min(60,published_teacher_margin)-(-A_STM_CP+B_STM_CP))) with equal component means. Report predicted and directly measured values separately, only after exact parity.",
+  "no_performance_gate": true,
+  "identity_stops": true,
+  "real_validation_opened": false,
+  "real_predictions_computed": false,
+  "native_local_executed": false,
+  "ci_launched": false,
+  "public_writes": false,
+  "verified_gain": false
+}

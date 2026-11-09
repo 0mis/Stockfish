@@ -1,0 +1,99 @@
+name: Official D1 fixed heldout and playing qualification v1
+
+on:
+  push:
+    branches: [research/official-d1-sibling-heldout-ci-v1]
+  workflow_dispatch:
+    inputs:
+      root_acceptance_sha256:
+        description: Exact Root-approved ROOT-ACCEPTANCE.json file SHA256
+        required: true
+        type: string
+      validation_url:
+        description: Immutable raw GitHub URL for the fixed f542d111 validation file
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  heldout:
+    if: github.repository == '0mis/Stockfish' && github.actor == '0mis'
+    runs-on: windows-2022
+    timeout-minutes: 45
+    steps:
+      - name: Preserve exact source bytes
+        shell: pwsh
+        run: git config --global core.autocrlf false
+
+      - name: Check out the Root-reviewed validation driver
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          ref: ${{ github.sha }}
+          path: driver
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Check out the exact official parent source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: official-stockfish/Stockfish
+          ref: 7cdd5e89a39fe3071b67d91c7bb07d712044bf76
+          path: source
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Select pinned CPython
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: '3.11.9'
+          architecture: x64
+          check-latest: false
+
+      - name: Install the inherited hash-pinned NumPy and chess artifacts
+        shell: pwsh
+        run: |
+          $pins = Get-Content -LiteralPath driver/research/official_d1/requirements.txt
+          $backend = Join-Path $env:RUNNER_TEMP 'official-d1-heldout-backend.txt'
+          $runtime = Join-Path $env:RUNNER_TEMP 'official-d1-heldout-runtime.txt'
+          $pins | Where-Object { $_ -cmatch '^(setuptools|wheel) @ ' } | Set-Content -LiteralPath $backend -Encoding utf8NoBOM
+          $pins | Where-Object { $_ -cmatch '^(numpy|chess) @ ' } | Set-Content -LiteralPath $runtime -Encoding utf8NoBOM
+          $flags = @('--disable-pip-version-check','--no-index','--no-deps','--no-cache-dir','--require-hashes','--force-reinstall')
+          python -m pip --isolated install @flags -r $backend
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m pip --isolated install @flags --no-build-isolation -r $runtime
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $heldoutPython = python -I -c "import sys; assert sys.version_info[:3] == (3, 11, 9); print(sys.executable)"
+          if ($LASTEXITCODE -ne 0 -or $heldoutPython -isnot [string] -or -not (Test-Path -LiteralPath $heldoutPython -PathType Leaf)) { throw 'Pinned Python unavailable' }
+          "RUNNER_PYTHON=$heldoutPython" >> $env:GITHUB_ENV
+
+      - name: Synthetic gates only; never run the training test suite
+        shell: pwsh
+        run: |
+          & $env:RUNNER_PYTHON -B -m unittest discover -s driver/research/official_d1_validation -p 'test_*.py' -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Root gate, exact byte proof, fixed heldout parity and qualification
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ROOT_ACCEPTANCE_SHA256: ${{ inputs.root_acceptance_sha256 || '7747ba3257d7e495cf370c947ce145a7399ddb73363f5ad25e9f9095ce1f6bc8' }}
+          VALIDATION_URL: ${{ inputs.validation_url || 'https://raw.githubusercontent.com/0mis/stockfish-weight-space-lab/f53bf6aebb79ba4d604297cc6da087cea8ac3fd3/research/lichess-multipv/validation.json' }}
+          OPENBLAS_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: |
+          & $env:RUNNER_PYTHON -B driver/research/official_d1_validation/validate_hosted.py --root-acceptance-sha256 $env:ROOT_ACCEPTANCE_SHA256 --validation-url $env:VALIDATION_URL
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Retain finite raw evidence including failed checks
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: official-d1-heldout-v1-${{ github.sha }}
+          path: official-d1-heldout-evidence/
+          retention-days: 1
+          if-no-files-found: warn
+          compression-level: 6

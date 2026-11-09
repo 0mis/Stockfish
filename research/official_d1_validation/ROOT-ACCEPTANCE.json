@@ -1,0 +1,90 @@
+{
+  "accepted": true,
+  "engine_sha256": "b67c37d0d45e3540e311392aeeb699e3a745f16e172bc3fc6f85e0782093842b",
+  "files": {
+    "cache_manifest": {
+      "bytes": 126846,
+      "member": "train-cache/CACHE-MANIFEST.json",
+      "sha256": "8fc81e352c109c519306e9e8219b8e809267eecd8d0ea4065273b1c55062c070"
+    },
+    "candidate": {
+      "bytes": 136247652,
+      "member": "candidate.nnue",
+      "sha256": "80124404107a47a02f0c22903b21d60ec2718a868677e1fb526e5f55bf425292"
+    },
+    "edited_train_parity": {
+      "bytes": 48610,
+      "member": "edited-training-parity.accepted.json",
+      "sha256": "350d3bc462d8519b5cc3ff961a8cfe75730b0754f578c12f7185f191030992c6"
+    },
+    "frozen": {
+      "bytes": 219117,
+      "member": "training-fit/FROZEN.json",
+      "sha256": "3039611d8e45aa38eb18b4bf2befa7c0861161c60da18e7eaf338727f2e19b18"
+    },
+    "mapping": {
+      "bytes": 56458,
+      "member": "train-cache/MAPPING.json",
+      "sha256": "757437241b8c9bc963e668b983053960690105694af7e86f2d407c0d139c085f"
+    },
+    "original_train_parity": {
+      "bytes": 48612,
+      "member": "original-training-parity.accepted.json",
+      "sha256": "bd1791108400311261146fb22562f1d5184b633184070176057b46268f99b210"
+    },
+    "recipe": {
+      "bytes": 913,
+      "member": "candidate.recipe.json",
+      "sha256": "ca6578a39be5673cc6bc15e19da07d07af511dd66c2a1714acedad9d903d81e2"
+    },
+    "train_cache": {
+      "bytes": 608474,
+      "member": "train-cache/TRAIN-CACHE.jsonl",
+      "sha256": "aafc57081ab3b4bf39d332e0180d9ffdca2dc57572f8e1d8c77b4971ab8d3c50"
+    }
+  },
+  "identity": false,
+  "no_performance_gate": true,
+  "parent_sha256": "d1ee674a62ca754648fb8c2907ff4e92f0c3acff28f59afa0f5bd4e3949538f1",
+  "plan_sha256": "ff34dd8db34c08f51f96201ae74131ab2e10c58a35d06542dc06e9da96f61e92",
+  "root_byte_audit_sha256": "6a7a52c34d4bcd26a0bcefac9887e37c8a3974c71c536fedee37b13e0669f830",
+  "schema": "official-d1-heldout-root-acceptance/1",
+  "scope": "one_fixed_official_d1_validation",
+  "source_commit": "7cdd5e89a39fe3071b67d91c7bb07d712044bf76",
+  "source_tree": "7086bc94bdb39564b678ec4812ecde485de58fb5",
+  "training_acceptance": {
+    "bytes": 5243,
+    "sha256": "627d4731330c728e401dd351a1fe1a21dfaee5277cedd4a8346d940d4ed65387"
+  },
+  "training_acceptance_assertions": [
+    {
+      "equals": "OFFICIAL_D1_TRAIN_CI_ACCEPTED",
+      "path": [
+        "status"
+      ]
+    },
+    {
+      "equals": false,
+      "path": [
+        "validation_read_or_predictions"
+      ]
+    },
+    {
+      "equals": 2,
+      "path": [
+        "candidate_bytes_changed"
+      ]
+    }
+  ],
+  "training_artifact": {
+    "bytes": 116805039,
+    "id": 13668397917,
+    "sha256": "36e2922dfd3511d4e6276a2255d01fb0526e9853fad055135c490ca74ff0917a"
+  },
+  "training_driver_commit": "856af5b39b8e63c7da6389e185daa986983b4084",
+  "training_run_id": 42608176797,
+  "validation_bytes": 162650,
+  "validation_roots": 68,
+  "validation_sha256": "f542d111aa1c850c00da08beb6d45a8fa5b0447a6aa9df93d06350ee4ba5cd24",
+  "verified_gain": false
+}
