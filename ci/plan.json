@@ -1,0 +1,40 @@
+{
+  "base_commit": "43e01e07210948e1130dc687c065d7a3742b2793",
+  "base_repository": "official-stockfish/Stockfish",
+  "base_tree": "97c77114c970b5573e33db9c1e90fbef943a6d42",
+  "build": {
+    "architecture": "x86-64-bmi2",
+    "compiler": "same runner-provided g++ executable/version/SHA for both, COMP=gcc",
+    "jobs": 2,
+    "nnue_embedding": true,
+    "target": "profile-build"
+  },
+  "candidate_commit": "77811f10b69eb54f5a78150c33144af86731ae46",
+  "candidate_source_branch": "research/test1757-nine-bias-net-only-43e01-source-001",
+  "candidate_tree": "5d3cd81e42c128a0e94a3960ea08980aa0a73296",
+  "code_sha256": {
+    "audit.py": "7eec2c4e2a58f6589d401c66a6fb3b2368b78b521710a0933ce7959111ab95d9",
+    "pgo_capture.py": "369ebac8fd63560be65092be538640a35336570eb0470ba5cea00b00e8773f56",
+    "qualify.py": "af62d16f65249102e50f2bf7a87e8172c3feaf4420a32f5087e48ea585db31ec",
+    "qualify_common.py": "4d1efe8b85fa01033bdd99e8981fa2b5634ab616d190178b01615b9e5461834f",
+    "test_qualification.py": "b8d09cddc719decb9324eccc767dcd3efc324e45600e57b5a1051eff2a2028f5"
+  },
+  "driver_branch": "research/test1757-nine-bias-net-only-43e01-ci-001",
+  "experiment": "test1757-nine-bias-net-only-43e01-ci-001",
+  "native_inputs": "Two fresh default UCI benches and one startpos perft4 per final binary, plus default PGO canonical bench and UCI identity; no games or private/formal positions",
+  "networks": {
+    "baseline": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+    "candidate": "d5c257728ba53cb9808543ce2800080c860f1c878896cd1b17f75ed4b20aafee"
+  },
+  "qualification": "Both exact public net full SHAs, complete source-tree equivalence except the default line, exact ELF-embedded net bytes, repeated per-side full 51-search signature and197281 perft4",
+  "repository": "0mis/Stockfish",
+  "runner": {
+    "billing_changes": false,
+    "custom_secrets": false,
+    "kind": "standard public GitHub-hosted",
+    "label": "ubuntu-24.04"
+  },
+  "schema": "official43e01-net-only-public-qualification-plan/1",
+  "scope": "Functional net-only Fishtest preparation. Does not test the released history/prefetch search build and makes no strength claim.",
+  "sole_source_change": "src/evaluate.h default18cd to d5; all other upstream source and attribution preserved"
+}

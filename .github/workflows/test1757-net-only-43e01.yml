@@ -1,0 +1,55 @@
+name: Isolated d5 net-only qualification on official43e01
+on:
+  push:
+    branches: [research/test1757-nine-bias-net-only-43e01-ci-001]
+    paths: ['ci/**', '.github/workflows/test1757-net-only-43e01.yml']
+permissions:
+  contents: read
+concurrency:
+  group: test1757-net-only-official43e01-001
+  cancel-in-progress: false
+jobs:
+  qualify:
+    if: github.repository == '0mis/Stockfish' && github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Checkout exact isolated driver
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          path: driver
+          persist-credentials: false
+      - name: Checkout exact pristine official baseline
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: official-stockfish/Stockfish
+          ref: 43e01e07210948e1130dc687c065d7a3742b2793
+          path: baseline
+          persist-credentials: false
+      - name: Checkout exact one-line candidate source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: 0mis/Stockfish
+          ref: 77811f10b69eb54f5a78150c33144af86731ae46
+          path: candidate
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: '3.12'
+      - name: Pure synthetic qualification fixtures
+        working-directory: driver/ci
+        run: python -B -m unittest -v test_qualification
+      - name: Build and qualify both fresh embedded defaults
+        run: python -B driver/ci/qualify.py --root "$GITHUB_WORKSPACE"
+      - name: Independent raw output and signature reread
+        run: python -B driver/ci/audit.py --evidence evidence
+      - name: Preserve raw qualification evidence and corresponding source
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: net-only-official43e01-${{ github.run_id }}
+          path: evidence
+          retention-days: 7
+          compression-level: 9
+          if-no-files-found: error
