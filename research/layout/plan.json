@@ -1,0 +1,34 @@
+{
+  "experiment": "layout-public-games-v1",
+  "question": "Can a lossless reordering of the original test1757 network channels reduce the number of active four-channel groups on held-out opening families?",
+  "purpose": "Development experiment for a candidate that may evaluate positions faster. Source and network authors retain their upstream credit.",
+  "public_games_commit": "6831500a4c6b22d64109a38bb0dc5bbf5b6f8fe0",
+  "public_game_sources": {
+    "edited": {"path": "results/test1757-edited-screen/games-utc.pgn", "games": 128, "bytes": 918097, "sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"},
+    "parent": {"path": "results/test1757-parent-screen/games-utc.pgn", "games": 128, "bytes": 935475, "sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"}
+  },
+  "source": {"commit": "7a17b53bcaf93f54a23ad65f309c413585500c82", "executable_sha256": "12a8e7bfdd9b1189b4350bd9ebef3501be1e89bd5fa41dcb56921f85ba23869a", "parent_net_sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf", "parent_net_bytes": 138360528, "source_bench": 3464885},
+  "sampling": {
+    "family_key": "SHA256 of the opening board's standard four-field FEN with legal en passant.",
+    "family_order": "Sort 63 unique families by SHA256 of UTF-8 stockfish-layout-public-games-v1/family, one NUL byte, then the ASCII family key. The first 48 go to optimization. The remaining 15 go to holdout.",
+    "boards": "Replay both public arms in fixed edited then parent order. Sample plies 8, 16, ..., 96 relative to each game start. Use legal standard nonterminal boards with the side to move out of check. The input game result, clocks and evaluations are not selection variables.",
+    "position_key": "SHA256 of the standard legal-EP four-field FEN. Guard both ordinary and Shredder castling spellings.",
+    "position_order": "Within each family rank distinct positions by SHA256 of UTF-8 stockfish-layout-public-games-v1/position, one NUL byte, then the ASCII position key. Use the first encountered row for repeated occurrences. Use up to 32 distinct positions per family. Remove duplicate aliases across selected rows in each partition. Remove holdout rows with any alias in the entire set of eligible optimization-family positions.",
+    "feasibility": "Require at least 384 optimization rows and 96 holdout rows, with all 15 holdout families represented. Otherwise preserve the diagnostic and end this experiment without substituting data.",
+    "interpretation": "These are previously published development trajectories. Holdout refers only to the channel-order fit in this experiment. Neither partition is a fresh chess strength test."
+  },
+  "optimizer": {
+    "objective": "Count all-zero groups of four consecutive product activations after folding both perspectives into the same 512-channel coordinate system.",
+    "policy": "From identity, compute exact improvements for cross-group two-swaps. Sort by descending positive gain and ascending slot pair, then apply group-disjoint swaps in each batch. Stop when no positive swap exists or after 64 batches. Use one fitted permutation. Freeze its complete 512-index file and digest before computing any holdout activations.",
+    "inspiration": "https://github.com/official-stockfish/nnue-pytorch/blob/b26145006e54e6461cb4b51944ab05cc4850c580/ftperm.py"
+  },
+  "proxy_gate": {
+    "relative_active_groups_reduction_minimum": 0.01,
+    "holdout_families_with_strict_reduction_minimum": 8,
+    "test": "Require 100 * (identity active groups minus fitted active groups) >= identity active groups across holdout rows, and strictly fewer active groups in at least 8 of the 15 holdout families. A zero-activity baseline or a failed feasibility/gate ends candidate generation for this study."
+  },
+  "edit": "Permute both paired FT halves and both perspective blocks of FC0 input columns in every physical stack. Preserve every integer value, header, route, and other parameter. Invert the complete edit to recover the exact parent SHA256.",
+  "native_checks": "Use the identical accepted prefetch Windows executable for parent and candidate. Compare full 92-bucket tables and raw NNUE scores at up to two deterministic sampled positions per holdout family. Require equality of all 51 benchmark per-position nodes, scores, PVs, best moves and total 3464885, plus start-position perft4 of 197281. Preserve commands and both output streams.",
+  "decision": "A passing proxy and exact finite native checks qualify the candidate for a separate timed comparison. Speed selection and strength confirmation require their own measurements.",
+  "strength_protocol": "Formal comparisons continue under their own frozen conditions and existing alpha ledger. This experiment uses only previously published development games."
+}
