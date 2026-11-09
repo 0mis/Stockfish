@@ -152,12 +152,50 @@ class HeldoutTests(unittest.TestCase):
         fen = v.chess.STARTING_FEN
         stdout = "uciok\nreadyok\n" + ("info depth 13 seldepth 14 multipv 1 score cp 0 nodes 100 nps 999 hashfull 0 tbhits 0 time 1 pv e2e4 e7e5\nbestmove e2e4 ponder e7e5\n" * 51) + "readyok\n"
         stderr = "".join(f"Position: {index}/51 ({fen})\n" for index in range(1, 52)) + "Nodes searched: 5100\n"
-        first = v.parse_bench(stdout.encode(), stderr.encode(), 0)
-        second = v.parse_bench(stdout.replace("nps 999", "nps 333").replace("time 1 ", "time 4 ").encode(), stderr.encode(), 0)
+        specs = [{"source": fen, "chess960": False}] * 51
+        first = v.parse_bench(stdout.encode(), stderr.encode(), 0, specs=specs)
+        second = v.parse_bench(stdout.replace("nps 999", "nps 333").replace("time 1 ", "time 4 ").encode(), stderr.encode(), 0, specs=specs)
         self.assertEqual(first["search_signature_sha256"], second["search_signature_sha256"])
         self.assertEqual(first["nodes"], 5100)
         with self.assertRaises(ValueError):
-            v.parse_bench(stdout.encode(), stderr.replace("Position: 51/51", "Position: 50/51").encode(), 0)
+            v.parse_bench(stdout.encode(), stderr.replace("Position: 51/51", "Position: 50/51").encode(), 0, specs=specs)
+
+    def test_benchmark_source_modes_and_contextual_chess960_castling(self):
+        # The final default roots are Chess960 even when castling spellings are
+        # KQkq. Native king-to-rook castling must use that declared board mode.
+        source = ('const std::vector<std::string> Defaults = {\n'
+                  '"setoption name UCI_Chess960 value false",\n'
+                  '"' + v.chess.STARTING_FEN + '",\n'
+                  '"setoption name UCI_Chess960 value true",\n'
+                  '"4k3/8/8/8/8/8/8/R3K2R w HA - 0 1",\n};\n').encode()
+        specs = v.benchmark_specs(source, expected=2)
+        self.assertEqual([spec["chess960"] for spec in specs], [False, True])
+        board = v.benchmark_root(specs[1])
+        v.benchmark_step(board, "e1h1")
+        self.assertEqual(board.king(v.chess.WHITE), v.chess.G1)
+        self.assertEqual(board.piece_at(v.chess.F1).piece_type, v.chess.ROOK)
+
+    def test_benchmark_source_history_and_marker_are_not_guessed(self):
+        spec = {"source": v.chess.STARTING_FEN + " moves e2e4 e7e5", "chess960": False}
+        board = v.benchmark_root(spec)
+        expected = v.chess.Board(); expected.push_uci("e2e4"); expected.push_uci("e7e5")
+        self.assertEqual(board.fen(), expected.fen())
+        with self.assertRaises(ValueError):
+            v.official_benchmark_specs(b"unverified benchmark source")
+
+    def test_actual_retained_position50_g8h8_castling_regression(self):
+        # Exact position/PV from failed run42612377008 original-bench-1.
+        spec = {"source": "bbqnnrkr/pppppppp/8/8/8/8/PPPPPPPP/BBQNNRKR w HFhf - 0 1 moves g2g3 d7d5 d2d4 c8h3 c1g5 e8d6 g5e7 f7f6", "chess960": True}
+        board = v.benchmark_root(spec)
+        fen = "bb1n1rkr/ppp1Q1pp/3n1p2/3p4/3P4/6Pq/PPP1PP1P/BB1NNRKR w HFhf - 0 5"
+        self.assertEqual(board.fen(shredder=True, en_passant="legal"), fen)
+        wrong = v.chess.Board(fen)
+        for token in ("e7e3", "f8e8", "e3d3"):
+            wrong.push_uci(token)
+        self.assertFalse(wrong.is_legal(v.chess.Move.from_uci("g8h8")))
+        for token in ("e7e3", "f8e8", "e3d3", "g8h8", "e1g2"):
+            v.benchmark_step(board, token)
+        self.assertEqual(board.piece_at(v.chess.F8).piece_type, v.chess.ROOK)
 
     def test_complete_standard_perft4_divides(self):
         values = {"a2a3":8457,"a2a4":9329,"b2b3":9345,"b2b4":9332,"c2c3":9272,"c2c4":9744,"d2d3":11959,"d2d4":12435,

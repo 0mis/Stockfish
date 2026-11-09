@@ -76,11 +76,12 @@ def setup(network):
 
 
 def qualification(executable, network, prefix):
+    specs = v.official_benchmark_specs((Path("source") / "src/benchmark.cpp").read_bytes())
     benches = []
     for repetition in (1, 2):
         text = "\n".join(setup(network) + ["bench 16 1 13 default depth", "isready", "quit", ""])
         stdout, stderr, code, receipt = native(executable, network, f"{prefix}-bench-{repetition}", text)
-        bench = v.parse_bench(stdout, stderr, code)
+        bench = v.parse_bench(stdout, stderr, code, specs=specs)
         bench["native_record"] = v.study.reference(OUT / f"{prefix}-bench-{repetition}.record.json")
         put(OUT / f"{prefix}-bench-{repetition}.parsed.json", bench); benches.append(bench)
     v.need(benches[0]["vector"] == benches[1]["vector"] and benches[0]["nodes"] == benches[1]["nodes"]
