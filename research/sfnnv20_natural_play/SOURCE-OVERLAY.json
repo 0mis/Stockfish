@@ -1,0 +1,61 @@
+{
+  "diagnostic_headers": {
+    "src/fc2_activation_command.h": {
+      "bytes": 8168,
+      "sha256": "8078b2276e72b38dc0b5f67c3b2e1325ed1f06eac5318c2b15c1eba4420e1e2f"
+    },
+    "src/nnue/fc2_activation_capture.h": {
+      "bytes": 3179,
+      "sha256": "b4e92b4fa58bcea12c8f7961fc8e0856aa8899997d4bf735a74ebd617de2a98f"
+    }
+  },
+  "patch_source_sha256": "1e0cff00f1d2e3ca7c2b9d24a044fba2ebe6c819309e84dea7854f2e5084f0bc",
+  "plan_sha256": "2b336a8321196ea580d498a005b35f488e18a958aa3aa2ed95f1bdbba1d0159a",
+  "schema": "sfnnv20-current-source-overlay/1",
+  "source_commit": "43e01e07210948e1130dc687c065d7a3742b2793",
+  "source_files": {
+    "src/main.cpp": {
+      "after_bytes": 1921,
+      "after_sha256": "2b4daebcc8cfa2e7c4a6493445faa50ca40362fa0c1c15863b3863aef387fdd3",
+      "before_bytes": 1602,
+      "before_sha256": "20ecc928260f46dfa3622ef0a4d810fe880322b1444659d155ce295be84b343a",
+      "macro_disabled_production_tokens_identical": true
+    },
+    "src/nnue/network.cpp": {
+      "after_bytes": 15162,
+      "after_sha256": "93c4659406eaf4cc209bf5294dac83180cf644077a01981e6131556fc380eb00",
+      "before_bytes": 14221,
+      "before_sha256": "43546936c4388b04bdd1a03dd850ce560f444f606100c3fe55613d049d15779a",
+      "macro_disabled_production_tokens_identical": true
+    },
+    "src/nnue/network.h": {
+      "after_bytes": 4392,
+      "after_sha256": "f74ec6b531012dba8c0fca906007dd49449e8f72d9826d810e37e4818f623d2b",
+      "before_bytes": 4091,
+      "before_sha256": "541886748437bfa27407ef3dcef74acbc083f61ee50fc4d5b46b63e68bfc9cb7",
+      "macro_disabled_production_tokens_identical": true
+    },
+    "src/nnue/nnue_architecture.h": {
+      "after_bytes": 8389,
+      "after_sha256": "f92def9e005164009f6a4bb485c20d81e34554a3c88830d61c82c97dca64f546",
+      "before_bytes": 7026,
+      "before_sha256": "2e1c5e489495cbb41a5860de814305726eb62d43c5fa3813ec432d1514b5ad21",
+      "macro_disabled_production_tokens_identical": true
+    }
+  },
+  "source_tree": "97c77114c970b5573e33db9c1e90fbef943a6d42",
+  "unchanged_reference_files": {
+    "src/benchmark.cpp": {
+      "bytes": 27162,
+      "sha256": "0a8d3f29278ad53abbceee284721a3ac4ddd7c768052de928672a2869bc2da80"
+    },
+    "src/evaluate.cpp": {
+      "bytes": 4607,
+      "sha256": "f421bdd8794ad5383966aafbf81b47d49aa151f7e582dedcc7d441c09fcee7f5"
+    },
+    "src/evaluate.h": {
+      "bytes": 1767,
+      "sha256": "419c847e48504deb4f4f613074f5d045cc593231a81cea3459fb953cf6c272b5"
+    }
+  }
+}

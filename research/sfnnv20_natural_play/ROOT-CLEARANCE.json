@@ -1,0 +1,13 @@
+{
+  "authority": "Root explicit technical clearance in this session",
+  "status": "GRANTED_FOR_EXACT_PUBLIC_INPUT_COMMITMENTS",
+  "source_commit": "43e01e07210948e1130dc687c065d7a3742b2793",
+  "student_network_sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+  "corpus_generator_commit": "87e0d14e8c8e1c0510865acef2b1ebf04b00f816",
+  "corpus_result_sha256": "120d2f683f89c5df6a596092c1de4f937ddc0e95cb29d0c44fa972d4cc6d7dbf",
+  "corpus_audit_sha256": "b8733a382e25e977ac610f2f824bc1cb2e2eb2d0abac9d0cb9611dc08084b76e",
+  "public_parent_stream_sha256": "6a6c2e63a2dc4548dee85a463a5ca01d8a85f53049fe2701fe5ff8e83f47be8d",
+  "public_child_stream_sha256": "dad3370e2be1b627af1691324656236b538c3aeee88d3ba6313c578593058840",
+  "scope": "Only the exact public parent/all-legal-one-ply input commitments, not an unobserved future search tree. No private IDs, pool inventory or detailed reservation state is included or may be published.",
+  "mismatch_or_missing_grant": "Refuse every natural-cohort native/search/eval/fit action."
+}

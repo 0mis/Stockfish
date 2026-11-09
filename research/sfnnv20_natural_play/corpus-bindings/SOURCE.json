@@ -1,0 +1,15 @@
+{
+  "archive_bytes": 17761302,
+  "archive_sha256": "aa40b3671fa3cf1072eb182892cd90b0e1e003a4a5943492f64b77e7f3fd1635",
+  "decompressed_bytes": 92811021,
+  "decompressed_sha256": "8963b6a1620a0e9c77e5515a0744ec133e86869487188af047bb0a74400dee37",
+  "http_metadata": {
+    "Content-Length": "17761302",
+    "ETag": "\"63653988-10f0416\"",
+    "Last-Modified": "Fri, 04 Nov 2022 16:10:48 GMT"
+  },
+  "license": "CC0-1.0",
+  "primary_license_url": "https://database.lichess.org/#standard",
+  "raw_PGN_published_or_returned": false,
+  "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2013-01.pgn.zst"
+}

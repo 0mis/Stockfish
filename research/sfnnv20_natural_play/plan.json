@@ -1,0 +1,289 @@
+{
+  "schema": "sfnnv20-natural-play-calibration-plan/1",
+  "status": "FROZEN_BEFORE_ANY_NEW_NATURAL_COHORT_SEARCH_EVALUATION_OR_FIT",
+  "study_id": "sfnnv20-natural-play-201301-calibration-001",
+  "separate_from": {
+    "closed_study": "official-d1-test1758-diagnostic-v1",
+    "closed_result_url": "https://github.com/0mis/Stockfish/blob/75e3cff37a39880912ee021d5a784503dfc0a574/research/official_d1_test1758/NO-FIT-RESULT.json",
+    "result": "1885 stable TRAIN pairs below frozen2000; no optimization/edit; identity.",
+    "retry_or_extension": false,
+    "old_D1_features_or_32_head_caches_used": false,
+    "old_withheld_labels_or_selected_line_outcomes_reused": false,
+    "head8_portability": "Out of scope: old D1 head8 quiet/quiet is an endgame/no-queen observation excluded by this middlegame corpus; SFNNv20 indices are not equivalent. No side-cohort or portability claim."
+  },
+  "purpose": "One prospective supervised sparse readout calibration using a fallible deeper-search teacher. A frozen exact byte recipe is not evidence of Elo or comparable strength after fresh backbone training.",
+  "official_source": {
+    "repository": "official-stockfish/Stockfish",
+    "commit": "43e01e07210948e1130dc687c065d7a3742b2793",
+    "tree": "97c77114c970b5573e33db9c1e90fbef943a6d42",
+    "student_and_teacher_search_source_identical": true,
+    "student_source_or_search_changed": false
+  },
+  "student": {
+    "network": "nn-18cd32e11a9c.nnue",
+    "sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+    "expected_serialized_bytes": 138360528,
+    "raw_routes": 192,
+    "expected_stored_heads": 92,
+    "expected_width": 128,
+    "original_network_unedited": true,
+    "network_authors": "Upstream Stockfish NNUE contributors / original Shawn Xu test1757 checkpoint; preserve upstream CC0 attribution and serialized description."
+  },
+  "teacher": {
+    "network": "nn-68752b755c93.nnue",
+    "sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
+    "expected_serialized_bytes": 138360528,
+    "url": "https://tests.stockfishchess.org/api/nn/nn-68752b755c93.nnue",
+    "original_author": "Shawn Xu (xu-shawn)",
+    "unedited": true,
+    "license": "CC0-1.0",
+    "source": "Same exact official43e ordinary executable as student; no old history/prefetch composite teacher.",
+    "accepted_prior_test_provenance": "https://tests.stockfishchess.org/tests/view/6af1273d8e7fb2e78bc1ca70",
+    "prior_test_is_not_this_candidate_gain": true
+  },
+  "ordinary_oracle": {
+    "accepted_build_run": 42708239066,
+    "accepted_build_driver": "ef49ff7929b718490deb08342a0ce8b9dbe7301f",
+    "archive_artifact_id": 13715421521,
+    "archive_bytes": 229871785,
+    "archive_sha256": "7533e105b6451bfc3881573aa96268fcaa4a9dc1e4435b4e0780b22fccdf23fe",
+    "member": "bin/baseline-stockfish",
+    "executable_bytes": 138978352,
+    "executable_sha256": "bd4bb1fb9bbd1009a47f68e9671e30755e2a8d9d3dbd4db1754146eab9d0c785",
+    "platform": "standard public ubuntu-24.04 / GCC BMI2 PGO",
+    "source": "exact official43e01",
+    "default_parent_bench": [
+      3464885,
+      3464885
+    ],
+    "default_parent_perft4": 197281,
+    "accepted_receipt_sha256": "0fbf8d4b7cdd3936dc1b52f9f7994d1a20e58f43967c6be483ddedd5e6a5b700",
+    "reuse_instead_of_duplicate_ordinary_build": true,
+    "do_not_use_d5_member_or_results": true,
+    "official_Nov9_release_is_a_source_matched_alternative_not_silently_substituted": true
+  },
+  "corpus": {
+    "repository": "0mis/Stockfish",
+    "generator_commit": "87e0d14e8c8e1c0510865acef2b1ebf04b00f816",
+    "plan_sha256": "238cbe1c36df282b61bcaddcd26afc0529b5ca60f2280b1babd8d94d01e7565b",
+    "readout_commit": "5fc9ed323a0a8a63c5052286ebe379d62ed40eb9",
+    "result_sha256": "120d2f683f89c5df6a596092c1de4f937ddc0e95cb29d0c44fa972d4cc6d7dbf",
+    "independent_audit_run": 42707284461,
+    "independent_audit_sha256": "b8733a382e25e977ac610f2f824bc1cb2e2eb2d0abac9d0cb9611dc08084b76e",
+    "source": {
+      "archive_bytes": 17761302,
+      "archive_sha256": "aa40b3671fa3cf1072eb182892cd90b0e1e003a4a5943492f64b77e7f3fd1635",
+      "decompressed_bytes": 92811021,
+      "decompressed_sha256": "8963b6a1620a0e9c77e5515a0744ec133e86869487188af047bb0a74400dee37",
+      "http_metadata": {
+        "Content-Length": "17761302",
+        "ETag": "\"63653988-10f0416\"",
+        "Last-Modified": "Fri, 04 Nov 2022 16:10:48 GMT"
+      },
+      "license": "CC0-1.0",
+      "primary_license_url": "https://database.lichess.org/#standard",
+      "raw_PGN_published_or_returned": false,
+      "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2013-01.pgn.zst"
+    },
+    "source_record_limit": 20000,
+    "quality_qualified_unique_games": 9488,
+    "split_and_selection": "Use the exact existing audited component assignment, fixed rankings, quotas and max8 roots/component; no resampling/replacements. Do not reinterpret family_id as the weight unit: component_id is the equal-weight unit.",
+    "partitions": {
+      "DEV": {
+        "roots": 3000,
+        "components": 1102,
+        "file": {
+          "bytes": 2151307,
+          "file": "dev-positions.jsonl",
+          "sha256": "a8feffa42f745762dca7ccfd36e1758b58748dcbdc12063b0cd944ef41e249ce"
+        }
+      },
+      "FINAL": {
+        "roots": 3000,
+        "components": 679,
+        "file": {
+          "bytes": 2174990,
+          "file": "final-positions.jsonl",
+          "sha256": "67ec50baed029a0c64df57e131f663e3fb526ccbef0638fbaaff543435491b94"
+        }
+      },
+      "SCREEN": {
+        "roots": 3000,
+        "components": 700,
+        "file": {
+          "bytes": 2171753,
+          "file": "screen-positions.jsonl",
+          "sha256": "688b780bd327281a0e57befea9fc35ba7b9015bb23e317ff4502c8d7b4061dcd"
+        }
+      },
+      "TRAIN": {
+        "roots": 16000,
+        "components": 4711,
+        "file": {
+          "bytes": 11498241,
+          "file": "train-positions.jsonl",
+          "sha256": "6af83b9459d7cf2aa587b53f7aed569375804a62295e2ef1f07394a35f00bdc6"
+        }
+      }
+    },
+    "public_artifacts": [
+      {
+        "bytes": 5393,
+        "id": 13713458861,
+        "name": "natural-play-201301-receipt",
+        "role": "receipt",
+        "sha256": "66bee933e4c320ab4d66f6a0cb904d4a013fc578601d13cbca3423358ad52d74"
+      },
+      {
+        "bytes": 161493708,
+        "id": 13713503713,
+        "name": "natural-play-201301-collision-index",
+        "role": "collision",
+        "sha256": "477fcea7d6cb278c0c6417eab40afe8626aba2a2e509db8eea5267f487f52c9b"
+      },
+      {
+        "bytes": 6925493,
+        "id": 13713164274,
+        "name": "natural-play-201301-sanitized-products",
+        "role": "positions",
+        "sha256": "05e4ea606660f97cc3b2a9b6cb07989686863d9a699717da8b50738d94e040f3"
+      }
+    ],
+    "public_canonical_streams": {
+      "anchor16.ids": {
+        "bytes": 467480,
+        "count": 7192,
+        "file": "anchor16.ids",
+        "sha256": "d777a3aa8e6d63f8b76cc231efb94cef4fc84328a1063cffd70835e1d53eb95b"
+      },
+      "census-roots.ids": {
+        "bytes": 2888340,
+        "count": 44436,
+        "file": "census-roots.ids",
+        "sha256": "5f288819cebf6b212304581ff8c68e6cf4b5f88a3d963c895619bb659ce93cd5"
+      },
+      "children.ids": {
+        "bytes": 94639025,
+        "count": 1455985,
+        "file": "children.ids",
+        "sha256": "dad3370e2be1b627af1691324656236b538c3aeee88d3ba6313c578593058840"
+      },
+      "parents.ids": {
+        "bytes": 2521155,
+        "count": 38787,
+        "file": "parents.ids",
+        "sha256": "6a6c2e63a2dc4548dee85a463a5ca01d8a85f53049fe2701fe5ff8e83f47be8d"
+      },
+      "selected-parents.ids": {
+        "bytes": 1625000,
+        "count": 25000,
+        "file": "selected-parents.ids",
+        "sha256": "94960975c5525ac6769c07fa033654c565ff8dcba9e11c505256a28438963063"
+      }
+    },
+    "canonical_domain": "ordinary Standard castling with legal EP only; no alternate Shredder or FEN-EP hash domains mixed into canonical streams",
+    "complete_source_lineage": "Bind original CC0 archive/full decompressed SHA and fixed first20000 parsed-record cutoff, all audited selected prefixes/actual clocks, full-legal-mainline game hashes/source ordinals and whole-census source/component membership. Do not claim the rest of the archive was parsed or observed.",
+    "native_history_scope": "Standalone exact six-field root FEN with actual source clocks. prefix_uci is retained for data-only legal reconstruction/origin, not sent as earlier native history; native input admission is exactly the cleared parent and legal one-ply positions.",
+    "February_2013_unopened_and_not_input": true,
+    "broadcast_archives_not_input": true,
+    "old_experiment_not_touched": true
+  },
+  "technical_admission": {
+    "authority": "Root explicit technical clearance in this session",
+    "status": "GRANTED_FOR_EXACT_PUBLIC_INPUT_COMMITMENTS",
+    "source_commit": "43e01e07210948e1130dc687c065d7a3742b2793",
+    "student_network_sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+    "corpus_generator_commit": "87e0d14e8c8e1c0510865acef2b1ebf04b00f816",
+    "corpus_result_sha256": "120d2f683f89c5df6a596092c1de4f937ddc0e95cb29d0c44fa972d4cc6d7dbf",
+    "corpus_audit_sha256": "b8733a382e25e977ac610f2f824bc1cb2e2eb2d0abac9d0cb9611dc08084b76e",
+    "public_parent_stream_sha256": "6a6c2e63a2dc4548dee85a463a5ca01d8a85f53049fe2701fe5ff8e83f47be8d",
+    "public_child_stream_sha256": "dad3370e2be1b627af1691324656236b538c3aeee88d3ba6313c578593058840",
+    "scope": "Only the exact public parent/all-legal-one-ply input commitments, not an unobserved future search tree. No private IDs, pool inventory or detailed reservation state is included or may be published.",
+    "mismatch_or_missing_grant": "Refuse every natural-cohort native/search/eval/fit action."
+  },
+  "capture_contract": {
+    "architecture": "SFNNv20, current-source native FC0[32],FC1[32], canonical serialized FC2 uint7[128], signed-int8 serialized weights and fixed int32 bias. Fresh per-network raw192->physical map and complete exact byte-map required.",
+    "forbidden": "No D1 32-head caches, no Python v19 feature-forward implementation, no copied old coordinates.",
+    "raw_quantizer": "fc2_affine_including_bias + fixed(fc0[30]-fc0[31]) in checked int32; cast combined to int64, multiply9600/divide16384 truncating toward zero, then divide16 toward zero exactly as official43e.",
+    "native_lookup": "Engine-provided current Stockfish::scale_evaluation(raw+offset,VALUE_ZERO,actualPosition) and UCIEngine::to_cp for every integer raw offset -80..80 inclusive. Offset0 must match fresh ordinary current-source raw+CP. No missing/out-of-range imputation.",
+    "joint_delta_bound": "Global L1<=16 and uint7<=127 imply absolute affine delta<=2032 and raw delta<80; every trial is checked against int32 and captured lookup bounds.",
+    "ordinary_eligibility": "Both nonterminal, not-in-check children for pair loss; retain every unavailable parent/pair/child and measure every otherwise available child even if its counterpart is unavailable.",
+    "native_gates": "Source-qualified diagnostic vs accepted ordinary original43e on predeclared public fixtures, then ALL measured original natural children raw+ordinary CP before any costs. After ONE joint freeze and typed bytes, ALL measured candidate children require actual ordinary native raw+CP parity before any gate interpretation."
+  },
+  "teacher_search": {
+    "threads": 1,
+    "hash_mib": 16,
+    "numa": "none",
+    "syzygy": "empty",
+    "chess960": false,
+    "node_budgets": [
+      65536,
+      262144
+    ],
+    "candidates": "Low-budget full-legal-root MultiPV2 selects A/B. Higher-budget MultiPV2 searchmoves exactly these same two moves. No student move proposal or source human played move is used.",
+    "reset": "Fresh ucinewgame/cleared search state for each budget; exact FEN6 and recorded clocks, no earlier PGN history.",
+    "snapshot": "Deepest fully completed exact/unbounded CP MultiPV2 depth; require final bestmove to equal its rank1. Do not fall back to a shallower snapshot if the deepest complete snapshot disagrees.",
+    "consensus": "Same A>B order at both fixed budgets; both margins>=16CP and each top CP absolute<=600. Mate, bound, incomplete, malformed, nonconsensus and ordinary-unavailable rows retain explicit reasons.",
+    "root_margin": "-childA_STM_CP + childB_STM_CP",
+    "target_margin": "min(40, low_margin_cp, high_margin_cp); root-STM CP.",
+    "budgets_and_filters_never_changed_from_visible_outcomes": true
+  },
+  "fit": {
+    "training_only": true,
+    "minimum_stable_train_pairs": 2000,
+    "minimum_train_components": 64,
+    "head_selection": "At least256 same-physical-head paired TRAIN roots and24 TRAIN components; choose at most4 by descending paired support then ascending physical head. Bind this student's actual map.",
+    "edits": "FC2 serialized signed-int8 coefficients only; no biases or other bytes. Deltas[-4,-2,-1,0,1,2,4], preserve[-128,127], max2 nonzero lanes/head,8 total,L1<=16.",
+    "optimizer": "ONE deterministic joint coordinate descent from identity; four full sweeps, selected heads ascending then lane0..127; consider every allowed final declared delta at each coordinate and current full joint vector. Stop if a full sweep makes no change. No restart or reselection.",
+    "objective": "Exact component-equal mean of root [Huber20(max(0,target-margin)) + ((newChildA-oldChildA)^2+(newChildB-oldChildB)^2)/2], plus sum(delta^2)/8. Huber20(e)=e^2/2 for e<=20 else20*(e-10). Anchors are original student ordinary CP, not teacher CP scale.",
+    "arithmetic": "Exact Fraction/integer sums. Equivalent LCM weights may optimize component-equal arithmetic; max8 roots/component bounds LCM<=840. Enforce integer overflow bounds or use Python exact integers; never approximate choices with float cost.",
+    "ties": "Exact cost, fewer changed lanes, smaller sum delta^2, smaller L1, lexicographic(head,lane,declared delta order). Identity wins ties.",
+    "error_strata": "Prospectively use the SOURCE-DEFINED semantic raw root route (piece-count band, root-STM queen bits, pawn layout and many-officers flag), crossed with A/B capture-or-promotion flags. Semantic routes are stable across compatible v20 checkpoints; stored physical head indices are not assumed portable.",
+    "specific_error_selection": "TRAIN only: >=128 stable eligible pairs,>=24 components, baseline component-equal rank error>=25%; choose highest error then lexical semantic descriptor. Old D1 head8 observation never selects a v20 stratum or coefficient.",
+    "freeze": "Freeze all edits or identity exactly ONCE before development outcomes. Bind full training/source/map/capture/cost-trace hashes, exact original/candidate bytes and inverse restore. No coordinate copying from any earlier candidate."
+  },
+  "gates": {
+    "ranking_error": "1 if margin<0,1/2 if margin==0,else0; exact component-equal mean.",
+    "absolute_anchors": "All measured available children, including unavailable-pair counterparts: drift RMS<=4CP, maximum absolute<=12CP, absolute mean signed drift<=1CP.",
+    "train": "Nonidentity, component-equal rank-error improvement>=0.02 absolute and Huber deficit improvement>=5%, supported predeclared error stratum, and all absolute anchors. Original+candidate native parity mandatory. Identity/shortfall/failure stops without DEV reads.",
+    "development": "Only the ONE frozen candidate, exact3000 DEV root roster; >=400 stable eligible pairs/16 components. Overall error improves>=0.01 and Huber>=2%; selected stratum>=64pairs/8components, baseline error>=20%, improves>=0.03. Same anchors. Failure stops; never re-fit or open FINAL.",
+    "final": "Only after the full DEV gate, exact3000 FINAL root roster; >=400 stable pairs/16components and selected stratum>=64pairs/8components. Overall error improves>=0.005, Huber>=1%, stratum error improves>=0.02, same anchors. Report once, no tuning/replacement.",
+    "playing_qualification": "Exact typed int8 byte diff, full parent/candidate/inverse SHA and every untouched span, actual complete repeated candidate bench signatures and perft4=197281 on the unchanged ordinary43e engine.",
+    "screen": "Only after every earlier gate:64 paired openings/128games from fixed SCREEN roster, one root/component, lowest SHA order, sourceFen6 openings,10+0.1,T1,Hash16,seed202611090213. Same unchanged ordinary43e exe; parent18cd vs frozen edited net; authentic clock losses/raw PGNs retained. Descriptive only; no Fishtest, release, X or gain claim."
+  },
+  "resources": {
+    "native_rosters": {
+      "TRAIN": 16000,
+      "DEV": 3000,
+      "FINAL": 3000,
+      "SCREEN_search_labels": 0
+    },
+    "maximum_teacher_roots": 22000,
+    "maximum_requested_teacher_nodes": 7208960000,
+    "max_reported_overshoot_per_search": 4096,
+    "max_total_reported_nodes": 7389184000,
+    "per_search_timeout_seconds": 30,
+    "max_measured_children": 44000,
+    "raw_lookup_offsets": 161,
+    "train_shards": 8,
+    "max_parallel_native_jobs": 2,
+    "job_native_wall_cap_seconds": 4500,
+    "job_timeout_minutes": 90,
+    "total_acquisition_worker_cap_seconds": 21600,
+    "fit_or_audit_job_cap_minutes": 45,
+    "pilot": "First128 distinct TRAIN components by SHA(namespace|component_id), one lowest-hash admitted root each; fixed method/budgets. Pilot rows count once in complete acquisition.",
+    "calibration_decision": "Use elapsed search+capture+ordinary-parity throughput only, conservative1.5x extrapolation to all22000 possible teacher roots/all44000 children. Proceed only if total<=21600worker-seconds and each scheduled shard<=3600s. Otherwise stop as resource-infeasible, no method/data-cap/threshold changes.",
+    "shortfall": "After the fixed complete TRAIN corpus, insufficient stable support freezes identity. Never extend from visible yield or validation.",
+    "compute": "Only standard free public GitHub-hosted runners; no user secrets, paid/self-hosted runner or local native/build/large CPU. Keep large data/model artifacts and fitting hosted, local metadata/code only."
+  },
+  "exposure_and_reproduction": {
+    "retain": "Original source/cutoff/sampler commitments; complete selected origin/game/component joins; every native input/stdout/stderr/process digest; all root/PV/bestmove/ponder legal-path usage indexes and available/held counts; ordinary child score provenance, byte-map, fit trace and authentic later game PGNs if any.",
+    "domains": "Keep source canonical ordinary-legal-EP admission IDs separate from any conservative alternate-domain usage projection; never silently mix domains.",
+    "unknown": "Unreported native search internals remain unknown. Root clearance is not a claim about an unobserved search tree or global formal-pool closure.",
+    "future_compatible_checkpoint_replication": "Not executed in this trial. A later authorized, separately frozen/collision-cleared February2013 study may learn the SAME method afresh on unedited68752; no copied coordinates or Jan heldout outcomes used to tune it. Only actual independent successful playing tests support that generalization.",
+    "fresh_backbone_training_strength_replication": false,
+    "February_2013_not_opened": true,
+    "all_new_candidate_statuses_experimental": true,
+    "no_Elo_or_truth_claim_from_proxies": true
+  }
+}

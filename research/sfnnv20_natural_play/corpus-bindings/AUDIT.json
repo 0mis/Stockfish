@@ -1,0 +1,43 @@
+{
+  "canonical_streams_verified": [
+    "anchor16.ids",
+    "census-roots.ids",
+    "children.ids",
+    "parents.ids",
+    "selected-parents.ids"
+  ],
+  "cross_partition_parent_child_intersections": 0,
+  "independently_reconstructed_legal_children": 937122,
+  "independently_reconstructed_selected_roots": 25000,
+  "native_processes": 0,
+  "origin_records_verified": 9488,
+  "partitions": {
+    "DEV": {
+      "components": 1102,
+      "roots": 3000
+    },
+    "FINAL": {
+      "components": 679,
+      "roots": 3000
+    },
+    "SCREEN": {
+      "components": 700,
+      "roots": 3000
+    },
+    "TRAIN": {
+      "components": 4711,
+      "roots": 16000
+    }
+  },
+  "plan_sha256": "238cbe1c36df282b61bcaddcd26afc0529b5ca60f2280b1babd8d94d01e7565b",
+  "preliminary_manifest_records_verified": 38787,
+  "private_collision_check_completed": false,
+  "schema": "natural-play-independent-saved-audit-v1",
+  "source_commit": "87e0d14e8c8e1c0510865acef2b1ebf04b00f816",
+  "source_resampled": false,
+  "source_run": 42706302113,
+  "status": "PASS",
+  "teacher_labels_collected": 0,
+  "training_admitted": false,
+  "wall_seconds": 60.325041789
+}

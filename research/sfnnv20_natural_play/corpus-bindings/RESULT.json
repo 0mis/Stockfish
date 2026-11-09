@@ -1,0 +1,192 @@
+{
+  "canonical_alias_scope": "ordinary Standard castling with legal EP only; no alternate Shredder or FEN-EP hash domains mixed into canonical streams",
+  "canonical_id_streams": {
+    "anchor16.ids": {
+      "bytes": 467480,
+      "count": 7192,
+      "file": "anchor16.ids",
+      "sha256": "d777a3aa8e6d63f8b76cc231efb94cef4fc84328a1063cffd70835e1d53eb95b"
+    },
+    "census-roots.ids": {
+      "bytes": 2888340,
+      "count": 44436,
+      "file": "census-roots.ids",
+      "sha256": "5f288819cebf6b212304581ff8c68e6cf4b5f88a3d963c895619bb659ce93cd5"
+    },
+    "children.ids": {
+      "bytes": 94639025,
+      "count": 1455985,
+      "file": "children.ids",
+      "sha256": "dad3370e2be1b627af1691324656236b538c3aeee88d3ba6313c578593058840"
+    },
+    "parents.ids": {
+      "bytes": 2521155,
+      "count": 38787,
+      "file": "parents.ids",
+      "sha256": "6a6c2e63a2dc4548dee85a463a5ca01d8a85f53049fe2701fe5ff8e83f47be8d"
+    },
+    "selected-parents.ids": {
+      "bytes": 1625000,
+      "count": 25000,
+      "file": "selected-parents.ids",
+      "sha256": "94960975c5525ac6769c07fa033654c565ff8dcba9e11c505256a28438963063"
+    }
+  },
+  "census": {
+    "distinct_anchor_families_with_roots": 7192,
+    "eligible_root_occurrences": 44437,
+    "fully_legal_standard_records": 20000,
+    "length_rejected": 10512,
+    "source_records": 20000,
+    "unique_eligible_roots": 44436,
+    "unique_quality_controlled_games": 9488
+  },
+  "cross_partition_parent_child_intersections": 0,
+  "decision": "STRUCTURAL_CAPACITY_SUFFICIENT_PRIVATE_GATE_REQUIRED",
+  "existing_retired_engine_study_touched": false,
+  "future_replication": {
+    "archive_opened": false,
+    "listed_source_games": 123961,
+    "not_part_of_this_study": true,
+    "sha256_metadata_only": "c136acdf343293c45252906fee91e3b561fb26a936979f52dbe04bb649a2fd86",
+    "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2013-02.pgn.zst"
+  },
+  "guard_component_counts": {
+    "DEV": 1102,
+    "FINAL": 679,
+    "SCREEN": 700,
+    "TRAIN": 4711,
+    "components_with_roots": 7192,
+    "distinct_preliminary_guard_ids": 1494631,
+    "generated_child_boards": 1455993,
+    "preliminary_anchor_families": 7192,
+    "preliminary_parent_records": 38787
+  },
+  "hash_only_reversible_manifest": {
+    "bytes": 53649701,
+    "decompressed_bytes": 108611668,
+    "decompressed_sha256": "0726ef41f70514ed40cfc8719321495db6d44da37090f6706052e268322a86e3",
+    "file": "root-child-exposure.jsonl.zst",
+    "records": 38787,
+    "sha256": "253fa2846fcccd31a2ed046e5d0d0c4af2713b6c5df1037f61dcf6bcf015d995"
+  },
+  "learning_reproducibility_claim": false,
+  "native_processes": 0,
+  "no_qc_replacement": true,
+  "outcomes_comments_names_ratings_retained": false,
+  "partitions": {
+    "DEV": {
+      "components_available": 1102,
+      "components_used": 1102,
+      "guard_ids_all_preliminary_roots": 227242,
+      "minimum_feasibility": {
+        "components": 250,
+        "positions": 2000
+      },
+      "minimum_met": true,
+      "positions": 3000,
+      "quota": 3000,
+      "sanitized_CI_only_positions": {
+        "bytes": 2151307,
+        "file": "dev-positions.jsonl",
+        "sha256": "a8feffa42f745762dca7ccfd36e1758b58748dcbdc12063b0cd944ef41e249ce"
+      }
+    },
+    "FINAL": {
+      "components_available": 679,
+      "components_used": 679,
+      "guard_ids_all_preliminary_roots": 144373,
+      "minimum_feasibility": {
+        "components": 250,
+        "positions": 2000
+      },
+      "minimum_met": true,
+      "positions": 3000,
+      "quota": 3000,
+      "sanitized_CI_only_positions": {
+        "bytes": 2174990,
+        "file": "final-positions.jsonl",
+        "sha256": "67ec50baed029a0c64df57e131f663e3fb526ccbef0638fbaaff543435491b94"
+      }
+    },
+    "SCREEN": {
+      "components_available": 700,
+      "components_used": 700,
+      "guard_ids_all_preliminary_roots": 148210,
+      "minimum_feasibility": {
+        "components": 250,
+        "positions": 2000
+      },
+      "minimum_met": true,
+      "positions": 3000,
+      "quota": 3000,
+      "sanitized_CI_only_positions": {
+        "bytes": 2171753,
+        "file": "screen-positions.jsonl",
+        "sha256": "688b780bd327281a0e57befea9fc35ba7b9015bb23e317ff4502c8d7b4061dcd"
+      }
+    },
+    "TRAIN": {
+      "components_available": 4711,
+      "components_used": 4711,
+      "guard_ids_all_preliminary_roots": 974806,
+      "minimum_feasibility": {
+        "components": 1500,
+        "positions": 12000
+      },
+      "minimum_met": true,
+      "positions": 16000,
+      "quota": 16000,
+      "sanitized_CI_only_positions": {
+        "bytes": 11498241,
+        "file": "train-positions.jsonl",
+        "sha256": "6af83b9459d7cf2aa587b53f7aed569375804a62295e2ef1f07394a35f00bdc6"
+      }
+    }
+  },
+  "plan_sha256": "238cbe1c36df282b61bcaddcd26afc0529b5ca60f2280b1babd8d94d01e7565b",
+  "private_collision_check_completed": false,
+  "public_sampling_conditioned_on_private_ids": false,
+  "resources": {
+    "peak_rss_KiB": 497276,
+    "system_cpu_seconds": 0.432036,
+    "user_cpu_seconds": 82.826978,
+    "wall_seconds": 97.739974329
+  },
+  "schema": "natural-play-data-feasibility-result-v1",
+  "source": {
+    "archive_bytes": 17761302,
+    "archive_sha256": "aa40b3671fa3cf1072eb182892cd90b0e1e003a4a5943492f64b77e7f3fd1635",
+    "decompressed_bytes": 92811021,
+    "decompressed_sha256": "8963b6a1620a0e9c77e5515a0744ec133e86869487188af047bb0a74400dee37",
+    "http_metadata": {
+      "Content-Length": "17761302",
+      "ETag": "\"63653988-10f0416\"",
+      "Last-Modified": "Fri, 04 Nov 2022 16:10:48 GMT"
+    },
+    "license": "CC0-1.0",
+    "primary_license_url": "https://database.lichess.org/#standard",
+    "raw_PGN_published_or_returned": false,
+    "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2013-01.pgn.zst"
+  },
+  "source_commit": "87e0d14e8c8e1c0510865acef2b1ebf04b00f816",
+  "source_correction": {
+    "abandoned_url": "https://database.lichess.org/broadcast/lichess_db_broadcast_2024-01.pgn.zst",
+    "broadcast_archive_downloaded": false,
+    "broadcast_archive_parsed": false,
+    "reason": "Broadcast-specific terms are CC BY-SA4.0 rather than the CC0 needed for the possible downstream network submission.",
+    "source_chosen_before_any_actual_archive_or_outcome_parsing": true
+  },
+  "source_game_origins": {
+    "bytes": 5695172,
+    "file": "source-game-origins.jsonl",
+    "records": 9488,
+    "sha256": "d2adcee899bb9a893a1fcd16cc92ae0addea70822392d511478d312079f1adb3",
+    "source_record_ordinals": "1-based within fixed first20000 records; only unique legal length-qualified games; labels absent"
+  },
+  "source_record_limit_fixed": 20000,
+  "status": "DATA_ONLY_DISCOVERY_COMPLETE",
+  "teacher_labels_collected": 0,
+  "training_admitted": false,
+  "weights_fitted": false
+}

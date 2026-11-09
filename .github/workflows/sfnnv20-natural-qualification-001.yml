@@ -1,0 +1,80 @@
+name: Current SFNNv20 public-fixture observer qualification
+
+on:
+  push:
+    branches:
+      - research/sfnnv20-natural-play-calibration-001
+    paths:
+      - .github/workflows/sfnnv20-natural-qualification-001.yml
+      - research/sfnnv20_natural_play/qualify_harness.py
+      - research/sfnnv20_natural_play/common.py
+      - research/sfnnv20_natural_play/capture_protocol.py
+      - research/sfnnv20_natural_play/patch_source.py
+      - research/sfnnv20_natural_play/overlay/**
+      - research/sfnnv20_natural_play/SOURCE-OVERLAY.json
+      - research/sfnnv20_natural_play/plan.json
+      - research/sfnnv20_natural_play/test_current_source.py
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: sfnnv20-natural-public-fixture-qualification-001
+  cancel-in-progress: false
+
+jobs:
+  qualify:
+    if: github.repository == '0mis/Stockfish' && github.ref == 'refs/heads/research/sfnnv20-natural-play-calibration-001'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - name: Checkout exact isolated driver
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          path: driver
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Checkout exact official43e source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: official-stockfish/Stockfish
+          ref: 43e01e07210948e1130dc687c065d7a3742b2793
+          path: source
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Use CPython 3.11
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+      - name: Install exact hashed legal-replay tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          sed -n '/^setuptools @/p; /^wheel @/p' driver/research/sfnnv20_natural_play/requirements.txt > "$RUNNER_TEMP/bootstrap.txt"
+          python -m pip install --disable-pip-version-check --no-cache-dir --no-deps --require-hashes -r "$RUNNER_TEMP/bootstrap.txt"
+          python -m pip install --disable-pip-version-check --no-cache-dir --no-deps --no-build-isolation --require-hashes -r driver/research/sfnnv20_natural_play/requirements.txt
+      - name: Check source, gate and integer contracts
+        shell: bash
+        run: python -B -m unittest discover -s driver/research/sfnnv20_natural_play -p 'test_*.py' -v
+      - name: Build observer only and prove public-fixture current raw plus CP parity
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -B driver/research/sfnnv20_natural_play/qualify_harness.py --source source --out sfnnv20-harness-evidence
+      - name: Retain exact observer, ordinary reference, byte-map and source
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: sfnnv20-current-harness-qualification
+          path: sfnnv20-harness-evidence/
+          if-no-files-found: error
+          retention-days: 90
+          compression-level: 6
+          include-hidden-files: true
