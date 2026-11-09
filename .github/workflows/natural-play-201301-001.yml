@@ -1,0 +1,81 @@
+name: natural-play-201301-data-only
+on:
+  push:
+    branches: [research/lichess-201301-natural-discovery-001]
+    paths:
+      - .github/workflows/natural-play-201301-001.yml
+      - research/natural_play_201301_001/discover.py
+      - research/natural_play_201301_001/test_discover.py
+      - research/natural_play_201301_001/plan.json
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: natural-play-201301-data-only
+  cancel-in-progress: false
+jobs:
+  discover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+      - name: Install fixed public parsers
+        run: |
+          python -m pip install --disable-pip-version-check --no-cache-dir chess==1.11.2 zstandard==0.23.0
+      - name: Synthetic tests
+        working-directory: research/natural_play_201301_001
+        run: |
+          set -o pipefail
+          python -B -m unittest -v test_discover.py 2>&1 | tee "$RUNNER_TEMP/natural-play-synthetic-tests.log"
+      - name: Bind precommitted source and plan
+        run: |
+          mkdir "$RUNNER_TEMP/natural-play-source-pins"
+          python - <<'PY'
+          import hashlib,json,os,pathlib,platform
+          files=['research/natural_play_201301_001/plan.json','research/natural_play_201301_001/discover.py','research/natural_play_201301_001/test_discover.py','.github/workflows/natural-play-201301-001.yml']
+          rows=[{'path':p,'bytes':len(b:=pathlib.Path(p).read_bytes()),'sha256':hashlib.sha256(b).hexdigest()} for p in files]
+          output={'schema':'natural-play-source-pins-v1','source_commit':os.environ['GITHUB_SHA'],'python':platform.python_version(),'files':rows,'native_processes':0}
+          pathlib.Path(os.environ['RUNNER_TEMP'],'natural-play-source-pins','SOURCE-PINS.json').write_text(json.dumps(output,sort_keys=True,indent=2)+'\n')
+          PY
+      - name: Fixed January 2013 data-only cohort
+        run: |
+          set -o pipefail
+          nice -n 10 python -B research/natural_play_201301_001/discover.py --expected-plan-sha 238cbe1c36df282b61bcaddcd26afc0529b5ca60f2280b1babd8d94d01e7565b --work "$RUNNER_TEMP/natural-play-201301-001" 2>&1 | tee "$RUNNER_TEMP/natural-play-discovery.log"
+      - name: Preserve small hash-only receipts and failure record
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: natural-play-201301-receipt
+          path: |
+            ${{ runner.temp }}/natural-play-201301-001/receipt/
+            ${{ runner.temp }}/natural-play-source-pins/
+            ${{ runner.temp }}/natural-play-synthetic-tests.log
+            ${{ runner.temp }}/natural-play-discovery.log
+          retention-days: 30
+          if-no-files-found: warn
+      - name: Preserve canonical hash-only collision index
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: natural-play-201301-collision-index
+          path: ${{ runner.temp }}/natural-play-201301-001/collision-index/
+          retention-days: 30
+          compression-level: 0
+          if-no-files-found: warn
+      - name: Preserve sanitized prospective partitions on CI only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: natural-play-201301-sanitized-products
+          path: ${{ runner.temp }}/natural-play-201301-001/sanitized-products/
+          retention-days: 30
+          if-no-files-found: warn

@@ -1,0 +1,146 @@
+{
+  "bounds": {
+    "canonical_child_ids": 4000000,
+    "compressed_bytes": 17761302,
+    "decompressed_bytes": 536870912,
+    "generated_child_boards": 4000000,
+    "hash_reverse_manifest_compressed_bytes": 134217728,
+    "hash_reverse_manifest_uncompressed_bytes": 536870912,
+    "preliminary_roots": 80000,
+    "returned_canonical_stream_total_bytes": 402653184,
+    "source_records": 20000,
+    "wall_seconds": 1500,
+    "workflow_timeout_minutes": 30
+  },
+  "canonical_ids": {
+    "alternate_alias_scope": "Only ordinary Standard legal-EP canonical IDs are exported. Shredder castling and FEN-EP alternative hash domains are not mixed into canonical streams; Root must normalize its reserved starts to the same canonical domain.",
+    "castling": "standard canonical KQkq; no Chess960. Equivalent representations normalize before hashing.",
+    "definition": "SHA256 ASCII(' '.join(board.fen(en_passant='legal').split()[:4]))",
+    "no_private_ids_or_fens_supplied": true,
+    "stream_format": "strictly ascending unique lowercase64hex plus LF;65bytes per ID"
+  },
+  "claim_scope": "Feasibility of a new natural-play corpus only. Counts cannot prove teacher-pair yield, statistical power or learning reproducibility before private collision and prospective future label collection. Existing retired-engine D1 fixed2000 study and its heldout partitions untouched.",
+  "exports": {
+    "collision_index": "parents.ids,children.ids,selected-parents.ids,census-roots.ids,anchor16.ids:canonical sorted65-byte streams with exact count/bytes/SHA; no alternative hash domains",
+    "large_products": "sanitized selected FEN+legal-prefix products stay onCI; original archive/PGN remain runner-only and are not re-published, downloaded locally or returned",
+    "privacy": "No player names, ratings, comments, result tags, annotations or native labels are published.",
+    "private_gate": "Root compares canonical streams against all prior/current reserved starting IDs privately before ANY fitting/training. No private IDs/FENs/schedules/outcomes enter public CI.",
+    "receipt": "small hash-only source/partition/count/resource/index receipt returned to Root",
+    "reversible": "hash-only preliminary root/component/split/selected/complete child-ID records, compressed onCI",
+    "selected_children": "children.ids includes ALL legal one-ply children of every preliminary parent, a conservative superset of all selected roots; reversible manifest binds the exact selected parent/child memberships.",
+    "source_origins": "hash-only source-game-origins.jsonl binds1-based record ordinal, complete legal-mainline game_id, anchor16 canonicalID, eligible rootIDs, componentID and split; no names/results/annotations"
+  },
+  "family": {
+    "anchor_cap_rank": "ascending SHA256(seed+'|anchor-cap|'+anchor_id)",
+    "anchor_ply": 16,
+    "component_id": "SHA256(domain plus all sorted member anchor IDs)",
+    "component_root_cap": 8,
+    "component_root_rank": "ascending SHA256(seed+'|component-root|'+root_id)",
+    "game_id": "SHA256 of domain plus complete legal mainline UCI sequence; exact move duplicates dropped independent of headers/result",
+    "initial_id": "canonical position ID after exact early ply16; transposition-aware, clocks omitted",
+    "maximum_candidate_anchor_families": 10000,
+    "preliminary_roots_per_anchor": 8,
+    "root_rank": "ascending SHA256(seed+'|family-root|'+canonical_root_id)",
+    "safeguards": "Union all shared eligible-root IDs across anchor families. For preliminary roots, also union any family sharing a canonical parent or ANY legal one-ply child ID. No chosen moves/evaluations used."
+  },
+  "fitting": false,
+  "future_replication": {
+    "archive_opened": false,
+    "listed_source_games": 123961,
+    "not_part_of_this_study": true,
+    "sha256_metadata_only": "c136acdf343293c45252906fee91e3b561fb26a936979f52dbe04bb649a2fd86",
+    "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2013-02.pgn.zst"
+  },
+  "games_played": false,
+  "native_engines": false,
+  "paid_compute": false,
+  "partitions": {
+    "assignment": "first64bits SHA256(seed+'|split|'+component_id), modulo10000:TRAIN<6500,DEV<8000,FINAL<9000,otherwiseSCREEN",
+    "component_order": "ascending SHA256(seed+'|component-order|'+component_id)",
+    "minimum_feasibility": {
+      "DEV": {
+        "components": 250,
+        "positions": 2000
+      },
+      "FINAL": {
+        "components": 250,
+        "positions": 2000
+      },
+      "SCREEN": {
+        "components": 250,
+        "positions": 2000
+      },
+      "TRAIN": {
+        "components": 1500,
+        "positions": 12000
+      }
+    },
+    "quotas": {
+      "DEV": 3000,
+      "FINAL": 3000,
+      "SCREEN": 3000,
+      "TRAIN": 16000
+    },
+    "selection": "round-robin one root/component/round, at most8; stop fixed split quota, never redraw after private collision",
+    "validation": "No teacher/native labels exist here. DEV/FINAL/SCREEN never become training. Verify all preliminary parent+child guard sets are disjoint between partitions."
+  },
+  "quality": {
+    "allowed_start": "ordinary standard initial position only; Variant absent/Standard/Chess; no FEN or SetUp1; null moves or malformed/illegal SAN reject the whole record",
+    "candidate_plies": [
+      32,
+      35,
+      38,
+      41,
+      44,
+      47,
+      50,
+      53,
+      56,
+      59,
+      62,
+      65,
+      68,
+      71,
+      74,
+      77,
+      80
+    ],
+    "maximum_plies": 512,
+    "minimum_legal_moves": 2,
+    "minimum_nonpawn_nonking": 8,
+    "minimum_pawns": 6,
+    "minimum_pieces": 18,
+    "minimum_plies": 64,
+    "minimum_queens": 1,
+    "results_comments_annotations_ratings_names": "ignored, never retained or used in acceptance, ranking, splitting or summaries",
+    "root_exclusions": "in check, automatically terminal, or already a second occurrence in that game"
+  },
+  "resource_estimate": {
+    "candidate_roots_max": 80000,
+    "child_boards_max": 4000000,
+    "download_bytes": 17761302,
+    "expected_standard_ci_wall_minutes": "roughly5\u201320; bounded at25 script/30 workflow",
+    "local_compute": "tiny synthetic tests/metadata only; real source replay and large products only standard free publicCI",
+    "replay_records_max": 20000
+  },
+  "schema": "natural-play-data-feasibility-plan-v1",
+  "seed": "lichess-std-201301-natural-v1",
+  "source": {
+    "bytes": 17761302,
+    "cohort": "first20000 source records, not first20000 successes; never replace QC failures",
+    "license": "CC0-1.0",
+    "license_source": "https://database.lichess.org/#standard",
+    "listed_source_games": 121332,
+    "primary_checksum_url": "https://database.lichess.org/standard/sha256sums.txt",
+    "sha256": "aa40b3671fa3cf1072eb182892cd90b0e1e003a4a5943492f64b77e7f3fd1635",
+    "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2013-01.pgn.zst"
+  },
+  "source_correction": {
+    "abandoned_url": "https://database.lichess.org/broadcast/lichess_db_broadcast_2024-01.pgn.zst",
+    "broadcast_archive_downloaded": false,
+    "broadcast_archive_parsed": false,
+    "reason": "Broadcast-specific terms are CC BY-SA4.0 rather than the CC0 needed for the possible downstream network submission.",
+    "source_chosen_before_any_actual_archive_or_outcome_parsing": true
+  },
+  "study_id": "lichess-standard-2013-01-natural-001"
+}
