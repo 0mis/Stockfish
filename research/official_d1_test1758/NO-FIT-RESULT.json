@@ -1,0 +1,209 @@
+{
+  "actual_acquisition": {
+    "actual_reported_teacher_nodes": 1988662038,
+    "candidate_moves": "Low-budget full-root MultiPV2; high-budget search restricted to the same two legal moves; same preferred order and exact/unbounded CP required.",
+    "complete_training_driver": "90f6a1032ba36934ad9ad7fb1961246a81adb2d2",
+    "complete_training_run": "https://github.com/0mis/Stockfish/actions/runs/42696757852",
+    "every_measured_original_child_native_raw_and_ordinary_CP_replayed": 10621,
+    "ordinary_in_check_or_terminal_scores_imputed": false,
+    "pilot_run": "https://github.com/0mis/Stockfish/actions/runs/42695021971",
+    "requested_teacher_nodes": 1989541888,
+    "root_margin": "-childA_STM_CP + childB_STM_CP",
+    "teacher_queries_legally_replayed": 12565
+  },
+  "attribution": "Stockfish source and original D1 network retain upstream attribution/licensing; the unmodified test1758 teacher is credited to Shawn Xu. New diagnostic code is 0mis AI-assisted work. No edited network was produced.",
+  "data": {
+    "authentic_source_games": 768,
+    "cross_partition_alias_cases_removed": 6,
+    "cross_physical_head_pairs": 188,
+    "eligible_families": 167,
+    "only_allowed_retired_PGN_archives": [
+      {
+        "bytes": 918097,
+        "name": "test1757-edited-screen",
+        "sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "bytes": 981421,
+        "name": "test1757-history-floor-screen",
+        "sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "bytes": 935475,
+        "name": "test1757-parent-screen",
+        "sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "bytes": 953620,
+        "name": "test1757-readout-ridge-screen",
+        "sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "bytes": 1879333,
+        "name": "test1757-selected-vs-official",
+        "sha256": "a90252baa4b3c573e770fc7f17e62f191b52607c38f259bc7b8eb050263aa519"
+      }
+    ],
+    "opening_start_families": 286,
+    "ordinary_measured_child_scores": 10621,
+    "overlapping_unavailable_reasons": {
+      "child1_in_check": 644,
+      "child1_terminal": 2,
+      "child2_in_check": 595,
+      "missing_fully_completed_exact_cp_pair": 1054,
+      "parent_terminal_or_fewer_than_two_legal_moves": 24,
+      "teacher_budget_order_disagreement": 1257,
+      "teacher_consensus_margin_below16": 1829,
+      "teacher_top_absolute_cp_above600": 482
+    },
+    "reason_counts_must_not_be_summed_as_disjoint_rows": true,
+    "same_physical_head_pairs": 1697,
+    "source_commit": "c6a21a063f5a219a72f8f814bfb6287d0925171b",
+    "source_game_results_used_for_sampling": false,
+    "source_repository": "0mis/stockfish-weight-space-lab",
+    "stable_eligible_sibling_pairs": 1885,
+    "training_families": 167,
+    "training_roots": 6658,
+    "unavailable_pairs": 4773
+  },
+  "experimental": true,
+  "frozen_method": {
+    "acquisition_extended_after_shortfall": false,
+    "estimator_sha256": "3ef267d5cb69bd3b69b1618905851167596ff0d4bb27902dd11ff0389df46e42",
+    "estimator_source_commit": "81ea56cb2f337ad4a53a0ac61f92d6ec6de7f880",
+    "weight_optimization_was_not_executed": true,
+    "plan_commit": "816bac3a6591e2b8295d1d2054a1c559491b02f3",
+    "plan_sha256": "4c12de51e9acc6bbb63a831d7bd2c6511cf155b2b9d6dca83e2644e5cceb1ca9",
+    "plan_url": "https://github.com/0mis/Stockfish/blob/816bac3a6591e2b8295d1d2054a1c559491b02f3/research/official_d1_test1758/plan.json",
+    "root_and_family_caps_or_filters_changed_after_outcomes": false,
+    "teacher_budgets_nodes": [
+      65536,
+      262144
+    ]
+  },
+  "frozen_stop": {
+    "Fishtest_submitted": false,
+    "changed_parameter_bytes": 0,
+    "core_bytes": 295,
+    "core_member": "frozen-identity/FROZEN-CORE.json",
+    "core_sha256": "992393490b01ecf190c60343e8c8c0810338e28ef834c34e822902b13a312153",
+    "development_screen_games": 0,
+    "development_search_evaluation_or_features_opened": false,
+    "final_FEN_identity_admission_only_exception": "Only predeclared data-only FEN/alias admission occurred; no heldout search/evaluation labels, features or predictions were opened.",
+    "final_search_evaluation_or_features_opened": false,
+    "identity": true,
+    "minimum_eligible_training_pairs": 2000,
+    "observed_eligible_training_pairs": 1885,
+    "screen_families_played": false,
+    "shortfall": 115,
+    "support_gate_passed": false,
+    "weight_optimization_performed": false
+  },
+  "main_result": "The complete fixed training corpus produced 1,885 stable eligible sibling comparisons, below the frozen 2,000 prerequisite. No optimization or NNUE edit was performed.",
+  "schema": "official-d1-test1758-bounded-no-fit-result/1",
+  "scope_and_reproducibility": {
+    "fresh_network_training_strength_replication_performed": false,
+    "moderator_clarification": "https://github.com/official-stockfish/Stockfish/discussions/7298#discussioncomment-19501738",
+    "no_existing_experiment_changed": true,
+    "no_formal_current_primary_or_successor_game_result_inputs": true,
+    "no_local_native_build_or_engine_runs": true,
+    "no_private_workspace_writes": true,
+    "note": "Pinned inputs, software and byte identity support procedural replay. Comparable strength after an independent fresh network training run was not demonstrated. Teacher-relative static proxies are not Elo."
+  },
+  "status": "COMPLETE_NO_FIT_IDENTITY",
+  "student": {
+    "engine_sha256": "b67c37d0d45e3540e311392aeeb699e3a745f16e172bc3fc6f85e0782093842b",
+    "network_changed": false,
+    "edited_network_file_produced": false,
+    "original_network_materialized_in_hosted_CI": true,
+    "original_network_bytes": 136247652,
+    "original_network_sha256": "d1ee674a62ca754648fb8c2907ff4e92f0c3acff28f59afa0f5bd4e3949538f1",
+    "retained_identity_sha256": "d1ee674a62ca754648fb8c2907ff4e92f0c3acff28f59afa0f5bd4e3949538f1",
+    "source_commit": "7cdd5e89a39fe3071b67d91c7bb07d712044bf76",
+    "source_or_search_changes": false,
+    "source_tree": "7086bc94bdb39564b678ec4812ecde485de58fb5"
+  },
+  "study_id": "official-d1-test1758-diagnostic-v1",
+  "teacher": {
+    "accepted_24864_game_STC_provenance_only": "https://tests.stockfishchess.org/tests/view/6af1273d8e7fb2e78bc1ca70",
+    "configuration": "Unmodified test1758 network loaded in the source-verified public history executable; this is the teacher only.",
+    "native_engine_sha256": "ae1d4772a71529085b26d7460e76fcf65dbe09782e55ea67ecef2e4f033c5ba5",
+    "native_source": "d19047cc44fae773a590be3b0b9f08fdd75acdc7",
+    "native_source_tree": "6c3cd141dcc3cac20b84469b729fbbd1141c0d60",
+    "network_bytes": 138360528,
+    "network_sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
+    "network_unmodified": true,
+    "original_network_author": "Shawn Xu (xu-shawn)",
+    "teacher_preferences_are_not_truth": true,
+    "upstream_source": "73fe1eaca99ac4a09252c876aa6b1cceeaf7c4c7"
+  },
+  "training_only_descriptive_observations": {
+    "baseline_static_ordering_against_teacher_consensus": {
+      "error": {
+        "denominator": 4092248160,
+        "numerator": 1075761811
+      },
+      "families": 167,
+      "huber": {
+        "denominator": 4092248160,
+        "numerator": 2187419390617
+      },
+      "pairs": 1885
+    },
+    "not_evidence_of_a_live_search_error_or_Elo_gain": true,
+    "selected_predeclared_training_stratum": {
+      "baseline_family_equal_error": {
+        "denominator": 7056,
+        "numerator": 2467
+      },
+      "families": 84,
+      "pairs": 152,
+      "stratum": "head=08;A_capture=0;B_capture=0",
+      "supported": true
+    },
+    "stratum_interpretation": "Physical D1 head 8, both selected moves quiet/nonpromotion. Training-only observation; not independently confirmed on heldout families."
+  },
+  "verified_retained_evidence": {
+    "all_five_original_raw_input_ZIPs_preserved": true,
+    "archive_bytes": 123873246,
+    "archive_sha256": "c665ec8e2ecbe1c5a95d64afdc9513563d6138fd9b1d35a85a7109cf95e1ab49",
+    "artifact_id": 13711946931,
+    "artifact_url": "https://github.com/0mis/Stockfish/actions/runs/42701558128/artifacts/13711946931",
+    "complete_raw_source_artifact_refs": [
+      {
+        "bytes": 41010310,
+        "path": "retained-source-artifacts/fixed-training-pilot.zip",
+        "sha256": "85a6fd44d0adc6c06d4f46bdea242daac3f731450d131305fc8078eca485caac"
+      },
+      {
+        "bytes": 19031930,
+        "path": "retained-source-artifacts/train-shard-0.zip",
+        "sha256": "289764bbc5c233961938aebd76c1d91e0c38a55cfc1fd84225c46827e2ae657e"
+      },
+      {
+        "bytes": 18687711,
+        "path": "retained-source-artifacts/train-shard-1.zip",
+        "sha256": "faad378a0dbb43362b67d63214a3f24f09d2261c8478bfdb1ef653886bb53332"
+      },
+      {
+        "bytes": 18687164,
+        "path": "retained-source-artifacts/train-shard-2.zip",
+        "sha256": "ecbd6ccc3426e1a22c32e7ac1c237ff43fabdb5c984df56e5fdba8694fcc9116"
+      },
+      {
+        "bytes": 20690743,
+        "path": "retained-source-artifacts/train-shard-3.zip",
+        "sha256": "431736c994907a7a1e0c3003652e9582fd92ec5b3263a458f2b757ab58808363"
+      }
+    ],
+    "independent_audit_driver": "d0240fb90f10fde6ef65a8ab1b9f5ba39ce1f1ac",
+    "independent_complete_replay_run": "https://github.com/0mis/Stockfish/actions/runs/42701558128",
+    "large_TRAIN_aggregation_kept_hosted": true,
+    "result_member": "RESULT.json",
+    "result_member_bytes": 3673,
+    "result_member_sha256": "96811afc2d74cfd7ab0ba844f64c6b31430f7953ec59a9aed0b845ba5990fd2a",
+    "retention_expires_at": "2027-02-07T21:20:25Z",
+    "small_metadata_members_CRC_SHA_EOF_verified": true,
+    "whole_archive_stream_SHA_verified_without_local_ZIP_duplication": true
+  }
+}
