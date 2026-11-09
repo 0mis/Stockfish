@@ -1,0 +1,6 @@
+{"phase": "plane_measured", "plane": "FullThreats", "supported": 512, "median": 0.006492419624452565, "identity_fraction": 0.01953125, "pass": false}
+{"phase": "plane_measured", "plane": "PP_3Wide", "supported": 512, "median": 0.0034212160952378037, "identity_fraction": 0.021484375, "pass": false}
+{"phase": "plane_measured", "plane": "K32H3_block0", "supported": 512, "median": 0.016538290594406875, "identity_fraction": 0.021484375, "pass": false}
+{"phase": "plane_measured", "plane": "K32H3_block1", "supported": 512, "median": 0.041077838664331345, "identity_fraction": 0.021484375, "pass": false}
+{"phase": "plane_measured", "plane": "K32H3_block2", "supported": 512, "median": 0.035307999284796436, "identity_fraction": 0.01953125, "pass": false}
+{"phase": "alignment_complete", "decision": "STOP_DIRECT_INTERPOLATION_LINE", "heads_passing": 0}

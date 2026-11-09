@@ -1,0 +1,60 @@
+{
+  "commit": "096e58412b893c1bc9530a28b95ab67a9b289ce9",
+  "inputs": {
+    "A": {
+      "bytes": 138360528,
+      "requested_url": "https://tests.stockfishchess.org/api/nn/nn-18cd32e11a9c.nnue",
+      "resolved_url": "https://data.stockfishchess.org/nn/nn-18cd32e11a9c.nnue",
+      "sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf"
+    },
+    "B": {
+      "bytes": 138360528,
+      "requested_url": "https://tests.stockfishchess.org/api/nn/nn-68752b755c93.nnue",
+      "resolved_url": "https://data.stockfishchess.org/nn/nn-68752b755c93.nnue",
+      "sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21"
+    }
+  },
+  "no_positions_or_engines_in_alignment": true,
+  "numpy_version": "2.2.6",
+  "parser_source": {
+    "bytes": 12484,
+    "commit": "7bef16fe1d9eb0ec8091f9c81b51afb410e62428",
+    "git_blob": "f139b953424f4efdeba909dd24bf48480989f146",
+    "path": "research/layout/permute_nnue.py",
+    "repository": "0mis/Stockfish",
+    "sha256": "8cedd68e2d36437939e4987413a217ff7c3e21c560441feb94464828ada68d70"
+  },
+  "plan_sha256": "65ac8dfc852a7e80b20469a68f06469b9f151cef65202147e2496bf4923053ba",
+  "scipy_version": "1.15.3",
+  "source": {
+    "audited_parser": {
+      "bytes": 12484,
+      "commit": "7bef16fe1d9eb0ec8091f9c81b51afb410e62428",
+      "git_blob": "f139b953424f4efdeba909dd24bf48480989f146",
+      "path": "research/layout/permute_nnue.py",
+      "repository": "0mis/Stockfish",
+      "sha256": "8cedd68e2d36437939e4987413a217ff7c3e21c560441feb94464828ada68d70"
+    },
+    "feature_geometry_primary": [
+      {
+        "commit": "73fe1eaca99ac4a09252c876aa6b1cceeaf7c4c7",
+        "git_blob": "9b190c2f4e2502148db383abc5b457285213c948",
+        "path": "src/nnue/features/pp_3wide.h"
+      },
+      {
+        "commit": "73fe1eaca99ac4a09252c876aa6b1cceeaf7c4c7",
+        "git_blob": "eed2596f2ad55bd6ba1f515f30bf6b086b106087",
+        "path": "src/nnue/features/k32h3.h"
+      },
+      {
+        "commit": "73fe1eaca99ac4a09252c876aa6b1cceeaf7c4c7",
+        "git_blob": "14dce98e8310391f133ea29eeaf679b57bb5d691",
+        "path": "src/nnue/nnue_feature_transformer.h"
+      }
+    ],
+    "repository": "xu-shawn/Stockfish",
+    "source_comparison": "Only src/evaluate.h differs between these exact commits.",
+    "test1757_commit": "d5a2bda7f028430f79e1789d47ae3228defb843b",
+    "test1758_commit": "73fe1eaca99ac4a09252c876aa6b1cceeaf7c4c7"
+  }
+}

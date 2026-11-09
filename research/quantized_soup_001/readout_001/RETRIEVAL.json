@@ -1,0 +1,58 @@
+{
+  "repository": "0mis/Stockfish",
+  "run_id": 42694359294,
+  "source_commit": "096e58412b893c1bc9530a28b95ab67a9b289ce9",
+  "artifact_id": 13709330605,
+  "archive_bytes": 20323213,
+  "archive_sha256": "cc0cd9cbc2f8d5aea2bcfd7a6010bf73960c6b5161b61d2510e76288936f7679",
+  "members": [
+    {
+      "member": "quantized-soup-001/evidence/CORRELATION-MATRICES.npz",
+      "bytes": 20077914,
+      "sha256": "5430a3f40927c3e15553281373afcf2351b1aa90cc6ffe140e04f432dc6abda2",
+      "crc32": "bf10fcf4"
+    },
+    {
+      "member": "quantized-soup-001/evidence/INPUTS.json",
+      "bytes": 2421,
+      "sha256": "5741adbbb2a5e446999e530edabcfe8ce0495b7331d2b407761e88fac0486036",
+      "crc32": "1cd47b25"
+    },
+    {
+      "member": "quantized-soup-001/evidence/RESULT.json",
+      "bytes": 1335534,
+      "sha256": "88855b37abae10abb4a18a468538700a0dd7320431b01cd6bf67706e6f634392",
+      "crc32": "c5983f39"
+    },
+    {
+      "member": "quantized-soup-001/evidence/SUMMARY.json",
+      "bytes": 2260,
+      "sha256": "3151f5c6c3cf8703adb31acbea0244e498616dd87940cd3b50af7cefd5641123",
+      "crc32": "4e0f7baa"
+    },
+    {
+      "member": "quantized-soup-tests.txt",
+      "bytes": 1631,
+      "sha256": "1f8f931067b1e952ec0994d6af6acea7920f516d8e901881e53e3a60fedc14ee",
+      "crc32": "0e25d408"
+    },
+    {
+      "member": "quantized-soup-alignment.log",
+      "bytes": 852,
+      "sha256": "b5da140e525658fe95b07f8ffb1c45eda46861f0edd700a74ef343fbe796a0b4",
+      "crc32": "bf9a8003"
+    },
+    {
+      "member": "method-source-pins.json",
+      "bytes": 932,
+      "sha256": "0b1313356ef319fd97cd5eec08a67260bd302a429df41699b5eeae3c364b5ed2",
+      "crc32": "33804e78"
+    },
+    {
+      "member": "upstream-source-compare.json",
+      "bytes": 11407,
+      "sha256": "60a50bed2b4576762b77e878b390577d4a9ef13c9b2e15e1eb6490abe09b9fa5",
+      "crc32": "a8c88aec"
+    }
+  ]
+}

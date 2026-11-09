@@ -1,0 +1,26 @@
+{
+  "commit": "096e58412b893c1bc9530a28b95ab67a9b289ce9",
+  "files": {
+    "research/quantized_soup_001/plan.json": {
+      "bytes": 7594,
+      "sha256": "65ac8dfc852a7e80b20469a68f06469b9f151cef65202147e2496bf4923053ba"
+    },
+    "research/quantized_soup_001/alignment.py": {
+      "bytes": 18039,
+      "sha256": "348ba8ee0be53c642d5c25130139fe6b22d818ace5d1e524319aca6aa4632c70"
+    },
+    "research/quantized_soup_001/test_alignment.py": {
+      "bytes": 5387,
+      "sha256": "7b3dc8803ce7eb748d5c9b91be51aeadd29047c03395864b8f5192fe2dcfb027"
+    },
+    "research/layout/permute_nnue.py": {
+      "bytes": 12484,
+      "sha256": "8cedd68e2d36437939e4987413a217ff7c3e21c560441feb94464828ada68d70"
+    },
+    ".github/workflows/quantized-soup-alignment-001.yml": {
+      "bytes": 3625,
+      "sha256": "b1a7bb5c34d86a6d226db466bf9aca9bb0516274b79e426bb4b36a519b3498bd"
+    }
+  },
+  "upstream_only_default_network_diff": true
+}

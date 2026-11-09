@@ -1,0 +1,15 @@
+test_identity_is_preferred_for_informative_identical_coordinates (test_alignment.AlignmentTests.test_identity_is_preferred_for_informative_identical_coordinates) ... ok
+test_nonidentity_paired_permutation_refuses_direct_gate (test_alignment.AlignmentTests.test_nonidentity_paired_permutation_refuses_direct_gate) ... ok
+test_physically_permissible_factor_swap_is_detected (test_alignment.AlignmentTests.test_physically_permissible_factor_swap_is_detected) ... ok
+test_sampling_is_fixed_hash_ranked_unique_and_plane_specific (test_alignment.AlignmentTests.test_sampling_is_fixed_hash_ranked_unique_and_plane_specific) ... ok
+test_shared_zeros_are_excluded_and_centering_is_real (test_alignment.AlignmentTests.test_shared_zeros_are_excluded_and_centering_is_real) ... ok
+test_structurally_impossible_rows_never_supply_alignment_evidence (test_alignment.AlignmentTests.test_structurally_impossible_rows_never_supply_alignment_evidence) ... ok
+test_uninformative_all_plane_gate_is_refused (test_alignment.AlignmentTests.test_uninformative_all_plane_gate_is_refused) ... ok
+test_zero_or_constant_lanes_never_fake_identity_support (test_alignment.AlignmentTests.test_zero_or_constant_lanes_never_fake_identity_support) ... ok
+test_every_stack_and_routing_and_signed_views_are_checked (test_alignment.ReaderTests.test_every_stack_and_routing_and_signed_views_are_checked) ... ok
+test_last_stack_corruption_and_trailing_bytes_refuse_geometry (test_alignment.ReaderTests.test_last_stack_corruption_and_trailing_bytes_refuse_geometry) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.044s
+
+OK

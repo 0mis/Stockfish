@@ -1,0 +1,167 @@
+{
+  "aggregate": {
+    "assignment_identity_fraction": 0.021484375,
+    "best_assignment_mean_gain_over_direct_identity": 0.4646351224558619,
+    "median_identity_correlation": 0.01858886620246817,
+    "pass": false,
+    "strict_identity_winner_fraction": 0.01953125,
+    "supported_pairs": 512
+  },
+  "artifact": {
+    "archive_bytes": 20323213,
+    "archive_sha256": "cc0cd9cbc2f8d5aea2bcfd7a6010bf73960c6b5161b61d2510e76288936f7679",
+    "artifact_id": 13709330605,
+    "members": [
+      {
+        "bytes": 20077914,
+        "crc32": "bf10fcf4",
+        "member": "quantized-soup-001/evidence/CORRELATION-MATRICES.npz",
+        "sha256": "5430a3f40927c3e15553281373afcf2351b1aa90cc6ffe140e04f432dc6abda2"
+      },
+      {
+        "bytes": 2421,
+        "crc32": "1cd47b25",
+        "member": "quantized-soup-001/evidence/INPUTS.json",
+        "sha256": "5741adbbb2a5e446999e530edabcfe8ce0495b7331d2b407761e88fac0486036"
+      },
+      {
+        "bytes": 1335534,
+        "crc32": "c5983f39",
+        "member": "quantized-soup-001/evidence/RESULT.json",
+        "sha256": "88855b37abae10abb4a18a468538700a0dd7320431b01cd6bf67706e6f634392"
+      },
+      {
+        "bytes": 2260,
+        "crc32": "4e0f7baa",
+        "member": "quantized-soup-001/evidence/SUMMARY.json",
+        "sha256": "3151f5c6c3cf8703adb31acbea0244e498616dd87940cd3b50af7cefd5641123"
+      },
+      {
+        "bytes": 1631,
+        "crc32": "0e25d408",
+        "member": "quantized-soup-tests.txt",
+        "sha256": "1f8f931067b1e952ec0994d6af6acea7920f516d8e901881e53e3a60fedc14ee"
+      },
+      {
+        "bytes": 852,
+        "crc32": "bf9a8003",
+        "member": "quantized-soup-alignment.log",
+        "sha256": "b5da140e525658fe95b07f8ffb1c45eda46861f0edd700a74ef343fbe796a0b4"
+      },
+      {
+        "bytes": 932,
+        "crc32": "33804e78",
+        "member": "method-source-pins.json",
+        "sha256": "0b1313356ef319fd97cd5eec08a67260bd302a429df41699b5eeae3c364b5ed2"
+      },
+      {
+        "bytes": 11407,
+        "crc32": "a8c88aec",
+        "member": "upstream-source-compare.json",
+        "sha256": "60a50bed2b4576762b77e878b390577d4a9ef13c9b2e15e1eb6490abe09b9fa5"
+      }
+    ],
+    "repository": "0mis/Stockfish",
+    "run_id": 42694359294,
+    "source_commit": "096e58412b893c1bc9530a28b95ab67a9b289ce9"
+  },
+  "candidate_created": false,
+  "ci_url": "https://github.com/0mis/Stockfish/actions/runs/42694359294",
+  "decision": "STOP_DIRECT_INTERPOLATION_LINE",
+  "earlier_launch_failure": {
+    "cause": "YAML plain-scalar colon in pip command; no jobs or measurements",
+    "recovery": "Workflow-only literal block correction; plan and numerical code unchanged",
+    "run_id": 42694177074
+  },
+  "feature_plane_summary": {
+    "FullThreats": {
+      "assignment_identity_fraction": 0.01953125,
+      "best_assignment_mean_gain_over_direct_identity": 0.3634773199118609,
+      "median_identity_correlation": 0.006492419624452565,
+      "pass": false,
+      "strict_identity_winner_fraction": 0.01953125,
+      "supported_pairs": 512
+    },
+    "K32H3_block0": {
+      "assignment_identity_fraction": 0.021484375,
+      "best_assignment_mean_gain_over_direct_identity": 0.5426775094943072,
+      "median_identity_correlation": 0.016538290594406875,
+      "pass": false,
+      "strict_identity_winner_fraction": 0.01953125,
+      "supported_pairs": 512
+    },
+    "K32H3_block1": {
+      "assignment_identity_fraction": 0.021484375,
+      "best_assignment_mean_gain_over_direct_identity": 0.5687574921815907,
+      "median_identity_correlation": 0.041077838664331345,
+      "pass": false,
+      "strict_identity_winner_fraction": 0.013671875,
+      "supported_pairs": 512
+    },
+    "K32H3_block2": {
+      "assignment_identity_fraction": 0.01953125,
+      "best_assignment_mean_gain_over_direct_identity": 0.546064906017629,
+      "median_identity_correlation": 0.035307999284796436,
+      "pass": false,
+      "strict_identity_winner_fraction": 0.015625,
+      "supported_pairs": 512
+    },
+    "PP_3Wide": {
+      "assignment_identity_fraction": 0.021484375,
+      "best_assignment_mean_gain_over_direct_identity": 0.3726445826811798,
+      "median_identity_correlation": 0.0034212160952378037,
+      "pass": false,
+      "strict_identity_winner_fraction": 0.01953125,
+      "supported_pairs": 512
+    }
+  },
+  "full_yaml_parser_check": "Complete recovered workflow parsed with PyYAML6.0.2 in external TEMP; branch trigger and all7 steps verified.",
+  "games": 0,
+  "geometry": {
+    "all_stack_tags_and_exact_EOF_verified": true,
+    "fallback_u16le_sha256": "166ea64eb3e4da682ba3394b0a7f68de6ca6e01daae472f8c85fbc5ad7e27dd7",
+    "ft_lanes": 1024,
+    "physical_heads": 92,
+    "raw_routes": 192
+  },
+  "head_weight_summary": {
+    "fc0": {
+      "correlation_max": 0.2438336578595758,
+      "correlation_median": 0.07801669550655137,
+      "correlation_min": 0.03476992741561219,
+      "informative_heads": 92,
+      "minimum_informative_rows": 32,
+      "passing_heads": 0
+    },
+    "fc1": {
+      "correlation_max": 0.5947503632627985,
+      "correlation_median": 0.301390988144224,
+      "correlation_min": 0.059263094867519996,
+      "informative_heads": 92,
+      "minimum_informative_rows": 32,
+      "passing_heads": 0
+    },
+    "fc2": {
+      "correlation_max": 0.8492769349007575,
+      "correlation_median": 0.6918445134931519,
+      "correlation_min": 0.40550003060569967,
+      "informative_heads": 92,
+      "passing_heads": 0
+    }
+  },
+  "measured_commit": "096e58412b893c1bc9530a28b95ab67a9b289ce9",
+  "median_identity_minus_best_other_margin_by_plane": {
+    "FullThreats": -0.3520996124547018,
+    "K32H3_block0": -0.587977524512254,
+    "K32H3_block1": -0.6043243721486118,
+    "K32H3_block2": -0.5969039586286368,
+    "PP_3Wide": -0.3648958728012764
+  },
+  "native_processes": 0,
+  "official_superiority_claim": false,
+  "permutation_applied": false,
+  "plan_sha256": "65ac8dfc852a7e80b20469a68f06469b9f151cef65202147e2496bf4923053ba",
+  "prospective_method_commit": "6e29caa7b74b9600a42dfcbeb5910190381229b6",
+  "schema": "quantized-soup-public-readout-v1",
+  "weights_fitted": false
+}
