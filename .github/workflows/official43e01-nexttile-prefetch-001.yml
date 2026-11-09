@@ -56,7 +56,7 @@ jobs:
           python -B -m unittest discover -s driver/research/nexttile43e01_001 -p 'test_*.py' -v
       - name: Fresh identical builds then bounded serial timing
         run: |
-          python -B driver/research/nexttile43e01_001/run.py --root "$GITHUB_WORKSPACE" --expected-plan-sha 201bc0b8c03fdf4cb837a87b4a8c6ca0dfeefe979a220d0e093eed615ce657dc
+          python -B driver/research/nexttile43e01_001/recover.py --root "$GITHUB_WORKSPACE" --expected-plan-sha 201bc0b8c03fdf4cb837a87b4a8c6ca0dfeefe979a220d0e093eed615ce657dc
       - name: Passive independent raw-output and clock audit
         run: |
           python -B driver/research/nexttile43e01_001/audit.py --evidence "$GITHUB_WORKSPACE/evidence"

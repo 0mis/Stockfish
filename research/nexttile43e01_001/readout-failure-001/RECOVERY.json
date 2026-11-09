@@ -1,0 +1,34 @@
+{
+  "all_original_code_pin_bytes_unchanged": true,
+  "automatic_retry": false,
+  "correction": "Explicit recovery entrypoint passes work/A-stockfish or work/B-stockfish to the unmodified native capture; original per-capture fresh mkdir, command/stdin, filenames, clocks and all gates remain. No timing retry or policy change.",
+  "failed_artifact": {
+    "bytes": 229919478,
+    "id": 13718136166,
+    "sha256": "63499bf9bb63dd992fe996dd0d9e7815d9c622a22ed079f92268254f930be896"
+  },
+  "failed_driver": "95f2624fcb0c1b7edbb92f27966669a6ab329032",
+  "failed_run": 42715339745,
+  "games_dispatched": 0,
+  "original_plan_sha256_unchanged": "201bc0b8c03fdf4cb837a87b4a8c6ca0dfeefe979a220d0e093eed615ce657dc",
+  "phase_audit": {
+    "bytes": 1739,
+    "sha256": "f6dae1ca09c5aec62314b908c329150c20c909bcd8f7485ddc90541ebad4af14"
+  },
+  "port_source_unchanged": "709bddfb2d10b9da1ecb0b97fff9452cd5a8ffc5",
+  "recovery_files": {
+    "recover.py": {
+      "bytes": 1136,
+      "sha256": "20a66923d46502351be003b33cddfe7921f72067e17feac9468727bfb5c108a0"
+    },
+    "test_recovery.py": {
+      "bytes": 2064,
+      "sha256": "0ec2c128b7a2d918040633f2bf3b0696cdfb7080b1bb4646fb7f43715f7c5eb5"
+    }
+  },
+  "root_instruction": "After authenticated phase audit proves zero measured blocks, scope qualification paths by engine and resume on standard hostedCI.",
+  "schema": "prefetch-premeasurement-recovery-v1",
+  "timed_blocks_started": 0,
+  "timed_processes_started": 0,
+  "warmups_started": 0
+}

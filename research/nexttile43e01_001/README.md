@@ -46,3 +46,14 @@ rejects the route. A pass is sent to Root before any separately authorized
 real-clock development A/B. This is a hosted target-architecture diagnostic,
 with no inference about laptop speed or Elo. No games, Fishtest submissions,
 private inputs or current matches/datasets are touched. All code is GPL-3.0-or-later.
+
+The first hosted attempt, run `42715339745`, stopped before B qualification:
+the two engines shared the `qualify-perft` working-directory name. Its complete
+authenticated artifact contains zero warmups and zero measured processes or
+blocks. `readout-failure-001` preserves that phase audit and exact artifact pin.
+The explicitly reviewed `recover.py` entrypoint gives the unchanged native
+capture separate A-stockfish/B-stockfish work parents. Original plan bytes,
+all original driver code pins, port source, commands, clocks and fixed gate
+remain identical. A mocked regression verifies separate workspaces and
+preserves rejection of duplicate captures within one engine. This is a
+premeasurement harness recovery, with no timing sample retried or discarded.
