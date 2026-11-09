@@ -1,0 +1,154 @@
+name: Test1757 head-bias calibration on retired games v1
+
+on:
+  push:
+    branches: [research/test1757-head-bias-ci-v1]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  head-bias:
+    if: github.repository == '0mis/Stockfish'
+    runs-on: windows-2022
+    timeout-minutes: 35
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Check out the exact experiment
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Select CPython 3.11 x64
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: '3.11.9'
+          architecture: x64
+          check-latest: false
+
+      - name: Install the hash-pinned PyPI files
+        run: |
+          $pins = Get-Content -LiteralPath research/layout/requirements.txt
+          $backend = Join-Path $env:RUNNER_TEMP 'layout-build-requirements.txt'
+          $runtime = Join-Path $env:RUNNER_TEMP 'layout-runtime-requirements.txt'
+          $pins | Where-Object { $_ -cmatch '^(setuptools|wheel) @ ' } | Set-Content -LiteralPath $backend -Encoding utf8NoBOM
+          $pins | Where-Object { $_ -cmatch '^(numpy|chess) @ ' } | Set-Content -LiteralPath $runtime -Encoding utf8NoBOM
+          $flags = @('--disable-pip-version-check', '--no-index', '--no-deps', '--no-cache-dir', '--require-hashes', '--force-reinstall')
+          python -m pip --isolated install @flags -r $backend
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m pip --isolated install @flags --no-build-isolation -r $runtime
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          @'
+          import struct
+          import sys
+          import chess
+          import numpy
+
+          assert sys.platform == "win32" and sys.version_info[:3] == (3, 11, 9) and struct.calcsize("P") == 8
+          assert (numpy.__version__, chess.__version__) == ("2.4.6", "1.11.2")
+          print(sys.version, numpy.__version__, chess.__version__)
+          '@ | python -B -
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Download the accepted prefetch artifact
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          repository: 0mis/Stockfish
+          run-id: 42543250921
+          name: test1757-prefetch-windows-bmi2-49672d7b3c2b0cb544f4bf7cc70515249fe047e3
+          github-token: ${{ github.token }}
+          path: accepted-reference
+
+      - name: Check out the two retired PGNs at their published commit
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: 0mis/stockfish-weight-space-lab
+          ref: 6831500a4c6b22d64109a38bb0dc5bbf5b6f8fe0
+          path: retired-public-games
+          sparse-checkout: |
+            /results/test1757-edited-screen/games-utc.pgn
+            /results/test1757-parent-screen/games-utc.pgn
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Verify all four experiment inputs
+        id: inputs
+        run: |
+          if (Test-Path -LiteralPath layout-inputs-receipt.json) { throw 'Input receipt already exists' }
+          python -B research/layout/fetch_inputs.py > layout-inputs-receipt.json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Get-Content -Raw -LiteralPath layout-inputs-receipt.json
+
+      - name: Run layout and head-calibration tests
+        run: |
+          $layout = Join-Path $env:GITHUB_WORKSPACE 'research/layout'
+          $head = Join-Path $env:GITHUB_WORKSPACE 'research/head_calibration'
+          foreach ($suite in @($layout, $head)) {
+            if (-not (Get-ChildItem -LiteralPath $suite -Recurse -File -Filter 'test_*.py')) { throw "No tests found in $suite" }
+            $otherSuite = if ($suite -eq $head) { $layout } else { $head }
+            $env:PYTHONPATH = @($suite, $otherSuite) -join [System.IO.Path]::PathSeparator
+            python -B -m unittest discover -s $suite -p 'test_*.py'
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+
+      - name: Run the head-bias experiment
+        id: experiment
+        run: |
+          python -B research/head_calibration/experiment.py --inputs inputs --output evidence
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Check generated evidence paths
+        id: paths
+        if: ${{ always() && !cancelled() && steps.inputs.outcome == 'success' }}
+        run: |
+          if (Test-Path -LiteralPath evidence) {
+            $root = Get-Item -LiteralPath evidence -Force
+            if (-not $root.PSIsContainer -or ($root.Attributes -band [IO.FileAttributes]::ReparsePoint)) { throw 'Invalid evidence directory' }
+            $links = Get-ChildItem -LiteralPath evidence -Force -Recurse -Attributes ReparsePoint -ErrorAction Stop
+            if ($links) { throw 'Evidence contains a linked path' }
+          }
+
+      - name: Check the final candidate receipt
+        id: candidate
+        if: ${{ success() && steps.experiment.outcome == 'success' }}
+        run: |
+          $result = Get-Content -Raw -LiteralPath evidence/RESULT.json -ErrorAction Stop | ConvertFrom-Json -AsHashtable
+          if ($result['heldout_gate_passed'] -isnot [bool]) { throw 'Final receipt needs a boolean heldout_gate_passed' }
+          if (-not $result['heldout_gate_passed']) {
+            if ($result.Contains('candidate_sha256')) { throw 'Rejected result lists a candidate digest' }
+            exit 0
+          }
+          $digest = $result['candidate_sha256']
+          if ($digest -isnot [string] -or $digest -cnotmatch '^[0-9a-f]{64}$') { throw 'Missing or invalid final candidate digest' }
+          if ($digest -in @('18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf', '12a8e7bfdd9b1189b4350bd9ebef3501be1e89bd5fa41dcb56921f85ba23869a')) { throw 'Candidate matches an input binary' }
+          $file = Get-Item -LiteralPath evidence/candidate.nnue -Force -ErrorAction Stop
+          if ($file.PSIsContainer -or $file.Length -eq 0 -or ($file.Attributes -band [IO.FileAttributes]::ReparsePoint)) { throw 'Invalid final candidate file' }
+          $copy = Join-Path $env:RUNNER_TEMP 'head-bias-candidate-verified.tmp'
+          Copy-Item -LiteralPath $file.FullName -Destination $copy -ErrorAction Stop
+          if ((Get-FileHash -Algorithm SHA256 -LiteralPath $copy).Hash.ToLowerInvariant() -cne $digest) { throw 'Final candidate checksum mismatch' }
+          $directory = New-Item -ItemType Directory -Path 'verified-head-bias-candidate' -ErrorAction Stop
+          Move-Item -LiteralPath $copy -Destination (Join-Path $directory.FullName 'candidate.nnue') -ErrorAction Stop
+          'path=verified-head-bias-candidate/candidate.nnue' | Add-Content -LiteralPath $env:GITHUB_OUTPUT -Encoding utf8NoBOM
+
+      - name: Upload generated evidence
+        if: ${{ always() && !cancelled() && steps.paths.outcome == 'success' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: test1757-head-bias-v1-${{ github.sha }}
+          path: |
+            layout-inputs-receipt.json
+            evidence/**/*.json
+            evidence/**/*.jsonl
+            evidence/**/*.txt
+            evidence/**/*.uci
+            ${{ steps.candidate.outputs.path }}
+          retention-days: 1
+          include-hidden-files: false
+          if-no-files-found: error
+          compression-level: 6
