@@ -1,0 +1,51 @@
+name: Public selected test1758 versus official development match001
+on:
+  push:
+    branches: [research/test1758-selected-vs-official-dev-001]
+    paths: ['public-dev/ADMISSION.json', '.github/workflows/test1758-selected-vs-official-dev-001.yml']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: test1758-selected-vs-official-dev-001
+  cancel-in-progress: false
+jobs:
+  fixed128pairs:
+    if: github.repository == '0mis/Stockfish' && github.ref == 'refs/heads/research/test1758-selected-vs-official-dev-001' && github.event.repository.private == false && github.run_attempt == 1
+    runs-on: windows-2022
+    timeout-minutes: 350
+    env:
+      FOLLOWUP_IMPLEMENTATION_SHA256: '75fbecf3cfc495e9a21775ecb55722c18b829783e849f45cc42d86fd111c9544'
+      FOLLOWUP_ADMISSION_SHA256: 'e825e69cd47f9a3abee18676e10dac21c6ac9b2eb33af8803f184da6e0b66935'
+    steps:
+      - name: Checkout exact admitted experiment commit
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: '3.12'
+      - name: Install exact pure PGN validator
+        run: python -m pip install --disable-pip-version-check chess==1.11.2
+      - name: Verify complete primary artifact before native input preparation
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python -B public-dev/admit_primary.py --plan-sha256 6b5806262ded69052089c623d02fc5dd8b0eaf2ed09d387fa9469ec7a71d5f5a
+      - name: No-native fixed protocol and admission fixtures
+        run: python -B -m unittest discover -s public-dev -p 'test_*.py' -v
+      - name: Fetch exact public binaries and selected network
+        run: python -B public-dev/prepare_inputs.py --plan-sha256 6b5806262ded69052089c623d02fc5dd8b0eaf2ed09d387fa9469ec7a71d5f5a
+      - name: Run fixed128 reversed pairs at10plus0point1
+        run: python -B public-dev/run_match.py --plan-sha256 6b5806262ded69052089c623d02fc5dd8b0eaf2ed09d387fa9469ec7a71d5f5a
+      - name: Independently replay all256 PGNs clocks hashes and interval
+        run: python -B public-dev/audit.py --plan-sha256 6b5806262ded69052089c623d02fc5dd8b0eaf2ed09d387fa9469ec7a71d5f5a
+      - name: Preserve evidence including any incomplete failure
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: test1758-selected-vs-official-dev-001-${{ github.run_id }}
+          path: evidence
+          if-no-files-found: warn
+          retention-days: 1
+          compression-level: 9
