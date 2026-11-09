@@ -6,7 +6,23 @@ The runtime independently downloads and replays that same actual primary ZIP.
 """
 import argparse,datetime,hashlib,importlib.util,io,json,os,re,sys,urllib.request,zipfile
 from pathlib import Path,PurePosixPath
+import chess
 from common import require,sha,canonical,dump,bound,verify_plan
+
+def opening_partition(primary,followup):
+ def ids(rows):
+  out=[]
+  for row in rows:
+   board=chess.Board(row['fen']);require(board.is_valid(),'Invalid declared starting board')
+   identity=sha(' '.join(board.fen(en_passant='legal').split()[:4]).encode('ascii'))
+   require(identity==row['opening_id'],'Noncanonical opening identity')
+   out.append(identity)
+  return out
+ old=ids(primary);new=ids(followup)
+ require(len(new)==len(set(new)),'Follow-up roots must all be distinct')
+ require(not set(old).intersection(new),'Primary/follow-up starting root overlap')
+ return {'primary_unique_roots':len(set(old)),'followup_unique_roots':len(set(new)),'canonical_root_overlap':0,
+         'primary_canonical_root_set_sha256':sha(canonical(sorted(set(old)))),'followup_ordered_root_ids_sha256':sha(canonical(new))}
 
 def read_url(url,token=None,limit=16*1024*1024):
  headers={'User-Agent':'0mis-prospective-public-followup/1','Accept':'application/vnd.github+json'}
@@ -126,7 +142,11 @@ def main():
   body=read_url('https://raw.githubusercontent.com/0mis/Stockfish/'+plan['selection']['primary_driver_commit']+'/public-dev/'+name)
   require(sha(body)==digest,'Published primary audit source changed');(source_root/name).write_bytes(body)
  spec=importlib.util.spec_from_file_location('pinned_primary_common',source_root/'common.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
- with zipfile.ZipFile(io.BytesIO(payload)) as archive:proof=replay_primary(plan,admission,archive,module,json.loads((source_root/'openings.json').read_bytes()))
+ primary_openings=json.loads((source_root/'openings.json').read_bytes());followup_openings=json.loads(bound(here/'openings.json',plan['openings_sha256']))
+ partition=opening_partition(primary_openings,followup_openings)
+ require(partition['primary_unique_roots']==plan['opening_policy']['primary_unique_roots'] and partition['followup_unique_roots']==128 and len(followup_openings)==128,'Frozen root coverage differs')
+ with zipfile.ZipFile(io.BytesIO(payload)) as archive:proof=replay_primary(plan,admission,archive,module,primary_openings)
+ proof['opening_partition']=partition
  proof.update(schema='test1758-actual-primary-runtime-admission/1',admission_sha256=sha(admission_raw),actual_primary_archive_sha256=sha(payload),verified_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
               primary_run_id=run['id'],primary_head_sha=run['head_sha'],primary_run_attempt=run['run_attempt'],review_receipt_sha256=sha(review_raw),native_processes_started_here=0)
  evidence=root/'evidence';evidence.mkdir(exist_ok=False);dump(evidence/'PRIMARY-ADMISSION.json',proof)

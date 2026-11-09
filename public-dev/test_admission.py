@@ -4,7 +4,7 @@ from pathlib import Path
 import chess,chess.pgn
 import common
 from common import sha,canonical,bootstrap,NAMES
-from admit_primary import validate_selection,validate_members,replay_primary,accepted_local
+from admit_primary import validate_selection,validate_members,replay_primary,accepted_local,opening_partition
 from run_match import command,game_accounting
 
 def fixtures(points=128):
@@ -21,6 +21,16 @@ def fixtures(points=128):
  return plan,admission,result,audit,inputs
 
 class AdmissionTests(unittest.TestCase):
+ def test_actual_canonical_partition_rejects_overlap_aliases_and_repeats(self):
+  def row(board):
+   fen=board.fen(en_passant='legal');return {'fen':fen,'opening_id':sha(' '.join(fen.split()[:4]).encode())}
+  board=chess.Board();old=row(board);board.push_uci('e2e4');new=row(board)
+  self.assertEqual(opening_partition([old,old],[new])['canonical_root_overlap'],0)
+  alias=copy.deepcopy(old);alias['fen']=' '.join(old['fen'].split()[:4])+' 9 34'
+  with self.assertRaises(ValueError):opening_partition([old],[alias])
+  with self.assertRaises(ValueError):opening_partition([old],[new,new])
+  forged=copy.deepcopy(new);forged['opening_id']='0'*64
+  with self.assertRaises(ValueError):opening_partition([old],[forged])
  def test_exact_rendered_workflow_and_implementation_are_required(self):
   import tempfile
   from unittest.mock import patch
