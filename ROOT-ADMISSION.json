@@ -1,0 +1,14 @@
+{
+  "aggregate_child_overlaps": 0,
+  "aggregate_parent_overlaps": 0,
+  "all_reserved_opening_pools_checked": true,
+  "child_count": 10724,
+  "child_id_sha256": "12a022058499c7d97f24cbaa250928df4b88ce9a1a6b1171e452727e5e1f40a0",
+  "freeze_commit": "ea629f55bfdeb682f5e533faf877f81bf87c0406",
+  "native_play_admitted": true,
+  "plan_sha256": "09fc4d8286b92b352a40f40d3863b56fc2190e8fb8cbf2f9d50fcdf554c7ed43",
+  "root_count": 286,
+  "root_id_sha256": "a33f09108012dc4b497b3baf657de528e4f7770a1215059582eed760b4b72eb9",
+  "schedule_sha256": "e8a84dc8fc6cca10ec52c31a65aa074131a1887c766db36af7869b6660e07ef5",
+  "schema": "released-composite-nov9-root-admission/1"
+}

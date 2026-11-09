@@ -1,0 +1,53 @@
+name: Released composite versus official Nov9 development challenge
+on:
+  push:
+    branches: [research/released-composite-vs-official-nov9-dev-001]
+    paths: ['ci/**', 'ROOT-ADMISSION.json', '.github/workflows/released-composite-nov9-dev-001.yml']
+permissions:
+  contents: read
+concurrency:
+  group: released-composite-vs-official-nov9-dev-001
+  cancel-in-progress: false
+jobs:
+  fixed-shard:
+    if: github.repository == '0mis/Stockfish' && github.event.repository.private == false
+    runs-on: windows-2022
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: [0, 1]
+    env:
+      COMPOSITE_IMPLEMENTATION_SHA256: '@IMPLEMENTATION@'
+      COMPOSITE_ADMISSION_SHA256: '@ADMISSION@'
+      COMPOSITE_PLAN_SHA256: '@PLAN@'
+    steps:
+      - name: Checkout the exact admitted experiment source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: '3.12'
+      - name: Install the pinned legal PGN parser
+        run: python -m pip install chess==1.11.2
+      - name: Pure protocol and Root admission conformance fixtures
+        working-directory: ci
+        run: python -B -m unittest -v test_harness
+      - name: Verify both exact bundles and fresh bench/perft on this host
+        run: python -B ci/prepare_inputs.py --shard ${{ matrix.shard }}
+      - name: Play this fixed disjoint shard with no outcome retries
+        run: python -B ci/run_match.py --shard ${{ matrix.shard }}
+      - name: Independently reread every raw pair and clock receipt
+        run: python -B ci/audit_shard.py --shard ${{ matrix.shard }}
+      - name: Preserve all raw evidence including any early failure
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: released-composite-nov9-shard-${{ matrix.shard }}-${{ github.run_id }}
+          path: evidence
+          retention-days: 7
+          compression-level: 9
+          if-no-files-found: error

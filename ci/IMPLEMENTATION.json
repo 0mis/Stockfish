@@ -1,0 +1,18 @@
+{
+  "admission_sha256": "42674c4684e8b9d2f1c2535e1e34dd4e3fa827aad7d16717277c40216d2efb2b",
+  "code_sha256": {
+    "audit_shard.py": "56f7cfc1cd2300e1dfb1813b236fd5ea3b1407ec24d6a78aba97256447cfb6c2",
+    "bench.py": "1839773d9f974eec451a78a6d3b0a054d0101eec3e56451b3727712d0b6aea75",
+    "common.py": "96e33a36fbeb069b2f304f97e88df43f23e3039087b9b2e23944348d326c9665",
+    "gameplay-workflow.disabled": "d64e04f80c922679757705aad8fd06d2cf3377bf75ee09d8ed97ae0c487dff93",
+    "prepare_inputs.py": "4ad8e9ce7ef5b8a6ab299987b0792ab6168c9b49b4e26f6550347749a2087006",
+    "run_match.py": "ce622d9f464f43b905bfba71d6e7a375dba442eb0100c261ce9ddabbf650cf07",
+    "test_harness.py": "05799a0357b2705a7f16ad3c1562485f680a74fc5367ccb9700fbac3b5776a0b"
+  },
+  "conformance_tests": 13,
+  "freeze_commit": "ea629f55bfdeb682f5e533faf877f81bf87c0406",
+  "plan_sha256": "09fc4d8286b92b352a40f40d3863b56fc2190e8fb8cbf2f9d50fcdf554c7ed43",
+  "reused_public_harness_source": "0mis/Stockfish@366de257b7bdc904dd8999714208d26ef9149e8e",
+  "schedule_sha256": "e8a84dc8fc6cca10ec52c31a65aa074131a1887c766db36af7869b6660e07ef5",
+  "schema": "released-composite-nov9-implementation/1"
+}
