@@ -64,6 +64,19 @@ jobs:
           github-token: ${{ github.token }}
           path: accepted-reference
 
+      - name: Check out the two retired PGNs at their published commit
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: 0mis/stockfish-weight-space-lab
+          ref: 6831500a4c6b22d64109a38bb0dc5bbf5b6f8fe0
+          path: retired-public-games
+          sparse-checkout: |
+            /results/test1757-edited-screen/games-utc.pgn
+            /results/test1757-parent-screen/games-utc.pgn
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+          fetch-depth: 1
+
       - name: Verify all four experiment inputs
         id: inputs
         run: |
