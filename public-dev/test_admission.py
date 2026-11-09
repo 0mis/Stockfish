@@ -73,6 +73,14 @@ class AdmissionTests(unittest.TestCase):
  def test_clock_loss_and_color_accounting_retains_reported_outcome(self):
   row={'games':[{'candidate_white':True,'candidate_score':0,'reported_clock_forfeit':True},{'candidate_white':False,'candidate_score':1,'reported_clock_forfeit':True}]}
   out=game_accounting([row]);self.assertEqual(out['candidate_white']['candidate_reported_clock_losses'],1);self.assertEqual(out['candidate_black']['official_reported_clock_losses'],1)
+ def test_clock_comment_is_preserved_even_with_generic_termination_header(self):
+  games=[]
+  for white in (True,False):
+   g=chess.pgn.Game();g.headers.update(Event='clock-fixture',White=NAMES['candidate'] if white else NAMES['parent'],Black=NAMES['parent'] if white else NAMES['candidate'],Result='0-1',Termination='normal')
+   node=g.add_variation(chess.Move.from_uci('e2e4'));node.comment='White lost on time';games.append(str(g))
+  opening={'pair_index':0,'opening_id':'synthetic','fen':chess.STARTING_FEN}
+  parsed=common.pair_games(('\n\n'.join(games)+'\n').encode(),opening,'clock-fixture',True)
+  self.assertTrue(all(g['reported_clock_forfeit'] for g in parsed['games']));self.assertEqual(parsed['candidate_points'],1)
  def test_full256_raw_fixture_replays_and_changed_raw_fails(self):
   plan,admission,result,audit,inputs=fixtures();members={};openings=[];combined=[];proofs=[]
   for i in range(128):

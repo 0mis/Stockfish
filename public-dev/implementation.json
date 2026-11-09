@@ -3,14 +3,14 @@
   "code_sha256": {
     "admit_primary.py": "2d36794bfeff7921f1d4d8685ff690395115afd7a83b0f007b8e322f246812bd",
     "audit.py": "9c0f99038f2dc9cb166d0365e3dba4f5b8aa5685e8ca74f60e4e8e630546b132",
-    "common.py": "3efa21e11a9e75f2b000b13d5b377eaaa9a8cad44041814be54b7452f2ad91a1",
+    "common.py": "7ccabb2ade85311d9c8c66a91a53a2516213b137e0985886b189fa015256b600",
     "gameplay-workflow.disabled": "e575782f3802e91d6c6cc729071cb89e9366d1d6a29f2938fbc709dfdd320d0d",
     "opening-provenance.json": "acad53849d6c3d2da8d4fd858faad13fdac2e873de0340beb6f4fd0ced721e50",
     "openings.json": "ffec0b02cd65f0bb1091ada037d6aa50b332cfb09858f5ab0193f2027e38a398",
     "prepare_inputs.py": "d75b0438106caca2922e9098b4a3416707c1a4441960eaabc2b475c54458756b",
     "published-test1757-recipe.json": "4ce6d12f6f79eb7462569e771e86ce1e27ee715d2801605f295dc1dcc0a804d3",
     "run_match.py": "e41d10aab49b0f11617916eb7a56e1c5034d1acc3e2c4986399d8635f0e7ab45",
-    "test_admission.py": "89a64bb13e0a2b938c49443d52cb8193aa4b80b55d17e156760be2e84b1c060e",
+    "test_admission.py": "1fb302347844b1bcba36a89a758fdc3479c72a4e4e2306b65f56655b91c8bcc1",
     "test_driver.py": "a11c59ad9bc67859015da5448aaa206c64c850f00c9d19c25b2a0b2633669597",
     "test_end_to_end.py": "b18a7b865fbee198e25df08536ee092569da55d7fed23e80b600f379acd96c63",
     "transfer-binding.json": "2122b6b11edfd32bbf3cd40503f055e144eaff6e5837ecab045f8055df09d7c0",
@@ -21,6 +21,6 @@
   "tests": {
     "full_sample_fake_referee": true,
     "native_execution": false,
-    "total": 16
+    "total": 17
   }
 }

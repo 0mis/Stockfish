@@ -37,7 +37,8 @@ def pair_games(raw,opening,event,candidate_first):
   require(plies>0,'No played moves: preserve as incomplete startup/native failure')
   result=game.headers['Result'];score=SCORES[result] if white==NAMES['candidate'] else 1-SCORES[result];points+=score
   reason=game.headers.get('Termination',game.end().comment or game.comment)
-  records.append({'date':game.headers.get('Date'),'time':game.headers.get('Time'),'utc_date':game.headers.get('UTCDate'),'utc_time':game.headers.get('UTCTime'),'time_control':game.headers.get('TimeControl'),'reported_clock_forfeit':bool(re.search(r'(?:time.?forfeit|loses? on time|time.?out|time.?loss)',str(reason),re.I)),'candidate_white':white==NAMES['candidate'],'result':result,'candidate_score':score,'plies':plies,'termination':reason})
+  reason_text=' '.join((str(reason),game.end().comment,game.comment))
+  records.append({'date':game.headers.get('Date'),'time':game.headers.get('Time'),'utc_date':game.headers.get('UTCDate'),'utc_time':game.headers.get('UTCTime'),'time_control':game.headers.get('TimeControl'),'reported_end_comment':game.end().comment,'reported_game_comment':game.comment,'reported_clock_forfeit':bool(re.search(r'(?:time.?forfeit|los(?:e[sd]?|t) on time|time.?out|time.?loss)',reason_text,re.I)),'candidate_white':white==NAMES['candidate'],'result':result,'candidate_score':score,'plies':plies,'termination':reason})
   games.append(game)
  require(chess.pgn.read_game(stream) is None and not stream.read().strip(),'Extra PGN games/text')
  return {'pair_index':opening['pair_index'],'opening_id':opening['opening_id'],'candidate_first':candidate_first,'candidate_points':points,'games':records}
