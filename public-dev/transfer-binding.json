@@ -1,0 +1,261 @@
+{
+  "bytes": 138360528,
+  "changed_bytes": 11,
+  "changed_heads": [
+    31,
+    51,
+    61,
+    65,
+    74,
+    76,
+    82,
+    87,
+    91
+  ],
+  "details": [
+    {
+      "bias_after": -7141,
+      "bias_before": -7237,
+      "bias_offset": 136247916,
+      "changed_byte_offsets": [
+        136247916,
+        136247917
+      ],
+      "changed_bytes": [
+        {
+          "after": 27,
+          "before": 187,
+          "offset": 136247916
+        },
+        {
+          "after": 228,
+          "before": 227,
+          "offset": 136247917
+        }
+      ],
+      "delta": 96,
+      "physical_head": 31,
+      "raw_delta_bounds": [
+        2,
+        4
+      ],
+      "raw_routes": [
+        49
+      ]
+    },
+    {
+      "bias_after": -689,
+      "bias_before": -945,
+      "bias_offset": 136952076,
+      "changed_byte_offsets": [
+        136952077
+      ],
+      "changed_bytes": [
+        {
+          "after": 253,
+          "before": 252,
+          "offset": 136952077
+        }
+      ],
+      "delta": 256,
+      "physical_head": 51,
+      "raw_delta_bounds": [
+        8,
+        10
+      ],
+      "raw_routes": [
+        73
+      ]
+    },
+    {
+      "bias_after": -706,
+      "bias_before": -514,
+      "bias_offset": 137304156,
+      "changed_byte_offsets": [
+        137304156
+      ],
+      "changed_bytes": [
+        {
+          "after": 62,
+          "before": 254,
+          "offset": 137304156
+        }
+      ],
+      "delta": -192,
+      "physical_head": 61,
+      "raw_delta_bounds": [
+        -8,
+        -6
+      ],
+      "raw_routes": [
+        91
+      ]
+    },
+    {
+      "bias_after": -2374,
+      "bias_before": -2598,
+      "bias_offset": 137444988,
+      "changed_byte_offsets": [
+        137444988,
+        137444989
+      ],
+      "changed_bytes": [
+        {
+          "after": 186,
+          "before": 218,
+          "offset": 137444988
+        },
+        {
+          "after": 246,
+          "before": 245,
+          "offset": 137444989
+        }
+      ],
+      "delta": 224,
+      "physical_head": 65,
+      "raw_delta_bounds": [
+        7,
+        9
+      ],
+      "raw_routes": [
+        97
+      ]
+    },
+    {
+      "bias_after": -2715,
+      "bias_before": -2971,
+      "bias_offset": 137761860,
+      "changed_byte_offsets": [
+        137761861
+      ],
+      "changed_bytes": [
+        {
+          "after": 245,
+          "before": 244,
+          "offset": 137761861
+        }
+      ],
+      "delta": 256,
+      "physical_head": 74,
+      "raw_delta_bounds": [
+        8,
+        10
+      ],
+      "raw_routes": [
+        115
+      ]
+    },
+    {
+      "bias_after": -6161,
+      "bias_before": -6417,
+      "bias_offset": 137832276,
+      "changed_byte_offsets": [
+        137832277
+      ],
+      "changed_bytes": [
+        {
+          "after": 231,
+          "before": 230,
+          "offset": 137832277
+        }
+      ],
+      "delta": 256,
+      "physical_head": 76,
+      "raw_delta_bounds": [
+        8,
+        10
+      ],
+      "raw_routes": [
+        120,
+        121
+      ]
+    },
+    {
+      "bias_after": -5539,
+      "bias_before": -5795,
+      "bias_offset": 138043524,
+      "changed_byte_offsets": [
+        138043525
+      ],
+      "changed_bytes": [
+        {
+          "after": 234,
+          "before": 233,
+          "offset": 138043525
+        }
+      ],
+      "delta": 256,
+      "physical_head": 82,
+      "raw_delta_bounds": [
+        8,
+        10
+      ],
+      "raw_routes": [
+        138,
+        139
+      ]
+    },
+    {
+      "bias_after": -4491,
+      "bias_before": -4747,
+      "bias_offset": 138219564,
+      "changed_byte_offsets": [
+        138219565
+      ],
+      "changed_bytes": [
+        {
+          "after": 238,
+          "before": 237,
+          "offset": 138219565
+        }
+      ],
+      "delta": 256,
+      "physical_head": 87,
+      "raw_delta_bounds": [
+        8,
+        10
+      ],
+      "raw_routes": [
+        162,
+        163,
+        164,
+        165,
+        166,
+        167
+      ]
+    },
+    {
+      "bias_after": -2667,
+      "bias_before": -2923,
+      "bias_offset": 138360396,
+      "changed_byte_offsets": [
+        138360397
+      ],
+      "changed_bytes": [
+        {
+          "after": 245,
+          "before": 244,
+          "offset": 138360397
+        }
+      ],
+      "delta": 256,
+      "physical_head": 91,
+      "raw_delta_bounds": [
+        8,
+        10
+      ],
+      "raw_routes": [
+        186,
+        187,
+        188,
+        189,
+        190,
+        191
+      ]
+    }
+  ],
+  "inverse_sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
+  "parent_credit": "Shawn Xu, test1758",
+  "recipe_sha256": "4ce6d12f6f79eb7462569e771e86ce1e27ee715d2801605f295dc1dcc0a804d3",
+  "sha256": "f92ca6117ec5ae7b0ca8c9242165aee06bd2417183daa4393b11f2df409e005d"
+}

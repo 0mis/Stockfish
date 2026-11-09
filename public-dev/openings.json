@@ -1,0 +1,1282 @@
+[
+  {
+    "candidate_first": true,
+    "fen": "rnbqk2r/1p2ppbp/p2p1np1/2p5/4P3/2P2N1P/PP1P1PP1/RNBQRBK1 w kq - 0 1",
+    "opening_id": "d33a50004fff7e34f18b8c752e2ae3f98887f9ac6cb05313cdeddf939ffd02ec",
+    "pair_index": 0,
+    "source_game_indices": [
+      0,
+      1
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqkb1r/pp1n1pp1/2n1p3/2ppP3/3P1P1p/2N1BN2/PPPQ2PP/R3KB1R w KQkq - 0 1",
+    "opening_id": "f36c78f396255534758946a25b2f73e959fa3db61c2cc258d9d14363736a07ca",
+    "pair_index": 1,
+    "source_game_indices": [
+      2,
+      3
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r2qk2r/ppp2ppp/1n1bpn2/5b2/3P4/1BN1PN2/PP3PPP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "a8f589d53b798847e44241d7bd6f44e850798233972b8f37273db3cb31bdd6b0",
+    "pair_index": 2,
+    "source_game_indices": [
+      4,
+      5
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1b2k1r/pp1pbppp/1qnNpn2/8/4P3/5N2/PPP1BPPP/R1BQK2R w KQ - 0 1",
+    "opening_id": "a5d049756bf8a0d99de5d0a2a1fc65b4e6b1197f55f25613161fba9241fb99f2",
+    "pair_index": 3,
+    "source_game_indices": [
+      6,
+      7
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqk2r/pp2bppp/3p1n2/2p5/2B1P3/4Q3/PPP2PPP/RNB2RK1 w kq - 0 1",
+    "opening_id": "6721404105f829b30ec448fd25f5e5356ef97b809aa0550e490a2d76f09f51ab",
+    "pair_index": 4,
+    "source_game_indices": [
+      8,
+      9
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r2qkb1r/pp1b1ppp/3p1n2/4p3/2BBP3/2N5/PPP2PPP/R2QK2R w KQkq - 0 1",
+    "opening_id": "5d6ef2536ff5a39b132fcb375048338e028fe073d8e1923393c3be739b705b69",
+    "pair_index": 5,
+    "source_game_indices": [
+      10,
+      11
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1b1k2r/ppp3pp/2nqpn2/3pNp2/3P1P2/2N5/PPP1BPPP/R2QK2R w KQkq - 0 1",
+    "opening_id": "de953e45e20d50dee6be7ccd490a6429da979f3640d9b2e603526e4fef019fd5",
+    "pair_index": 6,
+    "source_game_indices": [
+      12,
+      13
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rn1qk2r/pb1pppb1/1p3npp/3P4/2P4P/2N2N2/PP3PP1/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "592580532ef937cfb9ec3c0db5571aa84e2c34d1a37c598542621947278f88e6",
+    "pair_index": 7,
+    "source_game_indices": [
+      14,
+      15
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnb2rk1/1pqpppbp/p4np1/3P4/2P5/2N2N2/PP2BPPP/R1BQK2R w KQ - 0 1",
+    "opening_id": "bf749a24167bc9be321e6445b30206606ea4c7e48f44897eb456b3cfd1612650",
+    "pair_index": 8,
+    "source_game_indices": [
+      16,
+      17
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqkb1r/pp1ppp2/6p1/5n1p/2P4P/3Q2P1/PP2PP2/RNB1KB1R w KQkq - 0 1",
+    "opening_id": "61daab0e87d86fb56e1fc4a5830e1b75ae28dc0335e42a08ce6505c24d8aa199",
+    "pair_index": 9,
+    "source_game_indices": [
+      18,
+      19
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqk2r/p3nppp/1p1bpn2/2pp4/3P4/2PBPNB1/PP1N1PPP/R2QK2R w KQkq - 0 1",
+    "opening_id": "37db590ad1e42d0db26492cc49cab903dd96377bfd1957a49fe5bca4e9b538d4",
+    "pair_index": 10,
+    "source_game_indices": [
+      20,
+      21
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqk2r/pp2bppp/1n2pn2/2p5/3pPP2/3P1NP1/PPP1N1BP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "22fb4f6f0c7e3cadbaf658eed9300bf30a92588e02f036928358964dac92c870",
+    "pair_index": 11,
+    "source_game_indices": [
+      22,
+      23
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rn2kb1r/ppq2ppp/2pp1n2/4p3/N2PP1b1/1P1B4/P1PBNPPP/R2QK2R w KQkq - 0 1",
+    "opening_id": "70aadad96df7707d7891405d4dbb62fa86d1171abaab0181fb8fdcfd6dec08d9",
+    "pair_index": 12,
+    "source_game_indices": [
+      24,
+      25
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rnb1k1nr/1pbpqppp/2p5/p1P1p3/1P6/P1N2N2/1BQPPPPP/R3KB1R w KQkq - 0 1",
+    "opening_id": "00f2615df0c9470159436d38c985ecc25f06822d9e37fd1f24e0c89e873991a5",
+    "pair_index": 13,
+    "source_game_indices": [
+      26,
+      27
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnbqkb1r/4pp1p/p2p1npP/1ppP4/4PP2/8/PPP1B1P1/RNBQK1NR w KQkq - 0 1",
+    "opening_id": "0a0ae0534ae755587a58e88083db6f9f6f047aab72badb65732342947e552ba3",
+    "pair_index": 14,
+    "source_game_indices": [
+      28,
+      29
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqk2r/2p1nppp/p2p1n2/1pb1p1B1/4P3/1B1P1N2/PPP2PPP/RN1Q1RK1 w kq - 0 1",
+    "opening_id": "821455be24188757359a70b4a30044c48ef21dd2872c7c3adbac5fe0dd7be69f",
+    "pair_index": 15,
+    "source_game_indices": [
+      30,
+      31
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1b1kb1r/pppp1ppp/2n5/8/2q1n3/P4NP1/1P2PPBP/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "7340fa05fe2017714c8567ae5e1539e16c96bcdaa25f8448b265365c59bc8fee",
+    "pair_index": 16,
+    "source_game_indices": [
+      32,
+      33
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqk2r/p2nbppp/2p1pn2/1p6/3PN3/P4NP1/1PP1QP1P/R1B1KB1R w KQkq - 0 1",
+    "opening_id": "3920432ea6de2381b50f74efd9a743b3dbb80677b0b4c80d4516b1c98a85267e",
+    "pair_index": 17,
+    "source_game_indices": [
+      34,
+      35
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnbq1rk1/pp3pb1/3p1npp/2pPp3/2P1P3/2N2NP1/PP3PBP/R1BQK2R w KQ - 0 1",
+    "opening_id": "f0c969d5cfe23e345e447ea5c60ec72153f4ec87c4a1d5afc5156dd289d8390c",
+    "pair_index": 18,
+    "source_game_indices": [
+      36,
+      37
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1b2rk1/ppqnbppp/2pp1n2/4p3/2PPP3/1PNB4/P3NPPP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "03a5a985454958f76d881a3401bc059fc3e752fa3cc8329e3fbc7a07d4232a15",
+    "pair_index": 19,
+    "source_game_indices": [
+      38,
+      39
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rn1q1rk1/pbpp1pb1/1p3ppp/8/3PP3/2N2N2/PPPQ1PPP/2KR1B1R w - - 0 1",
+    "opening_id": "dc3f432a383926e8e11e33ad13bb4d7871987d362968777c146723e8655bd0db",
+    "pair_index": 20,
+    "source_game_indices": [
+      40,
+      41
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqk2r/ppp3bp/2np1np1/4p3/3PP3/2N1B3/PPPQN1PP/R3KB1R w KQkq - 0 1",
+    "opening_id": "13073bc7f46b292bbe77fdf1993bf55d9d5bbb071c1fc8a879f82d1eade4a281",
+    "pair_index": 21,
+    "source_game_indices": [
+      42,
+      43
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r2qk2r/ppp1bppp/2npb3/2n1p1P1/4P2P/2NP1N2/PPP2P2/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "f10e2c22e0935bd85f31e28d9f8d38633e3836cd39be90ea2aa00462c72e93b4",
+    "pair_index": 22,
+    "source_game_indices": [
+      44,
+      45
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rnbq1rk1/pp2n1bp/3p1pp1/2pPp1B1/4P3/2NB1N2/PPP2PPP/R2Q1RK1 w - - 0 1",
+    "opening_id": "6f3540c269b652ff4e8661cf34afee3f054cc6a027faeb3e724cf19ba48e190c",
+    "pair_index": 23,
+    "source_game_indices": [
+      46,
+      47
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bq1rk1/ppp1ppb1/3p1np1/3P3p/1n2P2P/2N1BN2/PPPQ1PP1/R3KB1R w KQ - 0 1",
+    "opening_id": "5abf3cd5041287537238650ad62483b78e251cbaac8961fa2b91a719efc5298e",
+    "pair_index": 24,
+    "source_game_indices": [
+      48,
+      49
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r2qkb1r/pp1n1ppp/4pn2/2p4b/2pP4/3N2P1/PP2PPBP/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "e8353c9bf081144bd09e444a4d3957335a9399cabb791bddeb494ec49e37b308",
+    "pair_index": 25,
+    "source_game_indices": [
+      50,
+      51
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnb1k2r/pp2qpb1/2p1pnpp/3p4/2PP1N1P/2N1P3/PPQ2PP1/R1B1KB1R w KQkq - 0 1",
+    "opening_id": "01fd3487e1a383842c6ab5e3dca2d0907e0a0f81fc3c335dd70226f81bb542aa",
+    "pair_index": 26,
+    "source_game_indices": [
+      52,
+      53
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rnb1qrk1/pppp2pp/4p3/5p2/2PPn3/P3P3/1PQ2PPP/R1B1KBNR w KQ - 0 1",
+    "opening_id": "44a7671dfb6e35076293f57d89bd73f3689d639b7fcdde6b75c008bc0090d86e",
+    "pair_index": 27,
+    "source_game_indices": [
+      54,
+      55
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqk2r/ppp1b1pp/3p1n2/3Pnp2/8/2NB4/PPP1NPPP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "f2812c687809d9525a442d46c9f5400676fd36c1a31921ddd16a0a0edef37e91",
+    "pair_index": 28,
+    "source_game_indices": [
+      56,
+      57
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqk2r/p2n1ppp/2pbpn2/1p6/2BP4/2N1PN2/PPQB1PPP/R3K2R w KQkq - 0 1",
+    "opening_id": "d9feeacefd703fe08bbbfc7b71a45e7f28514426d72a48498f754ad527766fc6",
+    "pair_index": 29,
+    "source_game_indices": [
+      58,
+      59
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r2qkbnr/2p1pp1p/p1pp2b1/6p1/3PP1P1/5N1P/PPPN1P2/R1BQK2R w KQkq - 0 1",
+    "opening_id": "ec05aac7f65bfbeff5493233b390410f98042648fd0e7e92c17cd5a317bf2544",
+    "pair_index": 30,
+    "source_game_indices": [
+      60,
+      61
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r2qkb1r/pbp1pppp/1p1p4/8/3PnB2/3BPN1P/PPP2PP1/R2QK2R w KQkq - 0 1",
+    "opening_id": "5c2d724d2b80aa04177fa44f61a2102f0fcedc87c45794c2fa276426623b2673",
+    "pair_index": 31,
+    "source_game_indices": [
+      62,
+      63
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqk2r/1pp1ppb1/p1n3p1/3pP2p/3P1Bn1/2N4N/PPPQ1PPP/R3KB1R w KQkq - 0 1",
+    "opening_id": "3a15e34e6a7b9e002f28a45965412d9daf1fbebdc634906247babe24c3c8b2ac",
+    "pair_index": 32,
+    "source_game_indices": [
+      64,
+      65
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rn1q1rk1/pb1pbppp/4pn2/1p6/3P4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "b290890d8d389b5fb20bd04c53872a52050b64c716cc7bc9e6292da987f78009",
+    "pair_index": 33,
+    "source_game_indices": [
+      66,
+      67
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rn1qk1nr/1p2bppp/p7/2pP4/P1p3b1/2N2N2/1P3PPP/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "bc572b6fb80fcfc58d96dc561dcf13260f328352fda089940b6ccf1bb82a16b0",
+    "pair_index": 34,
+    "source_game_indices": [
+      68,
+      69
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rn2kb1r/pp3ppp/2p1pn2/3p4/2PP1B2/3QPN2/Pq3PPP/RN3RK1 w kq - 0 1",
+    "opening_id": "801828c4c93037b5331fe42bc4561a5f0e8f9de1ddfe52be9ccbd9ca49142693",
+    "pair_index": 35,
+    "source_game_indices": [
+      70,
+      71
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqk2r/pp2n1bp/2np2p1/2p1pp2/3PP3/1PP2N2/PB2BPPP/RN1Q1RK1 w kq - 0 1",
+    "opening_id": "4ee766f9891fb63c47d63d4828ef3db0b819f958d19deee46b14842812399216",
+    "pair_index": 36,
+    "source_game_indices": [
+      72,
+      73
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rnb2rk1/ppp1bppp/4pq2/8/2BP4/2Q5/PPP1NPPP/R1B1K2R w KQ - 0 1",
+    "opening_id": "63ca590c039353a570a00245d7f336e7bb4a561afe6f12adf7aa44d65c837c62",
+    "pair_index": 37,
+    "source_game_indices": [
+      74,
+      75
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqk2r/ppp1b1pp/3p1n2/3Pnp2/8/2NB4/PPP1NPPP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "f2812c687809d9525a442d46c9f5400676fd36c1a31921ddd16a0a0edef37e91",
+    "pair_index": 38,
+    "source_game_indices": [
+      76,
+      77
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rn1qkb1r/1p3pp1/p2pbn2/4p2p/2P1P3/2N2P2/PPN3PP/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "952540dc6af126ea33205aff120b800d279a657ed94a6f369e769d75315b2104",
+    "pair_index": 39,
+    "source_game_indices": [
+      78,
+      79
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1b1k2r/pp1nqpbp/2pp2pn/4p3/2PPP3/2N2NP1/PP3PBP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "db0116da99004508459439635c84fafac6449056b6490a4aa985d83e6e2a535b",
+    "pair_index": 40,
+    "source_game_indices": [
+      80,
+      81
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rn1qk1nr/1bp2pbp/1p4p1/pP2p3/2Pp4/3P1NP1/P3PPBP/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "955568ae19557250ab88e21955adf7af0ef0746d5bb263a113a866fc6478c4d5",
+    "pair_index": 41,
+    "source_game_indices": [
+      82,
+      83
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1b1kbnr/pp3pp1/1qn1p3/3pP2p/3P4/2N3P1/PP2NP1P/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "d5416128716029fe58571725a04dc97b463e366a8d6471f5b2088ebe6576148b",
+    "pair_index": 42,
+    "source_game_indices": [
+      84,
+      85
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rnbq1rk1/pp2npbp/2p1p1p1/3p4/3PPP1P/2N2N2/PPP1B1P1/R1BQ1RK1 w - - 0 1",
+    "opening_id": "5f3f35647557681cf7a65743356f0c2f13b17167706aa2ace51759e92dacd477",
+    "pair_index": 43,
+    "source_game_indices": [
+      86,
+      87
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rn2kb1r/ppq1pppp/2p2n2/8/2PP2b1/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "9ccbcead690d5e5d84862906d2aa66c193d4d7a42ab25b5522276945bb34bdeb",
+    "pair_index": 44,
+    "source_game_indices": [
+      88,
+      89
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r2qk1nr/pp1bbppp/3p4/1B2p3/P2nP3/5N2/1P3PPP/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "cae332186f4f20bff2a28cccede2bf11255995b4a910ef4aa2d125d32c03bcef",
+    "pair_index": 45,
+    "source_game_indices": [
+      90,
+      91
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnbq1rk1/1p1pnpbp/p3p1p1/8/3PPP2/2NB1N2/PP4PP/R1BQK2R w KQ - 0 1",
+    "opening_id": "1488f2d6076d4b4401e4dc95da27eb1d44ce946ac931c7bdcc6c8d3c23f1c1da",
+    "pair_index": 46,
+    "source_game_indices": [
+      92,
+      93
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqk2r/pppp1ppp/2n5/4P3/4nP2/P7/1PP3PP/RNBQKB1R w KQkq - 0 1",
+    "opening_id": "105c6720d1e3b5e1c88d2772d6a845c209204014bdcbf399cc4d646281e2648a",
+    "pair_index": 47,
+    "source_game_indices": [
+      94,
+      95
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r2qkbnr/pp1bpppp/2n5/1B2p3/4Q3/2N2N2/PPP2PPP/R1B1K2R w KQkq - 0 1",
+    "opening_id": "5d3ecea11f0746e6aabc7800b77270c42714866d6512c4a413315e727c6feb80",
+    "pair_index": 48,
+    "source_game_indices": [
+      96,
+      97
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rnb1qrk1/pp2p1bp/2pp1np1/5p2/3P1B2/2PBPN1P/PP1N1PP1/R2QK2R w KQ - 0 1",
+    "opening_id": "7f9feae61180db3140c86e9c27a9071b15e35666eb2c6d67a705295848be4274",
+    "pair_index": 49,
+    "source_game_indices": [
+      98,
+      99
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnb2rk1/ppp1bppp/4pq2/8/2BP4/2Q5/PPP1NPPP/R1B1K2R w KQ - 0 1",
+    "opening_id": "63ca590c039353a570a00245d7f336e7bb4a561afe6f12adf7aa44d65c837c62",
+    "pair_index": 50,
+    "source_game_indices": [
+      100,
+      101
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqkb1r/ppp2ppp/1n2p3/3pP3/3P4/2NQ1N2/PPP2PPP/R1B2RK1 w kq - 0 1",
+    "opening_id": "25aa0a00550efe4f6899e59e2d1fc410e8bd4b5f4c6576c474616c638f11ec05",
+    "pair_index": 51,
+    "source_game_indices": [
+      102,
+      103
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqk2r/pp1n1ppp/3p1n2/b1pPp3/2P1P3/2NB1N1P/PP3PP1/R1BQK2R w KQkq - 0 1",
+    "opening_id": "26313b145a474a3bf89abf0499a3d22597a48e3844ff94301c20226d1c399270",
+    "pair_index": 52,
+    "source_game_indices": [
+      104,
+      105
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1b1k1nr/1pp2ppp/p1np2q1/8/1b2P3/2N3Q1/PPPB1PPP/2KR1BNR w kq - 0 1",
+    "opening_id": "644b657a61442044aebf26f350c943c34d6f7a3454604967b786de776b396878",
+    "pair_index": 53,
+    "source_game_indices": [
+      106,
+      107
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnbq1rk1/1p2npbp/p1ppp1p1/8/3PPP2/2PB1N2/PP4PP/RNB1QRK1 w - - 0 1",
+    "opening_id": "9c6945fe0a52bcc0534813ba7f1888a0c25cd58b2d75e26675414c897233333b",
+    "pair_index": 54,
+    "source_game_indices": [
+      108,
+      109
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqk2r/1ppnnpb1/p2pp1pp/8/2PPP2P/2NBBN2/PP3PP1/R2QK2R w KQkq - 0 1",
+    "opening_id": "dc7cdd697753bc554e19f60c09b79fe79dc50066c3a5a9c44dbad7735d96a6f3",
+    "pair_index": 55,
+    "source_game_indices": [
+      110,
+      111
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rn2kbnr/1b2qppp/p3p3/1p1pP1N1/2pP4/P1N1B3/1PP2PPP/R2QKB1R w KQkq - 0 1",
+    "opening_id": "49fed3a5ac07cce0296d68a971aca1318082bbc1c80dfb43e27f491a7d982956",
+    "pair_index": 56,
+    "source_game_indices": [
+      112,
+      113
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqk2r/p1n1ppbp/1p1p1np1/2pP4/P1P1P3/2N2N1P/1P3PP1/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "3b28f696c585612399203477b3ec8dad490a12d82b120d1fc96718318d874623",
+    "pair_index": 57,
+    "source_game_indices": [
+      114,
+      115
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1b1k1nr/1pp2ppp/p1np2q1/8/1b2P3/2N3Q1/PPPB1PPP/2KR1BNR w kq - 0 1",
+    "opening_id": "644b657a61442044aebf26f350c943c34d6f7a3454604967b786de776b396878",
+    "pair_index": 58,
+    "source_game_indices": [
+      116,
+      117
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rnbq1rk1/1pp1b1pp/3pp3/p4p2/2P1n3/P1N2NP1/1P1PPPBP/1RBQ1RK1 w - - 0 1",
+    "opening_id": "d6716fd106ce39da749471f645b60a11526ef447a2ecd0565c3577a7de8a69d1",
+    "pair_index": 59,
+    "source_game_indices": [
+      118,
+      119
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bq1rk1/ppp1p1bp/2np2p1/5p1n/2PP4/2N2NP1/PP1QPPBP/R1B2RK1 w - - 0 1",
+    "opening_id": "c9d15be55e98028ff91bb916f955b1447b53e01566eea4483adef1b4d8682926",
+    "pair_index": 60,
+    "source_game_indices": [
+      120,
+      121
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r2qkb1r/3bpppp/ppn2n2/2Pp4/3P4/2N2N2/PP2BPPP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "b63b13a17966e3489405f6afadb6a6d05e53b0b2f31ad00f884758cf2c424ae9",
+    "pair_index": 61,
+    "source_game_indices": [
+      122,
+      123
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnbq3r/pp3kbp/2p2ppn/3p4/3P4/2NB1N2/PPP2PPP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "fed81942e56c825a8a18689738c583c70902c5789bb28d1a7e93d95bd34331d9",
+    "pair_index": 62,
+    "source_game_indices": [
+      124,
+      125
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bk1b1r/pp1npppp/3p1n2/2pN2B1/2BP4/q3PN2/P1P2PPP/1R1QK2R w K - 0 1",
+    "opening_id": "9b2acfed506d264b9b1eb9e1b4940f150fb523b2ebc9dd6d320d3da36d934828",
+    "pair_index": 63,
+    "source_game_indices": [
+      126,
+      127
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqk2r/pp1n1pb1/2pp2pn/4p2p/2PPP2P/2N1B3/PP1QBPP1/R3K1NR w KQkq - 0 1",
+    "opening_id": "df5c5e7f5f87b6fb124d2a59e3cbc2d8a7fc54d86c2157325c3bf10cf066defe",
+    "pair_index": 64,
+    "source_game_indices": [
+      128,
+      129
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rnbq1rk1/1p2npbp/p1ppp1p1/8/3PPP2/2PB1N2/PP4PP/RNB1QRK1 w - - 0 1",
+    "opening_id": "9c6945fe0a52bcc0534813ba7f1888a0c25cd58b2d75e26675414c897233333b",
+    "pair_index": 65,
+    "source_game_indices": [
+      130,
+      131
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnbqk2r/pp1pnp2/2p4p/4P1p1/2B1Pp2/2N5/PPP3PP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "bd9551c6a2af6858773a5b760b06ddad93987c7693cc16b44a4121fa29c5a527",
+    "pair_index": 66,
+    "source_game_indices": [
+      132,
+      133
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r2qk1nr/1p2ppbp/p1p3p1/2p5/4P3/3P1b1P/PPPN1PP1/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "a00e719ef97ffe553629eba567a090e478c35bd8ab446508c6de67031a672e6c",
+    "pair_index": 67,
+    "source_game_indices": [
+      134,
+      135
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqkb1r/pp3ppp/8/2pn4/2Pn4/3P2P1/PP3PBP/R1BQK1NR w KQkq - 0 1",
+    "opening_id": "47b173a51f55fc739da6727be74c2f9f138f0fbdc693b2bd4c21024c8d082526",
+    "pair_index": 68,
+    "source_game_indices": [
+      136,
+      137
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r2qk1nr/pb1n1ppp/1p1bp3/3p4/2pP1P2/2P1PN2/PPBN2PP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "b5e185977c448a31dc02cabf7aa3beb657f4eb17657c647b5ff1ab6e42d048ff",
+    "pair_index": 69,
+    "source_game_indices": [
+      138,
+      139
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rn2kb1r/ppq2ppp/2pp1n2/4p3/N2PP1b1/1P1B4/P1PBNPPP/R2QK2R w KQkq - 0 1",
+    "opening_id": "70aadad96df7707d7891405d4dbb62fa86d1171abaab0181fb8fdcfd6dec08d9",
+    "pair_index": 70,
+    "source_game_indices": [
+      140,
+      141
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1b1k1nr/1p3pp1/1qn1p2p/p1bpP3/8/2PB1N2/PP3PPP/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "4534127a72dcf6be2168348011ffa906a83ab261fcb900a53b905ac5d8038f92",
+    "pair_index": 71,
+    "source_game_indices": [
+      142,
+      143
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rn2kb1r/ppq1pppp/2p2n2/8/2PP2b1/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "9ccbcead690d5e5d84862906d2aa66c193d4d7a42ab25b5522276945bb34bdeb",
+    "pair_index": 72,
+    "source_game_indices": [
+      144,
+      145
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqk2r/ppp2pp1/2n1pn1p/8/2QP4/P4N2/1P2PPPP/R1B1KB1R w KQkq - 0 1",
+    "opening_id": "aeb8ada939b5c7c7e373c6465ce754ded0202bcd814e93c6b93307c567c8d34a",
+    "pair_index": 73,
+    "source_game_indices": [
+      146,
+      147
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqk1nr/pp3pb1/3pp1p1/2p4p/3nPP2/3P1NPP/PPP3B1/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "5234e99bb32f4c3adde8b302355ad5dfc57db91bb736c78323e312de7ae46919",
+    "pair_index": 74,
+    "source_game_indices": [
+      148,
+      149
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqk1nr/pp1n1pb1/3p2pp/2pPp3/2P1P2P/1PNB4/P4PP1/R1BQK1NR w KQkq - 0 1",
+    "opening_id": "407e41dceaf8f68dbd6a733f29b59b4e3ebb5e3fc9d26ef50fbf0d816576adbf",
+    "pair_index": 75,
+    "source_game_indices": [
+      150,
+      151
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r2qkb1r/p4ppp/2p1pn2/7b/3P4/2N5/PP2PPPP/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "b0287065ed5661afb67f3141e3cc37d5290707c99ef16381415c546e5794fd55",
+    "pair_index": 76,
+    "source_game_indices": [
+      152,
+      153
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1b2rk1/ppqnbppp/2pp1n2/4p3/3PPP2/2PB1N2/PP4PP/RNBQ1R1K w - - 0 1",
+    "opening_id": "65f16333d2ad7856423c71637a3f2019f5601845e482f8e69a08ccd9f92880a7",
+    "pair_index": 77,
+    "source_game_indices": [
+      154,
+      155
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1b1kb1r/2qn1ppp/2pp1n2/pp2p3/3PP3/2N1BP2/PPPQN1PP/2KR1B1R w kq - 0 1",
+    "opening_id": "22e6460d52c76787fa5641e9c6085d1cc4035c5bc6adcf802b210b5bc4b63d12",
+    "pair_index": 78,
+    "source_game_indices": [
+      156,
+      157
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1b1kb1r/pp1n1ppp/2p1p3/q2n4/2BP1B2/2N1PN2/PPQ2PPP/R3K2R w KQkq - 0 1",
+    "opening_id": "fa9f6d42d31374bc234c2bb72f24bdb4c00708de8df050e7e60006450a0e6d34",
+    "pair_index": 79,
+    "source_game_indices": [
+      158,
+      159
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnb1k2r/pp2nppp/4p3/2ppP3/q2P3P/P1P2N2/2P2PP1/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "79f4abbbe3aeff2b5fe64b466abac8012db82ef2e55648f2691a25289574857c",
+    "pair_index": 80,
+    "source_game_indices": [
+      160,
+      161
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "1r1qk2r/pppbb1pp/2np1n2/4pp2/2PP4/2N1P1P1/PP2NPBP/R1BQ1RK1 w k - 0 1",
+    "opening_id": "21b7cf857a9adb99f00e78f26b106ca0fc7d7c617a98d60b0654e0dbb3057b81",
+    "pair_index": 81,
+    "source_game_indices": [
+      162,
+      163
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqnrk1/pp1nbppp/3p4/2pPp3/4P3/2N2NP1/PPP2PBP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "43e99315b7e8020566805257993bd65f44dc1539e112c86418ea9bb3192ecad6",
+    "pair_index": 82,
+    "source_game_indices": [
+      164,
+      165
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqk2r/ppp3bp/2np1np1/4p3/3PP3/2N1B3/PPPQN1PP/R3KB1R w KQkq - 0 1",
+    "opening_id": "13073bc7f46b292bbe77fdf1993bf55d9d5bbb071c1fc8a879f82d1eade4a281",
+    "pair_index": 83,
+    "source_game_indices": [
+      166,
+      167
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "2rqkb1r/1p1n1ppp/p1p1p2n/3pPb2/3P1P2/2N2N2/PPP1B1PP/R1BQ1RK1 w k - 0 1",
+    "opening_id": "a33eca248c3db082d496c5de4dbe3db16b9b47ca90cb20f2e0d4382f15344b7b",
+    "pair_index": 84,
+    "source_game_indices": [
+      168,
+      169
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rn3rk1/ppq1ppbp/2ppbnp1/8/3PP3/N5PP/PPP1NPB1/R1BQ1RK1 w - - 0 1",
+    "opening_id": "2f20e077fca2df4399c606f250790a07da509da5983f08075466b043429106ed",
+    "pair_index": 85,
+    "source_game_indices": [
+      170,
+      171
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnb1k2r/4ppbp/p1pp1np1/qp6/3PP1P1/P1N1BP2/1PPQ3P/R3KBNR w KQkq - 0 1",
+    "opening_id": "0b8df2b8dc3299e49869dfd91c96a12a8d6216e03884d04b18354eef9f684893",
+    "pair_index": 86,
+    "source_game_indices": [
+      172,
+      173
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r2qkb1r/pp3ppp/2n1pn2/2Pp1b2/1P6/2P1PN2/P4PPP/RNBQKB1R w KQkq - 0 1",
+    "opening_id": "f272041bb698078c483c6d035e2a9c69ccd207e3e46b4f48db0097af599290ef",
+    "pair_index": 87,
+    "source_game_indices": [
+      174,
+      175
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqk2r/p2nbppp/2p1pn2/1p6/3PN3/P4NP1/1PP1QP1P/R1B1KB1R w KQkq - 0 1",
+    "opening_id": "3920432ea6de2381b50f74efd9a743b3dbb80677b0b4c80d4516b1c98a85267e",
+    "pair_index": 88,
+    "source_game_indices": [
+      176,
+      177
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rn1qk1nr/pbp1bppp/1p1pp3/4P3/2PP4/P1N1B3/1P2NPPP/R2QKB1R w KQkq - 0 1",
+    "opening_id": "79a6ab1e128585ed0897dfe0f2d69ab53e0e2b2d572ddf43330df857019450db",
+    "pair_index": 89,
+    "source_game_indices": [
+      178,
+      179
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bq1rk1/pp1nbpp1/2pp1n1p/4p3/3PP2P/2N1BP2/PPPQN1P1/R3KB1R w KQ - 0 1",
+    "opening_id": "32a1ae7e06e58fbc9d91f07442e10e5ec821466c077ae78964ba7fa1131d5853",
+    "pair_index": 90,
+    "source_game_indices": [
+      180,
+      181
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1b1k2r/1pppnppp/p1n2q2/4b3/3NP3/1BN1B3/PPP2PPP/R2QK2R w KQkq - 0 1",
+    "opening_id": "6d4541c3672b307392a1bf5cd78c91dca270bd301ec5239aaa240e784a8f3a5c",
+    "pair_index": 91,
+    "source_game_indices": [
+      182,
+      183
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rn1qk2r/pb1pbppp/3np3/2pP4/8/2N2N2/PPP1BPPP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "cd1eaa6a2622736a34815ce8636f9d362f81bdf9ae6bffd0af53aaf539c7f9e0",
+    "pair_index": 92,
+    "source_game_indices": [
+      184,
+      185
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r3k2r/pp1q1ppp/2nb1n2/4p3/2P3b1/2NP1N2/PP2BPPP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "e02b221002633194a05a3dee353f423a0cb71fd99f6b4c75a1bf17037f3f810d",
+    "pair_index": 93,
+    "source_game_indices": [
+      186,
+      187
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1b1kb1r/pp3ppp/1qn1pn2/1Bp5/8/1PN1PN2/PB1P1PPP/R2QK2R w KQkq - 0 1",
+    "opening_id": "553590b26f18b0d37b4d46b14d089099d2d4b3780f51b2f4c22382247118e610",
+    "pair_index": 94,
+    "source_game_indices": [
+      188,
+      189
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1b1k2r/ppp3pp/2nqpn2/3pNp2/3P1P2/2N5/PPP1BPPP/R2QK2R w KQkq - 0 1",
+    "opening_id": "de953e45e20d50dee6be7ccd490a6429da979f3640d9b2e603526e4fef019fd5",
+    "pair_index": 95,
+    "source_game_indices": [
+      190,
+      191
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rn1q1rk1/ppp2pp1/5n1p/2b3B1/4P1b1/3P1N2/PPP1B1PP/RN1QK2R w KQ - 0 1",
+    "opening_id": "7d79ad0b986e5b43936b082ed185b792f6463e44c759ca8cbf3821bab7bc7931",
+    "pair_index": 96,
+    "source_game_indices": [
+      192,
+      193
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rnbq1rk1/pp2n1bp/3p1pp1/2pPp1B1/4P3/2NB1N2/PPP2PPP/R2Q1RK1 w - - 0 1",
+    "opening_id": "6f3540c269b652ff4e8661cf34afee3f054cc6a027faeb3e724cf19ba48e190c",
+    "pair_index": 97,
+    "source_game_indices": [
+      194,
+      195
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bq1rk1/1pp1ppb1/p1np1npp/8/2BPP3/P1N1BN1P/1PP2PP1/R2QK2R w KQ - 0 1",
+    "opening_id": "61f5380c240f4fabe6ab322f5d29418f86b2743f35ab5b8064ac0697f987667e",
+    "pair_index": 98,
+    "source_game_indices": [
+      196,
+      197
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rn1qkb1r/pbpp1p1p/1p2p1pQ/3nP1B1/3P4/7N/PPPN1PPP/R3KB1R w KQkq - 0 1",
+    "opening_id": "a0dc8f896f382bfcad53bff554fe3d1a784ab16958686ed11fa95056f3699b6d",
+    "pair_index": 99,
+    "source_game_indices": [
+      198,
+      199
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnbqkb1r/4pp1p/p2p1npP/1ppP4/4PP2/8/PPP1B1P1/RNBQK1NR w KQkq - 0 1",
+    "opening_id": "0a0ae0534ae755587a58e88083db6f9f6f047aab72badb65732342947e552ba3",
+    "pair_index": 100,
+    "source_game_indices": [
+      200,
+      201
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r2qk2r/ppp2ppp/1bnp1n2/4p2b/2B1P3/2NPBN1P/PPP1QPP1/R3K2R w KQkq - 0 1",
+    "opening_id": "d994adfa416de5d219965ab157d67c432638f56deae8a69d6247b461a6308e13",
+    "pair_index": 101,
+    "source_game_indices": [
+      202,
+      203
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnbq1rk1/ppp1ppb1/6pB/8/3Pp3/5N2/PPPQPPPP/2KR1B1R w - - 0 1",
+    "opening_id": "adfee980c09ea3907510512553f6a158f0c9fbf0c4fe3d3e100d9d95ae50c085",
+    "pair_index": 102,
+    "source_game_indices": [
+      204,
+      205
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rn1qkb1r/ppp2bpp/4p3/3p1p1P/3PnB2/3BPN2/PPP2PP1/RN1QK2R w KQkq - 0 1",
+    "opening_id": "ae82f754aec1ef16f82c31e5b7c421946cfafd120de13008157f99bebe2055ff",
+    "pair_index": 103,
+    "source_game_indices": [
+      206,
+      207
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1b1kb1r/pp3pp1/2npp3/q1p1P2p/2B3n1/2PP1N2/PP2QPPP/RNB2RK1 w kq - 0 1",
+    "opening_id": "9931ddcc7e46f2c1ea03b8aca4280ff1363c8156ac99d1e58c6e3497887477ef",
+    "pair_index": 104,
+    "source_game_indices": [
+      208,
+      209
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rnbq1rk1/1p2ppbp/3p1np1/2p5/4P3/PBNP4/1PP1NPPP/R1BQK2R w KQ - 0 1",
+    "opening_id": "d62a2e6c9ac0477b2fd1528f3442dccece3b7dbb0112cd3cf36568da90be4d8b",
+    "pair_index": 105,
+    "source_game_indices": [
+      210,
+      211
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rn1qkb1r/p4ppp/bpn1p3/2ppP3/3P4/2PB1N2/PP3PPP/RNBQR1K1 w kq - 0 1",
+    "opening_id": "e51530e2a2f18de4d9bd77e8d3147ce164cfb33b6f1f292ff7a6f16c0aae8b16",
+    "pair_index": 106,
+    "source_game_indices": [
+      212,
+      213
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1b1k2r/ppp3pp/2nqpn2/3pNp2/3P1P2/2N5/PPP1BPPP/R2QK2R w KQkq - 0 1",
+    "opening_id": "de953e45e20d50dee6be7ccd490a6429da979f3640d9b2e603526e4fef019fd5",
+    "pair_index": 107,
+    "source_game_indices": [
+      214,
+      215
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "2rqkb1r/1p1n1ppp/p1p1p2n/3pPb2/3P1P2/2N2N2/PPP1B1PP/R1BQ1RK1 w k - 0 1",
+    "opening_id": "a33eca248c3db082d496c5de4dbe3db16b9b47ca90cb20f2e0d4382f15344b7b",
+    "pair_index": 108,
+    "source_game_indices": [
+      216,
+      217
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1b1k2r/pp2bppp/1qnppn2/8/3P4/2PB1N2/PP1N1PPP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "d14a9d049ec12078a8f97f73943cb1caa7648eb9905b291a4897109ffe46da7d",
+    "pair_index": 109,
+    "source_game_indices": [
+      218,
+      219
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnb2rk1/1pqpppbp/p4np1/3P4/2P5/2N2N2/PP2BPPP/R1BQK2R w KQ - 0 1",
+    "opening_id": "bf749a24167bc9be321e6445b30206606ea4c7e48f44897eb456b3cfd1612650",
+    "pair_index": 110,
+    "source_game_indices": [
+      220,
+      221
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "2rqkb1r/1p1n1ppp/p1p1p2n/3pPb2/3P1P2/2N2N2/PPP1B1PP/R1BQ1RK1 w k - 0 1",
+    "opening_id": "a33eca248c3db082d496c5de4dbe3db16b9b47ca90cb20f2e0d4382f15344b7b",
+    "pair_index": 111,
+    "source_game_indices": [
+      222,
+      223
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqk2r/ppnnppbp/2p3p1/8/3PP3/3B1N2/PP3PPP/RNBQ1RK1 w kq - 0 1",
+    "opening_id": "a97f0a3738fdd3c27e9b050445e7a136ec839b6cb7d6b8ab2ca90901d23f304b",
+    "pair_index": 112,
+    "source_game_indices": [
+      224,
+      225
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r3k1nr/pbqpbppp/1pn5/2p1p3/4P3/3P1NP1/PPPN1PBP/R1BQR1K1 w kq - 0 1",
+    "opening_id": "22665770afd94f7270e14abfba6e0dabd0e9c1902c04a34da97b70ff3e8ec110",
+    "pair_index": 113,
+    "source_game_indices": [
+      226,
+      227
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnbqkb1r/4pp1p/p2p1npP/1ppP4/4PP2/8/PPP1B1P1/RNBQK1NR w KQkq - 0 1",
+    "opening_id": "0a0ae0534ae755587a58e88083db6f9f6f047aab72badb65732342947e552ba3",
+    "pair_index": 114,
+    "source_game_indices": [
+      228,
+      229
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bq1rk1/ppp1bppp/4pn2/3n4/3PN3/3B1N2/PPP2PPP/R1BQ1RK1 w - - 0 1",
+    "opening_id": "e89267ad73a95c28799fe06e3d1b2218ccf29ca8f5569c69c4ae4eae1ba200ea",
+    "pair_index": 115,
+    "source_game_indices": [
+      230,
+      231
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bqk2r/pp1nbppp/1npp4/4p1P1/3PP3/2N2PN1/PPP4P/R1BQKB1R w KQkq - 0 1",
+    "opening_id": "4d1bf7d65db16cb0b69f7e3004aef8018ca9e8dcfc4be11123055e524549ed84",
+    "pair_index": 116,
+    "source_game_indices": [
+      232,
+      233
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqk2r/pp1nbpp1/2pp3p/4p3/2BPn3/5NN1/PPP2PPP/R1BQ1RK1 w kq - 0 1",
+    "opening_id": "d24dcf0dade2e68c9c4ac25f8401c65ed7fe4892de14108cbf5ee27e9eb86045",
+    "pair_index": 117,
+    "source_game_indices": [
+      234,
+      235
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "r1bq1rk1/ppp1bppp/2np4/7n/4PB2/2N1QN2/PPP2PPP/2KR1B1R w - - 0 1",
+    "opening_id": "8c96edb2fa270b9457f99dc0998a2b57e9c4bbce165171a574b25c2b9d4931f8",
+    "pair_index": 118,
+    "source_game_indices": [
+      236,
+      237
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bq1rk1/pp2ppbp/3p1np1/2pP2B1/1n6/2N1PN2/PPP1BPPP/R2Q1RK1 w - - 0 1",
+    "opening_id": "c069611992409a7a5fa3e87d6558d0cfeffd0fc5438b2d606cc8d544ee4fdc7a",
+    "pair_index": 119,
+    "source_game_indices": [
+      238,
+      239
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnbqk2r/ppp2ppp/1n1b4/8/2PP1B2/5N2/PP4PP/RN1QKB1R w KQkq - 0 1",
+    "opening_id": "2afbd586c963f298a3afcb3b9135f5aaf33e14b3017bb14f0f7ed1676ad69cb9",
+    "pair_index": 120,
+    "source_game_indices": [
+      240,
+      241
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1b1kb1r/pp3ppp/1qn1pn2/1Bp5/8/1PN1PN2/PB1P1PPP/R2QK2R w KQkq - 0 1",
+    "opening_id": "553590b26f18b0d37b4d46b14d089099d2d4b3780f51b2f4c22382247118e610",
+    "pair_index": 121,
+    "source_game_indices": [
+      242,
+      243
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rnb1k2r/ppp2p1p/3qpp2/b7/3P4/P1N5/1PP1NPPP/R2QKB1R w KQkq - 0 1",
+    "opening_id": "49424d9352aeac2c453d4e9fd13127859b55d673f6a208f26429712052796a74",
+    "pair_index": 122,
+    "source_game_indices": [
+      244,
+      245
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bq1rk1/pp2ppbp/3p1np1/2pP2B1/1n6/2N1PN2/PPP1BPPP/R2Q1RK1 w - - 0 1",
+    "opening_id": "c069611992409a7a5fa3e87d6558d0cfeffd0fc5438b2d606cc8d544ee4fdc7a",
+    "pair_index": 123,
+    "source_game_indices": [
+      246,
+      247
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rn1qkb1r/pb2pppp/8/1Pp1p3/Q3n3/5N2/PP1PNPPP/R1B1KB1R w KQkq - 0 1",
+    "opening_id": "95858d761bce073b154d7c22f2593ac92c4cfead80c2800fc1b1c33b7fea5e5c",
+    "pair_index": 124,
+    "source_game_indices": [
+      248,
+      249
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "rnbq1rk1/pp2ppbp/2p3p1/8/4P3/2P1BN2/PPQ2PPP/R3KB1R w KQ - 0 1",
+    "opening_id": "cd692d24cb43476064a062413158792d2d4a94e030840c0cb86cd269a3b6165c",
+    "pair_index": 125,
+    "source_game_indices": [
+      250,
+      251
+    ]
+  },
+  {
+    "candidate_first": true,
+    "fen": "rn2kbnr/1bq2ppp/p2pp3/1p6/3NP3/3BB3/PPP1QPPP/RN3RK1 w kq - 0 1",
+    "opening_id": "e342d7024351357027e14bf00660471743831994a55b2186af8fa4ac7a5b7e57",
+    "pair_index": 126,
+    "source_game_indices": [
+      252,
+      253
+    ]
+  },
+  {
+    "candidate_first": false,
+    "fen": "r1bqkb1r/p2n2pp/1pn1pp2/2ppP3/3P4/1NP2N2/PP2BPPP/R1BQK2R w KQkq - 0 1",
+    "opening_id": "f8ffb38eae454888d320aec56ca7dc6761d15ef4ac376bd45476c33e30711844",
+    "pair_index": 127,
+    "source_game_indices": [
+      254,
+      255
+    ]
+  }
+]
