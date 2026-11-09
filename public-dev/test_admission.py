@@ -4,7 +4,7 @@ from pathlib import Path
 import chess,chess.pgn
 import common
 from common import sha,canonical,bootstrap,NAMES
-from admit_primary import validate_selection,validate_members,replay_primary,accepted_local,opening_partition,execution_history
+from admit_primary import validate_selection,validate_members,replay_primary,accepted_local,opening_partition,execution_history,ApiOnlyAuthorizationRedirect,read_url
 from run_match import command,game_accounting
 
 def fixtures(points=128):
@@ -21,6 +21,17 @@ def fixtures(points=128):
  return plan,admission,result,audit,inputs
 
 class AdmissionTests(unittest.TestCase):
+ def test_artifact_redirect_strips_api_auth_preserves_exact_query_and_refuses_http(self):
+  import urllib.request
+  handler=ApiOnlyAuthorizationRedirect();request=urllib.request.Request('https://api.github.com/repos/example/actions/artifacts/1/zip',headers={'Authorization':'Bearer synthetic-only'})
+  signed='https://artifact.example.invalid/archive.zip?sig=a%2Bb%2Fc%3D&sv=2026-11-09&x=one+two'
+  redirected=handler.redirect_request(request,None,302,'Found',{},signed)
+  self.assertIsNone(redirected.get_header('Authorization'));self.assertEqual(redirected.full_url,signed);self.assertTrue(handler.audit[-1]['authorization_removed'])
+  same=handler.redirect_request(request,None,302,'Found',{},'https://api.github.com/redirected')
+  self.assertEqual(same.get_header('Authorization'),'Bearer synthetic-only')
+  for url in ('http://artifact.example.invalid/archive.zip?sig=synthetic','https://user:pass@artifact.example.invalid/archive.zip'):
+   with self.assertRaises(ValueError):handler.redirect_request(request,None,302,'Found',{},url)
+  with self.assertRaises(ValueError):read_url('https://artifact.example.invalid/archive.zip',token='synthetic-only')
  def history_fixture(self):
   own={'id':20,'workflow_id':77,'head_branch':'fixture'};ref={'run_id':10,'head_sha':'pinned-old','run_attempt':1,'job_id':11}
   old={'id':10,'status':'completed','conclusion':'failure','head_sha':'pinned-old','run_attempt':1,'workflow_id':77,'head_branch':'fixture'}

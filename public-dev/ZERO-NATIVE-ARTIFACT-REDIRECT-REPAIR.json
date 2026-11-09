@@ -1,0 +1,54 @@
+{
+  "actual_read_only_archive_fetch": {
+    "artifact_bytes": 38676423,
+    "artifact_sha256": "3cd86dab43b4931fecd9425560cff9d1565d72fa43d9644f5281c20cf111666a",
+    "bytes": 610,
+    "redirect_checks": [
+      {
+        "authorization_removed": true,
+        "https_only": true,
+        "signed_query_preserved": true,
+        "target_is_github_api_origin": false
+      }
+    ],
+    "sha256": "c56646c0f7abed01e9bb2b73f0793fd6987e6d574729c6f94688857b903686e6"
+  },
+  "cause": "Default urllib redirect forwarded the GitHub read-only Authorization header to the signed Azure blob URL, which refused401. Source byte pins and known zero-native history had already passed.",
+  "frozen_plan_sha256": "6b5806262ded69052089c623d02fc5dd8b0eaf2ed09d387fa9469ec7a71d5f5a",
+  "games_played": 0,
+  "head_sha": "51e6862f2b0b4538e7ae6a785d134cdd48c73ebb",
+  "job_id": 129447991198,
+  "native_engines_started": 0,
+  "native_steps_skipped": [
+    "No-native fixed protocol and admission fixtures",
+    "Fetch exact public binaries and selected network",
+    "Run fixed128 reversed pairs at10plus0point1",
+    "Independently replay all256 PGNs clocks hashes and interval"
+  ],
+  "outcome_retries": 0,
+  "raw_api_and_joblog_refs": {
+    "ARTIFACTS.json": {
+      "bytes": 32,
+      "sha256": "244563f989470892c537c9a4622920af0d228ee4528f7d00c64a06d6cd95856c"
+    },
+    "JOB.log": {
+      "bytes": 27414,
+      "sha256": "f5dc84855322b82edfe42c17244066bae251393fd647bda038ff5b78d7f7d913"
+    },
+    "JOBS.json": {
+      "bytes": 3307,
+      "sha256": "26825d6f36cc33581e1d4b7b06564a3af585bd4b900842fd2b89d29be540d8df"
+    },
+    "RUN.json": {
+      "bytes": 11716,
+      "sha256": "5d3675e2066dca529d6c4db4e5909ab48413175054769ec02df24c1c15281416"
+    }
+  },
+  "recorded_utc": "2026-11-09T21:26:21.299202+00:00",
+  "repair": "Authorization is attached only to the HTTPS GitHub API origin, removed for non-API redirects; non-HTTPS and userinfo-bearing redirects refuse; exact signed query preserved; no signed URLs or tokens logged.",
+  "run_attempt": 1,
+  "run_id": 42701756132,
+  "run_url": "https://github.com/0mis/Stockfish/actions/runs/42701756132",
+  "schema": "test1758-pre-native-artifact-redirect-refusal/1",
+  "status": "ZERO_NATIVE_INPUT_PREPARATION_OR_GAMEPLAY"
+}

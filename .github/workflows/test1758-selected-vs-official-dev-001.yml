@@ -15,8 +15,8 @@ jobs:
     runs-on: windows-2022
     timeout-minutes: 350
     env:
-      FOLLOWUP_IMPLEMENTATION_SHA256: '4b422041cbe57bb1e01d5c7cb8b6453eb47d162e043fc9d27dc9b764c7f9dd5c'
-      FOLLOWUP_ADMISSION_SHA256: 'c8789f32eafa1d9ad7f34f34a03e95e3f296ce75f36cd4dcdd2b0a62744ed44f'
+      FOLLOWUP_IMPLEMENTATION_SHA256: '1bebdda1ab44c9756ded4c4459776de9c40280361cd4a4dd89a902d8baf8268b'
+      FOLLOWUP_ADMISSION_SHA256: '37250b3848a2e67c966c7051b90118805705573a9b5d39c7b088c1c2921f9530'
     steps:
       - name: Checkout exact admitted experiment commit
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd

@@ -4,7 +4,7 @@ The initial prospective branch contains no gameplay workflow. Later activation
 pins an actual public-safe reviewer receipt and this input document by SHA256.
 The runtime independently downloads and replays that same actual primary ZIP.
 """
-import argparse,datetime,hashlib,importlib.util,io,json,os,re,sys,urllib.request,zipfile
+import argparse,datetime,hashlib,importlib.util,io,json,os,re,sys,urllib.request,urllib.parse,zipfile
 from pathlib import Path,PurePosixPath
 import chess
 from common import require,sha,canonical,dump,bound,verify_plan
@@ -24,10 +24,29 @@ def opening_partition(primary,followup):
  return {'primary_unique_roots':len(set(old)),'followup_unique_roots':len(set(new)),'canonical_root_overlap':0,
          'primary_canonical_root_set_sha256':sha(canonical(sorted(set(old)))),'followup_ordered_root_ids_sha256':sha(canonical(new))}
 
+def api_origin(url):
+ parts=urllib.parse.urlsplit(url)
+ return parts.scheme=='https' and parts.hostname=='api.github.com' and parts.port in (None,443) and parts.username is None and parts.password is None
+
+class ApiOnlyAuthorizationRedirect(urllib.request.HTTPRedirectHandler):
+ def __init__(self):self.audit=[]
+ def redirect_request(self,req,fp,code,msg,headers,newurl):
+  target=urllib.parse.urlsplit(newurl)
+  require(target.scheme=='https' and bool(target.hostname) and target.username is None and target.password is None,'Non-HTTPS or credential-bearing redirect refused')
+  redirected=super().redirect_request(req,fp,code,msg,headers,newurl)
+  require(redirected is not None and urllib.parse.urlsplit(redirected.full_url).query==target.query,'Signed redirect query was altered')
+  before=redirected.get_header('Authorization') is not None
+  if not api_origin(newurl):redirected.remove_header('Authorization')
+  self.audit.append({'https_only':True,'target_is_github_api_origin':api_origin(newurl),'authorization_removed':before and redirected.get_header('Authorization') is None,'signed_query_preserved':True})
+  return redirected
+
 def read_url(url,token=None,limit=16*1024*1024):
+ require(urllib.parse.urlsplit(url).scheme=='https','Only HTTPS public inputs are allowed')
  headers={'User-Agent':'0mis-prospective-public-followup/1','Accept':'application/vnd.github+json'}
- if token:headers['Authorization']='Bearer '+token
- with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=120) as source:
+ if token:
+  require(api_origin(url),'Authorization is restricted to the GitHub API origin');headers['Authorization']='Bearer '+token
+ opener=urllib.request.build_opener(ApiOnlyAuthorizationRedirect())
+ with opener.open(urllib.request.Request(url,headers=headers),timeout=120) as source:
   body=source.read(limit+1)
  require(len(body)<=limit,'Remote response exceeds declared bound')
  return body

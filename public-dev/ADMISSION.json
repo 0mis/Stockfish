@@ -1,4 +1,9 @@
 {
+  "artifact_redirect_refusal_receipt": {
+    "bytes": 2258,
+    "file": "ZERO-NATIVE-ARTIFACT-REDIRECT-REPAIR.json",
+    "sha256": "1319607a0ebcbc34c39fb7100894dc16a45dfd8dcfa3eed935d09393bdff8f94"
+  },
   "followup_plan_sha256": "6b5806262ded69052089c623d02fc5dd8b0eaf2ed09d387fa9469ec7a71d5f5a",
   "no_followup_native_dispatch_yet": true,
   "preserved_pre_native_failures": [
@@ -7,6 +12,12 @@
       "job_id": 129444643206,
       "run_attempt": 1,
       "run_id": 42700795402
+    },
+    {
+      "head_sha": "51e6862f2b0b4538e7ae6a785d134cdd48c73ebb",
+      "job_id": 129447991198,
+      "run_attempt": 1,
+      "run_id": 42701756132
     }
   ],
   "primary": {
