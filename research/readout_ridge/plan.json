@@ -1,0 +1,22 @@
+{
+  "experiment": "test1757-regularized-readout-v1",
+  "question": "Can a single regularized calibration of the occupied NNUE heads produce a useful playing candidate?",
+  "method_scope": "This is supervised calibration using search labels and code. Earlier head diagnostics informed this hypothesis. Holdout search labels remain unseen at freeze time.",
+  "base_driver": "e0d20001c9d90c7e8c18bef054d53deb4c00ec2c",
+  "engine_sha256": "12a8e7bfdd9b1189b4350bd9ebef3501be1e89bd5fa41dcb56921f85ba23869a",
+  "network_sha256": "18cd32e11a9cac7c595bc6ebf1301088da8e1f2c7b31efda88dbc74c71f5d2cf",
+  "corpus": "Use the same hash-bound published game files and deterministic layout-public-games-v1 split. The 48 optimization families and 15 holdout families are separate in this calibration. The first two heads' optimization labels have been viewed in an earlier diagnostic. Only the optimization partition is used for fitting.",
+  "teacher": "Use the authenticated prefetch build and original network. Compute completed depths 9 and 13 at T1/H16, fresh search state per search. Retain raw UCI. Stable requires the same legal best move and exact principal CP scores within 250 CP of zero and 20 CP of one another. Preserve every other row and its reason.",
+  "sensitivity": "On optimization positions evaluate an auxiliary network with exactly +512 added to every signed FC2 bias. Its static CP difference from the original measures each row's positive-probe response. The auxiliary network serves only to measure this response.",
+  "fit": {
+    "observation": "For each stable optimization position take r = clamp(depth13CP - originalStaticCP, -30, 30) and s = probeStaticCP - originalStaticCP, both side-to-move. Use exact integer scores.",
+    "group": "Fit each physical head separately. Within the head give each represented opening family equal weight. A head with fewer than 16 stable observations or fewer than 6 families receives zero change.",
+    "estimate": "For an eligible head compute S = sum over families of mean(s*r) and D = sum over families of mean(s*s) + 16*36. This is ridge shrinkage toward zero, with 16 prior families at a nominal 6 CP response. Both quantities are rational.",
+    "quantize": "Compute delta = 16 * round_ties_to_even(32*S/D), then cap it to [-256,+256]. Freeze all 92 deltas together as one candidate before evaluating any holdout position. If all are zero, retain the identity result."
+  },
+  "byte_check": "Change only the declared signed int32 FC2 biases, bind their exact physical heads, byte offsets, old/new values, affected raw routes and whole-file digests. Applying the inverse patch must recover the exact original network SHA256.",
+  "holdout": "After freezing the complete candidate, compute the same original-engine depth labels and both static scores on the holdout. Report stable-row counts, family-weighted mean absolute errors and per-head/family changes, including unaffected observations. Holdout is diagnostic; there is one fixed candidate and no tuning, head pruning, or variant selection using these results.",
+  "native": "On real sampled positions verify complete routing and preservation of untouched heads, and check each selected raw integer change against quantization/truncation bounds. Require repeatable canonical bench, start-position perft4=197281 and unchanged input hashes before local qualification.",
+  "game_selection": "If nonidentity and structurally qualified, give the one frozen candidate a fixed 64-pair local development test against the original network under the existing screen settings. Do not count proxy scores as Elo. Select the fitted NNUE for further testing only if its complete valid score exceeds 64/128. The higher-rated goal still requires the existing separate formal confirmation gates.",
+  "selection_data": "Use a predeclared draw from the retired development pool excluding the 63 calibration opening families; bind the pool, seed, occurrence list and artifacts before any future screen games. No protected formal FENs are available to the optimizer."
+}
