@@ -155,7 +155,7 @@ def run(driver_commit):
                "strength_claim": False, "captures": {}}
     try:
         for label, directory, revision, expected in (("source-head", source, "HEAD", SOURCE_COMMIT),
-                ("source-tree", source, "HEAD^{tree}", SOURCE_TREE), ("driver-head", driver, "HEAD", driver_commit)):
+                ("source-tree", source, "HEAD:", SOURCE_TREE), ("driver-head", driver, "HEAD", driver_commit)):
             stdout, _ = capture(["git", "rev-parse", revision], directory, output, label)
             require(stdout.strip() == expected, label + " differs")
         capture(["git", "diff", "--exit-code", "HEAD", "--"], source, output, "source-clean-before")
