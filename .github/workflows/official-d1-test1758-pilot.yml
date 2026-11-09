@@ -1,0 +1,82 @@
+name: Official D1 test1758 training-only feasibility
+
+on:
+  push:
+    branches:
+      - research/official-d1-test1758-diagnostic-ci-v1
+    paths:
+      - .github/workflows/official-d1-test1758-pilot.yml
+      - research/official_d1_test1758/pilot.py
+      - research/official_d1_test1758/corpus.py
+      - research/official_d1_test1758/native.py
+      - research/official_d1_test1758/plan.json
+      - research/official_d1_test1758/test_contracts.py
+
+permissions:
+  contents: read
+
+concurrency:
+  group: official-d1-test1758-training-pilot-v1
+  cancel-in-progress: false
+
+jobs:
+  pilot:
+    if: github.repository == '0mis/Stockfish' && github.ref == 'refs/heads/research/official-d1-test1758-diagnostic-ci-v1'
+    runs-on: windows-2022
+    timeout-minutes: 45
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+    steps:
+      - name: Checkout exact driver
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          path: driver
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Checkout exact original official source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: official-stockfish/Stockfish
+          ref: 7cdd5e89a39fe3071b67d91c7bb07d712044bf76
+          path: source
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Use CPython 3.11 x64
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+          architecture: x64
+      - name: Install exact hashed public Python artifacts
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $bootstrap = Join-Path $env:RUNNER_TEMP 'd1-test1758-bootstrap.txt'
+          Get-Content -LiteralPath 'driver/research/official_d1_test1758/requirements.txt' | Where-Object { $_ -match '^(setuptools|wheel) @' } | Set-Content -LiteralPath $bootstrap -Encoding utf8
+          python -m pip install --disable-pip-version-check --no-cache-dir --no-deps --require-hashes -r $bootstrap
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m pip install --disable-pip-version-check --no-cache-dir --no-deps --no-build-isolation --require-hashes -r driver/research/official_d1_test1758/requirements.txt
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Check synthetic contracts
+        shell: pwsh
+        run: |
+          python -B -m unittest discover -s driver/research/official_d1_test1758 -p test_contracts.py -v
+          exit $LASTEXITCODE
+      - name: Build data-only split and run fixed training-only calibration
+        shell: pwsh
+        run: |
+          python -B driver/research/official_d1_test1758/pilot.py --source source --out d1-test1758-pilot-evidence
+          exit $LASTEXITCODE
+      - name: Retain real inputs, raw traces and all unavailable rows
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: official-d1-test1758-training-pilot
+          path: d1-test1758-pilot-evidence/
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 6
+          include-hidden-files: true

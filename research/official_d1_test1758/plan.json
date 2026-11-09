@@ -1,0 +1,152 @@
+{
+  "schema": "official-d1-test1758-diagnostic-plan/1",
+  "status": "FROZEN_BEFORE_NEW_TEACHER_SEARCHES_OR_STUDENT_PREDICTIONS",
+  "purpose": "A bounded public-development diagnostic of teacher-consensus sibling ordering and sparse NNUE-only readout repair of original official D1. Teacher preferences are fallible; proxy metrics are not Elo.",
+  "source_catalog": {
+    "repository": "0mis/stockfish-weight-space-lab",
+    "commit": "c6a21a063f5a219a72f8f814bfb6287d0925171b",
+    "allowed_pgns": [
+      {
+        "name": "test1757-edited-screen",
+        "bytes": 918097,
+        "sha256": "8bd56ec5f58ef65881ed5ae2d7ef6683683893c34c10b94b3bb0f2d5fc83dde9"
+      },
+      {
+        "name": "test1757-history-floor-screen",
+        "bytes": 981421,
+        "sha256": "1cc3b9222634b5346ab0a3fde46bbe6eefee76f8e129761c97bc3a76de90a1c0"
+      },
+      {
+        "name": "test1757-parent-screen",
+        "bytes": 935475,
+        "sha256": "1acfc5b48a1c20aa43947fbde0ec0ea6c413f8bf76a7265dbe3d8e47c711de5d"
+      },
+      {
+        "name": "test1757-readout-ridge-screen",
+        "bytes": 953620,
+        "sha256": "11ba0eff7e914f61f08915aa5f2abc464c850e921803cf46356d24c93092a779"
+      },
+      {
+        "name": "test1757-selected-vs-official",
+        "bytes": 1879333,
+        "sha256": "a90252baa4b3c573e770fc7f17e62f191b52607c38f259bc7b8eb050263aa519"
+      }
+    ],
+    "games": 768,
+    "literal_opening_fen4_families_upper_bound": 286,
+    "results_used_for_sampling": false,
+    "forbidden": "All other PGNs, confirmation-initiative-plus, formal/current-primary/successor openings, games, results and outcomes."
+  },
+  "student": {
+    "source": "7cdd5e89a39fe3071b67d91c7bb07d712044bf76",
+    "tree": "7086bc94bdb39564b678ec4812ecde485de58fb5",
+    "engine_sha256": "b67c37d0d45e3540e311392aeeb699e3a745f16e172bc3fc6f85e0782093842b",
+    "engine_bytes": 140839068,
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/download/stockfish-dev-20261106-7cdd5e89/stockfish-windows-x86-64-universal.zip",
+    "release_bytes": 119111575,
+    "release_sha256": "37c5fff649e820e3bcb5ac3450a1363cf0d75045da0dd15559873f76e53055d1",
+    "network_sha256": "d1ee674a62ca754648fb8c2907ff4e92f0c3acff28f59afa0f5bd4e3949538f1",
+    "network_bytes": 136247652,
+    "network_embedded_offset": 3248160,
+    "heads": 32
+  },
+  "teacher": {
+    "original_network_author": "Shawn Xu (xu-shawn)",
+    "network": "nn-68752b755c93.nnue",
+    "network_sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
+    "network_bytes": 138360528,
+    "network_url": "https://tests.stockfishchess.org/api/nn/nn-68752b755c93.nnue",
+    "upstream_source": "73fe1eaca99ac4a09252c876aa6b1cceeaf7c4c7",
+    "upstream_change": "Filename only against d5a2bda7f028430f79e1789d47ae3228defb843b.",
+    "accepted_STC": "https://tests.stockfishchess.org/tests/view/6af1273d8e7fb2e78bc1ca70",
+    "committed_games": 24864,
+    "native_engine_sha256": "ae1d4772a71529085b26d7460e76fcf65dbe09782e55ea67ecef2e4f033c5ba5",
+    "native_engine_bytes": 142322184,
+    "native_source": "d19047cc44fae773a590be3b0b9f08fdd75acdc7",
+    "native_source_tree": "6c3cd141dcc3cac20b84469b729fbbd1141c0d60",
+    "release_url": "https://github.com/0mis/Stockfish/releases/download/experimental-test1757-history-d5c257728ba5/stockfish-test1757-history-d5-windows-bmi2.zip",
+    "release_bytes": 232285191,
+    "release_sha256": "23b4df6759e361ea510e28f23abec04daeb14f08969a781653b08a916f0e4e8d",
+    "runtime_configuration": "Unmodified original 68752 network via explicit EvalFile; history/prefetch source is part of the teacher configuration, not a current-master NNUE-only claim.",
+    "license": "CC0-1.0 original network; preserve upstream author credit."
+  },
+  "corpus": {
+    "family": "SHA256 ASCII canonical ordinary legal-EP FEN4 of the original PGN opening-start board; no broader ECO-independence claim.",
+    "sampling": "Legal mainline boards at source-relative plies4,8,...,128. Ignore game Result and all scores. Deduplicate all clock-free position aliases retaining every source origin and the first exact FEN6 in fixed catalog/game/ply order. At most40 lowest root-ID hashes per opening-start family; no outcome-based replacement.",
+    "max_roots_per_family": 40,
+    "max_total_roots": 11440,
+    "max_families": 286,
+    "split": "SHA256 ASCII official-d1-test1758-v1/family|<family_id>, interpreted hex mod20: train0..10, development11..13, final14..16, screen17..19.",
+    "family_caps": {
+      "train": 256,
+      "development": 64,
+      "final": 64,
+      "screen": 64
+    },
+    "alias_guard": "Before native work, compute root and ALL legal one-ply-child aliases using ordinary/Shredder castling times legal/FEN EP. Drop every selected parent touching a root/child alias shared across assigned partitions. No replenishment. Retain all reasons and metadata denominator.",
+    "final_sealing": "Admission producer may parse final FEN identity only for split/alias proof. Fitter and all native searches/features/evaluations must not load final rows before the ONE nonidentity candidate and full-byte recipe are frozen and train parity accepted.",
+    "screen_sealing": "Screen families never enter teacher search, fitting or validation. Reserve64 distinct roots from at least32 screen families; max2 roots/family; lowest SHA order."
+  },
+  "search": {
+    "threads": 1,
+    "hash_mib": 16,
+    "numa": "none",
+    "syzygy": "empty",
+    "chess960": false,
+    "budgets_nodes": [
+      65536,
+      262144
+    ],
+    "move_selection": "Low budget full legal-root MultiPV2 chooses A/B. High budget MultiPV2 restricts searchmoves to exactly these two legal root moves; no student suggestion participates.",
+    "consensus": "Use deepest fully completed exact/unbounded CP MultiPV2 depth at each budget, require bestmove to match its rank1. Same A>B order at both budgets, both margins>=16CP, each |top CP|<=600. Mate/bound/malformed/incomplete/nonconsensus rows remain unavailable.",
+    "target": "min(40, low-budget margin, high-budget margin), root side-to-move CP.",
+    "statics": "After the moves, root margin = -childA_STM_CP + childB_STM_CP. Ordinary static pairs require both nonterminal and not-in-check children. Preserve every rejected row and reason.",
+    "maximum_requested_nodes_all_roots": 3748659200,
+    "max_reported_overshoot_per_search": 4096,
+    "max_reported_nodes_all_roots": 3842375680,
+    "per_search_timeout_seconds": 30,
+    "aggregate_native_search_time_cap_seconds": 10800,
+    "shards": 4,
+    "max_parallel_shards": 2,
+    "shard": "int(root_id,16)mod4; disjoint exact root roster; screen omitted.",
+    "runtime_calibration": "First64 train roots in SHA256(calibration|root_id) order. Fixed method and budgets. Measure elapsed time only for resource feasibility; never alter method, filters or caps from visible outcomes. If conservative predicted aggregate acquisition >180 worker-minutes or a shard >60min, stop as resource-infeasible. Native shard timeout75min. No extension based on validation or label shortfall."
+  },
+  "native_cache": {
+    "helpers_source": "856af5b39b8e63c7da6389e185daa986983b4084",
+    "unchanged_modules": {
+      "stage2/features_v19.py": "b494c4e11dafdfc9598c3c591c0dca720f41498ae5944d8dc384f03737a58e6e",
+      "stage2/nnue_v19.py": "371b1d61587252f2375e2a9e62281feaac499a53e41f7df700188ef2869cb76f",
+      "stage4/d1_fc2_study/forward.py": "415a3d2ea4a11723e8e208a9a1110d92d828d4a3e9cc75270d377be0abc29143",
+      "stage4/d1_fc2_study/weights.py": "d1534b01a78f6ea00b79c8cd3768a84c6d0960f0766a29fd9577c65f3feeb704"
+    },
+    "gate": "Every measured original child must match exact official b67 native raw internal NNUE and ordinary CP before fitting. Every changed candidate child must match native after the joint freeze. No counterfactual helper score substitutes for in-check/terminal ordinary static availability.",
+    "semantics": "Canonical FC2 uint7 activations, original affine including bias/skip, actual int64 multiply and truncation toward zero by16384 then16; unchanged D1 static_wrapper and CP rounding, actual full FEN6/rule50."
+  },
+  "fit": {
+    "minimum_train_pairs": 2000,
+    "minimum_train_families": 64,
+    "minimum_development_pairs": 400,
+    "minimum_development_families": 16,
+    "head_selection": "Training-only same-head pair support>=256 and >=24 families; take at most4, descending paired roots then lowest physical head.",
+    "coordinates": "Serialized FC2 int8 weights only, biases and every other byte fixed. Each delta in{-4,-2,-1,0,1,2,4}, preserve[-128,127], at most2 nonzero lanes/head,8 total, global L1<=16.",
+    "optimizer": "One deterministic joint sparse coordinate descent starting identity. Four full sweeps over selected heads ascending then lanes0..127. For each coordinate consider every allowed declared delta as its final value, scoring all current joint edits exactly. Stop early if a full sweep changes nothing. Never restart or reselect after development/final.",
+    "objective": "Exact family-equal mean of root [Huber20(max(0,target-margin)) + ((candidateChildA-parentChildA)^2+(candidateChildB-parentChildB)^2)/2] plus sum(delta^2)/8. Huber20(e)=e^2/2 for e<=20 else20*(e-10). Exact Fraction; all native CP values integer. Anchors are the original student's absolute child evaluations, not teacher CP scale.",
+    "tie": "Exact cost, fewer changed lanes, smaller sum delta^2, smaller L1, lexicographic(head,lane,delta declared order); identity wins equal cost.",
+    "specific_error": "Predeclared strata same-physical-head0..31 times A/B capture-or-promotion pattern (four patterns); cross-head rows remain overall metrics. Select one stratum from training with>=128 pairs,>=24 families, baseline family-equal ranking error>=25%; highest error then lexical stratum. No final/development selection.",
+    "freeze": "Freeze all coordinates or identity exactly once before any development outcomes, serialize once, full candidate/inverse SHA and exact untouched spans; candidate-native train parity before interpreting/gating."
+  },
+  "gates": {
+    "ranking_error": "1 if margin<0,1/2 if margin==0,else0; family-equal.",
+    "train": "Nonidentity, ranking error improves>=0.02 absolute and Huber deficit improves>=5%, at least one fixed error stratum. Child drift RMS<=4CP, maximum<=12CP, absolute mean signed drift<=1CP.",
+    "development": "ONE frozen candidate only. At least400 measurable pairs/16families. Overall ranking error improves>=0.01 absolute and Huber deficit improves>=2%; selected stratum has>=64pairs/8families, baseline error>=20% and improves>=0.03. Same absolute anchor limits. Failure stops; no second fit or final read.",
+    "final": "Only after frozen recipe + train parity + development gate. At least400 measurable pairs/16families and selected stratum>=64pairs/8families. Overall ranking error improves>=0.005 and Huber deficit improves>=1%; selected-stratum error improves>=0.02; same anchors. Report once, no tuning/replacement.",
+    "qualification": "Exact typed reversible bytes, parent+candidate/inverse hashes, all original/candidate native raw+CP parity, two complete repeated bench signatures with actual newly observed candidate nodes and perft4=197281. No invented expected candidate signature.",
+    "development_screen": "Only if all gates pass: same official b67 source/exe, original D1 versus frozen edited D1,64 paired openings/128games,10+0.1,T1,Hash16, fixedseed202611097831, reserved teacher-free screen families, authentic clock losses retained. Report descriptive outcome; no farm submission or Elo claim."
+  },
+  "resource_scope": {
+    "local": "Only small source/data byte feasibility, synthetic tests and metadata audit; no local native engines/build/large CPU. All work stays in new isolated OS TEMP; no private workspace writes.",
+    "hosted": "Only standard public GitHub-hosted windows-2022 runners on one new0mis/Stockfish branch; read-only contents/actions, no user secrets/paid/self-hosted runners. Finite shards, fail-safe artifact retention.",
+    "preserve": "Authentic five PGNs, all source/native/search input/stdout/stderr/process hashes, all denominators, root/child/family aliases and exposure indexes. Source mainline observations O, admission legal-child guards G, and actual reported teacher/student/bench paths separate. Unreported search internals are unknown, never claimed exhaustively observed.",
+    "forbidden": "No other branch/release writes, contacts, Fishtest submission, formal/current-primary/successor result peeking, or changes to frozen existing experiments."
+  }
+}
