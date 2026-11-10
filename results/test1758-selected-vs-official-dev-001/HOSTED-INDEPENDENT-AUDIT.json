@@ -1,0 +1,78 @@
+{
+  "candidate_points": 134.5,
+  "confirmed_strength_gain": false,
+  "descriptive_paired_bootstrap": {
+    "coefficient_vector_sha256": "8cb57c594c63c13757d21125fb5deda4cc990bb439633932f50ec77631c0c1cc",
+    "empirical_pentanomial": [
+      0,
+      14,
+      87,
+      27,
+      0
+    ],
+    "endpoints": [
+      {
+        "boundary": null,
+        "logistic_elo": 1.3571771589357418,
+        "percentile_denominator": 40,
+        "percentile_numerator": 1,
+        "score_fraction": {
+          "denominator": 512,
+          "numerator": 257
+        },
+        "twice_pair_point_sum": 257
+      },
+      {
+        "boundary": null,
+        "logistic_elo": 34.03773600517424,
+        "percentile_denominator": 40,
+        "percentile_numerator": 39,
+        "score_fraction": {
+          "denominator": 512,
+          "numerator": 281
+        },
+        "twice_pair_point_sum": 281
+      }
+    ],
+    "iid_empirical_pair_draws": 128,
+    "method": "exact_integer_empirical_paired_bootstrap_percentile",
+    "nominal_central_percent": 95,
+    "quantile_rule": "smallest k with40*CDF(k)>=q*128^128, q=1,39; no interpolation",
+    "scope": "Descriptive for this fixed retired-opening development match on standard public Actions VM; no formal confirmation or global gain inference."
+  },
+  "game_accounting": {
+    "candidate_black": {
+      "candidate_reported_clock_losses": 0,
+      "draws": 89,
+      "games": 128,
+      "losses": 36,
+      "official_reported_clock_losses": 0,
+      "wins": 3
+    },
+    "candidate_white": {
+      "candidate_reported_clock_losses": 0,
+      "draws": 78,
+      "games": 128,
+      "losses": 2,
+      "official_reported_clock_losses": 0,
+      "wins": 48
+    }
+  },
+  "games": 256,
+  "official_points": 121.5,
+  "pairs": 128,
+  "pentanomial": [
+    0,
+    14,
+    87,
+    27,
+    0
+  ],
+  "plan_sha256": "6b5806262ded69052089c623d02fc5dd8b0eaf2ed09d387fa9469ec7a71d5f5a",
+  "primary_admission_sha256": "37250b3848a2e67c966c7051b90118805705573a9b5d39c7b088c1c2921f9530",
+  "private_formal_evidence": false,
+  "result_sha256": "c19de5f3ea0564e2ef980d632d5b8608bcab4ad9d4eeed1c73b153ab84da07e3",
+  "schema": "full-fixed-public-development-independent-audit/1",
+  "selected_network_sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
+  "status": "all128pairs_256games_raw_receipts_reverified"
+}

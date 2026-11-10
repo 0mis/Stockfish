@@ -1,0 +1,34 @@
+{
+  "HOSTED-INDEPENDENT-AUDIT.json": {
+    "bytes": 2429,
+    "sha256": "177bc9f080eb7c6096f921adc4e2796cd937de79b0be30d09c6df4ef45832e0c"
+  },
+  "OPERATOR-INDEPENDENT-AUDIT.json": {
+    "bytes": 24860,
+    "sha256": "2e6e409d9452275a6eab44c1084f411076835b9a50528edeec54d54f08e555d7"
+  },
+  "PGN-BYTE-INDEX.json": {
+    "bytes": 26388,
+    "sha256": "0ac7927b7d8540264387871f45d013b0e17fb1416642e8cdefba718247ef1b75"
+  },
+  "PRIMARY-SELECTION.json": {
+    "bytes": 765,
+    "sha256": "adb93b98a10b8513c412e433a7b2caf6324d2476cfdb46f8351ce1897030238f"
+  },
+  "README.md": {
+    "bytes": 5567,
+    "sha256": "79f33cbf9aa867f850526c8ff333eb35a21a6f481378869ac5cce6be79d6702b"
+  },
+  "RESULT.json": {
+    "bytes": 15635,
+    "sha256": "c19de5f3ea0564e2ef980d632d5b8608bcab4ad9d4eeed1c73b153ab84da07e3"
+  },
+  "TERMINAL-ACCEPTANCE.json": {
+    "bytes": 200308,
+    "sha256": "8455b63a99bc7531a833b8f387beaf6018bc3d6ef5f891360dd5f30180614c14"
+  },
+  "games-utc.pgn": {
+    "bytes": 2331114,
+    "sha256": "51bb0a27f812ec32bf73fec4d8606f22d5abf78fb1981f5c38916695847a7b01"
+  }
+}

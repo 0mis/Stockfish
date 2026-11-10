@@ -1,0 +1,12 @@
+{
+  "followup_plan_sha256": "6b5806262ded69052089c623d02fc5dd8b0eaf2ed09d387fa9469ec7a71d5f5a",
+  "primary_edited_points": 127.5,
+  "primary_public_readout": "https://github.com/0mis/Stockfish/blob/f6b8d4898be1515be76db88e28987184dd49c7f2/results/test1758-fixed-bias-dev-001/README.md",
+  "primary_run": 42675059274,
+  "primary_unedited_points": 128.5,
+  "prospective_followup_freeze_commit": "4f0672262b2edd3d9b4c7ce17ac466893b398389",
+  "schema": "frozen-test1758-selection-readback/1",
+  "selected_network_sha256": "68752b755c93e419e714829c4aac1bbd66e9509a96cf175be28a00164b6d7f21",
+  "separate_estimates_never_pooled": true,
+  "strict_rule": "Edited network only if valid complete primary points>128; otherwise unedited original; invalid means no follow-up."
+}
